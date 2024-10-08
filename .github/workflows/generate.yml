@@ -1,0 +1,40 @@
+name: Generate Docs
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  generate:
+    name: Generate
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # avoid shallow clone so nbgv can do its work.
+          submodules: true
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v4
+
+      - name: Clone bicep-types-az
+        uses: actions/checkout@v4
+        with:
+          repository: Azure/bicep-types-az
+          path: workflow-temp/bicep-types-az
+
+      - name: Run Generation
+        run: |
+          mkdir -p "$RUNNER_TEMP/generated"
+          dotnet run --configuration Release --project ./src/TemplateRefGenerator \
+            --source-folder workflow-temp/bicep-types-az/generated \
+            --output-folder "$RUNNER_TEMP/generated" \
+            --verbose
+
+      - name: Upload Generated
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated
+          path: ${{ runner.temp }}/generated

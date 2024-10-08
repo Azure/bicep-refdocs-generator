@@ -2,6 +2,14 @@
 
 This repo contains the code for generating template reference documentation. It uses files from the **generated** folder in [bicep-types-az](https://github.com/Azure/bicep-types-az) as the source files.
 
+## Accessing Generated Files
+
+Every push to the `main` branch on this repo will trigger the [Generate GitHub Action](https://github.com/Azure/bicep-refdocs-generator/actions/workflows/generate.yml) which will run generation and upload results as an artifact named "generated".
+
+Download this artifact (see [here](https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/downloading-workflow-artifacts) for info), and unzip it. This will give you the full generated docs folder structure.
+
+You can also trigger the Generate action to run on demand (see [here](https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/manually-running-a-workflow) for info) to force generation with the most up-to-date copy of [bicep-types-az](https://github.com/Azure/bicep-types-az).
+
 ## Development
 
 ### Debugging
@@ -37,7 +45,7 @@ If you run this command without supplying any arguments, you will see a help mes
 
 Here's an example of how you can run the CLI tool:
 ```sh
-src/TemplateRefGenerator/bin/Debug/net8.0/TemplateRefGenerator --source-folder ../bicep-types-az/generated --output-folder ./generated --include-folder ./includes --use-bicep-types
+src/TemplateRefGenerator/bin/Debug/net8.0/TemplateRefGenerator --source-folder ../bicep-types-az/generated --output-folder ./generated
 ```
 
 To get detailed logging, use the `--verbose` flag.

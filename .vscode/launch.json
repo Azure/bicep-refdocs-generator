@@ -13,9 +13,6 @@
                 "../../../bicep-types-az/generated",
                 "--output-folder",
                 "../../generated",
-                "--include-folder",
-                "../../includes",
-                "--use-bicep-types",
                 "--verbose"
             ],
             "cwd": "${workspaceFolder}/src/TemplateRefGenerator",
@@ -35,11 +32,8 @@
                 "../../../bicep-types-az/generated",
                 "--output-folder",
                 "../../generated",
-                "--include-folder",
-                "../../includes",
                 "--provider-namespace",
                 "${input:providerNamespace}",
-                "--use-bicep-types",
                 "--verbose"
             ],
             "cwd": "${workspaceFolder}/src/TemplateRefGenerator",
