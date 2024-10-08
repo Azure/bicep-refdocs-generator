@@ -1,0 +1,25 @@
+{
+  "$schema": "../../remarks.schema.json",
+  "ResourceRemarks": [
+    {
+      "ResourceTypes": [
+        "microsoft.network/networksecuritygroups",
+        "microsoft.network/networksecuritygroups/securityrules"
+      ],
+      "Description": "For guidance on creating network security groups, see [Create virtual network resources by using Bicep](/azure/azure-resource-manager/bicep/scenarios-virtual-networks#network-security-groups)."
+    },
+    {
+      "ResourceTypes": [
+        "microsoft.network/privateendpoints"
+      ],
+      "Description": "For guidance on creating private endpoints, see [Create virtual network resources by using Bicep](/azure/azure-resource-manager/bicep/scenarios-virtual-networks#private-endpoints)."
+    },
+    {
+      "ResourceTypes": [
+        "microsoft.network/virtualnetworks",
+        "microsoft.network/virtualnetworks/subnets"
+      ],
+      "Description": "For guidance on creating virtual networks and subnets, see [Create virtual network resources by using Bicep](/azure/azure-resource-manager/bicep/scenarios-virtual-networks)."
+    }
+  ]
+}

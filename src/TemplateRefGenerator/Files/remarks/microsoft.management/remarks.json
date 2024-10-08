@@ -1,0 +1,17 @@
+{
+  "$schema": "../../remarks.schema.json",
+  "ResourceRemarks": [
+    {
+      "ResourceTypes": [
+        "microsoft.management/managementgroups"
+      ],
+      "Description": "When deployed at tenant scope, don't set the scope property. See create management groups with tenant deployments in [Bicep file](/azure/azure-resource-manager/bicep/deploy-to-tenant#create-management-group) or [ARM templates](/azure/azure-resource-manager/templates/deploy-to-tenant#create-management-group).\n\nWhen deployed at other scopes, set the scope property to `tenant()` for Bicep files or `/` for ARM templates. See create management groups with management group deployments in [Bicep file](/azure/azure-resource-manager/bicep/deploy-to-management-group#management-group) or [ARM templates](/azure/azure-resource-manager/templates/deploy-to-management-group#management-group)."
+    },
+    {
+      "ResourceTypes": [
+        "microsoft.management/managementgroups/subscriptions"
+      ],
+      "Description": "Use the `Microsoft.Management/managementGroups/subscriptions` resource to move an existing subscription to a new management group. For more information, see [Move subscriptions in ARM template or Bicep file](/azure/governance/management-groups/manage#move-subscriptions-in-arm-template)."
+    }
+  ]
+}

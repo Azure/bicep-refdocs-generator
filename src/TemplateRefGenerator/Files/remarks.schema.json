@@ -1,0 +1,148 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "ResourceRemarks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ResourceRemark"
+      }
+    },
+    "PropertyRemarks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/PropertyRemark"
+      }
+    },
+    "DeploymentRemarks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/DeploymentRemark"
+      }
+    },
+    "BicepSamples": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/CodeSample"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "ApiVersionRequirement": {
+      "type": "object",
+      "properties": {
+        "Minimum": {
+          "type": "string"
+        },
+        "Maximum": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ResourceRemark": {
+      "type": "object",
+      "properties": {
+        "ResourceTypes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ApiVersion": {
+          "$ref": "#/definitions/ApiVersionRequirement"
+        },
+        "Description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ResourceTypes",
+        "Description"
+      ],
+      "additionalProperties": false
+    },
+    "PropertyRemark": {
+      "type": "object",
+      "properties": {
+        "ResourceType": {
+          "type": "string"
+        },
+        "ApiVersion": {
+          "$ref": "#/definitions/ApiVersionRequirement"
+        },
+        "ObjectName": {
+          "type": "string"
+        },
+        "PropertyName": {
+          "type": "string"
+        },
+        "Description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ResourceType",
+        "ObjectName",
+        "PropertyName",
+        "Description"
+      ],
+      "additionalProperties": false
+    },
+    "CodeSample": {
+      "type": "object",
+      "properties": {
+        "ResourceType": {
+          "type": "string"
+        },
+        "ApiVersion": {
+          "$ref": "#/definitions/ApiVersionRequirement"
+        },
+        "Path": {
+          "type": "string"
+        },
+        "Description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ResourceType",
+        "Path",
+        "Description"
+      ],
+      "additionalProperties": false
+    },
+    "DeploymentRemark": {
+      "type": "object",
+      "properties": {
+        "ResourceType": {
+          "type": "string"
+        },
+        "ApiVersion": {
+          "$ref": "#/definitions/ApiVersionRequirement"
+        },
+        "DeploymentType": {
+          "type": "string",
+          "enum": [
+            "Bicep",
+            "Json",
+            "Terraform"
+          ]
+        },
+        "Description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ResourceType",
+        "DeploymentType",
+        "Description"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

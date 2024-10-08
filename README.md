@@ -1,14 +1,46 @@
-# Project
+# Template reference
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+This repo contains the code for generating template reference documentation. It uses files from the **generated** folder in [bicep-types-az](https://github.com/Azure/bicep-types-az) as the source files.
 
-As the maintainer of this project, please make a few updates:
+## Development
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+### Debugging
+
+In VSCode, use the "Launch CLI" debug target to start the application in debug mode.
+
+### Running tests
+
+Run `dotnet test` to run the test suite.
+
+### Updating baselines
+
+If a test failure requires updating the baselines, follow the instructions and run the commands supplied in the error message.
+
+If you want to update all of the baselines in one go, run:
+```sh
+./scripts/update_baselines.sh
+```
+
+### Building
+
+Run `dotnet build` to build this project.
+
+## Using the CLI
+
+After building the .NET solution, you can use the CLI by running:
+
+```sh
+./src/TemplateRefGenerator/bin/Debug/net8.0/TemplateRefGenerator
+```
+
+If you run this command without supplying any arguments, you will see a help message giving information on the supported arguments.
+
+Here's an example of how you can run the CLI tool:
+```sh
+src/TemplateRefGenerator/bin/Debug/net8.0/TemplateRefGenerator --source-folder ../bicep-types-az/generated --output-folder ./generated --include-folder ./includes --use-bicep-types
+```
+
+To get detailed logging, use the `--verbose` flag.
 
 ## Contributing
 

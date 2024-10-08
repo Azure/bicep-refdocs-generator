@@ -1,0 +1,1220 @@
+---
+title: Microsoft.DocumentDB/databaseAccounts 2024-05-15
+description: Azure Microsoft.DocumentDB/databaseAccounts syntax and properties to use in Azure Resource Manager templates for deploying the resource. API version 2024-05-15
+author: tfitzmac
+zone_pivot_groups: deployment-languages-reference
+ms.service: azure-resource-manager
+ms.topic: reference
+ms.date: 09/13/2024
+ms.author: tomfitz
+---
+# Microsoft.DocumentDB databaseAccounts 2024-05-15
+
+> [!div class="op_single_selector" title1="API Versions:"]
+> - [Latest](../databaseaccounts.md)
+> - [2024-05-15](../2024-05-15/databaseaccounts.md)
+> - [2024-05-15-preview](../2024-05-15-preview/databaseaccounts.md)
+> - [2024-02-15-preview](../2024-02-15-preview/databaseaccounts.md)
+> - [2023-11-15](../2023-11-15/databaseaccounts.md)
+> - [2023-11-15-preview](../2023-11-15-preview/databaseaccounts.md)
+> - [2023-09-15](../2023-09-15/databaseaccounts.md)
+> - [2023-09-15-preview](../2023-09-15-preview/databaseaccounts.md)
+> - [2023-04-15](../2023-04-15/databaseaccounts.md)
+> - [2023-03-15](../2023-03-15/databaseaccounts.md)
+> - [2023-03-15-preview](../2023-03-15-preview/databaseaccounts.md)
+> - [2023-03-01-preview](../2023-03-01-preview/databaseaccounts.md)
+> - [2022-11-15](../2022-11-15/databaseaccounts.md)
+> - [2022-11-15-preview](../2022-11-15-preview/databaseaccounts.md)
+> - [2022-08-15](../2022-08-15/databaseaccounts.md)
+> - [2022-08-15-preview](../2022-08-15-preview/databaseaccounts.md)
+> - [2022-05-15](../2022-05-15/databaseaccounts.md)
+> - [2022-05-15-preview](../2022-05-15-preview/databaseaccounts.md)
+> - [2022-02-15-preview](../2022-02-15-preview/databaseaccounts.md)
+> - [2021-11-15-preview](../2021-11-15-preview/databaseaccounts.md)
+> - [2021-10-15](../2021-10-15/databaseaccounts.md)
+> - [2021-10-15-preview](../2021-10-15-preview/databaseaccounts.md)
+> - [2021-07-01-preview](../2021-07-01-preview/databaseaccounts.md)
+> - [2021-06-15](../2021-06-15/databaseaccounts.md)
+> - [2021-05-15](../2021-05-15/databaseaccounts.md)
+> - [2021-04-15](../2021-04-15/databaseaccounts.md)
+> - [2021-04-01-preview](../2021-04-01-preview/databaseaccounts.md)
+> - [2021-03-15](../2021-03-15/databaseaccounts.md)
+> - [2021-03-01-preview](../2021-03-01-preview/databaseaccounts.md)
+> - [2021-01-15](../2021-01-15/databaseaccounts.md)
+> - [2020-09-01](../2020-09-01/databaseaccounts.md)
+> - [2020-06-01-preview](../2020-06-01-preview/databaseaccounts.md)
+> - [2020-04-01](../2020-04-01/databaseaccounts.md)
+> - [2020-03-01](../2020-03-01/databaseaccounts.md)
+> - [2019-12-12](../2019-12-12/databaseaccounts.md)
+> - [2019-08-01](../2019-08-01/databaseaccounts.md)
+> - [2016-03-31](../2016-03-31/databaseaccounts.md)
+> - [2016-03-19](../2016-03-19/databaseaccounts.md)
+> - [2015-11-06](../2015-11-06/databaseaccounts.md)
+> - [2015-04-08](../2015-04-08/databaseaccounts.md)
+> - [2015-04-01](../2015-04-01/databaseaccounts.md)
+
+
+::: zone pivot="deployment-language-bicep"
+
+## Bicep resource definition
+
+The databaseAccounts resource type can be deployed with operations that target: 
+
+* **Resource groups** - See [resource group deployment commands](/azure/azure-resource-manager/bicep/deploy-to-resource-group)
+
+For a list of changed properties in each API version, see [change log](~/microsoft.documentdb/change-log/databaseaccounts.md).
+
+## Resource format
+
+To create a Microsoft.DocumentDB/databaseAccounts resource, add the following Bicep to your template.
+
+```bicep
+resource symbolicname 'Microsoft.DocumentDB/databaseAccounts@2024-05-15' = {
+  identity: {
+    type: 'string'
+    userAssignedIdentities: {
+      {customized property}: {}
+    }
+  }
+  kind: 'string'
+  location: 'string'
+  name: 'string'
+  properties: {
+    analyticalStorageConfiguration: {
+      schemaType: 'string'
+    }
+    apiProperties: {
+      serverVersion: 'string'
+    }
+    backupPolicy: {
+      migrationState: {
+        startTime: 'string'
+        status: 'string'
+        targetType: 'string'
+      }
+      type: 'string'
+      // For remaining properties, see BackupPolicy objects
+    }
+    capabilities: [
+      {
+        name: 'string'
+      }
+    ]
+    capacity: {
+      totalThroughputLimit: int
+    }
+    connectorOffer: 'string'
+    consistencyPolicy: {
+      defaultConsistencyLevel: 'string'
+      maxIntervalInSeconds: int
+      maxStalenessPrefix: int
+    }
+    cors: [
+      {
+        allowedHeaders: 'string'
+        allowedMethods: 'string'
+        allowedOrigins: 'string'
+        exposedHeaders: 'string'
+        maxAgeInSeconds: int
+      }
+    ]
+    createMode: 'string'
+    customerManagedKeyStatus: 'string'
+    databaseAccountOfferType: 'Standard'
+    defaultIdentity: 'string'
+    disableKeyBasedMetadataWriteAccess: bool
+    disableLocalAuth: bool
+    enableAnalyticalStorage: bool
+    enableAutomaticFailover: bool
+    enableBurstCapacity: bool
+    enableCassandraConnector: bool
+    enableFreeTier: bool
+    enableMultipleWriteLocations: bool
+    enablePartitionMerge: bool
+    ipRules: [
+      {
+        ipAddressOrRange: 'string'
+      }
+    ]
+    isVirtualNetworkFilterEnabled: bool
+    keyVaultKeyUri: 'string'
+    locations: [
+      {
+        failoverPriority: int
+        isZoneRedundant: bool
+        locationName: 'string'
+      }
+    ]
+    minimalTlsVersion: 'string'
+    networkAclBypass: 'string'
+    networkAclBypassResourceIds: [
+      'string'
+    ]
+    publicNetworkAccess: 'string'
+    restoreParameters: {
+      databasesToRestore: [
+        {
+          collectionNames: [
+            'string'
+          ]
+          databaseName: 'string'
+        }
+      ]
+      gremlinDatabasesToRestore: [
+        {
+          databaseName: 'string'
+          graphNames: [
+            'string'
+          ]
+        }
+      ]
+      restoreMode: 'string'
+      restoreSource: 'string'
+      restoreTimestampInUtc: 'string'
+      tablesToRestore: [
+        'string'
+      ]
+    }
+    virtualNetworkRules: [
+      {
+        id: 'string'
+        ignoreMissingVNetServiceEndpoint: bool
+      }
+    ]
+  }
+  tags: {
+    {customized property}: 'string'
+  }
+}
+```
+### BackupPolicy objects
+
+Set the **type** property to specify the type of object.
+
+For **Continuous**, use:
+
+```bicep
+{
+  continuousModeProperties: {
+    tier: 'string'
+  }
+  type: 'Continuous'
+}
+```
+
+For **Periodic**, use:
+
+```bicep
+{
+  periodicModeProperties: {
+    backupIntervalInMinutes: int
+    backupRetentionIntervalInHours: int
+    backupStorageRedundancy: 'string'
+  }
+  type: 'Periodic'
+}
+```
+
+## Property values
+
+### AnalyticalStorageConfiguration
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| schemaType | Describes the types of schema for analytical storage. | 'FullFidelity'<br />'WellDefined' |
+
+### ApiProperties
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| serverVersion | Describes the ServerVersion of an a MongoDB account. | '3.2'<br />'3.6'<br />'4.0'<br />'4.2'<br />'5.0'<br />'6.0' |
+
+### BackupPolicy
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| migrationState | The object representing the state of the migration between the backup policies. | [BackupPolicyMigrationState](#backuppolicymigrationstate) |
+| type | Set to 'Continuous' for type [ContinuousModeBackupPolicy](#continuousmodebackuppolicy). Set to 'Periodic' for type [PeriodicModeBackupPolicy](#periodicmodebackuppolicy). | 'Continuous'<br />'Periodic' (required) |
+
+### BackupPolicyMigrationState
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| startTime | Time at which the backup policy migration started (ISO-8601 format). | string |
+| status | Describes the status of migration between backup policy types. | 'Completed'<br />'Failed'<br />'InProgress'<br />'Invalid' |
+| targetType | Describes the target backup policy type of the backup policy migration. | 'Continuous'<br />'Periodic' |
+
+### Capability
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| name | Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include "EnableTable" and "EnableGremlin". | string |
+
+### Capacity
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| totalThroughputLimit | The total throughput limit imposed on the account. A totalThroughputLimit of 2000 imposes a strict limit of max throughput that can be provisioned on that account to be 2000. A totalThroughputLimit of -1 indicates no limits on provisioning of throughput. | int <br /><br />Constraints:<br />Min value = -1 |
+
+### Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+
+### ConsistencyPolicy
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| defaultConsistencyLevel | The default consistency level and configuration settings of the Cosmos DB account. | 'BoundedStaleness'<br />'ConsistentPrefix'<br />'Eventual'<br />'Session'<br />'Strong' (required) |
+| maxIntervalInSeconds | When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'. | int <br /><br />Constraints:<br />Min value = 5<br />Max value = 86400 |
+| maxStalenessPrefix | When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'. | int <br /><br />Constraints:<br />Min value = 1<br />Max value = 2147483647 |
+
+### ContinuousModeBackupPolicy
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| continuousModeProperties | Configuration values for continuous mode backup | [ContinuousModeProperties](#continuousmodeproperties) |
+| type | Describes the mode of backups. | 'Continuous' (required) |
+
+### ContinuousModeProperties
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| tier | Enum to indicate type of Continuous backup mode | 'Continuous30Days'<br />'Continuous7Days' |
+
+### CorsPolicy
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| allowedHeaders | The request headers that the origin domain may specify on the CORS request. | string |
+| allowedMethods | The methods (HTTP request verbs) that the origin domain may use for a CORS request. | string |
+| allowedOrigins | The origin domains that are permitted to make a request against the service via CORS. | string (required) |
+| exposedHeaders | The response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer. | string |
+| maxAgeInSeconds | The maximum amount time that a browser should cache the preflight OPTIONS request. | int <br /><br />Constraints:<br />Min value = 1<br />Max value = 2147483647 |
+
+### DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| analyticalStorageConfiguration | Analytical storage specific properties. | [AnalyticalStorageConfiguration](#analyticalstorageconfiguration) |
+| apiProperties | API specific properties. Currently, supported only for MongoDB API. | [ApiProperties](#apiproperties) |
+| backupPolicy | The object representing the policy for taking backups on an account. | [BackupPolicy](#backuppolicy) |
+| capabilities | List of Cosmos DB capabilities for the account | [Capability](#capability)[] |
+| capacity | The object that represents all properties related to capacity enforcement on an account. | [Capacity](#capacity) |
+| connectorOffer | The cassandra connector offer type for the Cosmos DB database C* account. | 'Small' |
+| consistencyPolicy | The consistency policy for the Cosmos DB account. | [ConsistencyPolicy](#consistencypolicy) |
+| cors | The CORS policy for the Cosmos DB database account. | [CorsPolicy](#corspolicy)[] |
+| createMode | Enum to indicate the mode of account creation. | 'Default'<br />'Restore' |
+| customerManagedKeyStatus | Indicates the status of the Customer Managed Key feature on the account. In case there are errors, the property provides troubleshooting guidance. | string |
+| databaseAccountOfferType | The offer type for the database | 'Standard' (required) |
+| defaultIdentity | The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more. | string |
+| disableKeyBasedMetadataWriteAccess | Disable write operations on metadata resources (databases, containers, throughput) via account keys | bool |
+| disableLocalAuth | Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication. | bool |
+| enableAnalyticalStorage | Flag to indicate whether to enable storage analytics. | bool |
+| enableAutomaticFailover | Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account. | bool |
+| enableBurstCapacity | Flag to indicate enabling/disabling of Burst Capacity feature on the account | bool |
+| enableCassandraConnector | Enables the cassandra connector on the Cosmos DB C* account | bool |
+| enableFreeTier | Flag to indicate whether Free Tier is enabled. | bool |
+| enableMultipleWriteLocations | Enables the account to write in multiple locations | bool |
+| enablePartitionMerge | Flag to indicate enabling/disabling of Partition Merge feature on the account | bool |
+| ipRules | List of IpRules. | [IpAddressOrRange](#ipaddressorrange)[] |
+| isVirtualNetworkFilterEnabled | Flag to indicate whether to enable/disable Virtual Network ACL rules. | bool |
+| keyVaultKeyUri | The URI of the key vault | string |
+| locations | An array that contains the georeplication locations enabled for the Cosmos DB account. | [Location](#location)[] (required) |
+| minimalTlsVersion | Indicates the minimum allowed Tls version. The default value is Tls 1.2. Cassandra and Mongo APIs only work with Tls 1.2. | 'Tls'<br />'Tls11'<br />'Tls12' |
+| networkAclBypass | Indicates what services are allowed to bypass firewall checks. | 'AzureServices'<br />'None' |
+| networkAclBypassResourceIds | An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account. | string[] |
+| publicNetworkAccess | Whether requests from Public Network are allowed | 'Disabled'<br />'Enabled'<br />'SecuredByPerimeter' |
+| restoreParameters | Parameters to indicate the information about the restore. | [RestoreParameters](#restoreparameters) |
+| virtualNetworkRules | List of Virtual Network ACL rules configured for the Cosmos DB account. | [VirtualNetworkRule](#virtualnetworkrule)[] |
+
+### DatabaseRestoreResource
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| collectionNames | The names of the collections available for restore. | string[] |
+| databaseName | The name of the database available for restore. | string |
+
+### GremlinDatabaseRestoreResource
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| databaseName | The name of the gremlin database available for restore. | string |
+| graphNames | The names of the graphs available for restore. | string[] |
+
+### IpAddressOrRange
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| ipAddressOrRange | A single IPv4 address or a single IPv4 address range in CIDR format. Provided IPs must be well-formatted and cannot be contained in one of the following ranges: 10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12, 192.168.0.0/16, since these are not enforceable by the IP address filter. Example of valid inputs: “23.40.210.245” or “23.40.210.0/8”. | string |
+
+### Location
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| failoverPriority | The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists. | int <br /><br />Constraints:<br />Min value = 0 |
+| isZoneRedundant | Flag to indicate whether or not this region is an AvailabilityZone region | bool |
+| locationName | The name of the region. | string |
+
+### ManagedServiceIdentity
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| type | The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service. | 'None'<br />'SystemAssigned'<br />'SystemAssigned,UserAssigned'<br />'UserAssigned' |
+| userAssignedIdentities | The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'. | [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities) |
+
+### ManagedServiceIdentityUserAssignedIdentities
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+
+### Microsoft.DocumentDB/databaseAccounts
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| identity | Identity for the resource. | [ManagedServiceIdentity](#managedserviceidentity) |
+| kind | Indicates the type of database account. This can only be set at database account creation. | 'GlobalDocumentDB'<br />'MongoDB'<br />'Parse' |
+| location | The location of the resource group to which the resource belongs. | string |
+| name | The resource name | string <br /><br />Constraints:<br />Min length = 3<br />Max length = 3<br />Pattern = `^[a-z0-9]+(-[a-z0-9]+)*` (required) |
+| properties | Properties to create and update Azure Cosmos DB database accounts. | [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties) (required) |
+| tags | Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB". | [Tags](#tags) |
+
+### PeriodicModeBackupPolicy
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| periodicModeProperties | Configuration values for periodic mode backup | [PeriodicModeProperties](#periodicmodeproperties) |
+| type | Describes the mode of backups. | 'Periodic' (required) |
+
+### PeriodicModeProperties
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| backupIntervalInMinutes | An integer representing the interval in minutes between two backups | int <br /><br />Constraints:<br />Min value = 0 |
+| backupRetentionIntervalInHours | An integer representing the time (in hours) that each backup is retained | int <br /><br />Constraints:<br />Min value = 0 |
+| backupStorageRedundancy | Enum to indicate type of backup residency | 'Geo'<br />'Local'<br />'Zone' |
+
+### RestoreParameters
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| databasesToRestore | List of specific databases available for restore. | [DatabaseRestoreResource](#databaserestoreresource)[] |
+| gremlinDatabasesToRestore | List of specific gremlin databases available for restore. | [GremlinDatabaseRestoreResource](#gremlindatabaserestoreresource)[] |
+| restoreMode | Describes the mode of the restore. | 'PointInTime' |
+| restoreSource | The id of the restorable database account from which the restore has to be initiated. For example: /subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/locations/{location}/restorableDatabaseAccounts/{restorableDatabaseAccountName} | string |
+| restoreTimestampInUtc | Time to which the account has to be restored (ISO-8601 format). | string |
+| tablesToRestore | List of specific tables available for restore. | string[] |
+
+### Tags
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+
+### VirtualNetworkRule
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| id | Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}. | string |
+| ignoreMissingVNetServiceEndpoint | Create firewall rule before the virtual network has vnet service endpoint enabled. | bool |
+
+
+## Quickstart templates
+
+The following quickstart templates deploy this resource type.
+
+> [!div class="mx-tableFixed"]
+> | Template | Description |
+> | ----- | ----- |
+> | [CI/CD using Jenkins on Azure Container Service (AKS)](https://github.com/Azure/azure-quickstart-templates/tree/master/application-workloads/jenkins/jenkins-cicd-container)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fapplication-workloads%2Fjenkins%2Fjenkins-cicd-container%2Fazuredeploy.json) | Containers make it very easy for you to continuously build and deploy your applications. By orchestrating deployment of those containers using Kubernetes in Azure Container Service, you can achieve replicable, manageable clusters of containers. By setting up a continuous build to produce your container images and orchestration, you can increase the speed and reliability of your deployment. |
+> | [Web App with a SQL Database, Azure Cosmos DB, Azure Search](https://github.com/Azure/azure-quickstart-templates/tree/master/demos/web-app-sql-docdb-search)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fdemos%2Fweb-app-sql-docdb-search%2Fazuredeploy.json) | This template provisions a Web App, a SQL Database, Azure Cosmos DB, Azure Search and Application Insights.  |
+> | [Create an Azure Cosmos DB account for Cassandra API](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-cassandra)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-cassandra%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for Cassandra API in two regions with a keyspace and table with dedicated throughput. |
+> | [Create autoscale Azure Cosmos DB account for Cassandra API](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-cassandra-autoscale)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-cassandra-autoscale%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for Cassandra API in two regions with a keyspace and table with autoscale throughput. |
+> | [Create an Azure CosmosDB Account](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-create-account)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-create-account%2Fazuredeploy.json) | This ARM template is intented to create a CosmosDB Account quickly with the minimal required values |
+> | [Create an Azure Cosmos DB account in multiple regions](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-create-multi-region-account)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-create-multi-region-account%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for any database API type with a primary and secondary region with choice of consistency level and failover type. |
+> | [Create a free-tier Azure Cosmos DB account](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-free)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-free%2Fazuredeploy.json) | This template creates a free-tier Azure Cosmos DB account for SQL API with a database with shared throughput and container. |
+> | [Create an Azure Cosmos DB account for Gremlin API](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-gremlin)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-gremlin%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for Gremlin API in two regions with one database and one graph using dedicated throughput. |
+> | [Create an Azure Cosmos DB account for Gremlin API autoscale](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-gremlin-autoscale)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-gremlin-autoscale%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for Gremlin API in two regions with one database and one graph using autoscale throughput. |
+> | [Create an Azure Cosmos account for MongoDB API](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-mongodb)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-mongodb%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for MongoDB API 4.2 in two regions using shared and dedicated throughput with two collections. |
+> | [Create an Azure Cosmos account for MongoDB API autoscale](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-mongodb-autoscale)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-mongodb-autoscale%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for MongoDB API 4.2 in two regions using both shared and dedicated autoscale throughput. |
+> | [Create an Azure Cosmos DB Account with a private endpoint](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-private-endpoint)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-private-endpoint%2Fazuredeploy.json) | This template will create a Cosmos account, a virtual network and a private endpoint exposing the Cosmos account to the virtual network. |
+> | [Create an Azure Cosmos DB account for Core (SQL) API](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-sql)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-sql%2Fazuredeploy.json) | This template creates an Azure Cosmos account for Core (SQL) API with a database and container with throughput with multiple other options. |
+> | [Azure Cosmos DB account SQL API with analytical store](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-sql-analytical-store)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-sql-analytical-store%2Fazuredeploy.json) | This template creates an Azure Cosmos account for Core (SQL) API with a database and container configured with analytical store. |
+> | [Create an Azure Cosmos DB account SQL API with autoscale](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-sql-autoscale)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-sql-autoscale%2Fazuredeploy.json) | This template creates an Azure Cosmos account for Core (SQL) API with a database and container with autoscale throughput with multiple other options. |
+> | [Create Azure Cosmos DB Core (SQL) API stored procedures](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-sql-container-sprocs)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-sql-container-sprocs%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for Core (SQL) API and a container with a stored procedure, trigger and user defined function. |
+> | [Create a minimal Azure Cosmos DB account for Core (SQL) API](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-sql-minimal)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-sql-minimal%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for the Core (SQL) API while only specifying the minimal required resource properties. |
+> | [Create Azure Cosmos with SQL API and multiple containers](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-sql-multiple-containers)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-sql-multiple-containers%2Fazuredeploy.json) | The template creates a Cosmos container with a SQL API and allows adding mulitple containers. |
+> | [Create an Azure Cosmos DB SQL Account with data plane RBAC](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-sql-rbac)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-sql-rbac%2Fazuredeploy.json) | This template will create a SQL Cosmos account, a natively maintained Role Definition, and a natively maintained Role Assignment for an AAD identity. |
+> | [Create a Serverless Azure Cosmos DB account for SQL API](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-sql-serverless)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-sql-serverless%2Fazuredeploy.json) | This template creates an serverless Azure Cosmos DB account for the Core (SQL) API. |
+> | [Create an Azure Cosmos account for Table API](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-table)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-table%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for Table API in two regions and a single table with provisioned throughput. |
+> | [Create an Azure Cosmos account for Table API with autoscale](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-table-autoscale)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-table-autoscale%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for Table API in two regions and a single table with autoscale throughput. |
+> | [Create a zero touch Azure Cosmos account and Azure Web App](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-webapp)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-webapp%2Fazuredeploy.json) | This template creates an Azure Cosmos account, injects the Cosmos DB endpoint and keys into Azure Web App settings, then deploys an ASP MVC web app from GitHub. |
+> | [Create a Cosmos DB account with Microsoft Defender enabled](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/microsoft-defender-cosmosdb-create-account)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fmicrosoft-defender-cosmosdb-create-account%2Fazuredeploy.json) | Using this ARM template, you can deploy an Azure Cosmos DB account with Microsoft Defender for Azure Cosmos DB enabled. Microsoft Defender for Azure Cosmos DB is an Azure-native layer of security that detects attempts to exploit databases in your Azure Cosmos DB accounts. Microsoft Defender for Azure Cosmos DB detects potential SQL injections, known bad actors based on Microsoft Threat Intelligence, suspicious access patterns, and potential exploitations of your database through compromised identities or malicious insiders. |
+> | [Deploy Azure Data Explorer DB with Cosmos DB connection](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.kusto/kusto-cosmos-db)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.kusto%2Fkusto-cosmos-db%2Fazuredeploy.json) | Deploy Azure Data Explorer DB with Cosmos DB connection. |
+> | [Azure Cosmos DB Account with Web App](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.web/documentdb-webapp)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.web%2Fdocumentdb-webapp%2Fazuredeploy.json) | This template deploys an Azure Cosmos DB account, an App Service Plan, and creates a Web App in the App Service Plan. It also adds two Application settings to the Web App that reference the Azure Cosmos DB account endpoint. This way solutions deployed to the Web App can connect to the Azure Cosmos DB account endpoint using those settings. |
+
+::: zone-end
+
+::: zone pivot="deployment-language-arm-template"
+
+## ARM template resource definition
+
+The databaseAccounts resource type can be deployed with operations that target: 
+
+* **Resource groups** - See [resource group deployment commands](/azure/azure-resource-manager/templates/deploy-to-resource-group)
+
+For a list of changed properties in each API version, see [change log](~/microsoft.documentdb/change-log/databaseaccounts.md).
+
+## Resource format
+
+To create a Microsoft.DocumentDB/databaseAccounts resource, add the following JSON to your template.
+
+```json
+{
+  "type": "Microsoft.DocumentDB/databaseAccounts",
+  "apiVersion": "2024-05-15",
+  "name": "string",
+  "identity": {
+    "type": "string",
+    "userAssignedIdentities": {
+      "{customized property}": {
+      }
+    }
+  },
+  "kind": "string",
+  "location": "string",
+  "properties": {
+    "analyticalStorageConfiguration": {
+      "schemaType": "string"
+    },
+    "apiProperties": {
+      "serverVersion": "string"
+    },
+    "backupPolicy": {
+      "migrationState": {
+        "startTime": "string",
+        "status": "string",
+        "targetType": "string"
+      },
+      "type": "string"
+      // For remaining properties, see BackupPolicy objects
+    },
+    "capabilities": [
+      {
+        "name": "string"
+      }
+    ],
+    "capacity": {
+      "totalThroughputLimit": "int"
+    },
+    "connectorOffer": "string",
+    "consistencyPolicy": {
+      "defaultConsistencyLevel": "string",
+      "maxIntervalInSeconds": "int",
+      "maxStalenessPrefix": "int"
+    },
+    "cors": [
+      {
+        "allowedHeaders": "string",
+        "allowedMethods": "string",
+        "allowedOrigins": "string",
+        "exposedHeaders": "string",
+        "maxAgeInSeconds": "int"
+      }
+    ],
+    "createMode": "string",
+    "customerManagedKeyStatus": "string",
+    "databaseAccountOfferType": "Standard",
+    "defaultIdentity": "string",
+    "disableKeyBasedMetadataWriteAccess": "bool",
+    "disableLocalAuth": "bool",
+    "enableAnalyticalStorage": "bool",
+    "enableAutomaticFailover": "bool",
+    "enableBurstCapacity": "bool",
+    "enableCassandraConnector": "bool",
+    "enableFreeTier": "bool",
+    "enableMultipleWriteLocations": "bool",
+    "enablePartitionMerge": "bool",
+    "ipRules": [
+      {
+        "ipAddressOrRange": "string"
+      }
+    ],
+    "isVirtualNetworkFilterEnabled": "bool",
+    "keyVaultKeyUri": "string",
+    "locations": [
+      {
+        "failoverPriority": "int",
+        "isZoneRedundant": "bool",
+        "locationName": "string"
+      }
+    ],
+    "minimalTlsVersion": "string",
+    "networkAclBypass": "string",
+    "networkAclBypassResourceIds": [ "string" ],
+    "publicNetworkAccess": "string",
+    "restoreParameters": {
+      "databasesToRestore": [
+        {
+          "collectionNames": [ "string" ],
+          "databaseName": "string"
+        }
+      ],
+      "gremlinDatabasesToRestore": [
+        {
+          "databaseName": "string",
+          "graphNames": [ "string" ]
+        }
+      ],
+      "restoreMode": "string",
+      "restoreSource": "string",
+      "restoreTimestampInUtc": "string",
+      "tablesToRestore": [ "string" ]
+    },
+    "virtualNetworkRules": [
+      {
+        "id": "string",
+        "ignoreMissingVNetServiceEndpoint": "bool"
+      }
+    ]
+  },
+  "tags": {
+    "{customized property}": "string"
+  }
+}
+```
+### BackupPolicy objects
+
+Set the **type** property to specify the type of object.
+
+For **Continuous**, use:
+
+```json
+{
+  "continuousModeProperties": {
+    "tier": "string"
+  },
+  "type": "Continuous"
+}
+```
+
+For **Periodic**, use:
+
+```json
+{
+  "periodicModeProperties": {
+    "backupIntervalInMinutes": "int",
+    "backupRetentionIntervalInHours": "int",
+    "backupStorageRedundancy": "string"
+  },
+  "type": "Periodic"
+}
+```
+
+## Property values
+
+### AnalyticalStorageConfiguration
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| schemaType | Describes the types of schema for analytical storage. | 'FullFidelity'<br />'WellDefined' |
+
+### ApiProperties
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| serverVersion | Describes the ServerVersion of an a MongoDB account. | '3.2'<br />'3.6'<br />'4.0'<br />'4.2'<br />'5.0'<br />'6.0' |
+
+### BackupPolicy
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| migrationState | The object representing the state of the migration between the backup policies. | [BackupPolicyMigrationState](#backuppolicymigrationstate-1) |
+| type | Set to 'Continuous' for type [ContinuousModeBackupPolicy](#continuousmodebackuppolicy-1). Set to 'Periodic' for type [PeriodicModeBackupPolicy](#periodicmodebackuppolicy-1). | 'Continuous'<br />'Periodic' (required) |
+
+### BackupPolicyMigrationState
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| startTime | Time at which the backup policy migration started (ISO-8601 format). | string |
+| status | Describes the status of migration between backup policy types. | 'Completed'<br />'Failed'<br />'InProgress'<br />'Invalid' |
+| targetType | Describes the target backup policy type of the backup policy migration. | 'Continuous'<br />'Periodic' |
+
+### Capability
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| name | Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include "EnableTable" and "EnableGremlin". | string |
+
+### Capacity
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| totalThroughputLimit | The total throughput limit imposed on the account. A totalThroughputLimit of 2000 imposes a strict limit of max throughput that can be provisioned on that account to be 2000. A totalThroughputLimit of -1 indicates no limits on provisioning of throughput. | int <br /><br />Constraints:<br />Min value = -1 |
+
+### Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+
+### ConsistencyPolicy
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| defaultConsistencyLevel | The default consistency level and configuration settings of the Cosmos DB account. | 'BoundedStaleness'<br />'ConsistentPrefix'<br />'Eventual'<br />'Session'<br />'Strong' (required) |
+| maxIntervalInSeconds | When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'. | int <br /><br />Constraints:<br />Min value = 5<br />Max value = 86400 |
+| maxStalenessPrefix | When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'. | int <br /><br />Constraints:<br />Min value = 1<br />Max value = 2147483647 |
+
+### ContinuousModeBackupPolicy
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| continuousModeProperties | Configuration values for continuous mode backup | [ContinuousModeProperties](#continuousmodeproperties-1) |
+| type | Describes the mode of backups. | 'Continuous' (required) |
+
+### ContinuousModeProperties
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| tier | Enum to indicate type of Continuous backup mode | 'Continuous30Days'<br />'Continuous7Days' |
+
+### CorsPolicy
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| allowedHeaders | The request headers that the origin domain may specify on the CORS request. | string |
+| allowedMethods | The methods (HTTP request verbs) that the origin domain may use for a CORS request. | string |
+| allowedOrigins | The origin domains that are permitted to make a request against the service via CORS. | string (required) |
+| exposedHeaders | The response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer. | string |
+| maxAgeInSeconds | The maximum amount time that a browser should cache the preflight OPTIONS request. | int <br /><br />Constraints:<br />Min value = 1<br />Max value = 2147483647 |
+
+### DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| analyticalStorageConfiguration | Analytical storage specific properties. | [AnalyticalStorageConfiguration](#analyticalstorageconfiguration-1) |
+| apiProperties | API specific properties. Currently, supported only for MongoDB API. | [ApiProperties](#apiproperties-1) |
+| backupPolicy | The object representing the policy for taking backups on an account. | [BackupPolicy](#backuppolicy-1) |
+| capabilities | List of Cosmos DB capabilities for the account | [Capability](#capability-1)[] |
+| capacity | The object that represents all properties related to capacity enforcement on an account. | [Capacity](#capacity-1) |
+| connectorOffer | The cassandra connector offer type for the Cosmos DB database C* account. | 'Small' |
+| consistencyPolicy | The consistency policy for the Cosmos DB account. | [ConsistencyPolicy](#consistencypolicy-1) |
+| cors | The CORS policy for the Cosmos DB database account. | [CorsPolicy](#corspolicy-1)[] |
+| createMode | Enum to indicate the mode of account creation. | 'Default'<br />'Restore' |
+| customerManagedKeyStatus | Indicates the status of the Customer Managed Key feature on the account. In case there are errors, the property provides troubleshooting guidance. | string |
+| databaseAccountOfferType | The offer type for the database | 'Standard' (required) |
+| defaultIdentity | The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more. | string |
+| disableKeyBasedMetadataWriteAccess | Disable write operations on metadata resources (databases, containers, throughput) via account keys | bool |
+| disableLocalAuth | Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication. | bool |
+| enableAnalyticalStorage | Flag to indicate whether to enable storage analytics. | bool |
+| enableAutomaticFailover | Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account. | bool |
+| enableBurstCapacity | Flag to indicate enabling/disabling of Burst Capacity feature on the account | bool |
+| enableCassandraConnector | Enables the cassandra connector on the Cosmos DB C* account | bool |
+| enableFreeTier | Flag to indicate whether Free Tier is enabled. | bool |
+| enableMultipleWriteLocations | Enables the account to write in multiple locations | bool |
+| enablePartitionMerge | Flag to indicate enabling/disabling of Partition Merge feature on the account | bool |
+| ipRules | List of IpRules. | [IpAddressOrRange](#ipaddressorrange-1)[] |
+| isVirtualNetworkFilterEnabled | Flag to indicate whether to enable/disable Virtual Network ACL rules. | bool |
+| keyVaultKeyUri | The URI of the key vault | string |
+| locations | An array that contains the georeplication locations enabled for the Cosmos DB account. | [Location](#location-1)[] (required) |
+| minimalTlsVersion | Indicates the minimum allowed Tls version. The default value is Tls 1.2. Cassandra and Mongo APIs only work with Tls 1.2. | 'Tls'<br />'Tls11'<br />'Tls12' |
+| networkAclBypass | Indicates what services are allowed to bypass firewall checks. | 'AzureServices'<br />'None' |
+| networkAclBypassResourceIds | An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account. | string[] |
+| publicNetworkAccess | Whether requests from Public Network are allowed | 'Disabled'<br />'Enabled'<br />'SecuredByPerimeter' |
+| restoreParameters | Parameters to indicate the information about the restore. | [RestoreParameters](#restoreparameters-1) |
+| virtualNetworkRules | List of Virtual Network ACL rules configured for the Cosmos DB account. | [VirtualNetworkRule](#virtualnetworkrule-1)[] |
+
+### DatabaseRestoreResource
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| collectionNames | The names of the collections available for restore. | string[] |
+| databaseName | The name of the database available for restore. | string |
+
+### GremlinDatabaseRestoreResource
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| databaseName | The name of the gremlin database available for restore. | string |
+| graphNames | The names of the graphs available for restore. | string[] |
+
+### IpAddressOrRange
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| ipAddressOrRange | A single IPv4 address or a single IPv4 address range in CIDR format. Provided IPs must be well-formatted and cannot be contained in one of the following ranges: 10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12, 192.168.0.0/16, since these are not enforceable by the IP address filter. Example of valid inputs: “23.40.210.245” or “23.40.210.0/8”. | string |
+
+### Location
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| failoverPriority | The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists. | int <br /><br />Constraints:<br />Min value = 0 |
+| isZoneRedundant | Flag to indicate whether or not this region is an AvailabilityZone region | bool |
+| locationName | The name of the region. | string |
+
+### ManagedServiceIdentity
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| type | The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service. | 'None'<br />'SystemAssigned'<br />'SystemAssigned,UserAssigned'<br />'UserAssigned' |
+| userAssignedIdentities | The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'. | [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities-1) |
+
+### ManagedServiceIdentityUserAssignedIdentities
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+
+### Microsoft.DocumentDB/databaseAccounts
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| identity | Identity for the resource. | [ManagedServiceIdentity](#managedserviceidentity-1) |
+| kind | Indicates the type of database account. This can only be set at database account creation. | 'GlobalDocumentDB'<br />'MongoDB'<br />'Parse' |
+| location | The location of the resource group to which the resource belongs. | string |
+| name | The resource name | string <br /><br />Constraints:<br />Min length = 3<br />Max length = 3<br />Pattern = `^[a-z0-9]+(-[a-z0-9]+)*` (required) |
+| properties | Properties to create and update Azure Cosmos DB database accounts. | [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties-1) (required) |
+| tags | Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB". | [Tags](#tags-1) |
+
+### PeriodicModeBackupPolicy
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| periodicModeProperties | Configuration values for periodic mode backup | [PeriodicModeProperties](#periodicmodeproperties-1) |
+| type | Describes the mode of backups. | 'Periodic' (required) |
+
+### PeriodicModeProperties
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| backupIntervalInMinutes | An integer representing the interval in minutes between two backups | int <br /><br />Constraints:<br />Min value = 0 |
+| backupRetentionIntervalInHours | An integer representing the time (in hours) that each backup is retained | int <br /><br />Constraints:<br />Min value = 0 |
+| backupStorageRedundancy | Enum to indicate type of backup residency | 'Geo'<br />'Local'<br />'Zone' |
+
+### RestoreParameters
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| databasesToRestore | List of specific databases available for restore. | [DatabaseRestoreResource](#databaserestoreresource-1)[] |
+| gremlinDatabasesToRestore | List of specific gremlin databases available for restore. | [GremlinDatabaseRestoreResource](#gremlindatabaserestoreresource-1)[] |
+| restoreMode | Describes the mode of the restore. | 'PointInTime' |
+| restoreSource | The id of the restorable database account from which the restore has to be initiated. For example: /subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/locations/{location}/restorableDatabaseAccounts/{restorableDatabaseAccountName} | string |
+| restoreTimestampInUtc | Time to which the account has to be restored (ISO-8601 format). | string |
+| tablesToRestore | List of specific tables available for restore. | string[] |
+
+### Tags
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+
+### VirtualNetworkRule
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| id | Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}. | string |
+| ignoreMissingVNetServiceEndpoint | Create firewall rule before the virtual network has vnet service endpoint enabled. | bool |
+
+
+## Quickstart templates
+
+The following quickstart templates deploy this resource type.
+
+> [!div class="mx-tableFixed"]
+> | Template | Description |
+> | ----- | ----- |
+> | [CI/CD using Jenkins on Azure Container Service (AKS)](https://github.com/Azure/azure-quickstart-templates/tree/master/application-workloads/jenkins/jenkins-cicd-container)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fapplication-workloads%2Fjenkins%2Fjenkins-cicd-container%2Fazuredeploy.json) | Containers make it very easy for you to continuously build and deploy your applications. By orchestrating deployment of those containers using Kubernetes in Azure Container Service, you can achieve replicable, manageable clusters of containers. By setting up a continuous build to produce your container images and orchestration, you can increase the speed and reliability of your deployment. |
+> | [Web App with a SQL Database, Azure Cosmos DB, Azure Search](https://github.com/Azure/azure-quickstart-templates/tree/master/demos/web-app-sql-docdb-search)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fdemos%2Fweb-app-sql-docdb-search%2Fazuredeploy.json) | This template provisions a Web App, a SQL Database, Azure Cosmos DB, Azure Search and Application Insights.  |
+> | [Create an Azure Cosmos DB account for Cassandra API](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-cassandra)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-cassandra%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for Cassandra API in two regions with a keyspace and table with dedicated throughput. |
+> | [Create autoscale Azure Cosmos DB account for Cassandra API](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-cassandra-autoscale)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-cassandra-autoscale%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for Cassandra API in two regions with a keyspace and table with autoscale throughput. |
+> | [Create an Azure CosmosDB Account](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-create-account)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-create-account%2Fazuredeploy.json) | This ARM template is intented to create a CosmosDB Account quickly with the minimal required values |
+> | [Create an Azure Cosmos DB account in multiple regions](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-create-multi-region-account)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-create-multi-region-account%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for any database API type with a primary and secondary region with choice of consistency level and failover type. |
+> | [Create a free-tier Azure Cosmos DB account](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-free)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-free%2Fazuredeploy.json) | This template creates a free-tier Azure Cosmos DB account for SQL API with a database with shared throughput and container. |
+> | [Create an Azure Cosmos DB account for Gremlin API](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-gremlin)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-gremlin%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for Gremlin API in two regions with one database and one graph using dedicated throughput. |
+> | [Create an Azure Cosmos DB account for Gremlin API autoscale](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-gremlin-autoscale)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-gremlin-autoscale%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for Gremlin API in two regions with one database and one graph using autoscale throughput. |
+> | [Create an Azure Cosmos account for MongoDB API](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-mongodb)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-mongodb%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for MongoDB API 4.2 in two regions using shared and dedicated throughput with two collections. |
+> | [Create an Azure Cosmos account for MongoDB API autoscale](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-mongodb-autoscale)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-mongodb-autoscale%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for MongoDB API 4.2 in two regions using both shared and dedicated autoscale throughput. |
+> | [Create an Azure Cosmos DB Account with a private endpoint](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-private-endpoint)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-private-endpoint%2Fazuredeploy.json) | This template will create a Cosmos account, a virtual network and a private endpoint exposing the Cosmos account to the virtual network. |
+> | [Create an Azure Cosmos DB account for Core (SQL) API](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-sql)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-sql%2Fazuredeploy.json) | This template creates an Azure Cosmos account for Core (SQL) API with a database and container with throughput with multiple other options. |
+> | [Azure Cosmos DB account SQL API with analytical store](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-sql-analytical-store)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-sql-analytical-store%2Fazuredeploy.json) | This template creates an Azure Cosmos account for Core (SQL) API with a database and container configured with analytical store. |
+> | [Create an Azure Cosmos DB account SQL API with autoscale](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-sql-autoscale)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-sql-autoscale%2Fazuredeploy.json) | This template creates an Azure Cosmos account for Core (SQL) API with a database and container with autoscale throughput with multiple other options. |
+> | [Create Azure Cosmos DB Core (SQL) API stored procedures](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-sql-container-sprocs)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-sql-container-sprocs%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for Core (SQL) API and a container with a stored procedure, trigger and user defined function. |
+> | [Create a minimal Azure Cosmos DB account for Core (SQL) API](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-sql-minimal)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-sql-minimal%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for the Core (SQL) API while only specifying the minimal required resource properties. |
+> | [Create Azure Cosmos with SQL API and multiple containers](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-sql-multiple-containers)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-sql-multiple-containers%2Fazuredeploy.json) | The template creates a Cosmos container with a SQL API and allows adding mulitple containers. |
+> | [Create an Azure Cosmos DB SQL Account with data plane RBAC](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-sql-rbac)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-sql-rbac%2Fazuredeploy.json) | This template will create a SQL Cosmos account, a natively maintained Role Definition, and a natively maintained Role Assignment for an AAD identity. |
+> | [Create a Serverless Azure Cosmos DB account for SQL API](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-sql-serverless)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-sql-serverless%2Fazuredeploy.json) | This template creates an serverless Azure Cosmos DB account for the Core (SQL) API. |
+> | [Create an Azure Cosmos account for Table API](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-table)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-table%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for Table API in two regions and a single table with provisioned throughput. |
+> | [Create an Azure Cosmos account for Table API with autoscale](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-table-autoscale)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-table-autoscale%2Fazuredeploy.json) | This template creates an Azure Cosmos DB account for Table API in two regions and a single table with autoscale throughput. |
+> | [Create a zero touch Azure Cosmos account and Azure Web App](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/cosmosdb-webapp)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fcosmosdb-webapp%2Fazuredeploy.json) | This template creates an Azure Cosmos account, injects the Cosmos DB endpoint and keys into Azure Web App settings, then deploys an ASP MVC web app from GitHub. |
+> | [Create a Cosmos DB account with Microsoft Defender enabled](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.documentdb/microsoft-defender-cosmosdb-create-account)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.documentdb%2Fmicrosoft-defender-cosmosdb-create-account%2Fazuredeploy.json) | Using this ARM template, you can deploy an Azure Cosmos DB account with Microsoft Defender for Azure Cosmos DB enabled. Microsoft Defender for Azure Cosmos DB is an Azure-native layer of security that detects attempts to exploit databases in your Azure Cosmos DB accounts. Microsoft Defender for Azure Cosmos DB detects potential SQL injections, known bad actors based on Microsoft Threat Intelligence, suspicious access patterns, and potential exploitations of your database through compromised identities or malicious insiders. |
+> | [Deploy Azure Data Explorer DB with Cosmos DB connection](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.kusto/kusto-cosmos-db)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.kusto%2Fkusto-cosmos-db%2Fazuredeploy.json) | Deploy Azure Data Explorer DB with Cosmos DB connection. |
+> | [Azure Cosmos DB Account with Web App](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.web/documentdb-webapp)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.web%2Fdocumentdb-webapp%2Fazuredeploy.json) | This template deploys an Azure Cosmos DB account, an App Service Plan, and creates a Web App in the App Service Plan. It also adds two Application settings to the Web App that reference the Azure Cosmos DB account endpoint. This way solutions deployed to the Web App can connect to the Azure Cosmos DB account endpoint using those settings. |
+
+::: zone-end
+
+::: zone pivot="deployment-language-terraform"
+
+## Terraform (AzAPI provider) resource definition
+
+The databaseAccounts resource type can be deployed with operations that target: 
+
+* **Resource groups**
+
+For a list of changed properties in each API version, see [change log](~/microsoft.documentdb/change-log/databaseaccounts.md).
+
+## Resource format
+
+To create a Microsoft.DocumentDB/databaseAccounts resource, add the following Terraform to your template.
+
+```terraform
+resource "azapi_resource" "symbolicname" = {
+  type = "Microsoft.DocumentDB/databaseAccounts@2024-05-15"
+  name = "string"
+  identity = {
+    type = "string"
+    userAssignedIdentities = {
+      {customized property} = {
+      }
+    }
+  }
+  kind = "string"
+  location = "string"
+  body = jsonencode({
+    properties = {
+      analyticalStorageConfiguration = {
+        schemaType = "string"
+      }
+      apiProperties = {
+        serverVersion = "string"
+      }
+      backupPolicy = {
+        migrationState = {
+          startTime = "string"
+          status = "string"
+          targetType = "string"
+        }
+        type = "string"
+        // For remaining properties, see BackupPolicy objects
+      }
+      capabilities = [
+        {
+          name = "string"
+        }
+      ]
+      capacity = {
+        totalThroughputLimit = int
+      }
+      connectorOffer = "string"
+      consistencyPolicy = {
+        defaultConsistencyLevel = "string"
+        maxIntervalInSeconds = int
+        maxStalenessPrefix = int
+      }
+      cors = [
+        {
+          allowedHeaders = "string"
+          allowedMethods = "string"
+          allowedOrigins = "string"
+          exposedHeaders = "string"
+          maxAgeInSeconds = int
+        }
+      ]
+      createMode = "string"
+      customerManagedKeyStatus = "string"
+      databaseAccountOfferType = 'Standard'
+      defaultIdentity = "string"
+      disableKeyBasedMetadataWriteAccess = bool
+      disableLocalAuth = bool
+      enableAnalyticalStorage = bool
+      enableAutomaticFailover = bool
+      enableBurstCapacity = bool
+      enableCassandraConnector = bool
+      enableFreeTier = bool
+      enableMultipleWriteLocations = bool
+      enablePartitionMerge = bool
+      ipRules = [
+        {
+          ipAddressOrRange = "string"
+        }
+      ]
+      isVirtualNetworkFilterEnabled = bool
+      keyVaultKeyUri = "string"
+      locations = [
+        {
+          failoverPriority = int
+          isZoneRedundant = bool
+          locationName = "string"
+        }
+      ]
+      minimalTlsVersion = "string"
+      networkAclBypass = "string"
+      networkAclBypassResourceIds = [
+        "string"
+      ]
+      publicNetworkAccess = "string"
+      restoreParameters = {
+        databasesToRestore = [
+          {
+            collectionNames = [
+              "string"
+            ]
+            databaseName = "string"
+          }
+        ]
+        gremlinDatabasesToRestore = [
+          {
+            databaseName = "string"
+            graphNames = [
+              "string"
+            ]
+          }
+        ]
+        restoreMode = "string"
+        restoreSource = "string"
+        restoreTimestampInUtc = "string"
+        tablesToRestore = [
+          "string"
+        ]
+      }
+      virtualNetworkRules = [
+        {
+          id = "string"
+          ignoreMissingVNetServiceEndpoint = bool
+        }
+      ]
+    }
+  })
+  tags = {
+    {customized property} = "string"
+  }
+}
+```
+### BackupPolicy objects
+
+Set the **type** property to specify the type of object.
+
+For **Continuous**, use:
+
+```terraform
+{
+  continuousModeProperties = {
+    tier = "string"
+  }
+  type = 'Continuous'
+}
+```
+
+For **Periodic**, use:
+
+```terraform
+{
+  periodicModeProperties = {
+    backupIntervalInMinutes = int
+    backupRetentionIntervalInHours = int
+    backupStorageRedundancy = "string"
+  }
+  type = 'Periodic'
+}
+```
+
+## Property values
+
+### AnalyticalStorageConfiguration
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| schemaType | Describes the types of schema for analytical storage. | 'FullFidelity'<br />'WellDefined' |
+
+### ApiProperties
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| serverVersion | Describes the ServerVersion of an a MongoDB account. | '3.2'<br />'3.6'<br />'4.0'<br />'4.2'<br />'5.0'<br />'6.0' |
+
+### BackupPolicy
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| migrationState | The object representing the state of the migration between the backup policies. | [BackupPolicyMigrationState](#backuppolicymigrationstate-2) |
+| type | Set to 'Continuous' for type [ContinuousModeBackupPolicy](#continuousmodebackuppolicy-2). Set to 'Periodic' for type [PeriodicModeBackupPolicy](#periodicmodebackuppolicy-2). | 'Continuous'<br />'Periodic' (required) |
+
+### BackupPolicyMigrationState
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| startTime | Time at which the backup policy migration started (ISO-8601 format). | string |
+| status | Describes the status of migration between backup policy types. | 'Completed'<br />'Failed'<br />'InProgress'<br />'Invalid' |
+| targetType | Describes the target backup policy type of the backup policy migration. | 'Continuous'<br />'Periodic' |
+
+### Capability
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| name | Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include "EnableTable" and "EnableGremlin". | string |
+
+### Capacity
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| totalThroughputLimit | The total throughput limit imposed on the account. A totalThroughputLimit of 2000 imposes a strict limit of max throughput that can be provisioned on that account to be 2000. A totalThroughputLimit of -1 indicates no limits on provisioning of throughput. | int <br /><br />Constraints:<br />Min value = -1 |
+
+### Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+
+### ConsistencyPolicy
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| defaultConsistencyLevel | The default consistency level and configuration settings of the Cosmos DB account. | 'BoundedStaleness'<br />'ConsistentPrefix'<br />'Eventual'<br />'Session'<br />'Strong' (required) |
+| maxIntervalInSeconds | When used with the Bounded Staleness consistency level, this value represents the time amount of staleness (in seconds) tolerated. Accepted range for this value is 5 - 86400. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'. | int <br /><br />Constraints:<br />Min value = 5<br />Max value = 86400 |
+| maxStalenessPrefix | When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'. | int <br /><br />Constraints:<br />Min value = 1<br />Max value = 2147483647 |
+
+### ContinuousModeBackupPolicy
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| continuousModeProperties | Configuration values for continuous mode backup | [ContinuousModeProperties](#continuousmodeproperties-2) |
+| type | Describes the mode of backups. | 'Continuous' (required) |
+
+### ContinuousModeProperties
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| tier | Enum to indicate type of Continuous backup mode | 'Continuous30Days'<br />'Continuous7Days' |
+
+### CorsPolicy
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| allowedHeaders | The request headers that the origin domain may specify on the CORS request. | string |
+| allowedMethods | The methods (HTTP request verbs) that the origin domain may use for a CORS request. | string |
+| allowedOrigins | The origin domains that are permitted to make a request against the service via CORS. | string (required) |
+| exposedHeaders | The response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer. | string |
+| maxAgeInSeconds | The maximum amount time that a browser should cache the preflight OPTIONS request. | int <br /><br />Constraints:<br />Min value = 1<br />Max value = 2147483647 |
+
+### DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| analyticalStorageConfiguration | Analytical storage specific properties. | [AnalyticalStorageConfiguration](#analyticalstorageconfiguration-2) |
+| apiProperties | API specific properties. Currently, supported only for MongoDB API. | [ApiProperties](#apiproperties-2) |
+| backupPolicy | The object representing the policy for taking backups on an account. | [BackupPolicy](#backuppolicy-2) |
+| capabilities | List of Cosmos DB capabilities for the account | [Capability](#capability-2)[] |
+| capacity | The object that represents all properties related to capacity enforcement on an account. | [Capacity](#capacity-2) |
+| connectorOffer | The cassandra connector offer type for the Cosmos DB database C* account. | 'Small' |
+| consistencyPolicy | The consistency policy for the Cosmos DB account. | [ConsistencyPolicy](#consistencypolicy-2) |
+| cors | The CORS policy for the Cosmos DB database account. | [CorsPolicy](#corspolicy-2)[] |
+| createMode | Enum to indicate the mode of account creation. | 'Default'<br />'Restore' |
+| customerManagedKeyStatus | Indicates the status of the Customer Managed Key feature on the account. In case there are errors, the property provides troubleshooting guidance. | string |
+| databaseAccountOfferType | The offer type for the database | 'Standard' (required) |
+| defaultIdentity | The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more. | string |
+| disableKeyBasedMetadataWriteAccess | Disable write operations on metadata resources (databases, containers, throughput) via account keys | bool |
+| disableLocalAuth | Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication. | bool |
+| enableAnalyticalStorage | Flag to indicate whether to enable storage analytics. | bool |
+| enableAutomaticFailover | Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account. | bool |
+| enableBurstCapacity | Flag to indicate enabling/disabling of Burst Capacity feature on the account | bool |
+| enableCassandraConnector | Enables the cassandra connector on the Cosmos DB C* account | bool |
+| enableFreeTier | Flag to indicate whether Free Tier is enabled. | bool |
+| enableMultipleWriteLocations | Enables the account to write in multiple locations | bool |
+| enablePartitionMerge | Flag to indicate enabling/disabling of Partition Merge feature on the account | bool |
+| ipRules | List of IpRules. | [IpAddressOrRange](#ipaddressorrange-2)[] |
+| isVirtualNetworkFilterEnabled | Flag to indicate whether to enable/disable Virtual Network ACL rules. | bool |
+| keyVaultKeyUri | The URI of the key vault | string |
+| locations | An array that contains the georeplication locations enabled for the Cosmos DB account. | [Location](#location-2)[] (required) |
+| minimalTlsVersion | Indicates the minimum allowed Tls version. The default value is Tls 1.2. Cassandra and Mongo APIs only work with Tls 1.2. | 'Tls'<br />'Tls11'<br />'Tls12' |
+| networkAclBypass | Indicates what services are allowed to bypass firewall checks. | 'AzureServices'<br />'None' |
+| networkAclBypassResourceIds | An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account. | string[] |
+| publicNetworkAccess | Whether requests from Public Network are allowed | 'Disabled'<br />'Enabled'<br />'SecuredByPerimeter' |
+| restoreParameters | Parameters to indicate the information about the restore. | [RestoreParameters](#restoreparameters-2) |
+| virtualNetworkRules | List of Virtual Network ACL rules configured for the Cosmos DB account. | [VirtualNetworkRule](#virtualnetworkrule-2)[] |
+
+### DatabaseRestoreResource
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| collectionNames | The names of the collections available for restore. | string[] |
+| databaseName | The name of the database available for restore. | string |
+
+### GremlinDatabaseRestoreResource
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| databaseName | The name of the gremlin database available for restore. | string |
+| graphNames | The names of the graphs available for restore. | string[] |
+
+### IpAddressOrRange
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| ipAddressOrRange | A single IPv4 address or a single IPv4 address range in CIDR format. Provided IPs must be well-formatted and cannot be contained in one of the following ranges: 10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12, 192.168.0.0/16, since these are not enforceable by the IP address filter. Example of valid inputs: “23.40.210.245” or “23.40.210.0/8”. | string |
+
+### Location
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| failoverPriority | The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists. | int <br /><br />Constraints:<br />Min value = 0 |
+| isZoneRedundant | Flag to indicate whether or not this region is an AvailabilityZone region | bool |
+| locationName | The name of the region. | string |
+
+### ManagedServiceIdentity
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| type | The type of identity used for the resource. The type 'SystemAssigned,UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service. | 'None'<br />'SystemAssigned'<br />'SystemAssigned,UserAssigned'<br />'UserAssigned' |
+| userAssignedIdentities | The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'. | [ManagedServiceIdentityUserAssignedIdentities](#managedserviceidentityuserassignedidentities-2) |
+
+### ManagedServiceIdentityUserAssignedIdentities
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+
+### Microsoft.DocumentDB/databaseAccounts
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| identity | Identity for the resource. | [ManagedServiceIdentity](#managedserviceidentity-2) |
+| kind | Indicates the type of database account. This can only be set at database account creation. | 'GlobalDocumentDB'<br />'MongoDB'<br />'Parse' |
+| location | The location of the resource group to which the resource belongs. | string |
+| name | The resource name | string <br /><br />Constraints:<br />Min length = 3<br />Max length = 3<br />Pattern = `^[a-z0-9]+(-[a-z0-9]+)*` (required) |
+| properties | Properties to create and update Azure Cosmos DB database accounts. | [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties-2) (required) |
+| tags | Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB". | [Tags](#tags-2) |
+
+### PeriodicModeBackupPolicy
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| periodicModeProperties | Configuration values for periodic mode backup | [PeriodicModeProperties](#periodicmodeproperties-2) |
+| type | Describes the mode of backups. | 'Periodic' (required) |
+
+### PeriodicModeProperties
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| backupIntervalInMinutes | An integer representing the interval in minutes between two backups | int <br /><br />Constraints:<br />Min value = 0 |
+| backupRetentionIntervalInHours | An integer representing the time (in hours) that each backup is retained | int <br /><br />Constraints:<br />Min value = 0 |
+| backupStorageRedundancy | Enum to indicate type of backup residency | 'Geo'<br />'Local'<br />'Zone' |
+
+### RestoreParameters
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| databasesToRestore | List of specific databases available for restore. | [DatabaseRestoreResource](#databaserestoreresource-2)[] |
+| gremlinDatabasesToRestore | List of specific gremlin databases available for restore. | [GremlinDatabaseRestoreResource](#gremlindatabaserestoreresource-2)[] |
+| restoreMode | Describes the mode of the restore. | 'PointInTime' |
+| restoreSource | The id of the restorable database account from which the restore has to be initiated. For example: /subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/locations/{location}/restorableDatabaseAccounts/{restorableDatabaseAccountName} | string |
+| restoreTimestampInUtc | Time to which the account has to be restored (ISO-8601 format). | string |
+| tablesToRestore | List of specific tables available for restore. | string[] |
+
+### Tags
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+
+### VirtualNetworkRule
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| id | Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}. | string |
+| ignoreMissingVNetServiceEndpoint | Create firewall rule before the virtual network has vnet service endpoint enabled. | bool |
+
+
+::: zone-end

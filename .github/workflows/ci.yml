@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v4
+
+      - name: Run Tests
+        run: |
+          dotnet test
+
+  generate:
+    name: Generate
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v4
+
+      - name: Clone bicep-types-az
+        uses: actions/checkout@v4
+        with:
+          repository: Azure/bicep-types-az
+          path: workflow-temp/bicep-types-az
+
+      - name: Run Generation
+        run: |
+          mkdir -p "$RUNNER_TEMP/generated"
+          dotnet run --project ./src/TemplateRefGenerator \
+            --source-folder workflow-temp/bicep-types-az/generated \
+            --output-folder "$RUNNER_TEMP/generated" \
+            --verbose
+
+      - name: Upload Generated
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated
+          path: ${{ runner.temp }}/generated

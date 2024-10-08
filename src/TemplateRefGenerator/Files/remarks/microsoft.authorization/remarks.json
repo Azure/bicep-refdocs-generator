@@ -1,0 +1,12 @@
+{
+  "$schema": "../../remarks.schema.json",
+  "ResourceRemarks": [
+    {
+      "ResourceTypes": [
+        "microsoft.authorization/roleassignments",
+        "microsoft.authorization/roledefinitions"
+      ],
+      "Description": "For guidance on creating role assignments and definitions, see [Create Azure RBAC resources by using Bicep](/azure/azure-resource-manager/bicep/scenarios-rbac)."
+    }
+  ]
+}

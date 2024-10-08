@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "QuickstartLinks": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/QuickstartLink"
+        }
+      }
+    }
+  },
+  "required": [
+    "QuickstartLinks"
+  ],
+  "additionalProperties": false,
+  "definitions": {
+    "QuickstartLink": {
+      "properties": {
+        "Title": {
+          "type": "string"
+        },
+        "Description": {
+          "type": "string"
+        },
+        "TemplateUrl": {
+          "type": "string"
+        },
+        "DeployUrl": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Title",
+        "Description",
+        "TemplateUrl",
+        "DeployUrl"
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch CLI",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/src/TemplateRefGenerator/bin/Debug/net8.0/TemplateRefGenerator",
+            "args": [
+                "--source-folder",
+                "../../../bicep-types-az/generated",
+                "--output-folder",
+                "../../generated",
+                "--include-folder",
+                "../../includes",
+                "--use-bicep-types",
+                "--verbose"
+            ],
+            "cwd": "${workspaceFolder}/src/TemplateRefGenerator",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Launch CLI (Single Provider)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/src/TemplateRefGenerator/bin/Debug/net8.0/TemplateRefGenerator",
+            "args": [
+                "--source-folder",
+                "../../../bicep-types-az/generated",
+                "--output-folder",
+                "../../generated",
+                "--include-folder",
+                "../../includes",
+                "--provider-namespace",
+                "${input:providerNamespace}",
+                "--use-bicep-types",
+                "--verbose"
+            ],
+            "cwd": "${workspaceFolder}/src/TemplateRefGenerator",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "providerNamespace",
+            "default": "Microsoft.Compute",
+            "type": "promptString",
+            "description": "Pick a Provider Namespace to generate docs for"
+        }
+    ]
+}
