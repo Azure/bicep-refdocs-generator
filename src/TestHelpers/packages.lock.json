@@ -73,9 +73,9 @@
       },
       "MSTest.TestFramework": {
         "type": "Direct",
-        "requested": "[3.5.2, )",
-        "resolved": "3.5.2",
-        "contentHash": "XDPIPvPWcbnyte0Oj0EzxMV38RIE925C0EtZCWXUfsho+QYqIv3LNjIZstG/JpamlhPHOQlfdrzc/FRF9lW5Ag=="
+        "requested": "[3.6.1, )",
+        "resolved": "3.6.1",
+        "contentHash": "ugHS5Bz+hlLBd7FSS9JokRrzjmlmDQIx0Hxj6LTJztH/CRkuzNM+hK9Zoa53DR/B4BysEpu16ZXnm6KLH6Vrzg=="
       },
       "Nerdbank.GitVersioning": {
         "type": "Direct",
