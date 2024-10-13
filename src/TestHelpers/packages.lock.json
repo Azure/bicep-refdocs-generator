@@ -28,11 +28,11 @@
       },
       "JsonDiffPatch.Net": {
         "type": "Direct",
-        "requested": "[2.1.0, )",
-        "resolved": "2.1.0",
-        "contentHash": "SvJLeTGc01OUkMo87ExRBLv593dYZ4TtdsbPBB5ukmOcHIc+jT+epCzqwokxgVoeIdFGeAczOnCD51es7LEnuQ==",
+        "requested": "[2.3.0, )",
+        "resolved": "2.3.0",
+        "contentHash": "a+I1WNXSwkelsgUfMk3LVRY3FzQDV8nCpRMcml2whQDimbnOG+mxRCt6kCzMRFwshg9ir4shm0yvYDL7E89ayg==",
         "dependencies": {
-          "Newtonsoft.Json": "10.0.3"
+          "Newtonsoft.Json": "11.0.1"
         }
       },
       "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
