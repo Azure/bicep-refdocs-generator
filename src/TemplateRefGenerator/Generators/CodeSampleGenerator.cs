@@ -116,7 +116,7 @@ public class CodeSampleGenerator
                 }
                 if (!props.Any() && additionalPropType is {})
                 {
-                    AddProperty("{customized property}", () => GenerateBicep(sb, indentLevel + 1, additionalPropType.Type, $"{path}.*", visited));
+                    AddProperty("'[key (string)]'", () => GenerateBicep(sb, indentLevel + 1, additionalPropType.Type, $"{path}.*", visited));
                 }
                 sb.Append(indent + "}");
                 break;
@@ -234,7 +234,7 @@ public class CodeSampleGenerator
                 }
                 if (!props.Any() && additionalPropType is {})
                 {
-                    AddProperty("{customized property}", true, () => GenerateArmTemplateJson(resource, sb, indentLevel + 1, additionalPropType.Type, $"{path}.*", visited));
+                    AddProperty("[key (string)]", true, () => GenerateArmTemplateJson(resource, sb, indentLevel + 1, additionalPropType.Type, $"{path}.*", visited));
                 }
                 sb.Append(indent + "}");
                 break;
@@ -366,7 +366,7 @@ public class CodeSampleGenerator
                 }
                 if (!props.Any() && additionalPropType is {})
                 {
-                    AddProperty("{customized property}", () => GenerateTerraform(resource, sb, indentLevel + 1, additionalPropType.Type, $"{path}.*", visited));
+                    AddProperty("\"[key (string)]\"", () => GenerateTerraform(resource, sb, indentLevel + 1, additionalPropType.Type, $"{path}.*", visited));
                 }
 
                 sb.Append(indent + "}");

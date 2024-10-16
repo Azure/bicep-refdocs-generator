@@ -57,7 +57,7 @@ resource symbolicname 'Microsoft.Resources/resourceGroups@2024-07-01' = {
   name: 'string'
   properties: {}
   tags: {
-    {customized property}: 'string'
+    '[key (string)]': 'string'
   }
 }
 ```
@@ -139,7 +139,7 @@ To create a Microsoft.Resources/resourceGroups resource, add the following JSON 
   "properties": {
   },
   "tags": {
-    "{customized property}": "string"
+    "[key (string)]": "string"
   }
 }
 ```
@@ -208,7 +208,7 @@ resource "azapi_resource" "symbolicname" {
     }
   })
   tags = {
-    {customized property} = "string"
+    "[key (string)]" = "string"
   }
 }
 ```

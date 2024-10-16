@@ -143,7 +143,7 @@ resource symbolicname 'Microsoft.Compute/disks@2024-03-02' = {
     name: 'string'
   }
   tags: {
-    {customized property}: 'string'
+    '[key (string)]': 'string'
   }
   zones: [
     'string'
@@ -426,7 +426,7 @@ To create a Microsoft.Compute/disks resource, add the following JSON to your tem
     "name": "string"
   },
   "tags": {
-    "{customized property}": "string"
+    "[key (string)]": "string"
   },
   "zones": [ "string" ]
 }
@@ -715,7 +715,7 @@ resource "azapi_resource" "symbolicname" {
     name = "string"
   }
   tags = {
-    {customized property} = "string"
+    "[key (string)]" = "string"
   }
   zones = [
     "string"

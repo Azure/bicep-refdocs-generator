@@ -50,7 +50,7 @@ resource symbolicname 'Microsoft.CostManagement/exports@2019-01-01' = {
     definition: {
       dataset: {
         aggregation: {
-          {customized property}: {
+          '[key (string)]': {
             function: 'string'
             name: 'string'
           }
@@ -274,7 +274,7 @@ To create a Microsoft.CostManagement/exports resource, add the following JSON to
     "definition": {
       "dataset": {
         "aggregation": {
-          "{customized property}": {
+          "[key (string)]": {
             "function": "string",
             "name": "string"
           }
@@ -493,7 +493,7 @@ resource "azapi_resource" "symbolicname" {
       definition = {
         dataset = {
           aggregation = {
-            {customized property} = {
+            "[key (string)]" = {
               function = "string"
               name = "string"
             }
