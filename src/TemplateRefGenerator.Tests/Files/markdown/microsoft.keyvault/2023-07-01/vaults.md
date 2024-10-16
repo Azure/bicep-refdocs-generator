@@ -111,7 +111,7 @@ resource symbolicname 'Microsoft.KeyVault/vaults@2023-07-01' = {
     vaultUri: 'string'
   }
   tags: {
-    {customized property}: 'string'
+    '[key (string)]': 'string'
   }
 }
 ```
@@ -319,7 +319,7 @@ To create a Microsoft.KeyVault/vaults resource, add the following JSON to your t
     "vaultUri": "string"
   },
   "tags": {
-    "{customized property}": "string"
+    "[key (string)]": "string"
   }
 }
 ```
@@ -536,7 +536,7 @@ resource "azapi_resource" "symbolicname" = {
     }
   })
   tags = {
-    {customized property} = "string"
+    "[key (string)]" = "string"
   }
 }
 ```

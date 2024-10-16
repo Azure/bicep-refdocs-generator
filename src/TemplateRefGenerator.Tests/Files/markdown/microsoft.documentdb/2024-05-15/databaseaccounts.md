@@ -73,7 +73,7 @@ resource symbolicname 'Microsoft.DocumentDB/databaseAccounts@2024-05-15' = {
   identity: {
     type: 'string'
     userAssignedIdentities: {
-      {customized property}: {}
+      '[key (string)]': {}
     }
   }
   kind: 'string'
@@ -183,7 +183,7 @@ resource symbolicname 'Microsoft.DocumentDB/databaseAccounts@2024-05-15' = {
     ]
   }
   tags: {
-    {customized property}: 'string'
+    '[key (string)]': 'string'
   }
 }
 ```
@@ -476,7 +476,7 @@ To create a Microsoft.DocumentDB/databaseAccounts resource, add the following JS
   "identity": {
     "type": "string",
     "userAssignedIdentities": {
-      "{customized property}": {
+      "[key (string)]": {
       }
     }
   },
@@ -578,7 +578,7 @@ To create a Microsoft.DocumentDB/databaseAccounts resource, add the following JS
     ]
   },
   "tags": {
-    "{customized property}": "string"
+    "[key (string)]": "string"
   }
 }
 ```
@@ -870,7 +870,7 @@ resource "azapi_resource" "symbolicname" = {
   identity = {
     type = "string"
     userAssignedIdentities = {
-      {customized property} = {
+      "[key (string)]" = {
       }
     }
   }
@@ -982,7 +982,7 @@ resource "azapi_resource" "symbolicname" = {
     }
   })
   tags = {
-    {customized property} = "string"
+    "[key (string)]" = "string"
   }
 }
 ```
