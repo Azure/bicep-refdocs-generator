@@ -33,15 +33,15 @@ foreach ($metadataPath in $metadataPaths) {
     $hasBicep = (Test-Path $bicepPath -PathType Leaf)
 
     $metadataContent = Get-Content $metadataPath.FullName | ConvertFrom-Json
-    $description = $metadataContent.description
+    $description = $metadataContent.description.Replace("/en-us/", "/").Replace("http://", "https://").Replace("https://docs.microsoft.com/", "/")
     $displayName = $metadataContent.itemDisplayName
 
     $templateContent = Get-Content $templatePath | ConvertFrom-Json
     $resourceTypes = GetResourceTypes($templateContent)
 
     $quickstartLinks += @{
-        Title = $metadataContent.itemDisplayName;
-        Description = $metadataContent.description;
+        Title = $displayName;
+        Description = $description;
         Path = [System.IO.Path]::GetRelativePath($QuickStartsRepoPath, "$templatePath/..").Replace("\\", "/")
         ResourceTypes = @($resourceTypes);
         HasBicep = $hasBicep;

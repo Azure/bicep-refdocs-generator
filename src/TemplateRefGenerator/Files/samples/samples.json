@@ -1400,7 +1400,7 @@
       "HasBicep": false,
       "ResourceTypes": [],
       "Path": "application-workloads/netapp/netapp-ontap-sql",
-      "Description": "NetApp ONTAP Cloud, the leading enterprise storage operating system, is deployed using OnCommand Cloud Manager to deliver secure, proven NFS, CIFS and iSCSI data management for Azure cloud storage. A software-only storage service running the ONTAP storage operating system, ONTAP Cloud combines data control with enterprise-class storage features—such as data deduplication and compression—to minimize your Azure storage footprint. OnCommand Cloud Manager handles deployment and management of ONTAP Cloud, giving you a simple point-and-click environment to manage your storage and ease control of your data. This Quickstart deploys a production ready and secure environment which includes NetApp ONTAP Cloud, OnCommand Manager, backend SQL Server and Jump Server for accessing systems via remote Desktop.It follows standard recommended architecture & security best practices. See quickstart guide at http://bit.ly/otcguide before deploying the template.",
+      "Description": "NetApp ONTAP Cloud, the leading enterprise storage operating system, is deployed using OnCommand Cloud Manager to deliver secure, proven NFS, CIFS and iSCSI data management for Azure cloud storage. A software-only storage service running the ONTAP storage operating system, ONTAP Cloud combines data control with enterprise-class storage features—such as data deduplication and compression—to minimize your Azure storage footprint. OnCommand Cloud Manager handles deployment and management of ONTAP Cloud, giving you a simple point-and-click environment to manage your storage and ease control of your data. This Quickstart deploys a production ready and secure environment which includes NetApp ONTAP Cloud, OnCommand Manager, backend SQL Server and Jump Server for accessing systems via remote Desktop.It follows standard recommended architecture & security best practices. See quickstart guide at https://bit.ly/otcguide before deploying the template.",
       "Title": "NetApp ONTAP Cloud with SQL"
     },
     {
@@ -2092,7 +2092,7 @@
         "Microsoft.Network/virtualNetworks"
       ],
       "Path": "application-workloads/sap/sap-lama-apps",
-      "Description": "This template deploys a virtual machine and installs the required applications to use this virtual machine for SAP LaMa. The template also creates the required disk layout. For more information about managing Azure virtual machines with SAP LaMa, see https://docs.microsoft.com/azure/virtual-machines/workloads/sap/lama-installation.",
+      "Description": "This template deploys a virtual machine and installs the required applications to use this virtual machine for SAP LaMa. The template also creates the required disk layout. For more information about managing Azure virtual machines with SAP LaMa, see /azure/virtual-machines/workloads/sap/lama-installation.",
       "Title": "SAP LaMa template for SAP NetWeaver application server"
     },
     {
@@ -2105,7 +2105,7 @@
         "Microsoft.Network/virtualNetworks"
       ],
       "Path": "application-workloads/sap/sap-lama-ascs",
-      "Description": "This template deploys a virtual machine and installs the required applications to use this virtual machine for SAP LaMa. The template also creates the required disk layout. For more information about managing Azure virtual machines with SAP LaMa, see https://docs.microsoft.com/azure/virtual-machines/workloads/sap/lama-installation.",
+      "Description": "This template deploys a virtual machine and installs the required applications to use this virtual machine for SAP LaMa. The template also creates the required disk layout. For more information about managing Azure virtual machines with SAP LaMa, see /azure/virtual-machines/workloads/sap/lama-installation.",
       "Title": "SAP LaMa template for SAP NetWeaver ASCS"
     },
     {
@@ -2118,7 +2118,7 @@
         "Microsoft.Network/virtualNetworks"
       ],
       "Path": "application-workloads/sap/sap-lama-database",
-      "Description": "This template deploys a virtual machine and installs the required applications to use this virtual machine for SAP LaMa. The template also creates the required disk layout. For more information about managing Azure virtual machines with SAP LaMa, see https://docs.microsoft.com/azure/virtual-machines/workloads/sap/lama-installation.",
+      "Description": "This template deploys a virtual machine and installs the required applications to use this virtual machine for SAP LaMa. The template also creates the required disk layout. For more information about managing Azure virtual machines with SAP LaMa, see /azure/virtual-machines/workloads/sap/lama-installation.",
       "Title": "SAP LaMa template for SAP NetWeaver database server"
     },
     {
@@ -2816,7 +2816,7 @@
         "Microsoft.Network/virtualNetworks"
       ],
       "Path": "application-workloads/wordpress/wordpress-single-vm-ubuntu",
-      "Description": "This template deploys a complete LAMP stack, then installs and initializes WordPress. Once the deployment is finished, you need to go to http://fqdn.of.your.vm/wordpress/ to finish the configuration, create an account, and get started with WordPress.",
+      "Description": "This template deploys a complete LAMP stack, then installs and initializes WordPress. Once the deployment is finished, you need to go to https://fqdn.of.your.vm/wordpress/ to finish the configuration, create an account, and get started with WordPress.",
       "Title": "Deploy a single-VM WordPress to Azure"
     },
     {
@@ -4479,7 +4479,7 @@
         "Microsoft.Network/virtualNetworks"
       ],
       "Path": "demos/vm-winrm-keyvault-windows",
-      "Description": "This template installs a certificate from Azure Key Vault on a Virtual Machine and opens up WinRM HTTP and HTTPS listeners. Prerequisite: A certificate uploaded to Azure Key Vault. Create the Key Vault using the template at http://azure.microsoft.com/en-us/documentation/templates/101-create-key-vault",
+      "Description": "This template installs a certificate from Azure Key Vault on a Virtual Machine and opens up WinRM HTTP and HTTPS listeners. Prerequisite: A certificate uploaded to Azure Key Vault. Create the Key Vault using the template at https://azure.microsoft.com/documentation/templates/101-create-key-vault",
       "Title": "WinRM on a Windows VM"
     },
     {
@@ -6847,7 +6847,7 @@
         "Microsoft.Network/virtualNetworks"
       ],
       "Path": "quickstarts/microsoft.compute/vm-push-certificate-windows",
-      "Description": "Push a certificate onto a Windows VM. Create the Key Vault using the template at http://azure.microsoft.com/en-us/documentation/templates/101-create-key-vault",
+      "Description": "Push a certificate onto a Windows VM. Create the Key Vault using the template at https://azure.microsoft.com/documentation/templates/101-create-key-vault",
       "Title": "Push a certificate onto a Windows VM"
     },
     {
@@ -7112,7 +7112,7 @@
         "Microsoft.Network/virtualNetworks"
       ],
       "Path": "quickstarts/microsoft.compute/vm-trustedlaunch-linux",
-      "Description": "This template allows you to deploy a trusted launch capable Linux virtual machine using a few different options for the Linux version, using the latest patched version. If you enable Secureboot and vTPM, the Guest Attestation extension will be installed on your VM. This extension will perform remote [attestation](https://docs.microsoft.com/en-us/windows/security/information-protection/tpm/tpm-fundamentals#measured-boot-with-support-for-attestation) by the cloud. By default, this will deploy an Standard_D2_v3 size virtual machine in the resource group location and return the FQDN of the virtual machine.",
+      "Description": "This template allows you to deploy a trusted launch capable Linux virtual machine using a few different options for the Linux version, using the latest patched version. If you enable Secureboot and vTPM, the Guest Attestation extension will be installed on your VM. This extension will perform remote [attestation](/windows/security/information-protection/tpm/tpm-fundamentals#measured-boot-with-support-for-attestation) by the cloud. By default, this will deploy an Standard_D2_v3 size virtual machine in the resource group location and return the FQDN of the virtual machine.",
       "Title": "Deploy a trusted launch capable Linux virtual machine"
     },
     {
@@ -7126,7 +7126,7 @@
         "Microsoft.Network/virtualNetworks"
       ],
       "Path": "quickstarts/microsoft.compute/vm-trustedlaunch-windows",
-      "Description": "This template allows you to deploy a trusted launch capable Windows virtual machine using a few different options for the Windows version, using the latest patched version. If you enable Secureboot and vTPM, the Guest Attestation extension will be installed on your VM. This extension will perform remote [attestation](https://docs.microsoft.com/en-us/windows/security/information-protection/tpm/tpm-fundamentals#measured-boot-with-support-for-attestation) by the cloud. By default, this will deploy an Standard_D2_v3 size virtual machine in the resource group location and return the FQDN of the virtual machine.",
+      "Description": "This template allows you to deploy a trusted launch capable Windows virtual machine using a few different options for the Windows version, using the latest patched version. If you enable Secureboot and vTPM, the Guest Attestation extension will be installed on your VM. This extension will perform remote [attestation](/windows/security/information-protection/tpm/tpm-fundamentals#measured-boot-with-support-for-attestation) by the cloud. By default, this will deploy an Standard_D2_v3 size virtual machine in the resource group location and return the FQDN of the virtual machine.",
       "Title": "Deploy a trusted launch capable Windows virtual machine"
     },
     {
@@ -7455,7 +7455,7 @@
         "Microsoft.Network/virtualNetworks"
       ],
       "Path": "quickstarts/microsoft.compute/vmss-trustedlaunch-windows",
-      "Description": "This template allows you to deploy a trusted launch capable VM Scale Set of Windows VMs using the latest patched version of Windows Server 2016, Windows Server 2019 or Windows Server 2022 Azure Edition. These VMs are behind a load balancer with NAT rules for RDP connections. If you enable Secureboot and vTPM, the Guest Attestation extension will be installed on your VMSS. This extension will perform remote [attestation](https://docs.microsoft.com/en-us/windows/security/information-protection/tpm/tpm-fundamentals#measured-boot-with-support-for-attestation) by the cloud.",
+      "Description": "This template allows you to deploy a trusted launch capable VM Scale Set of Windows VMs using the latest patched version of Windows Server 2016, Windows Server 2019 or Windows Server 2022 Azure Edition. These VMs are behind a load balancer with NAT rules for RDP connections. If you enable Secureboot and vTPM, the Guest Attestation extension will be installed on your VMSS. This extension will perform remote [attestation](/windows/security/information-protection/tpm/tpm-fundamentals#measured-boot-with-support-for-attestation) by the cloud.",
       "Title": "Deploy a trusted launch capable Windows VM Scale Set"
     },
     {
@@ -8613,7 +8613,7 @@
         "Microsoft.VirtualMachineImages/imageTemplates"
       ],
       "Path": "quickstarts/microsoft.devcenter/devbox-with-customized-image",
-      "Description": "This template would create all Dev Box admin resources as per Dev Box quick start guide (https://learn.microsoft.com/en-us/azure/dev-box/quickstart-create-dev-box). You can view all resources created, or directly go to DevPortal.microsoft.com to create your first Dev Box.",
+      "Description": "This template would create all Dev Box admin resources as per Dev Box quick start guide (https://learn.microsoft.com/azure/dev-box/quickstart-create-dev-box). You can view all resources created, or directly go to DevPortal.microsoft.com to create your first Dev Box.",
       "Title": "Configure Dev Box service"
     },
     {
@@ -9347,7 +9347,7 @@
         "Microsoft.Storage/storageAccounts"
       ],
       "Path": "quickstarts/microsoft.hdinsight/hdinsight-kafka-with-edge-schema-registry",
-      "Description": "This template allows you to create an HDInsight cluster running Linux with a schema registry edge node. For more information, see https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-apps-use-edge-node",
+      "Description": "This template allows you to create an HDInsight cluster running Linux with a schema registry edge node. For more information, see /azure/hdinsight/hdinsight-apps-use-edge-node",
       "Title": "Deploy HDInsight cluster + Confluent Schema Registry node"
     },
     {
@@ -9356,7 +9356,7 @@
         "Microsoft.HDInsight/clusters/applications"
       ],
       "Path": "quickstarts/microsoft.hdinsight/hdinsight-linux-add-edge-node",
-      "Description": "This template allows you to create an empty edge node and add it to an existing HDInsight cluster. For more information, see https://docs.microsoft.com/azure/hdinsight/hdinsight-apps-use-edge-node",
+      "Description": "This template allows you to create an empty edge node and add it to an existing HDInsight cluster. For more information, see /azure/hdinsight/hdinsight-apps-use-edge-node",
       "Title": "Deploy an edge node to an existing HDInsight cluster"
     },
     {
@@ -9396,7 +9396,7 @@
         "Microsoft.Storage/storageAccounts"
       ],
       "Path": "quickstarts/microsoft.hdinsight/hdinsight-linux-with-edge-node",
-      "Description": "This template allows you to create an HDInsight cluster running Linux with an empty edge node. For more information, see https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-apps-use-edge-node",
+      "Description": "This template allows you to create an HDInsight cluster running Linux with an empty edge node. For more information, see /azure/hdinsight/hdinsight-apps-use-edge-node",
       "Title": "Deploy a HDInsight cluster with an edge node"
     },
     {
@@ -11638,7 +11638,7 @@
         "Microsoft.Network/virtualNetworks/subnets"
       ],
       "Path": "quickstarts/microsoft.network/load-balancer-ip-configured-backend-pool",
-      "Description": "This template is used to demonstrate how ARM Templates can be used to configure the Backend Pool of a Load Balancer by IP Address as outlined in the [Backend Pool management](https://docs.microsoft.com/azure/load-balancer/backend-pool-management) document.",
+      "Description": "This template is used to demonstrate how ARM Templates can be used to configure the Backend Pool of a Load Balancer by IP Address as outlined in the [Backend Pool management](/azure/load-balancer/backend-pool-management) document.",
       "Title": "Standard Load Balancer with Backend Pool by IP Addresses"
     },
     {
@@ -13365,7 +13365,7 @@
         "Microsoft.Web/sites/sourcecontrols"
       ],
       "Path": "quickstarts/microsoft.web/app-service-docs-linux",
-      "Description": "This template is to be used with http://docs.microsoft.com/azure/app-service/quickstart-arm-template",
+      "Description": "This template is to be used with /azure/app-service/quickstart-arm-template",
       "Title": "App Service Quickstart - Linux App"
     },
     {
@@ -13376,7 +13376,7 @@
         "Microsoft.Web/sites/sourcecontrols"
       ],
       "Path": "quickstarts/microsoft.web/app-service-docs-windows",
-      "Description": "This template is to be used with http://docs.microsoft.com/azure/app-service/quickstart-arm-template",
+      "Description": "This template is to be used with /azure/app-service/quickstart-arm-template",
       "Title": "App Service Quickstart - Windows app"
     },
     {
@@ -13386,7 +13386,7 @@
         "Microsoft.Web/sites"
       ],
       "Path": "quickstarts/microsoft.web/app-service-docs-windows-container",
-      "Description": "This template is to be used with http://docs.microsoft.com/azure/app-service/quickstart-arm-template",
+      "Description": "This template is to be used with /azure/app-service/quickstart-arm-template",
       "Title": "App Service Quickstart - Windows container app"
     },
     {
@@ -14104,7 +14104,7 @@
         "Microsoft.Web/sites/sourcecontrols"
       ],
       "Path": "quickstarts/microsoft.web/webapp-basic-windows",
-      "Description": "This template is to be used with http://docs.microsoft.com/azure/app-service/quickstart-arm-template",
+      "Description": "This template is to be used with /azure/app-service/quickstart-arm-template",
       "Title": "App Service Quickstart - Windows app"
     },
     {
