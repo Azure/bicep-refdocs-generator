@@ -19,13 +19,14 @@ public class ConfigLoader
         ImmutableArray<string> ExcludedProviders);
 
     public record SamplesFile(
-        ImmutableDictionary<string, ImmutableArray<QuickstartLink>> QuickstartLinks);
+        ImmutableArray<QuickstartLink> QuickstartLinks);
 
     public record QuickstartLink(
         string Title,
         string Description,
-        string TemplateUrl,
-        string DeployUrl);
+        string Path,
+        ImmutableArray<string> ResourceTypes,
+        bool HasBicep);
 
     public ConfigFile GetConfiguration()
         => ConfigFileLazy.Value;

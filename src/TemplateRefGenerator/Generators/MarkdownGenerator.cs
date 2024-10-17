@@ -252,23 +252,30 @@ For **{discSample.DiscriminatorValue}**, use:
 """);
 
         var quickstartLinks = configLoader.GetSamples().QuickstartLinks;
-        if (quickstartLinks.TryGetValue(resource.ResourceType.ToLowerInvariant(), out var links))
+        var matchingLinks = quickstartLinks
+            .Where(x => x.ResourceTypes.Contains(resource.ResourceType, StringComparer.OrdinalIgnoreCase))
+            .Where(x => x.HasBicep)
+            .OrderBy(x => x.Title).ToArray();
+
+        if (matchingLinks.Any())
         {
 
             sb.Append($"""
-## Quickstart templates
+## Quickstart samples
 
-The following quickstart templates deploy this resource type.
+The following quickstart samples deploy this resource type.
 
 > [!div class="mx-tableFixed"]
-> | Template | Description |
+> | Bicep File | Description |
 > | ----- | ----- |
 
 """);
-            foreach (var link in links)
+            foreach (var link in matchingLinks)
             {
+                var bicepUrl = $"https://github.com/Azure/azure-quickstart-templates/tree/master/{link.Path}/main.bicep";
+
                 sb.Append($"""
-> | [{link.Title}]({link.TemplateUrl})<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)]({link.DeployUrl}) | {link.Description} |
+> | [{link.Title}]({bicepUrl}) | {link.Description} |
 
 """);
             }
@@ -376,7 +383,11 @@ For **{discSample.DiscriminatorValue}**, use:
 """);
 
         var quickstartLinks = configLoader.GetSamples().QuickstartLinks;
-        if (quickstartLinks.TryGetValue(resource.ResourceType.ToLowerInvariant(), out var links))
+        var matchingLinks = quickstartLinks
+            .Where(x => x.ResourceTypes.Contains(resource.ResourceType, StringComparer.OrdinalIgnoreCase))
+            .OrderBy(x => x.Title).ToArray();
+
+        if (matchingLinks.Any())
         {
 
             sb.Append($"""
@@ -389,10 +400,14 @@ The following quickstart templates deploy this resource type.
 > | ----- | ----- |
 
 """);
-            foreach (var link in links)
+            foreach (var link in matchingLinks)
             {
+                var templateUrl = $"https://github.com/Azure/azure-quickstart-templates/tree/master/{link.Path}";
+                var rawTemplateUrl = $"https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/{link.Path}/azuredeploy.json";
+                var deployUrl = $"https://portal.azure.com/#create/Microsoft.Template/uri/{Uri.EscapeDataString(rawTemplateUrl)}";
+
                 sb.Append($"""
-> | [{link.Title}]({link.TemplateUrl})<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)]({link.DeployUrl}) | {link.Description} |
+> | [{link.Title}]({templateUrl})<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)]({deployUrl}) | {link.Description} |
 
 """);
             }
