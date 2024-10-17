@@ -6,12 +6,9 @@
       "type": "string"
     },
     "QuickstartLinks": {
-      "type": "object",
-      "additionalProperties": {
-        "type": "array",
-        "items": {
-          "$ref": "#/definitions/QuickstartLink"
-        }
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/QuickstartLink"
       }
     }
   },
@@ -28,19 +25,26 @@
         "Description": {
           "type": "string"
         },
-        "TemplateUrl": {
+        "Path": {
           "type": "string"
         },
-        "DeployUrl": {
-          "type": "string"
+        "ResourceTypes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "HasBicep": {
+          "type": "boolean"
         }
       },
       "required": [
         "Title",
         "Description",
-        "TemplateUrl",
-        "DeployUrl"
-      ]
+        "Path",
+        "ResourceTypes"
+      ],
+      "additionalProperties": false
     }
   }
 }
