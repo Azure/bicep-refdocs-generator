@@ -16,6 +16,6 @@
     <PackageReference Include="MSTest.TestFramework" Version="3.6.1" />
     <PackageReference Include="Azure.Bicep.Types.Az" Version="0.2.706" />
     <PackageReference Include="JsonDiffPatch.Net" Version="2.3.0" />
-    <PackageReference Include="DiffPlex" Version="1.7.1" />
+    <PackageReference Include="DiffPlex" Version="1.7.2" />
   </ItemGroup>
 </Project>
