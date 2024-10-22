@@ -255,7 +255,7 @@ No properties added, updated or removed.
 
         var mdFilePath = $"~/{providerNamespace}/{apiVersion}/{unqualifiedResourceType}.md".ToLowerInvariant();
 
-        return $"[{typeName}]({mdFilePath}#{typeName.ToLowerInvariant()})";
+        return $"[{typeName}]({mdFilePath}{MarkdownUtils.GetDocAnchor(typeName)})";
     }
 
     private static IEnumerable<(string? prevName, string? newName)> GetObjectPropertyChanges(ResourceTypeChangeLog resourceTypeChange, VersionedChangeLog versionedChange, IReadOnlyDictionary<string, ObjectTypeProperty> before, IReadOnlyDictionary<string, ObjectTypeProperty> after)
@@ -403,7 +403,7 @@ No properties added, updated or removed.
         var providerNamespace = Utils.GetProviderNamespace(resourceType);
         var unqualifiedResourceType = Utils.GetUnqualifiedType(resourceType);
 
-        return MarkdownUtils.GetLink(unqualifiedResourceType, $"~/{providerNamespace}/change-log/{unqualifiedResourceType}.md#{apiVersion}".ToLowerInvariant());
+        return MarkdownUtils.GetLink(unqualifiedResourceType, $"~/{providerNamespace}/change-log/{unqualifiedResourceType}.md{MarkdownUtils.GetDocAnchor(apiVersion)}".ToLowerInvariant());
     }
 
     private static string GetSummaryVersionChanges(ProviderChangeLog changeLog)

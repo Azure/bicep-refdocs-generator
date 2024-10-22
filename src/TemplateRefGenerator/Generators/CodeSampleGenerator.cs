@@ -330,7 +330,7 @@ public class CodeSampleGenerator
         switch (type)
         {
             case ResourceType resourceType:
-                sb.Append($"resource \"azapi_resource\" \"symbolicname\" = ");
+                sb.Append($"resource \"azapi_resource\" \"symbolicname\" ");
                 GenerateTerraform(resource, sb, 0, resourceType.Body.Type, "", visited);
                 break;
 
@@ -379,7 +379,7 @@ public class CodeSampleGenerator
                 sb.Append(indent + "]");
                 break;
             case StringLiteralType stringLiteralType:
-                sb.Append($"'{stringLiteralType.Value}'");
+                sb.Append($"\"{stringLiteralType.Value}\"");
                 break;
             case IntegerType:
                 sb.Append($"int");

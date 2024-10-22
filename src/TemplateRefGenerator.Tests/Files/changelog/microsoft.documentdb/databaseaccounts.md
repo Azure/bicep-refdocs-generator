@@ -353,7 +353,7 @@ Updated:
 * [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2021-06-15/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Added property 'disableLocalAuth'
 * [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2021-06-15/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Added property 'instanceId'
 * [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2021-06-15/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Added property 'restoreParameters'
-* [Microsoft.DocumentDB/databaseAccounts](~/microsoft.documentdb/2021-06-15/databaseaccounts.md#microsoft.documentdb/databaseaccounts): Added property 'systemData'
+* [Microsoft.DocumentDB/databaseAccounts](~/microsoft.documentdb/2021-06-15/databaseaccounts.md#microsoftdocumentdbdatabaseaccounts): Added property 'systemData'
 
 
 ## 2021-05-15
@@ -380,7 +380,7 @@ Removed:
 Updated:
 
 * [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2021-04-15/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Changed type from Azure.Bicep.Types.Concrete.DiscriminatedObjectType to Azure.Bicep.Types.Concrete.ObjectType
-* [Microsoft.DocumentDB/databaseAccounts](~/microsoft.documentdb/2021-04-15/databaseaccounts.md#microsoft.documentdb/databaseaccounts): Removed property 'systemData'
+* [Microsoft.DocumentDB/databaseAccounts](~/microsoft.documentdb/2021-04-15/databaseaccounts.md#microsoftdocumentdbdatabaseaccounts): Removed property 'systemData'
 * [PeriodicModeProperties](~/microsoft.documentdb/2021-04-15/databaseaccounts.md#periodicmodeproperties): Removed property 'backupStorageRedundancy'
 
 
@@ -397,7 +397,7 @@ Added:
 Updated:
 
 * [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2021-04-01-preview/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Changed type from Azure.Bicep.Types.Concrete.ObjectType to Azure.Bicep.Types.Concrete.DiscriminatedObjectType
-* [Microsoft.DocumentDB/databaseAccounts](~/microsoft.documentdb/2021-04-01-preview/databaseaccounts.md#microsoft.documentdb/databaseaccounts): Added property 'systemData'
+* [Microsoft.DocumentDB/databaseAccounts](~/microsoft.documentdb/2021-04-01-preview/databaseaccounts.md#microsoftdocumentdbdatabaseaccounts): Added property 'systemData'
 * [PeriodicModeProperties](~/microsoft.documentdb/2021-04-01-preview/databaseaccounts.md#periodicmodeproperties): Added property 'backupStorageRedundancy'
 
 
@@ -414,7 +414,7 @@ Removed:
 Updated:
 
 * [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2021-03-15/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Changed type from Azure.Bicep.Types.Concrete.DiscriminatedObjectType to Azure.Bicep.Types.Concrete.ObjectType
-* [Microsoft.DocumentDB/databaseAccounts](~/microsoft.documentdb/2021-03-15/databaseaccounts.md#microsoft.documentdb/databaseaccounts): Removed property 'systemData'
+* [Microsoft.DocumentDB/databaseAccounts](~/microsoft.documentdb/2021-03-15/databaseaccounts.md#microsoftdocumentdbdatabaseaccounts): Removed property 'systemData'
 * [PeriodicModeProperties](~/microsoft.documentdb/2021-03-15/databaseaccounts.md#periodicmodeproperties): Removed property 'backupStorageRedundancy'
 
 
@@ -431,7 +431,7 @@ Added:
 Updated:
 
 * [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2021-03-01-preview/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Changed type from Azure.Bicep.Types.Concrete.ObjectType to Azure.Bicep.Types.Concrete.DiscriminatedObjectType
-* [Microsoft.DocumentDB/databaseAccounts](~/microsoft.documentdb/2021-03-01-preview/databaseaccounts.md#microsoft.documentdb/databaseaccounts): Added property 'systemData'
+* [Microsoft.DocumentDB/databaseAccounts](~/microsoft.documentdb/2021-03-01-preview/databaseaccounts.md#microsoftdocumentdbdatabaseaccounts): Added property 'systemData'
 * [PeriodicModeProperties](~/microsoft.documentdb/2021-03-01-preview/databaseaccounts.md#periodicmodeproperties): Added property 'backupStorageRedundancy'
 
 
@@ -447,7 +447,7 @@ Updated:
 
 * [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2021-01-15/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Added property 'networkAclBypass'
 * [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2021-01-15/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Added property 'networkAclBypassResourceIds'
-* [Microsoft.DocumentDB/databaseAccounts](~/microsoft.documentdb/2021-01-15/databaseaccounts.md#microsoft.documentdb/databaseaccounts): Added property 'identity'
+* [Microsoft.DocumentDB/databaseAccounts](~/microsoft.documentdb/2021-01-15/databaseaccounts.md#microsoftdocumentdbdatabaseaccounts): Added property 'identity'
 
 
 ## 2020-09-01
@@ -466,8 +466,8 @@ Removed:
 Updated:
 
 * [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2020-09-01/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Changed type from Azure.Bicep.Types.Concrete.DiscriminatedObjectType to Azure.Bicep.Types.Concrete.ObjectType
-* [Microsoft.DocumentDB/databaseAccounts](~/microsoft.documentdb/2020-09-01/databaseaccounts.md#microsoft.documentdb/databaseaccounts): Removed property 'identity'
-* [Microsoft.DocumentDB/databaseAccounts](~/microsoft.documentdb/2020-09-01/databaseaccounts.md#microsoft.documentdb/databaseaccounts): Removed property 'systemData'
+* [Microsoft.DocumentDB/databaseAccounts](~/microsoft.documentdb/2020-09-01/databaseaccounts.md#microsoftdocumentdbdatabaseaccounts): Removed property 'identity'
+* [Microsoft.DocumentDB/databaseAccounts](~/microsoft.documentdb/2020-09-01/databaseaccounts.md#microsoftdocumentdbdatabaseaccounts): Removed property 'systemData'
 * [PeriodicModeProperties](~/microsoft.documentdb/2020-09-01/databaseaccounts.md#periodicmodeproperties): Removed property 'backupStorageRedundancy'
 
 
@@ -491,8 +491,8 @@ Added:
 Updated:
 
 * [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2020-06-01-preview/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Changed type from Azure.Bicep.Types.Concrete.ObjectType to Azure.Bicep.Types.Concrete.DiscriminatedObjectType
-* [Microsoft.DocumentDB/databaseAccounts](~/microsoft.documentdb/2020-06-01-preview/databaseaccounts.md#microsoft.documentdb/databaseaccounts): Added property 'identity'
-* [Microsoft.DocumentDB/databaseAccounts](~/microsoft.documentdb/2020-06-01-preview/databaseaccounts.md#microsoft.documentdb/databaseaccounts): Added property 'systemData'
+* [Microsoft.DocumentDB/databaseAccounts](~/microsoft.documentdb/2020-06-01-preview/databaseaccounts.md#microsoftdocumentdbdatabaseaccounts): Added property 'identity'
+* [Microsoft.DocumentDB/databaseAccounts](~/microsoft.documentdb/2020-06-01-preview/databaseaccounts.md#microsoftdocumentdbdatabaseaccounts): Added property 'systemData'
 
 
 ## 2020-04-01

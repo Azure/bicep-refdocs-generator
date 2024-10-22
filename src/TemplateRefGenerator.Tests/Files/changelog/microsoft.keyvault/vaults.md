@@ -65,7 +65,7 @@ Added:
 
 Updated:
 
-* [Microsoft.KeyVault/vaults](~/microsoft.keyvault/2020-04-01-preview/vaults.md#microsoft.keyvault/vaults): Added property 'systemData'
+* [Microsoft.KeyVault/vaults](~/microsoft.keyvault/2020-04-01-preview/vaults.md#microsoftkeyvaultvaults): Added property 'systemData'
 * [VaultProperties](~/microsoft.keyvault/2020-04-01-preview/vaults.md#vaultproperties): Removed property 'hsmPoolResourceId'
 
 

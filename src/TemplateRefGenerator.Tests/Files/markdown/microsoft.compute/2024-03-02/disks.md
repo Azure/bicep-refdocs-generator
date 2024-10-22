@@ -8,7 +8,7 @@ ms.topic: reference
 ms.date: 09/13/2024
 ms.author: tomfitz
 ---
-# Microsoft.Compute disks 2024-03-02
+# # Microsoft.Compute disks 2024-03-02
 
 > [!div class="op_single_selector" title1="API Versions:"]
 > - [Latest](../disks.md)
@@ -547,6 +547,7 @@ To create a Microsoft.Compute/disks resource, add the following JSON to your tem
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
+| type | The resource type | 'Microsoft.Compute/disks' |
 | extendedLocation | The extended location where the disk will be created. Extended location cannot be changed. | [ExtendedLocation](#extendedlocation-1) |
 | location | Resource location | string (required) |
 | name | The resource name | string (required) |
@@ -618,7 +619,7 @@ For a list of changed properties in each API version, see [change log](~/microso
 To create a Microsoft.Compute/disks resource, add the following Terraform to your template.
 
 ```terraform
-resource "azapi_resource" "symbolicname" = {
+resource "azapi_resource" "symbolicname" {
   type = "Microsoft.Compute/disks@2024-03-02"
   name = "string"
   extendedLocation = {
@@ -837,6 +838,7 @@ resource "azapi_resource" "symbolicname" = {
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
+| type | The resource type | "Microsoft.Compute/disks@2024-03-02" |
 | extendedLocation | The extended location where the disk will be created. Extended location cannot be changed. | [ExtendedLocation](#extendedlocation-2) |
 | location | Resource location | string (required) |
 | name | The resource name | string (required) |

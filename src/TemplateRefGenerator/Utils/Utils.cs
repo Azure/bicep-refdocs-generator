@@ -40,4 +40,10 @@ public static class Utils
         return JsonSerializer.Deserialize<T>(contents, options) ??
             throw new InvalidOperationException($"Failed to deserialize file {filePath}");
     }
+
+    public static bool IsChildResource(string unqualifiedResourceType)
+        => unqualifiedResourceType.Contains('/');
+
+    public static string GetParentResource(string resourceType)
+        => resourceType.Substring(0, resourceType.LastIndexOf('/'));
 }

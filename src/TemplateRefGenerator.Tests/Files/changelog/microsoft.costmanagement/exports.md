@@ -63,8 +63,8 @@ Added:
 
 Updated:
 
-* [Microsoft.CostManagement/exports](~/microsoft.costmanagement/2023-04-01-preview/exports.md#microsoft.costmanagement/exports): Added property 'identity'
-* [Microsoft.CostManagement/exports](~/microsoft.costmanagement/2023-04-01-preview/exports.md#microsoft.costmanagement/exports): Added property 'location'
+* [Microsoft.CostManagement/exports](~/microsoft.costmanagement/2023-04-01-preview/exports.md#microsoftcostmanagementexports): Added property 'identity'
+* [Microsoft.CostManagement/exports](~/microsoft.costmanagement/2023-04-01-preview/exports.md#microsoftcostmanagementexports): Added property 'location'
 
 
 ## 2023-03-01
@@ -146,8 +146,8 @@ Removed:
 
 Updated:
 
-* [Microsoft.CostManagement/exports](~/microsoft.costmanagement/2019-11-01/exports.md#microsoft.costmanagement/exports): Added property 'eTag'
-* [Microsoft.CostManagement/exports](~/microsoft.costmanagement/2019-11-01/exports.md#microsoft.costmanagement/exports): Removed property 'tags'
+* [Microsoft.CostManagement/exports](~/microsoft.costmanagement/2019-11-01/exports.md#microsoftcostmanagementexports): Added property 'eTag'
+* [Microsoft.CostManagement/exports](~/microsoft.costmanagement/2019-11-01/exports.md#microsoftcostmanagementexports): Removed property 'tags'
 
 
 ## 2019-10-01
