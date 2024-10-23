@@ -28,9 +28,10 @@ public static class TocGenerator
             var segments = resourceType.Split('/').Skip(1).ToArray();
             foreach (var parentSegment in segments[0..^1])
             {
-                if (parentToc.Items.FirstOrDefault(x => StringComparer.OrdinalIgnoreCase.Equals(x.Name, parentSegment)) is not {} nextParentToc)
+                var folderName = $"{parentSegment}/";
+                if (parentToc.Items.FirstOrDefault(x => StringComparer.OrdinalIgnoreCase.Equals(x.Name, folderName)) is not {} nextParentToc)
                 {
-                    nextParentToc = new(parentSegment, new());
+                    nextParentToc = new(folderName, new());
                     parentToc.Items.Add(nextParentToc);
                 }
 
@@ -54,9 +55,10 @@ public static class TocGenerator
                 var segments = resourceType.Split('/').Skip(1).ToArray();
                 foreach (var parentSegment in segments[0..^1])
                 {
-                    if (parentToc.Items.FirstOrDefault(x => StringComparer.OrdinalIgnoreCase.Equals(x.Name, parentSegment)) is not {} nextParentToc)
+                    var folderName = $"{parentSegment}/";
+                    if (parentToc.Items.FirstOrDefault(x => StringComparer.OrdinalIgnoreCase.Equals(x.Name, folderName)) is not {} nextParentToc)
                     {
-                        nextParentToc = new(parentSegment, new());
+                        nextParentToc = new(folderName, new());
                         parentToc.Items.Add(nextParentToc);
                     }
 
@@ -87,9 +89,10 @@ public static class TocGenerator
             var segments = resourceType.Split('/').Skip(1).ToArray();
             foreach (var parentSegment in segments[0..^1])
             {
-                if (parentToc.Items.FirstOrDefault(x => StringComparer.OrdinalIgnoreCase.Equals(x.Name, parentSegment)) is not {} nextParentToc)
+                var folderName = $"{parentSegment}/";
+                if (parentToc.Items.FirstOrDefault(x => StringComparer.OrdinalIgnoreCase.Equals(x.Name, folderName)) is not {} nextParentToc)
                 {
-                    nextParentToc = new(parentSegment, new());
+                    nextParentToc = new(folderName, new());
                     parentToc.Items.Add(nextParentToc);
                 }
 

@@ -1,5 +1,6 @@
 - name: cassandraClusters
   href: ./cassandraclusters.md
+- name: cassandraClusters/
   items:
   - name: backups
     href: ./cassandraclusters/backups.md
@@ -7,24 +8,29 @@
     href: ./cassandraclusters/datacenters.md
 - name: databaseAccounts
   href: ./databaseaccounts.md
+- name: databaseAccounts/
   items:
-  - name: apis
+  - name: apis/
     items:
     - name: databases
       href: ./databaseaccounts/apis/databases.md
+    - name: databases/
       items:
       - name: collections
         href: ./databaseaccounts/apis/databases/collections.md
+      - name: collections/
         items:
         - name: settings
           href: ./databaseaccounts/apis/databases/collections/settings.md
       - name: containers
         href: ./databaseaccounts/apis/databases/containers.md
+      - name: containers/
         items:
         - name: settings
           href: ./databaseaccounts/apis/databases/containers/settings.md
       - name: graphs
         href: ./databaseaccounts/apis/databases/graphs.md
+      - name: graphs/
         items:
         - name: settings
           href: ./databaseaccounts/apis/databases/graphs/settings.md
@@ -32,24 +38,29 @@
         href: ./databaseaccounts/apis/databases/settings.md
     - name: keyspaces
       href: ./databaseaccounts/apis/keyspaces.md
+    - name: keyspaces/
       items:
       - name: settings
         href: ./databaseaccounts/apis/keyspaces/settings.md
       - name: tables
         href: ./databaseaccounts/apis/keyspaces/tables.md
+      - name: tables/
         items:
         - name: settings
           href: ./databaseaccounts/apis/keyspaces/tables/settings.md
     - name: tables
       href: ./databaseaccounts/apis/tables.md
+    - name: tables/
       items:
       - name: settings
         href: ./databaseaccounts/apis/tables/settings.md
   - name: cassandraKeyspaces
     href: ./databaseaccounts/cassandrakeyspaces.md
+  - name: cassandraKeyspaces/
     items:
     - name: tables
       href: ./databaseaccounts/cassandrakeyspaces/tables.md
+    - name: tables/
       items:
       - name: throughputSettings
         href: ./databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -57,6 +68,7 @@
       href: ./databaseaccounts/cassandrakeyspaces/throughputsettings.md
     - name: views
       href: ./databaseaccounts/cassandrakeyspaces/views.md
+    - name: views/
       items:
       - name: throughputSettings
         href: ./databaseaccounts/cassandrakeyspaces/views/throughputsettings.md
@@ -66,9 +78,11 @@
     href: ./databaseaccounts/graphs.md
   - name: gremlinDatabases
     href: ./databaseaccounts/gremlindatabases.md
+  - name: gremlinDatabases/
     items:
     - name: graphs
       href: ./databaseaccounts/gremlindatabases/graphs.md
+    - name: graphs/
       items:
       - name: throughputSettings
         href: ./databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -76,9 +90,11 @@
       href: ./databaseaccounts/gremlindatabases/throughputsettings.md
   - name: mongodbDatabases
     href: ./databaseaccounts/mongodbdatabases.md
+  - name: mongodbDatabases/
     items:
     - name: collections
       href: ./databaseaccounts/mongodbdatabases/collections.md
+    - name: collections/
       items:
       - name: throughputSettings
         href: ./databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -100,11 +116,13 @@
     href: ./databaseaccounts/services.md
   - name: sqlDatabases
     href: ./databaseaccounts/sqldatabases.md
+  - name: sqlDatabases/
     items:
     - name: clientEncryptionKeys
       href: ./databaseaccounts/sqldatabases/clientencryptionkeys.md
     - name: containers
       href: ./databaseaccounts/sqldatabases/containers.md
+    - name: containers/
       items:
       - name: storedProcedures
         href: ./databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -122,6 +140,7 @@
     href: ./databaseaccounts/sqlroledefinitions.md
   - name: tables
     href: ./databaseaccounts/tables.md
+  - name: tables/
     items:
     - name: throughputSettings
       href: ./databaseaccounts/tables/throughputsettings.md
@@ -129,6 +148,7 @@
   href: ./locations.md
 - name: mongoClusters
   href: ./mongoclusters.md
+- name: mongoClusters/
   items:
   - name: firewallRules
     href: ./mongoclusters/firewallrules.md
@@ -136,6 +156,7 @@
     href: ./mongoclusters/privateendpointconnections.md
 - name: throughputPools
   href: ./throughputpools.md
+- name: throughputPools/
   items:
   - name: throughputPoolAccounts
     href: ./throughputpools/throughputpoolaccounts.md
@@ -145,6 +166,7 @@
     items:
     - name: mongoClusters
       href: ./2024-07-01/mongoclusters.md
+    - name: mongoClusters/
       items:
       - name: firewallRules
         href: ./2024-07-01/mongoclusters/firewallrules.md
@@ -154,6 +176,7 @@
     items:
     - name: mongoClusters
       href: ./2024-06-01-preview/mongoclusters.md
+    - name: mongoClusters/
       items:
       - name: firewallRules
         href: ./2024-06-01-preview/mongoclusters/firewallrules.md
@@ -163,17 +186,21 @@
     items:
     - name: cassandraClusters
       href: ./2024-05-15/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: dataCenters
         href: ./2024-05-15/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2024-05-15/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2024-05-15/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2024-05-15/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2024-05-15/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -181,9 +208,11 @@
           href: ./2024-05-15/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2024-05-15/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2024-05-15/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2024-05-15/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -191,9 +220,11 @@
           href: ./2024-05-15/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2024-05-15/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2024-05-15/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2024-05-15/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -213,11 +244,13 @@
         href: ./2024-05-15/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2024-05-15/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: clientEncryptionKeys
           href: ./2024-05-15/databaseaccounts/sqldatabases/clientencryptionkeys.md
         - name: containers
           href: ./2024-05-15/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2024-05-15/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -235,6 +268,7 @@
         href: ./2024-05-15/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2024-05-15/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2024-05-15/databaseaccounts/tables/throughputsettings.md
@@ -244,17 +278,21 @@
     items:
     - name: cassandraClusters
       href: ./2024-05-15-preview/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: dataCenters
         href: ./2024-05-15-preview/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2024-05-15-preview/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2024-05-15-preview/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2024-05-15-preview/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2024-05-15-preview/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -262,6 +300,7 @@
           href: ./2024-05-15-preview/databaseaccounts/cassandrakeyspaces/throughputsettings.md
         - name: views
           href: ./2024-05-15-preview/databaseaccounts/cassandrakeyspaces/views.md
+        - name: views/
           items:
           - name: throughputSettings
             href: ./2024-05-15-preview/databaseaccounts/cassandrakeyspaces/views/throughputsettings.md
@@ -271,9 +310,11 @@
         href: ./2024-05-15-preview/databaseaccounts/graphs.md
       - name: gremlinDatabases
         href: ./2024-05-15-preview/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2024-05-15-preview/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2024-05-15-preview/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -281,9 +322,11 @@
           href: ./2024-05-15-preview/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2024-05-15-preview/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2024-05-15-preview/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2024-05-15-preview/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -305,11 +348,13 @@
         href: ./2024-05-15-preview/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2024-05-15-preview/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: clientEncryptionKeys
           href: ./2024-05-15-preview/databaseaccounts/sqldatabases/clientencryptionkeys.md
         - name: containers
           href: ./2024-05-15-preview/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2024-05-15-preview/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -327,6 +372,7 @@
         href: ./2024-05-15-preview/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2024-05-15-preview/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2024-05-15-preview/databaseaccounts/tables/throughputsettings.md
@@ -334,6 +380,7 @@
       href: ./2024-05-15-preview/locations.md
     - name: throughputPools
       href: ./2024-05-15-preview/throughputpools.md
+    - name: throughputPools/
       items:
       - name: throughputPoolAccounts
         href: ./2024-05-15-preview/throughputpools/throughputpoolaccounts.md
@@ -341,6 +388,7 @@
     items:
     - name: mongoClusters
       href: ./2024-03-01-preview/mongoclusters.md
+    - name: mongoClusters/
       items:
       - name: firewallRules
         href: ./2024-03-01-preview/mongoclusters/firewallrules.md
@@ -350,17 +398,21 @@
     items:
     - name: cassandraClusters
       href: ./2024-02-15-preview/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: dataCenters
         href: ./2024-02-15-preview/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2024-02-15-preview/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2024-02-15-preview/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2024-02-15-preview/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2024-02-15-preview/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -368,6 +420,7 @@
           href: ./2024-02-15-preview/databaseaccounts/cassandrakeyspaces/throughputsettings.md
         - name: views
           href: ./2024-02-15-preview/databaseaccounts/cassandrakeyspaces/views.md
+        - name: views/
           items:
           - name: throughputSettings
             href: ./2024-02-15-preview/databaseaccounts/cassandrakeyspaces/views/throughputsettings.md
@@ -377,9 +430,11 @@
         href: ./2024-02-15-preview/databaseaccounts/graphs.md
       - name: gremlinDatabases
         href: ./2024-02-15-preview/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2024-02-15-preview/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2024-02-15-preview/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -387,9 +442,11 @@
           href: ./2024-02-15-preview/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2024-02-15-preview/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2024-02-15-preview/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2024-02-15-preview/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -409,11 +466,13 @@
         href: ./2024-02-15-preview/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2024-02-15-preview/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: clientEncryptionKeys
           href: ./2024-02-15-preview/databaseaccounts/sqldatabases/clientencryptionkeys.md
         - name: containers
           href: ./2024-02-15-preview/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2024-02-15-preview/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -431,6 +490,7 @@
         href: ./2024-02-15-preview/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2024-02-15-preview/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2024-02-15-preview/databaseaccounts/tables/throughputsettings.md
@@ -438,11 +498,13 @@
       href: ./2024-02-15-preview/locations.md
     - name: mongoClusters
       href: ./2024-02-15-preview/mongoclusters.md
+    - name: mongoClusters/
       items:
       - name: firewallRules
         href: ./2024-02-15-preview/mongoclusters/firewallrules.md
     - name: throughputPools
       href: ./2024-02-15-preview/throughputpools.md
+    - name: throughputPools/
       items:
       - name: throughputPoolAccounts
         href: ./2024-02-15-preview/throughputpools/throughputpoolaccounts.md
@@ -450,17 +512,21 @@
     items:
     - name: cassandraClusters
       href: ./2023-11-15/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: dataCenters
         href: ./2023-11-15/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2023-11-15/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2023-11-15/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2023-11-15/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2023-11-15/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -468,9 +534,11 @@
           href: ./2023-11-15/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2023-11-15/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2023-11-15/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2023-11-15/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -478,9 +546,11 @@
           href: ./2023-11-15/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2023-11-15/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2023-11-15/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2023-11-15/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -500,11 +570,13 @@
         href: ./2023-11-15/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2023-11-15/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: clientEncryptionKeys
           href: ./2023-11-15/databaseaccounts/sqldatabases/clientencryptionkeys.md
         - name: containers
           href: ./2023-11-15/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2023-11-15/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -522,6 +594,7 @@
         href: ./2023-11-15/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2023-11-15/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2023-11-15/databaseaccounts/tables/throughputsettings.md
@@ -531,17 +604,21 @@
     items:
     - name: cassandraClusters
       href: ./2023-11-15-preview/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: dataCenters
         href: ./2023-11-15-preview/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2023-11-15-preview/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2023-11-15-preview/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2023-11-15-preview/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2023-11-15-preview/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -549,6 +626,7 @@
           href: ./2023-11-15-preview/databaseaccounts/cassandrakeyspaces/throughputsettings.md
         - name: views
           href: ./2023-11-15-preview/databaseaccounts/cassandrakeyspaces/views.md
+        - name: views/
           items:
           - name: throughputSettings
             href: ./2023-11-15-preview/databaseaccounts/cassandrakeyspaces/views/throughputsettings.md
@@ -558,9 +636,11 @@
         href: ./2023-11-15-preview/databaseaccounts/graphs.md
       - name: gremlinDatabases
         href: ./2023-11-15-preview/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2023-11-15-preview/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2023-11-15-preview/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -568,9 +648,11 @@
           href: ./2023-11-15-preview/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2023-11-15-preview/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2023-11-15-preview/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2023-11-15-preview/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -590,11 +672,13 @@
         href: ./2023-11-15-preview/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2023-11-15-preview/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: clientEncryptionKeys
           href: ./2023-11-15-preview/databaseaccounts/sqldatabases/clientencryptionkeys.md
         - name: containers
           href: ./2023-11-15-preview/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2023-11-15-preview/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -612,6 +696,7 @@
         href: ./2023-11-15-preview/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2023-11-15-preview/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2023-11-15-preview/databaseaccounts/tables/throughputsettings.md
@@ -619,11 +704,13 @@
       href: ./2023-11-15-preview/locations.md
     - name: mongoClusters
       href: ./2023-11-15-preview/mongoclusters.md
+    - name: mongoClusters/
       items:
       - name: firewallRules
         href: ./2023-11-15-preview/mongoclusters/firewallrules.md
     - name: throughputPools
       href: ./2023-11-15-preview/throughputpools.md
+    - name: throughputPools/
       items:
       - name: throughputPoolAccounts
         href: ./2023-11-15-preview/throughputpools/throughputpoolaccounts.md
@@ -631,17 +718,21 @@
     items:
     - name: cassandraClusters
       href: ./2023-09-15/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: dataCenters
         href: ./2023-09-15/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2023-09-15/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2023-09-15/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2023-09-15/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2023-09-15/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -649,9 +740,11 @@
           href: ./2023-09-15/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2023-09-15/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2023-09-15/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2023-09-15/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -659,9 +752,11 @@
           href: ./2023-09-15/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2023-09-15/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2023-09-15/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2023-09-15/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -681,11 +776,13 @@
         href: ./2023-09-15/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2023-09-15/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: clientEncryptionKeys
           href: ./2023-09-15/databaseaccounts/sqldatabases/clientencryptionkeys.md
         - name: containers
           href: ./2023-09-15/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2023-09-15/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -703,6 +800,7 @@
         href: ./2023-09-15/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2023-09-15/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2023-09-15/databaseaccounts/tables/throughputsettings.md
@@ -712,17 +810,21 @@
     items:
     - name: cassandraClusters
       href: ./2023-09-15-preview/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: dataCenters
         href: ./2023-09-15-preview/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2023-09-15-preview/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2023-09-15-preview/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2023-09-15-preview/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2023-09-15-preview/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -730,6 +832,7 @@
           href: ./2023-09-15-preview/databaseaccounts/cassandrakeyspaces/throughputsettings.md
         - name: views
           href: ./2023-09-15-preview/databaseaccounts/cassandrakeyspaces/views.md
+        - name: views/
           items:
           - name: throughputSettings
             href: ./2023-09-15-preview/databaseaccounts/cassandrakeyspaces/views/throughputsettings.md
@@ -739,9 +842,11 @@
         href: ./2023-09-15-preview/databaseaccounts/graphs.md
       - name: gremlinDatabases
         href: ./2023-09-15-preview/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2023-09-15-preview/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2023-09-15-preview/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -749,9 +854,11 @@
           href: ./2023-09-15-preview/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2023-09-15-preview/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2023-09-15-preview/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2023-09-15-preview/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -771,11 +878,13 @@
         href: ./2023-09-15-preview/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2023-09-15-preview/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: clientEncryptionKeys
           href: ./2023-09-15-preview/databaseaccounts/sqldatabases/clientencryptionkeys.md
         - name: containers
           href: ./2023-09-15-preview/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2023-09-15-preview/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -793,6 +902,7 @@
         href: ./2023-09-15-preview/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2023-09-15-preview/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2023-09-15-preview/databaseaccounts/tables/throughputsettings.md
@@ -800,6 +910,7 @@
       href: ./2023-09-15-preview/locations.md
     - name: mongoClusters
       href: ./2023-09-15-preview/mongoclusters.md
+    - name: mongoClusters/
       items:
       - name: firewallRules
         href: ./2023-09-15-preview/mongoclusters/firewallrules.md
@@ -807,17 +918,21 @@
     items:
     - name: cassandraClusters
       href: ./2023-04-15/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: dataCenters
         href: ./2023-04-15/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2023-04-15/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2023-04-15/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2023-04-15/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2023-04-15/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -825,9 +940,11 @@
           href: ./2023-04-15/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2023-04-15/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2023-04-15/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2023-04-15/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -835,9 +952,11 @@
           href: ./2023-04-15/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2023-04-15/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2023-04-15/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2023-04-15/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -857,11 +976,13 @@
         href: ./2023-04-15/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2023-04-15/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: clientEncryptionKeys
           href: ./2023-04-15/databaseaccounts/sqldatabases/clientencryptionkeys.md
         - name: containers
           href: ./2023-04-15/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2023-04-15/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -879,6 +1000,7 @@
         href: ./2023-04-15/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2023-04-15/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2023-04-15/databaseaccounts/tables/throughputsettings.md
@@ -888,17 +1010,21 @@
     items:
     - name: cassandraClusters
       href: ./2023-03-15/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: dataCenters
         href: ./2023-03-15/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2023-03-15/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2023-03-15/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2023-03-15/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2023-03-15/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -906,9 +1032,11 @@
           href: ./2023-03-15/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2023-03-15/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2023-03-15/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2023-03-15/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -916,9 +1044,11 @@
           href: ./2023-03-15/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2023-03-15/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2023-03-15/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2023-03-15/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -938,11 +1068,13 @@
         href: ./2023-03-15/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2023-03-15/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: clientEncryptionKeys
           href: ./2023-03-15/databaseaccounts/sqldatabases/clientencryptionkeys.md
         - name: containers
           href: ./2023-03-15/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2023-03-15/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -960,6 +1092,7 @@
         href: ./2023-03-15/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2023-03-15/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2023-03-15/databaseaccounts/tables/throughputsettings.md
@@ -969,6 +1102,7 @@
     items:
     - name: cassandraClusters
       href: ./2023-03-15-preview/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: backups
         href: ./2023-03-15-preview/cassandraclusters/backups.md
@@ -976,12 +1110,15 @@
         href: ./2023-03-15-preview/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2023-03-15-preview/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2023-03-15-preview/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2023-03-15-preview/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2023-03-15-preview/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -989,6 +1126,7 @@
           href: ./2023-03-15-preview/databaseaccounts/cassandrakeyspaces/throughputsettings.md
         - name: views
           href: ./2023-03-15-preview/databaseaccounts/cassandrakeyspaces/views.md
+        - name: views/
           items:
           - name: throughputSettings
             href: ./2023-03-15-preview/databaseaccounts/cassandrakeyspaces/views/throughputsettings.md
@@ -998,9 +1136,11 @@
         href: ./2023-03-15-preview/databaseaccounts/graphs.md
       - name: gremlinDatabases
         href: ./2023-03-15-preview/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2023-03-15-preview/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2023-03-15-preview/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -1008,9 +1148,11 @@
           href: ./2023-03-15-preview/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2023-03-15-preview/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2023-03-15-preview/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2023-03-15-preview/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -1030,11 +1172,13 @@
         href: ./2023-03-15-preview/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2023-03-15-preview/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: clientEncryptionKeys
           href: ./2023-03-15-preview/databaseaccounts/sqldatabases/clientencryptionkeys.md
         - name: containers
           href: ./2023-03-15-preview/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2023-03-15-preview/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -1052,6 +1196,7 @@
         href: ./2023-03-15-preview/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2023-03-15-preview/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2023-03-15-preview/databaseaccounts/tables/throughputsettings.md
@@ -1059,6 +1204,7 @@
       href: ./2023-03-15-preview/locations.md
     - name: mongoClusters
       href: ./2023-03-15-preview/mongoclusters.md
+    - name: mongoClusters/
       items:
       - name: firewallRules
         href: ./2023-03-15-preview/mongoclusters/firewallrules.md
@@ -1066,6 +1212,7 @@
     items:
     - name: cassandraClusters
       href: ./2023-03-01-preview/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: backups
         href: ./2023-03-01-preview/cassandraclusters/backups.md
@@ -1073,12 +1220,15 @@
         href: ./2023-03-01-preview/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2023-03-01-preview/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2023-03-01-preview/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2023-03-01-preview/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2023-03-01-preview/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -1086,6 +1236,7 @@
           href: ./2023-03-01-preview/databaseaccounts/cassandrakeyspaces/throughputsettings.md
         - name: views
           href: ./2023-03-01-preview/databaseaccounts/cassandrakeyspaces/views.md
+        - name: views/
           items:
           - name: throughputSettings
             href: ./2023-03-01-preview/databaseaccounts/cassandrakeyspaces/views/throughputsettings.md
@@ -1095,9 +1246,11 @@
         href: ./2023-03-01-preview/databaseaccounts/graphs.md
       - name: gremlinDatabases
         href: ./2023-03-01-preview/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2023-03-01-preview/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2023-03-01-preview/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -1105,9 +1258,11 @@
           href: ./2023-03-01-preview/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2023-03-01-preview/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2023-03-01-preview/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2023-03-01-preview/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -1127,11 +1282,13 @@
         href: ./2023-03-01-preview/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2023-03-01-preview/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: clientEncryptionKeys
           href: ./2023-03-01-preview/databaseaccounts/sqldatabases/clientencryptionkeys.md
         - name: containers
           href: ./2023-03-01-preview/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2023-03-01-preview/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -1149,6 +1306,7 @@
         href: ./2023-03-01-preview/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2023-03-01-preview/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2023-03-01-preview/databaseaccounts/tables/throughputsettings.md
@@ -1156,6 +1314,7 @@
       href: ./2023-03-01-preview/locations.md
     - name: mongoClusters
       href: ./2023-03-01-preview/mongoclusters.md
+    - name: mongoClusters/
       items:
       - name: firewallRules
         href: ./2023-03-01-preview/mongoclusters/firewallrules.md
@@ -1163,17 +1322,21 @@
     items:
     - name: cassandraClusters
       href: ./2022-11-15/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: dataCenters
         href: ./2022-11-15/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2022-11-15/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2022-11-15/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2022-11-15/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2022-11-15/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -1181,9 +1344,11 @@
           href: ./2022-11-15/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2022-11-15/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2022-11-15/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2022-11-15/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -1191,9 +1356,11 @@
           href: ./2022-11-15/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2022-11-15/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2022-11-15/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2022-11-15/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -1213,11 +1380,13 @@
         href: ./2022-11-15/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2022-11-15/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: clientEncryptionKeys
           href: ./2022-11-15/databaseaccounts/sqldatabases/clientencryptionkeys.md
         - name: containers
           href: ./2022-11-15/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2022-11-15/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -1235,6 +1404,7 @@
         href: ./2022-11-15/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2022-11-15/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2022-11-15/databaseaccounts/tables/throughputsettings.md
@@ -1244,6 +1414,7 @@
     items:
     - name: cassandraClusters
       href: ./2022-11-15-preview/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: backups
         href: ./2022-11-15-preview/cassandraclusters/backups.md
@@ -1251,12 +1422,15 @@
         href: ./2022-11-15-preview/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2022-11-15-preview/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2022-11-15-preview/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2022-11-15-preview/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2022-11-15-preview/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -1264,6 +1438,7 @@
           href: ./2022-11-15-preview/databaseaccounts/cassandrakeyspaces/throughputsettings.md
         - name: views
           href: ./2022-11-15-preview/databaseaccounts/cassandrakeyspaces/views.md
+        - name: views/
           items:
           - name: throughputSettings
             href: ./2022-11-15-preview/databaseaccounts/cassandrakeyspaces/views/throughputsettings.md
@@ -1273,9 +1448,11 @@
         href: ./2022-11-15-preview/databaseaccounts/graphs.md
       - name: gremlinDatabases
         href: ./2022-11-15-preview/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2022-11-15-preview/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2022-11-15-preview/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -1283,9 +1460,11 @@
           href: ./2022-11-15-preview/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2022-11-15-preview/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2022-11-15-preview/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2022-11-15-preview/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -1305,11 +1484,13 @@
         href: ./2022-11-15-preview/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2022-11-15-preview/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: clientEncryptionKeys
           href: ./2022-11-15-preview/databaseaccounts/sqldatabases/clientencryptionkeys.md
         - name: containers
           href: ./2022-11-15-preview/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2022-11-15-preview/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -1327,6 +1508,7 @@
         href: ./2022-11-15-preview/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2022-11-15-preview/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2022-11-15-preview/databaseaccounts/tables/throughputsettings.md
@@ -1336,17 +1518,21 @@
     items:
     - name: cassandraClusters
       href: ./2022-08-15/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: dataCenters
         href: ./2022-08-15/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2022-08-15/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2022-08-15/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2022-08-15/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2022-08-15/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -1354,9 +1540,11 @@
           href: ./2022-08-15/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2022-08-15/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2022-08-15/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2022-08-15/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -1364,9 +1552,11 @@
           href: ./2022-08-15/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2022-08-15/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2022-08-15/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2022-08-15/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -1386,9 +1576,11 @@
         href: ./2022-08-15/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2022-08-15/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: containers
           href: ./2022-08-15/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2022-08-15/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -1406,6 +1598,7 @@
         href: ./2022-08-15/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2022-08-15/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2022-08-15/databaseaccounts/tables/throughputsettings.md
@@ -1415,6 +1608,7 @@
     items:
     - name: cassandraClusters
       href: ./2022-08-15-preview/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: backups
         href: ./2022-08-15-preview/cassandraclusters/backups.md
@@ -1422,12 +1616,15 @@
         href: ./2022-08-15-preview/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2022-08-15-preview/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2022-08-15-preview/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2022-08-15-preview/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2022-08-15-preview/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -1435,6 +1632,7 @@
           href: ./2022-08-15-preview/databaseaccounts/cassandrakeyspaces/throughputsettings.md
         - name: views
           href: ./2022-08-15-preview/databaseaccounts/cassandrakeyspaces/views.md
+        - name: views/
           items:
           - name: throughputSettings
             href: ./2022-08-15-preview/databaseaccounts/cassandrakeyspaces/views/throughputsettings.md
@@ -1444,9 +1642,11 @@
         href: ./2022-08-15-preview/databaseaccounts/graphs.md
       - name: gremlinDatabases
         href: ./2022-08-15-preview/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2022-08-15-preview/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2022-08-15-preview/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -1454,9 +1654,11 @@
           href: ./2022-08-15-preview/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2022-08-15-preview/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2022-08-15-preview/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2022-08-15-preview/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -1476,11 +1678,13 @@
         href: ./2022-08-15-preview/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2022-08-15-preview/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: clientEncryptionKeys
           href: ./2022-08-15-preview/databaseaccounts/sqldatabases/clientencryptionkeys.md
         - name: containers
           href: ./2022-08-15-preview/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2022-08-15-preview/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -1498,6 +1702,7 @@
         href: ./2022-08-15-preview/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2022-08-15-preview/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2022-08-15-preview/databaseaccounts/tables/throughputsettings.md
@@ -1507,17 +1712,21 @@
     items:
     - name: cassandraClusters
       href: ./2022-05-15/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: dataCenters
         href: ./2022-05-15/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2022-05-15/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2022-05-15/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2022-05-15/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2022-05-15/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -1525,9 +1734,11 @@
           href: ./2022-05-15/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2022-05-15/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2022-05-15/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2022-05-15/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -1535,9 +1746,11 @@
           href: ./2022-05-15/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2022-05-15/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2022-05-15/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2022-05-15/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -1553,9 +1766,11 @@
         href: ./2022-05-15/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2022-05-15/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: containers
           href: ./2022-05-15/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2022-05-15/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -1573,6 +1788,7 @@
         href: ./2022-05-15/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2022-05-15/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2022-05-15/databaseaccounts/tables/throughputsettings.md
@@ -1582,6 +1798,7 @@
     items:
     - name: cassandraClusters
       href: ./2022-05-15-preview/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: backups
         href: ./2022-05-15-preview/cassandraclusters/backups.md
@@ -1589,12 +1806,15 @@
         href: ./2022-05-15-preview/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2022-05-15-preview/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2022-05-15-preview/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2022-05-15-preview/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2022-05-15-preview/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -1602,6 +1822,7 @@
           href: ./2022-05-15-preview/databaseaccounts/cassandrakeyspaces/throughputsettings.md
         - name: views
           href: ./2022-05-15-preview/databaseaccounts/cassandrakeyspaces/views.md
+        - name: views/
           items:
           - name: throughputSettings
             href: ./2022-05-15-preview/databaseaccounts/cassandrakeyspaces/views/throughputsettings.md
@@ -1611,9 +1832,11 @@
         href: ./2022-05-15-preview/databaseaccounts/graphs.md
       - name: gremlinDatabases
         href: ./2022-05-15-preview/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2022-05-15-preview/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2022-05-15-preview/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -1621,9 +1844,11 @@
           href: ./2022-05-15-preview/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2022-05-15-preview/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2022-05-15-preview/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2022-05-15-preview/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -1643,11 +1868,13 @@
         href: ./2022-05-15-preview/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2022-05-15-preview/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: clientEncryptionKeys
           href: ./2022-05-15-preview/databaseaccounts/sqldatabases/clientencryptionkeys.md
         - name: containers
           href: ./2022-05-15-preview/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2022-05-15-preview/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -1665,6 +1892,7 @@
         href: ./2022-05-15-preview/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2022-05-15-preview/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2022-05-15-preview/databaseaccounts/tables/throughputsettings.md
@@ -1674,6 +1902,7 @@
     items:
     - name: cassandraClusters
       href: ./2022-02-15-preview/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: backups
         href: ./2022-02-15-preview/cassandraclusters/backups.md
@@ -1681,12 +1910,15 @@
         href: ./2022-02-15-preview/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2022-02-15-preview/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2022-02-15-preview/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2022-02-15-preview/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2022-02-15-preview/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -1694,6 +1926,7 @@
           href: ./2022-02-15-preview/databaseaccounts/cassandrakeyspaces/throughputsettings.md
         - name: views
           href: ./2022-02-15-preview/databaseaccounts/cassandrakeyspaces/views.md
+        - name: views/
           items:
           - name: throughputSettings
             href: ./2022-02-15-preview/databaseaccounts/cassandrakeyspaces/views/throughputsettings.md
@@ -1703,9 +1936,11 @@
         href: ./2022-02-15-preview/databaseaccounts/graphs.md
       - name: gremlinDatabases
         href: ./2022-02-15-preview/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2022-02-15-preview/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2022-02-15-preview/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -1713,9 +1948,11 @@
           href: ./2022-02-15-preview/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2022-02-15-preview/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2022-02-15-preview/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2022-02-15-preview/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -1735,11 +1972,13 @@
         href: ./2022-02-15-preview/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2022-02-15-preview/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: clientEncryptionKeys
           href: ./2022-02-15-preview/databaseaccounts/sqldatabases/clientencryptionkeys.md
         - name: containers
           href: ./2022-02-15-preview/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2022-02-15-preview/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -1757,6 +1996,7 @@
         href: ./2022-02-15-preview/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2022-02-15-preview/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2022-02-15-preview/databaseaccounts/tables/throughputsettings.md
@@ -1766,6 +2006,7 @@
     items:
     - name: cassandraClusters
       href: ./2021-11-15-preview/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: backups
         href: ./2021-11-15-preview/cassandraclusters/backups.md
@@ -1773,12 +2014,15 @@
         href: ./2021-11-15-preview/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2021-11-15-preview/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2021-11-15-preview/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2021-11-15-preview/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2021-11-15-preview/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -1786,6 +2030,7 @@
           href: ./2021-11-15-preview/databaseaccounts/cassandrakeyspaces/throughputsettings.md
         - name: views
           href: ./2021-11-15-preview/databaseaccounts/cassandrakeyspaces/views.md
+        - name: views/
           items:
           - name: throughputSettings
             href: ./2021-11-15-preview/databaseaccounts/cassandrakeyspaces/views/throughputsettings.md
@@ -1795,9 +2040,11 @@
         href: ./2021-11-15-preview/databaseaccounts/graphs.md
       - name: gremlinDatabases
         href: ./2021-11-15-preview/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2021-11-15-preview/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2021-11-15-preview/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -1805,9 +2052,11 @@
           href: ./2021-11-15-preview/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2021-11-15-preview/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2021-11-15-preview/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2021-11-15-preview/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -1827,11 +2076,13 @@
         href: ./2021-11-15-preview/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2021-11-15-preview/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: clientEncryptionKeys
           href: ./2021-11-15-preview/databaseaccounts/sqldatabases/clientencryptionkeys.md
         - name: containers
           href: ./2021-11-15-preview/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2021-11-15-preview/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -1849,6 +2100,7 @@
         href: ./2021-11-15-preview/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2021-11-15-preview/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2021-11-15-preview/databaseaccounts/tables/throughputsettings.md
@@ -1858,17 +2110,21 @@
     items:
     - name: cassandraClusters
       href: ./2021-10-15/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: dataCenters
         href: ./2021-10-15/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2021-10-15/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2021-10-15/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2021-10-15/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2021-10-15/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -1876,9 +2132,11 @@
           href: ./2021-10-15/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2021-10-15/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2021-10-15/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2021-10-15/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -1886,9 +2144,11 @@
           href: ./2021-10-15/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2021-10-15/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2021-10-15/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2021-10-15/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -1902,9 +2162,11 @@
         href: ./2021-10-15/databaseaccounts/privatelinkresources.md
       - name: sqlDatabases
         href: ./2021-10-15/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: containers
           href: ./2021-10-15/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2021-10-15/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -1922,6 +2184,7 @@
         href: ./2021-10-15/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2021-10-15/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2021-10-15/databaseaccounts/tables/throughputsettings.md
@@ -1931,6 +2194,7 @@
     items:
     - name: cassandraClusters
       href: ./2021-10-15-preview/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: backups
         href: ./2021-10-15-preview/cassandraclusters/backups.md
@@ -1938,12 +2202,15 @@
         href: ./2021-10-15-preview/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2021-10-15-preview/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2021-10-15-preview/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2021-10-15-preview/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2021-10-15-preview/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -1951,6 +2218,7 @@
           href: ./2021-10-15-preview/databaseaccounts/cassandrakeyspaces/throughputsettings.md
         - name: views
           href: ./2021-10-15-preview/databaseaccounts/cassandrakeyspaces/views.md
+        - name: views/
           items:
           - name: throughputSettings
             href: ./2021-10-15-preview/databaseaccounts/cassandrakeyspaces/views/throughputsettings.md
@@ -1960,9 +2228,11 @@
         href: ./2021-10-15-preview/databaseaccounts/graphs.md
       - name: gremlinDatabases
         href: ./2021-10-15-preview/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2021-10-15-preview/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2021-10-15-preview/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -1970,9 +2240,11 @@
           href: ./2021-10-15-preview/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2021-10-15-preview/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2021-10-15-preview/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2021-10-15-preview/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -1992,11 +2264,13 @@
         href: ./2021-10-15-preview/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2021-10-15-preview/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: clientEncryptionKeys
           href: ./2021-10-15-preview/databaseaccounts/sqldatabases/clientencryptionkeys.md
         - name: containers
           href: ./2021-10-15-preview/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2021-10-15-preview/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -2014,6 +2288,7 @@
         href: ./2021-10-15-preview/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2021-10-15-preview/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2021-10-15-preview/databaseaccounts/tables/throughputsettings.md
@@ -2023,6 +2298,7 @@
     items:
     - name: cassandraClusters
       href: ./2021-07-01-preview/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: backups
         href: ./2021-07-01-preview/cassandraclusters/backups.md
@@ -2030,12 +2306,15 @@
         href: ./2021-07-01-preview/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2021-07-01-preview/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2021-07-01-preview/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2021-07-01-preview/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2021-07-01-preview/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -2043,6 +2322,7 @@
           href: ./2021-07-01-preview/databaseaccounts/cassandrakeyspaces/throughputsettings.md
         - name: views
           href: ./2021-07-01-preview/databaseaccounts/cassandrakeyspaces/views.md
+        - name: views/
           items:
           - name: throughputSettings
             href: ./2021-07-01-preview/databaseaccounts/cassandrakeyspaces/views/throughputsettings.md
@@ -2050,9 +2330,11 @@
         href: ./2021-07-01-preview/databaseaccounts/graphs.md
       - name: gremlinDatabases
         href: ./2021-07-01-preview/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2021-07-01-preview/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2021-07-01-preview/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -2060,9 +2342,11 @@
           href: ./2021-07-01-preview/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2021-07-01-preview/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2021-07-01-preview/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2021-07-01-preview/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -2078,9 +2362,11 @@
         href: ./2021-07-01-preview/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2021-07-01-preview/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: containers
           href: ./2021-07-01-preview/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2021-07-01-preview/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -2098,6 +2384,7 @@
         href: ./2021-07-01-preview/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2021-07-01-preview/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2021-07-01-preview/databaseaccounts/tables/throughputsettings.md
@@ -2107,12 +2394,15 @@
     items:
     - name: databaseAccounts
       href: ./2021-06-15/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2021-06-15/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2021-06-15/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2021-06-15/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -2120,9 +2410,11 @@
           href: ./2021-06-15/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2021-06-15/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2021-06-15/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2021-06-15/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -2130,9 +2422,11 @@
           href: ./2021-06-15/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2021-06-15/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2021-06-15/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2021-06-15/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -2146,9 +2440,11 @@
         href: ./2021-06-15/databaseaccounts/privatelinkresources.md
       - name: sqlDatabases
         href: ./2021-06-15/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: containers
           href: ./2021-06-15/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2021-06-15/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -2166,6 +2462,7 @@
         href: ./2021-06-15/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2021-06-15/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2021-06-15/databaseaccounts/tables/throughputsettings.md
@@ -2173,12 +2470,15 @@
     items:
     - name: databaseAccounts
       href: ./2021-05-15/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2021-05-15/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2021-05-15/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2021-05-15/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -2186,9 +2486,11 @@
           href: ./2021-05-15/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2021-05-15/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2021-05-15/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2021-05-15/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -2196,9 +2498,11 @@
           href: ./2021-05-15/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2021-05-15/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2021-05-15/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2021-05-15/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -2212,9 +2516,11 @@
         href: ./2021-05-15/databaseaccounts/privatelinkresources.md
       - name: sqlDatabases
         href: ./2021-05-15/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: containers
           href: ./2021-05-15/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2021-05-15/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -2232,6 +2538,7 @@
         href: ./2021-05-15/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2021-05-15/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2021-05-15/databaseaccounts/tables/throughputsettings.md
@@ -2239,12 +2546,15 @@
     items:
     - name: databaseAccounts
       href: ./2021-04-15/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2021-04-15/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2021-04-15/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2021-04-15/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -2252,9 +2562,11 @@
           href: ./2021-04-15/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2021-04-15/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2021-04-15/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2021-04-15/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -2262,9 +2574,11 @@
           href: ./2021-04-15/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2021-04-15/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2021-04-15/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2021-04-15/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -2278,9 +2592,11 @@
         href: ./2021-04-15/databaseaccounts/privatelinkresources.md
       - name: sqlDatabases
         href: ./2021-04-15/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: containers
           href: ./2021-04-15/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2021-04-15/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -2298,6 +2614,7 @@
         href: ./2021-04-15/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2021-04-15/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2021-04-15/databaseaccounts/tables/throughputsettings.md
@@ -2305,6 +2622,7 @@
     items:
     - name: cassandraClusters
       href: ./2021-04-01-preview/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: backups
         href: ./2021-04-01-preview/cassandraclusters/backups.md
@@ -2312,12 +2630,15 @@
         href: ./2021-04-01-preview/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2021-04-01-preview/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2021-04-01-preview/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2021-04-01-preview/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2021-04-01-preview/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -2325,9 +2646,11 @@
           href: ./2021-04-01-preview/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2021-04-01-preview/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2021-04-01-preview/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2021-04-01-preview/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -2335,9 +2658,11 @@
           href: ./2021-04-01-preview/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2021-04-01-preview/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2021-04-01-preview/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2021-04-01-preview/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -2353,9 +2678,11 @@
         href: ./2021-04-01-preview/databaseaccounts/services.md
       - name: sqlDatabases
         href: ./2021-04-01-preview/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: containers
           href: ./2021-04-01-preview/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2021-04-01-preview/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -2373,6 +2700,7 @@
         href: ./2021-04-01-preview/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2021-04-01-preview/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2021-04-01-preview/databaseaccounts/tables/throughputsettings.md
@@ -2382,12 +2710,15 @@
     items:
     - name: databaseAccounts
       href: ./2021-03-15/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2021-03-15/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2021-03-15/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2021-03-15/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -2395,9 +2726,11 @@
           href: ./2021-03-15/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2021-03-15/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2021-03-15/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2021-03-15/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -2405,9 +2738,11 @@
           href: ./2021-03-15/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2021-03-15/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2021-03-15/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2021-03-15/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -2421,9 +2756,11 @@
         href: ./2021-03-15/databaseaccounts/privatelinkresources.md
       - name: sqlDatabases
         href: ./2021-03-15/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: containers
           href: ./2021-03-15/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2021-03-15/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -2437,6 +2774,7 @@
           href: ./2021-03-15/databaseaccounts/sqldatabases/throughputsettings.md
       - name: tables
         href: ./2021-03-15/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2021-03-15/databaseaccounts/tables/throughputsettings.md
@@ -2444,6 +2782,7 @@
     items:
     - name: cassandraClusters
       href: ./2021-03-01-preview/cassandraclusters.md
+    - name: cassandraClusters/
       items:
       - name: backups
         href: ./2021-03-01-preview/cassandraclusters/backups.md
@@ -2451,12 +2790,15 @@
         href: ./2021-03-01-preview/cassandraclusters/datacenters.md
     - name: databaseAccounts
       href: ./2021-03-01-preview/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2021-03-01-preview/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2021-03-01-preview/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2021-03-01-preview/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -2464,9 +2806,11 @@
           href: ./2021-03-01-preview/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2021-03-01-preview/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2021-03-01-preview/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2021-03-01-preview/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -2474,9 +2818,11 @@
           href: ./2021-03-01-preview/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2021-03-01-preview/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2021-03-01-preview/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2021-03-01-preview/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -2490,9 +2836,11 @@
         href: ./2021-03-01-preview/databaseaccounts/privatelinkresources.md
       - name: sqlDatabases
         href: ./2021-03-01-preview/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: containers
           href: ./2021-03-01-preview/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2021-03-01-preview/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -2510,6 +2858,7 @@
         href: ./2021-03-01-preview/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2021-03-01-preview/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2021-03-01-preview/databaseaccounts/tables/throughputsettings.md
@@ -2519,12 +2868,15 @@
     items:
     - name: databaseAccounts
       href: ./2021-01-15/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2021-01-15/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2021-01-15/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2021-01-15/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -2532,9 +2884,11 @@
           href: ./2021-01-15/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2021-01-15/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2021-01-15/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2021-01-15/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -2542,9 +2896,11 @@
           href: ./2021-01-15/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2021-01-15/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2021-01-15/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2021-01-15/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -2558,9 +2914,11 @@
         href: ./2021-01-15/databaseaccounts/privatelinkresources.md
       - name: sqlDatabases
         href: ./2021-01-15/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: containers
           href: ./2021-01-15/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2021-01-15/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -2574,6 +2932,7 @@
           href: ./2021-01-15/databaseaccounts/sqldatabases/throughputsettings.md
       - name: tables
         href: ./2021-01-15/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2021-01-15/databaseaccounts/tables/throughputsettings.md
@@ -2581,12 +2940,15 @@
     items:
     - name: databaseAccounts
       href: ./2020-09-01/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2020-09-01/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2020-09-01/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2020-09-01/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -2594,9 +2956,11 @@
           href: ./2020-09-01/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2020-09-01/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2020-09-01/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2020-09-01/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -2604,9 +2968,11 @@
           href: ./2020-09-01/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2020-09-01/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2020-09-01/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2020-09-01/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -2616,9 +2982,11 @@
         href: ./2020-09-01/databaseaccounts/notebookworkspaces.md
       - name: sqlDatabases
         href: ./2020-09-01/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: containers
           href: ./2020-09-01/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2020-09-01/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -2632,6 +3000,7 @@
           href: ./2020-09-01/databaseaccounts/sqldatabases/throughputsettings.md
       - name: tables
         href: ./2020-09-01/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2020-09-01/databaseaccounts/tables/throughputsettings.md
@@ -2639,12 +3008,15 @@
     items:
     - name: databaseAccounts
       href: ./2020-06-01-preview/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2020-06-01-preview/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2020-06-01-preview/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2020-06-01-preview/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -2652,9 +3024,11 @@
           href: ./2020-06-01-preview/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2020-06-01-preview/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2020-06-01-preview/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2020-06-01-preview/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -2662,9 +3036,11 @@
           href: ./2020-06-01-preview/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2020-06-01-preview/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2020-06-01-preview/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2020-06-01-preview/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -2674,9 +3050,11 @@
         href: ./2020-06-01-preview/databaseaccounts/notebookworkspaces.md
       - name: sqlDatabases
         href: ./2020-06-01-preview/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: containers
           href: ./2020-06-01-preview/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2020-06-01-preview/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -2694,6 +3072,7 @@
         href: ./2020-06-01-preview/databaseaccounts/sqlroledefinitions.md
       - name: tables
         href: ./2020-06-01-preview/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2020-06-01-preview/databaseaccounts/tables/throughputsettings.md
@@ -2701,12 +3080,15 @@
     items:
     - name: databaseAccounts
       href: ./2020-04-01/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2020-04-01/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2020-04-01/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2020-04-01/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -2714,9 +3096,11 @@
           href: ./2020-04-01/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2020-04-01/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2020-04-01/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2020-04-01/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -2724,9 +3108,11 @@
           href: ./2020-04-01/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2020-04-01/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2020-04-01/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2020-04-01/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -2736,9 +3122,11 @@
         href: ./2020-04-01/databaseaccounts/notebookworkspaces.md
       - name: sqlDatabases
         href: ./2020-04-01/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: containers
           href: ./2020-04-01/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2020-04-01/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -2752,6 +3140,7 @@
           href: ./2020-04-01/databaseaccounts/sqldatabases/throughputsettings.md
       - name: tables
         href: ./2020-04-01/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2020-04-01/databaseaccounts/tables/throughputsettings.md
@@ -2759,12 +3148,15 @@
     items:
     - name: databaseAccounts
       href: ./2020-03-01/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2020-03-01/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2020-03-01/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2020-03-01/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -2772,9 +3164,11 @@
           href: ./2020-03-01/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2020-03-01/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2020-03-01/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2020-03-01/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -2782,9 +3176,11 @@
           href: ./2020-03-01/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2020-03-01/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2020-03-01/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2020-03-01/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -2794,9 +3190,11 @@
         href: ./2020-03-01/databaseaccounts/notebookworkspaces.md
       - name: sqlDatabases
         href: ./2020-03-01/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: containers
           href: ./2020-03-01/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2020-03-01/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -2810,6 +3208,7 @@
           href: ./2020-03-01/databaseaccounts/sqldatabases/throughputsettings.md
       - name: tables
         href: ./2020-03-01/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2020-03-01/databaseaccounts/tables/throughputsettings.md
@@ -2817,12 +3216,15 @@
     items:
     - name: databaseAccounts
       href: ./2019-12-12/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2019-12-12/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2019-12-12/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2019-12-12/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -2830,9 +3232,11 @@
           href: ./2019-12-12/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2019-12-12/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2019-12-12/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2019-12-12/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -2840,9 +3244,11 @@
           href: ./2019-12-12/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2019-12-12/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2019-12-12/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2019-12-12/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -2852,9 +3258,11 @@
         href: ./2019-12-12/databaseaccounts/notebookworkspaces.md
       - name: sqlDatabases
         href: ./2019-12-12/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: containers
           href: ./2019-12-12/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2019-12-12/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -2868,6 +3276,7 @@
           href: ./2019-12-12/databaseaccounts/sqldatabases/throughputsettings.md
       - name: tables
         href: ./2019-12-12/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2019-12-12/databaseaccounts/tables/throughputsettings.md
@@ -2875,12 +3284,15 @@
     items:
     - name: databaseAccounts
       href: ./2019-08-01/databaseaccounts.md
+    - name: databaseAccounts/
       items:
       - name: cassandraKeyspaces
         href: ./2019-08-01/databaseaccounts/cassandrakeyspaces.md
+      - name: cassandraKeyspaces/
         items:
         - name: tables
           href: ./2019-08-01/databaseaccounts/cassandrakeyspaces/tables.md
+        - name: tables/
           items:
           - name: throughputSettings
             href: ./2019-08-01/databaseaccounts/cassandrakeyspaces/tables/throughputsettings.md
@@ -2888,9 +3300,11 @@
           href: ./2019-08-01/databaseaccounts/cassandrakeyspaces/throughputsettings.md
       - name: gremlinDatabases
         href: ./2019-08-01/databaseaccounts/gremlindatabases.md
+      - name: gremlinDatabases/
         items:
         - name: graphs
           href: ./2019-08-01/databaseaccounts/gremlindatabases/graphs.md
+        - name: graphs/
           items:
           - name: throughputSettings
             href: ./2019-08-01/databaseaccounts/gremlindatabases/graphs/throughputsettings.md
@@ -2898,9 +3312,11 @@
           href: ./2019-08-01/databaseaccounts/gremlindatabases/throughputsettings.md
       - name: mongodbDatabases
         href: ./2019-08-01/databaseaccounts/mongodbdatabases.md
+      - name: mongodbDatabases/
         items:
         - name: collections
           href: ./2019-08-01/databaseaccounts/mongodbdatabases/collections.md
+        - name: collections/
           items:
           - name: throughputSettings
             href: ./2019-08-01/databaseaccounts/mongodbdatabases/collections/throughputsettings.md
@@ -2910,9 +3326,11 @@
         href: ./2019-08-01/databaseaccounts/notebookworkspaces.md
       - name: sqlDatabases
         href: ./2019-08-01/databaseaccounts/sqldatabases.md
+      - name: sqlDatabases/
         items:
         - name: containers
           href: ./2019-08-01/databaseaccounts/sqldatabases/containers.md
+        - name: containers/
           items:
           - name: storedProcedures
             href: ./2019-08-01/databaseaccounts/sqldatabases/containers/storedprocedures.md
@@ -2926,12 +3344,13 @@
           href: ./2019-08-01/databaseaccounts/sqldatabases/throughputsettings.md
       - name: tables
         href: ./2019-08-01/databaseaccounts/tables.md
+      - name: tables/
         items:
         - name: throughputSettings
           href: ./2019-08-01/databaseaccounts/tables/throughputsettings.md
   - name: 2019-08-01-preview
     items:
-    - name: databaseAccounts
+    - name: databaseAccounts/
       items:
       - name: privateEndpointConnections
         href: ./2019-08-01-preview/databaseaccounts/privateendpointconnections.md
@@ -2941,24 +3360,29 @@
     items:
     - name: databaseAccounts
       href: ./2016-03-31/databaseaccounts.md
+    - name: databaseAccounts/
       items:
-      - name: apis
+      - name: apis/
         items:
         - name: databases
           href: ./2016-03-31/databaseaccounts/apis/databases.md
+        - name: databases/
           items:
           - name: collections
             href: ./2016-03-31/databaseaccounts/apis/databases/collections.md
+          - name: collections/
             items:
             - name: settings
               href: ./2016-03-31/databaseaccounts/apis/databases/collections/settings.md
           - name: containers
             href: ./2016-03-31/databaseaccounts/apis/databases/containers.md
+          - name: containers/
             items:
             - name: settings
               href: ./2016-03-31/databaseaccounts/apis/databases/containers/settings.md
           - name: graphs
             href: ./2016-03-31/databaseaccounts/apis/databases/graphs.md
+          - name: graphs/
             items:
             - name: settings
               href: ./2016-03-31/databaseaccounts/apis/databases/graphs/settings.md
@@ -2966,16 +3390,19 @@
             href: ./2016-03-31/databaseaccounts/apis/databases/settings.md
         - name: keyspaces
           href: ./2016-03-31/databaseaccounts/apis/keyspaces.md
+        - name: keyspaces/
           items:
           - name: settings
             href: ./2016-03-31/databaseaccounts/apis/keyspaces/settings.md
           - name: tables
             href: ./2016-03-31/databaseaccounts/apis/keyspaces/tables.md
+          - name: tables/
             items:
             - name: settings
               href: ./2016-03-31/databaseaccounts/apis/keyspaces/tables/settings.md
         - name: tables
           href: ./2016-03-31/databaseaccounts/apis/tables.md
+        - name: tables/
           items:
           - name: settings
             href: ./2016-03-31/databaseaccounts/apis/tables/settings.md
@@ -2983,24 +3410,29 @@
     items:
     - name: databaseAccounts
       href: ./2016-03-19/databaseaccounts.md
+    - name: databaseAccounts/
       items:
-      - name: apis
+      - name: apis/
         items:
         - name: databases
           href: ./2016-03-19/databaseaccounts/apis/databases.md
+        - name: databases/
           items:
           - name: collections
             href: ./2016-03-19/databaseaccounts/apis/databases/collections.md
+          - name: collections/
             items:
             - name: settings
               href: ./2016-03-19/databaseaccounts/apis/databases/collections/settings.md
           - name: containers
             href: ./2016-03-19/databaseaccounts/apis/databases/containers.md
+          - name: containers/
             items:
             - name: settings
               href: ./2016-03-19/databaseaccounts/apis/databases/containers/settings.md
           - name: graphs
             href: ./2016-03-19/databaseaccounts/apis/databases/graphs.md
+          - name: graphs/
             items:
             - name: settings
               href: ./2016-03-19/databaseaccounts/apis/databases/graphs/settings.md
@@ -3008,16 +3440,19 @@
             href: ./2016-03-19/databaseaccounts/apis/databases/settings.md
         - name: keyspaces
           href: ./2016-03-19/databaseaccounts/apis/keyspaces.md
+        - name: keyspaces/
           items:
           - name: settings
             href: ./2016-03-19/databaseaccounts/apis/keyspaces/settings.md
           - name: tables
             href: ./2016-03-19/databaseaccounts/apis/keyspaces/tables.md
+          - name: tables/
             items:
             - name: settings
               href: ./2016-03-19/databaseaccounts/apis/keyspaces/tables/settings.md
         - name: tables
           href: ./2016-03-19/databaseaccounts/apis/tables.md
+        - name: tables/
           items:
           - name: settings
             href: ./2016-03-19/databaseaccounts/apis/tables/settings.md
@@ -3025,24 +3460,29 @@
     items:
     - name: databaseAccounts
       href: ./2015-11-06/databaseaccounts.md
+    - name: databaseAccounts/
       items:
-      - name: apis
+      - name: apis/
         items:
         - name: databases
           href: ./2015-11-06/databaseaccounts/apis/databases.md
+        - name: databases/
           items:
           - name: collections
             href: ./2015-11-06/databaseaccounts/apis/databases/collections.md
+          - name: collections/
             items:
             - name: settings
               href: ./2015-11-06/databaseaccounts/apis/databases/collections/settings.md
           - name: containers
             href: ./2015-11-06/databaseaccounts/apis/databases/containers.md
+          - name: containers/
             items:
             - name: settings
               href: ./2015-11-06/databaseaccounts/apis/databases/containers/settings.md
           - name: graphs
             href: ./2015-11-06/databaseaccounts/apis/databases/graphs.md
+          - name: graphs/
             items:
             - name: settings
               href: ./2015-11-06/databaseaccounts/apis/databases/graphs/settings.md
@@ -3050,16 +3490,19 @@
             href: ./2015-11-06/databaseaccounts/apis/databases/settings.md
         - name: keyspaces
           href: ./2015-11-06/databaseaccounts/apis/keyspaces.md
+        - name: keyspaces/
           items:
           - name: settings
             href: ./2015-11-06/databaseaccounts/apis/keyspaces/settings.md
           - name: tables
             href: ./2015-11-06/databaseaccounts/apis/keyspaces/tables.md
+          - name: tables/
             items:
             - name: settings
               href: ./2015-11-06/databaseaccounts/apis/keyspaces/tables/settings.md
         - name: tables
           href: ./2015-11-06/databaseaccounts/apis/tables.md
+        - name: tables/
           items:
           - name: settings
             href: ./2015-11-06/databaseaccounts/apis/tables/settings.md
@@ -3067,24 +3510,29 @@
     items:
     - name: databaseAccounts
       href: ./2015-04-08/databaseaccounts.md
+    - name: databaseAccounts/
       items:
-      - name: apis
+      - name: apis/
         items:
         - name: databases
           href: ./2015-04-08/databaseaccounts/apis/databases.md
+        - name: databases/
           items:
           - name: collections
             href: ./2015-04-08/databaseaccounts/apis/databases/collections.md
+          - name: collections/
             items:
             - name: settings
               href: ./2015-04-08/databaseaccounts/apis/databases/collections/settings.md
           - name: containers
             href: ./2015-04-08/databaseaccounts/apis/databases/containers.md
+          - name: containers/
             items:
             - name: settings
               href: ./2015-04-08/databaseaccounts/apis/databases/containers/settings.md
           - name: graphs
             href: ./2015-04-08/databaseaccounts/apis/databases/graphs.md
+          - name: graphs/
             items:
             - name: settings
               href: ./2015-04-08/databaseaccounts/apis/databases/graphs/settings.md
@@ -3092,16 +3540,19 @@
             href: ./2015-04-08/databaseaccounts/apis/databases/settings.md
         - name: keyspaces
           href: ./2015-04-08/databaseaccounts/apis/keyspaces.md
+        - name: keyspaces/
           items:
           - name: settings
             href: ./2015-04-08/databaseaccounts/apis/keyspaces/settings.md
           - name: tables
             href: ./2015-04-08/databaseaccounts/apis/keyspaces/tables.md
+          - name: tables/
             items:
             - name: settings
               href: ./2015-04-08/databaseaccounts/apis/keyspaces/tables/settings.md
         - name: tables
           href: ./2015-04-08/databaseaccounts/apis/tables.md
+        - name: tables/
           items:
           - name: settings
             href: ./2015-04-08/databaseaccounts/apis/tables/settings.md
@@ -3109,24 +3560,29 @@
     items:
     - name: databaseAccounts
       href: ./2015-04-01/databaseaccounts.md
+    - name: databaseAccounts/
       items:
-      - name: apis
+      - name: apis/
         items:
         - name: databases
           href: ./2015-04-01/databaseaccounts/apis/databases.md
+        - name: databases/
           items:
           - name: collections
             href: ./2015-04-01/databaseaccounts/apis/databases/collections.md
+          - name: collections/
             items:
             - name: settings
               href: ./2015-04-01/databaseaccounts/apis/databases/collections/settings.md
           - name: containers
             href: ./2015-04-01/databaseaccounts/apis/databases/containers.md
+          - name: containers/
             items:
             - name: settings
               href: ./2015-04-01/databaseaccounts/apis/databases/containers/settings.md
           - name: graphs
             href: ./2015-04-01/databaseaccounts/apis/databases/graphs.md
+          - name: graphs/
             items:
             - name: settings
               href: ./2015-04-01/databaseaccounts/apis/databases/graphs/settings.md
@@ -3134,16 +3590,19 @@
             href: ./2015-04-01/databaseaccounts/apis/databases/settings.md
         - name: keyspaces
           href: ./2015-04-01/databaseaccounts/apis/keyspaces.md
+        - name: keyspaces/
           items:
           - name: settings
             href: ./2015-04-01/databaseaccounts/apis/keyspaces/settings.md
           - name: tables
             href: ./2015-04-01/databaseaccounts/apis/keyspaces/tables.md
+          - name: tables/
             items:
             - name: settings
               href: ./2015-04-01/databaseaccounts/apis/keyspaces/tables/settings.md
         - name: tables
           href: ./2015-04-01/databaseaccounts/apis/tables.md
+        - name: tables/
           items:
           - name: settings
             href: ./2015-04-01/databaseaccounts/apis/tables/settings.md
