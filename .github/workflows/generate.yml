@@ -1,9 +1,14 @@
 name: Generate Docs
 
 on:
-  push:
-    branches: [main]
+  schedule:
+    - cron: '0 9 * * SUN'
   workflow_dispatch:
+    inputs:
+      types_az_ref:
+        description: 'Git ref or full SHA for https://github.com/Azure/bicep-types-az.'
+        required: true
+        default: autogenerate
 
 jobs:
   generate:
@@ -24,6 +29,14 @@ jobs:
         with:
           repository: Azure/bicep-types-az
           path: workflow-temp/bicep-types-az
+          ref: ${{ github.event.inputs.types_az_ref || 'autogenerate' }}
+
+      - id: get_types_az_gh_uri
+        name: Get GitHub URI for bicep-types-az
+        run: |
+          git_sha=`git rev-parse --short HEAD`
+          echo "gh_uri=https://github.com/Azure/bicep-types-az/tree/$git_sha" >> $GITHUB_OUTPUT
+        working-directory: workflow-temp/bicep-types-az
 
       - name: Run Generation
         run: |
@@ -38,3 +51,7 @@ jobs:
         with:
           name: generated
           path: ${{ runner.temp }}/generated
+
+      - name: Job Summary
+        run: |
+          echo "Generated docs from ${{ steps.get_types_az_gh_uri.outputs.gh_uri }}" >> $GITHUB_STEP_SUMMARY
