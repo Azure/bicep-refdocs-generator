@@ -8,7 +8,7 @@ ms.topic: reference
 ms.date: 09/13/2024
 ms.author: tomfitz
 ---
-# Microsoft.Resources resourceGroups 2024-07-01
+# # Microsoft.Resources resourceGroups 2024-07-01
 
 > [!div class="op_single_selector" title1="API Versions:"]
 > - [Latest](../resourcegroups.md)
@@ -149,6 +149,7 @@ To create a Microsoft.Resources/resourceGroups resource, add the following JSON 
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
+| type | The resource type | 'Microsoft.Resources/resourceGroups' |
 | location | The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations. | string (required) |
 | managedBy | The ID of the resource that manages this resource group. | string |
 | name | The resource name | string <br /><br />Constraints:<br />Min length = 1<br />Max length = 1<br />Pattern = `^[-\w\._\(\)]+$` (required) |
@@ -197,7 +198,7 @@ For a list of changed properties in each API version, see [change log](~/microso
 To create a Microsoft.Resources/resourceGroups resource, add the following Terraform to your template.
 
 ```terraform
-resource "azapi_resource" "symbolicname" = {
+resource "azapi_resource" "symbolicname" {
   type = "Microsoft.Resources/resourceGroups@2024-07-01"
   name = "string"
   location = "string"
@@ -217,6 +218,7 @@ resource "azapi_resource" "symbolicname" = {
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
+| type | The resource type | "Microsoft.Resources/resourceGroups@2024-07-01" |
 | location | The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations. | string (required) |
 | managedBy | The ID of the resource that manages this resource group. | string |
 | name | The resource name | string <br /><br />Constraints:<br />Min length = 1<br />Max length = 1<br />Pattern = `^[-\w\._\(\)]+$` (required) |

@@ -8,7 +8,7 @@ ms.topic: reference
 ms.date: 09/13/2024
 ms.author: tomfitz
 ---
-# Microsoft.DocumentDB databaseAccounts 2024-05-15
+# # Microsoft.DocumentDB databaseAccounts 2024-05-15
 
 > [!div class="op_single_selector" title1="API Versions:"]
 > - [Latest](../databaseaccounts.md)
@@ -766,6 +766,7 @@ For **Periodic**, use:
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
+| type | The resource type | 'Microsoft.DocumentDB/databaseAccounts' |
 | identity | Identity for the resource. | [ManagedServiceIdentity](#managedserviceidentity-1) |
 | kind | Indicates the type of database account. This can only be set at database account creation. | 'GlobalDocumentDB'<br />'MongoDB'<br />'Parse' |
 | location | The location of the resource group to which the resource belongs. | string |
@@ -865,7 +866,7 @@ For a list of changed properties in each API version, see [change log](~/microso
 To create a Microsoft.DocumentDB/databaseAccounts resource, add the following Terraform to your template.
 
 ```terraform
-resource "azapi_resource" "symbolicname" = {
+resource "azapi_resource" "symbolicname" {
   type = "Microsoft.DocumentDB/databaseAccounts@2024-05-15"
   name = "string"
   identity = {
@@ -919,7 +920,7 @@ resource "azapi_resource" "symbolicname" = {
       ]
       createMode = "string"
       customerManagedKeyStatus = "string"
-      databaseAccountOfferType = 'Standard'
+      databaseAccountOfferType = "Standard"
       defaultIdentity = "string"
       disableKeyBasedMetadataWriteAccess = bool
       disableLocalAuth = bool
@@ -998,7 +999,7 @@ For **Continuous**, use:
   continuousModeProperties = {
     tier = "string"
   }
-  type = 'Continuous'
+  type = "Continuous"
 }
 ```
 
@@ -1011,7 +1012,7 @@ For **Periodic**, use:
     backupRetentionIntervalInHours = int
     backupStorageRedundancy = "string"
   }
-  type = 'Periodic'
+  type = "Periodic"
 }
 ```
 
@@ -1172,6 +1173,7 @@ For **Periodic**, use:
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
+| type | The resource type | "Microsoft.DocumentDB/databaseAccounts@2024-05-15" |
 | identity | Identity for the resource. | [ManagedServiceIdentity](#managedserviceidentity-2) |
 | kind | Indicates the type of database account. This can only be set at database account creation. | 'GlobalDocumentDB'<br />'MongoDB'<br />'Parse' |
 | location | The location of the resource group to which the resource belongs. | string |

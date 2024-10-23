@@ -83,8 +83,8 @@
       },
       "DiffPlex": {
         "type": "Transitive",
-        "resolved": "1.7.1",
-        "contentHash": "a0fSO2p8ykrcfzgG0sjpZAMZPthXXz4l6UIVuM9uyIYIh5yga4sq3aydSGt6n+MkdSBKvMurjjaKnxIqZtfG1g=="
+        "resolved": "1.7.2",
+        "contentHash": "qJEjdxEDBWSFZGB8paBB9HDeJXHGlHlOXeGX3kbTuXWuOsgv2iSAEOOzo5V1/B39Vcxr9IVVrNKewRcX+rsn4g=="
       },
       "JsonDiffPatch.Net": {
         "type": "Transitive",
@@ -243,7 +243,7 @@
         "type": "Project",
         "dependencies": {
           "Azure.Bicep.Types.Az": "[0.2.706, )",
-          "DiffPlex": "[1.7.1, )",
+          "DiffPlex": "[1.7.2, )",
           "FluentAssertions": "[6.12.1, )",
           "JsonDiffPatch.Net": "[2.3.0, )",
           "MSTest.TestAdapter": "[3.6.1, )",

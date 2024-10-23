@@ -8,7 +8,7 @@ ms.topic: reference
 ms.date: 09/13/2024
 ms.author: tomfitz
 ---
-# Microsoft.KeyVault vaults 2023-07-01
+# # Microsoft.KeyVault vaults 2023-07-01
 
 > [!div class="op_single_selector" title1="API Versions:"]
 > - [Latest](../vaults.md)
@@ -331,6 +331,7 @@ To create a Microsoft.KeyVault/vaults resource, add the following JSON to your t
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
+| type | The resource type | 'Microsoft.KeyVault/vaults' |
 | location | The supported Azure location where the key vault should be created. | string (required) |
 | name | The resource name | string <br /><br />Constraints:<br />Pattern = `^[a-zA-Z0-9-]{3,24}$` (required) |
 | properties | Properties of the vault | [VaultProperties](#vaultproperties-1) (required) |
@@ -467,7 +468,7 @@ For a list of changed properties in each API version, see [change log](~/microso
 To create a Microsoft.KeyVault/vaults resource, add the following Terraform to your template.
 
 ```terraform
-resource "azapi_resource" "symbolicname" = {
+resource "azapi_resource" "symbolicname" {
   type = "Microsoft.KeyVault/vaults@2023-07-01"
   name = "string"
   location = "string"
@@ -553,6 +554,7 @@ resource "azapi_resource" "symbolicname" = {
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
+| type | The resource type | "Microsoft.KeyVault/vaults@2023-07-01" |
 | location | The supported Azure location where the key vault should be created. | string (required) |
 | name | The resource name | string <br /><br />Constraints:<br />Pattern = `^[a-zA-Z0-9-]{3,24}$` (required) |
 | properties | Properties of the vault | [VaultProperties](#vaultproperties-2) (required) |

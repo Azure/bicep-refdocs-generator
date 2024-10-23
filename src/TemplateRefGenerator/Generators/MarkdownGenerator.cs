@@ -77,12 +77,15 @@ public class MarkdownGenerator
         => properties.Where(x => !x.Value.Flags.HasFlag(ObjectTypePropertyFlags.ReadOnly))
             .OrderBy(x => x.Key, StringComparer.OrdinalIgnoreCase);
 
-    private static string GetHeading(PageMetadata metadata, ResourceMetadata resource)
+    private static string GetHeading(PageMetadata metadata, ResourceMetadata resource, bool isLatestVersionPage)
     {
+        var pageTitle = isLatestVersionPage ? resource.ResourceType : $"{resource.ResourceType} {resource.ApiVersion}";
+        var apiVersion = isLatestVersionPage ? "latest" : resource.ApiVersion;
+
         return $"""
 ---
-title: {resource.ResourceType} {resource.ApiVersion}
-description: Azure {resource.ResourceType} syntax and properties to use in Azure Resource Manager templates for deploying the resource. API version {resource.ApiVersion}
+title: {pageTitle}
+description: Azure {resource.ResourceType} syntax and properties to use in Azure Resource Manager templates for deploying the resource. API version {apiVersion}
 author: {metadata.Author}
 zone_pivot_groups: deployment-languages-reference
 ms.service: azure-resource-manager
@@ -247,7 +250,7 @@ For **{discSample.DiscriminatorValue}**, use:
         sb.Append($"""
 ## Property values
 
-{GetPropertyValues(resource, namedTypes, remarks, anchorIndex)}
+{GetPropertyValues(resource, DeploymentType.Bicep, namedTypes, remarks, anchorIndex)}
 
 """);
 
@@ -378,7 +381,7 @@ For **{discSample.DiscriminatorValue}**, use:
         sb.Append($"""
 ## Property values
 
-{GetPropertyValues(resource, namedTypes, remarks, anchorIndex)}
+{GetPropertyValues(resource, DeploymentType.Json, namedTypes, remarks, anchorIndex)}
 
 """);
 
@@ -509,7 +512,7 @@ For **{discSample.DiscriminatorValue}**, use:
         sb.Append($"""
 ## Property values
 
-{GetPropertyValues(resource, namedTypes, remarks, anchorIndex)}
+{GetPropertyValues(resource, DeploymentType.Terraform, namedTypes, remarks, anchorIndex)}
 ::: zone-end
 
 """);
@@ -656,10 +659,10 @@ For **{discSample.DiscriminatorValue}**, use:
                 return $"string{stringConstraints}";
             case ObjectType objectType:
                 var anchorSuffixO = anchorIndex > 0 ? $"-{anchorIndex}" : "";
-                return MarkdownUtils.GetLink(objectType.Name, $"#{objectType.Name.ToLowerInvariant()}{anchorSuffixO}");
+                return MarkdownUtils.GetLink(objectType.Name, MarkdownUtils.GetDocAnchor($"{objectType.Name}{anchorSuffixO}"));
             case DiscriminatedObjectType objectType:
                 var anchorSuffixDo = anchorIndex > 0 ? $"-{anchorIndex}" : "";
-                return MarkdownUtils.GetLink(objectType.Name, $"#{objectType.Name.ToLowerInvariant()}{anchorSuffixDo}");
+                return MarkdownUtils.GetLink(objectType.Name, MarkdownUtils.GetDocAnchor($"{objectType.Name}{anchorSuffixDo}"));
             case ArrayType arrayType when arrayType.ItemType.Type is UnionType:
                 return $"String array containing any of:{Br}{GetTypeValue(arrayType.ItemType.Type, anchorIndex)}";
             case ArrayType arrayType:
@@ -709,7 +712,7 @@ For **{discSample.DiscriminatorValue}**, use:
         return constraints.Any() ? $" {Br}{Br}" + JoinWithBr("Constraints:", JoinWithBr(constraints)) : "";
     }
 
-    public static string GetPropertyValues(ResourceMetadata resource, ImmutableArray<NamedType> namedTypes, RemarksFile remarks, int anchorIndex)
+    public static string GetPropertyValues(ResourceMetadata resource, DeploymentType deploymentType, ImmutableArray<NamedType> namedTypes, RemarksFile remarks, int anchorIndex)
     {
         var anchorSuffix = anchorIndex > 0 ? $"-{anchorIndex}" : "";
         var remarksByObjectName = remarks.GetPropertyRemarks(resource).ToLookup(x => x.ObjectName, StringComparer.OrdinalIgnoreCase);
@@ -725,18 +728,61 @@ For **{discSample.DiscriminatorValue}**, use:
 """);
         }
 
-        void writeProperties(string name, IReadOnlyDictionary<string, ObjectTypeProperty> properties) {
-            var remarksByPropertyName = remarksByObjectName[name]
+        void writeProperties(string typeName, IReadOnlyDictionary<string, ObjectTypeProperty> properties) {
+            var remarksByPropertyName = remarksByObjectName[typeName]
                 .ToDictionary(x => x.PropertyName, StringComparer.OrdinalIgnoreCase);
+
+            if (typeName == resource.ResourceType)
+            {
+                switch (deploymentType)
+                {
+                    case DeploymentType.Bicep:
+                        if (Utils.IsChildResource(resource.UnqualifiedResourceType))
+                        {
+                            var parentType = Utils.GetParentResource(resource.ResourceType);
+                            var parentTypeUnqualified = Utils.GetParentResource(resource.UnqualifiedResourceType);
+
+                            sb.Append($"""
+| parent | In Bicep, you can specify the parent resource for a child resource. You only need to add this property when the child resource is declared outside of the parent resource.<br /><br />For more information, see [Child resource outside parent resource](/azure/azure-resource-manager/bicep/child-resource-name-type#outside-parent-resource). | Symbolic name for resource of type: [{parentTypeUnqualified}](~/{parentType.ToLowerInvariant()}.md) | 
+
+""");   
+                        }
+                        break;
+                    case DeploymentType.Terraform:
+                        if (Utils.IsChildResource(resource.UnqualifiedResourceType))
+                        {
+                            var parentType = Utils.GetParentResource(resource.ResourceType);
+                            var parentTypeUnqualified = Utils.GetParentResource(resource.UnqualifiedResourceType);
+
+                            sb.Append($"""
+| parent_id | The ID of the resource that is the parent for this resource. | ID for resource of type: [{parentTypeUnqualified}](~/{parentType.ToLowerInvariant()}.md) | 
+
+""");
+                        }
+
+                        sb.Append($"""
+| type | The resource type | "{resource.ResourceType}@{resource.ApiVersion}" |
+
+""");
+                        break;
+                    case DeploymentType.Json:
+                        sb.Append($"""
+| type | The resource type | '{resource.ResourceType}' |
+
+""");
+                        break;
+                }
+            }
 
             foreach (var (propName, prop) in GetOrderedWritableProperties(properties))
             {
                 var remark = remarksByPropertyName.TryGetValue(propName, out var value) ? value : null;
+                var description = remark?.Description ?? prop.Description ?? "";
 
                 var requiredSuffix = prop.Flags.HasFlag(ObjectTypePropertyFlags.Required) ? " (required)" : "";
 
                 sb.Append($"""
-| {propName} | {remark?.Description ?? prop.Description} | {GetTypeValue(prop.Type.Type, anchorIndex)}{requiredSuffix} |
+| {propName} | {MarkdownUtils.EscapeNewlines(description)} | {GetTypeValue(prop.Type.Type, anchorIndex)}{requiredSuffix} |
 
 """);
             }
@@ -767,7 +813,7 @@ For **{discSample.DiscriminatorValue}**, use:
                             .Select(x => new StaticTypeReference(new StringLiteralType(x)))
                             .ToList())),
                         ObjectTypePropertyFlags.Required,
-                        string.Join(' ', typeLookup.Select(x => $"Set to '{x.Key}' for type {MarkdownUtils.GetLink(x.Value.Name, $"#{x.Value.Name.ToLowerInvariant()}{anchorSuffix}")}.")));
+                        string.Join(' ', typeLookup.Select(x => $"Set to '{x.Key}' for type {MarkdownUtils.GetLink(x.Value.Name, MarkdownUtils.GetDocAnchor($"{x.Value.Name}{anchorSuffix}"))}.")));
 
                     writeHeading(name);
                     writeProperties(name, discType.BaseProperties.ToImmutableDictionary().Add(discType.Discriminator, discriminatorProperty));
@@ -797,10 +843,11 @@ For **{discSample.DiscriminatorValue}**, use:
 
         var namedTypes = GetNamedTypes(resource);
         var remarks = remarksLoader.GetRemarks(providerNamespace);
+        var pageTitle = isLatestVersionPage ? $"# {resource.Provider} {resource.UnqualifiedResourceType}" : $"# {resource.Provider} {resource.UnqualifiedResourceType} {resource.ApiVersion}";
 
         return $"""
-{GetHeading(pageMetadata, resource)}
-# {resource.Provider} {resource.UnqualifiedResourceType} {resource.ApiVersion}
+{GetHeading(pageMetadata, resource, isLatestVersionPage)}
+# {pageTitle}
 
 {GetApiVersionLinks(groupedTypes, resource, isLatestVersionPage)}
 {GetResourceRemarks(resource, remarks)}

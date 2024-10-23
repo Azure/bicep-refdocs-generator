@@ -106,7 +106,7 @@ Updated:
 
 * [DiskProperties](~/microsoft.compute/2020-09-30/disks.md#diskproperties): Added property 'burstingEnabled'
 * [DiskProperties](~/microsoft.compute/2020-09-30/disks.md#diskproperties): Added property 'purchasePlan'
-* [Microsoft.Compute/disks](~/microsoft.compute/2020-09-30/disks.md#microsoft.compute/disks): Added property 'extendedLocation'
+* [Microsoft.Compute/disks](~/microsoft.compute/2020-09-30/disks.md#microsoftcomputedisks): Added property 'extendedLocation'
 
 
 ## 2020-06-30
@@ -138,7 +138,7 @@ Updated:
 * [DiskProperties](~/microsoft.compute/2019-11-01/disks.md#diskproperties): Added property 'diskMBpsReadOnly'
 * [DiskProperties](~/microsoft.compute/2019-11-01/disks.md#diskproperties): Added property 'maxShares'
 * [DiskProperties](~/microsoft.compute/2019-11-01/disks.md#diskproperties): Added property 'shareInfo'
-* [Microsoft.Compute/disks](~/microsoft.compute/2019-11-01/disks.md#microsoft.compute/disks): Added property 'managedByExtended'
+* [Microsoft.Compute/disks](~/microsoft.compute/2019-11-01/disks.md#microsoftcomputedisks): Added property 'managedByExtended'
 
 
 ## 2019-07-01
@@ -207,9 +207,9 @@ Updated:
 
 * [DiskProperties](~/microsoft.compute/2017-03-30/disks.md#diskproperties): Removed property 'accountType'
 * [DiskProperties](~/microsoft.compute/2017-03-30/disks.md#diskproperties): Removed property 'ownerId'
-* [Microsoft.Compute/disks](~/microsoft.compute/2017-03-30/disks.md#microsoft.compute/disks): Added property 'managedBy'
-* [Microsoft.Compute/disks](~/microsoft.compute/2017-03-30/disks.md#microsoft.compute/disks): Added property 'sku'
-* [Microsoft.Compute/disks](~/microsoft.compute/2017-03-30/disks.md#microsoft.compute/disks): Added property 'zones'
+* [Microsoft.Compute/disks](~/microsoft.compute/2017-03-30/disks.md#microsoftcomputedisks): Added property 'managedBy'
+* [Microsoft.Compute/disks](~/microsoft.compute/2017-03-30/disks.md#microsoftcomputedisks): Added property 'sku'
+* [Microsoft.Compute/disks](~/microsoft.compute/2017-03-30/disks.md#microsoftcomputedisks): Added property 'zones'
 
 
 ## 2016-04-30-preview
