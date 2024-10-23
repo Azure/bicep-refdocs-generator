@@ -406,7 +406,6 @@ No new or updated resource types.
 > |  | [databaseAccounts/sqlDatabases/throughputSettings](~/microsoft.documentdb/change-log/databaseaccounts/sqldatabases/throughputsettings.md#2021-10-15) |
 > |  | [databaseAccounts/tables](~/microsoft.documentdb/change-log/databaseaccounts/tables.md#2021-10-15) |
 > |  | [databaseAccounts/tables/throughputSettings](~/microsoft.documentdb/change-log/databaseaccounts/tables/throughputsettings.md#2021-10-15) |
-> |  | [locations](~/microsoft.documentdb/change-log/locations.md#2021-10-15) |
 
 ## 2021-11-15-preview
 
@@ -437,7 +436,6 @@ No new or updated resource types.
 > |  | [databaseAccounts/sqlDatabases/throughputSettings](~/microsoft.documentdb/change-log/databaseaccounts/sqldatabases/throughputsettings.md#2021-11-15-preview) |
 > |  | [databaseAccounts/tables](~/microsoft.documentdb/change-log/databaseaccounts/tables.md#2021-11-15-preview) |
 > |  | [databaseAccounts/tables/throughputSettings](~/microsoft.documentdb/change-log/databaseaccounts/tables/throughputsettings.md#2021-11-15-preview) |
-> |  | [locations](~/microsoft.documentdb/change-log/locations.md#2021-11-15-preview) |
 
 ## 2022-02-15-preview
 
@@ -484,7 +482,6 @@ No new or updated resource types.
 > |  | [databaseAccounts/sqlDatabases/throughputSettings](~/microsoft.documentdb/change-log/databaseaccounts/sqldatabases/throughputsettings.md#2022-05-15) |
 > |  | [databaseAccounts/tables](~/microsoft.documentdb/change-log/databaseaccounts/tables.md#2022-05-15) |
 > |  | [databaseAccounts/tables/throughputSettings](~/microsoft.documentdb/change-log/databaseaccounts/tables/throughputsettings.md#2022-05-15) |
-> |  | [locations](~/microsoft.documentdb/change-log/locations.md#2022-05-15) |
 
 ## 2022-08-15-preview
 
@@ -514,7 +511,6 @@ No new or updated resource types.
 > |  | [databaseAccounts/sqlDatabases/throughputSettings](~/microsoft.documentdb/change-log/databaseaccounts/sqldatabases/throughputsettings.md#2022-08-15-preview) |
 > |  | [databaseAccounts/tables](~/microsoft.documentdb/change-log/databaseaccounts/tables.md#2022-08-15-preview) |
 > |  | [databaseAccounts/tables/throughputSettings](~/microsoft.documentdb/change-log/databaseaccounts/tables/throughputsettings.md#2022-08-15-preview) |
-> |  | [locations](~/microsoft.documentdb/change-log/locations.md#2022-08-15-preview) |
 
 ## 2022-08-15
 
@@ -544,7 +540,6 @@ No new or updated resource types.
 > |  | [databaseAccounts/sqlDatabases/throughputSettings](~/microsoft.documentdb/change-log/databaseaccounts/sqldatabases/throughputsettings.md#2022-08-15) |
 > |  | [databaseAccounts/tables](~/microsoft.documentdb/change-log/databaseaccounts/tables.md#2022-08-15) |
 > |  | [databaseAccounts/tables/throughputSettings](~/microsoft.documentdb/change-log/databaseaccounts/tables/throughputsettings.md#2022-08-15) |
-> |  | [locations](~/microsoft.documentdb/change-log/locations.md#2022-08-15) |
 
 ## 2022-11-15-preview
 
@@ -574,7 +569,6 @@ No new or updated resource types.
 > |  | [databaseAccounts/sqlDatabases/throughputSettings](~/microsoft.documentdb/change-log/databaseaccounts/sqldatabases/throughputsettings.md#2022-11-15-preview) |
 > |  | [databaseAccounts/tables](~/microsoft.documentdb/change-log/databaseaccounts/tables.md#2022-11-15-preview) |
 > |  | [databaseAccounts/tables/throughputSettings](~/microsoft.documentdb/change-log/databaseaccounts/tables/throughputsettings.md#2022-11-15-preview) |
-> |  | [locations](~/microsoft.documentdb/change-log/locations.md#2022-11-15-preview) |
 
 ## 2022-11-15
 
@@ -604,7 +598,6 @@ No new or updated resource types.
 > |  | [databaseAccounts/sqlDatabases/throughputSettings](~/microsoft.documentdb/change-log/databaseaccounts/sqldatabases/throughputsettings.md#2022-11-15) |
 > |  | [databaseAccounts/tables](~/microsoft.documentdb/change-log/databaseaccounts/tables.md#2022-11-15) |
 > |  | [databaseAccounts/tables/throughputSettings](~/microsoft.documentdb/change-log/databaseaccounts/tables/throughputsettings.md#2022-11-15) |
-> |  | [locations](~/microsoft.documentdb/change-log/locations.md#2022-11-15) |
 
 ## 2023-03-01-preview
 
@@ -634,7 +627,6 @@ No new or updated resource types.
 > |  | [databaseAccounts/sqlDatabases/throughputSettings](~/microsoft.documentdb/change-log/databaseaccounts/sqldatabases/throughputsettings.md#2023-03-01-preview) |
 > |  | [databaseAccounts/tables](~/microsoft.documentdb/change-log/databaseaccounts/tables.md#2023-03-01-preview) |
 > |  | [databaseAccounts/tables/throughputSettings](~/microsoft.documentdb/change-log/databaseaccounts/tables/throughputsettings.md#2023-03-01-preview) |
-> |  | [locations](~/microsoft.documentdb/change-log/locations.md#2023-03-01-preview) |
 
 ## 2023-03-15-preview
 
@@ -644,7 +636,6 @@ No new or updated resource types.
 > |  | [cassandraClusters](~/microsoft.documentdb/change-log/cassandraclusters.md#2023-03-15-preview) |
 > |  | [cassandraClusters/dataCenters](~/microsoft.documentdb/change-log/cassandraclusters/datacenters.md#2023-03-15-preview) |
 > |  | [databaseAccounts/sqlDatabases/containers](~/microsoft.documentdb/change-log/databaseaccounts/sqldatabases/containers.md#2023-03-15-preview) |
-> |  | [locations](~/microsoft.documentdb/change-log/locations.md#2023-03-15-preview) |
 
 ## 2023-03-15
 

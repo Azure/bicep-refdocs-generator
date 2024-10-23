@@ -370,7 +370,7 @@ No properties added, updated or removed.
                 types.Add(arrayType.ItemType.Type);
                 break;
             case ObjectType objectType:
-                foreach (var property in objectType.Properties.Values)
+                foreach (var (_, property) in GetOrderedWritableProperties(objectType.Properties))
                 {
                     GetReferencedTypes(property.Type.Type, types);
                 }
@@ -380,7 +380,7 @@ No properties added, updated or removed.
                 }
                 break;
             case DiscriminatedObjectType discType:
-                foreach (var property in discType.BaseProperties.Values)
+                foreach (var (_, property) in GetOrderedWritableProperties(discType.BaseProperties))
                 {
                     GetReferencedTypes(property.Type.Type, types);
                 }

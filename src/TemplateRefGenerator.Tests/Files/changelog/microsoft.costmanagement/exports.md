@@ -23,7 +23,6 @@ No properties added, updated or removed.
 
 Removed:
 
-* [ExportSuspensionContext](~/microsoft.costmanagement/2023-08-01/exports.md#exportsuspensioncontext)
 * [FilterItems](~/microsoft.costmanagement/2023-08-01/exports.md#filteritems)
 
 Updated:
@@ -41,7 +40,6 @@ Updated:
 
 Added:
 
-* [ExportSuspensionContext](~/microsoft.costmanagement/2023-07-01-preview/exports.md#exportsuspensioncontext)
 * [FilterItems](~/microsoft.costmanagement/2023-07-01-preview/exports.md#filteritems)
 
 Updated:
@@ -73,14 +71,7 @@ No properties added, updated or removed.
 
 ## 2022-10-01
 
-Added:
-
-* [ExportRun](~/microsoft.costmanagement/2022-10-01/exports.md#exportrun)
-
-Removed:
-
-* [ExportExecution](~/microsoft.costmanagement/2022-10-01/exports.md#exportexecution)
-
+No properties added, updated or removed.
 
 ## 2021-10-01
 
@@ -107,7 +98,6 @@ Added:
 
 * [ExportDataset](~/microsoft.costmanagement/2020-06-01/exports.md#exportdataset)
 * [ExportDatasetConfiguration](~/microsoft.costmanagement/2020-06-01/exports.md#exportdatasetconfiguration)
-* [ExportExecution](~/microsoft.costmanagement/2020-06-01/exports.md#exportexecution)
 * [ExportExecutionListResult](~/microsoft.costmanagement/2020-06-01/exports.md#exportexecutionlistresult)
 * [ExportTimePeriod](~/microsoft.costmanagement/2020-06-01/exports.md#exporttimeperiod)
 
@@ -142,7 +132,6 @@ Removed:
 * [QueryDefinition](~/microsoft.costmanagement/2019-11-01/exports.md#querydefinition)
 * [QueryFilter](~/microsoft.costmanagement/2019-11-01/exports.md#queryfilter)
 * [QuerySortingConfiguration](~/microsoft.costmanagement/2019-11-01/exports.md#querysortingconfiguration)
-* [ResourceTags](~/microsoft.costmanagement/2019-11-01/exports.md#resourcetags)
 
 Updated:
 
