@@ -15,7 +15,6 @@ This article describes the properties that changed in each API version for [micr
 
 Removed:
 
-* [CapacityModeChangeTransitionState](~/microsoft.documentdb/2024-05-15/databaseaccounts.md#capacitymodechangetransitionstate)
 * [DiagnosticLogSettings](~/microsoft.documentdb/2024-05-15/databaseaccounts.md#diagnosticlogsettings)
 
 Updated:
@@ -27,16 +26,11 @@ Updated:
 * [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-05-15/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Removed property 'enableMaterializedViews'
 * [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-05-15/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Removed property 'enablePerRegionPerPartitionAutoscale'
 * [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-05-15/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Removed property 'enablePriorityBasedExecution'
-* [PrivateEndpointConnection](~/microsoft.documentdb/2024-05-15/databaseaccounts.md#privateendpointconnection): Removed property 'systemData'
 * [RestoreParameters](~/microsoft.documentdb/2024-05-15/databaseaccounts.md#restoreparameters): Removed property 'restoreWithTtlDisabled'
 * [RestoreParameters](~/microsoft.documentdb/2024-05-15/databaseaccounts.md#restoreparameters): Removed property 'sourceBackupLocation'
 
 
 ## 2024-05-15-preview
-
-Added:
-
-* [CapacityModeChangeTransitionState](~/microsoft.documentdb/2024-05-15-preview/databaseaccounts.md#capacitymodechangetransitionstate)
 
 Updated:
 
@@ -57,7 +51,6 @@ Updated:
 * [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-02-15-preview/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Added property 'enableMaterializedViews'
 * [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-02-15-preview/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Added property 'enablePerRegionPerPartitionAutoscale'
 * [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-02-15-preview/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Added property 'enablePriorityBasedExecution'
-* [PrivateEndpointConnection](~/microsoft.documentdb/2024-02-15-preview/databaseaccounts.md#privateendpointconnection): Added property 'systemData'
 * [RestoreParameters](~/microsoft.documentdb/2024-02-15-preview/databaseaccounts.md#restoreparameters): Added property 'restoreWithTtlDisabled'
 * [RestoreParameters](~/microsoft.documentdb/2024-02-15-preview/databaseaccounts.md#restoreparameters): Added property 'sourceBackupLocation'
 
@@ -228,9 +221,7 @@ Updated:
 
 Added:
 
-* [AccountKeyMetadata](~/microsoft.documentdb/2022-08-15-preview/databaseaccounts.md#accountkeymetadata)
 * [ContinuousModeProperties](~/microsoft.documentdb/2022-08-15-preview/databaseaccounts.md#continuousmodeproperties)
-* [DatabaseAccountKeysMetadata](~/microsoft.documentdb/2022-08-15-preview/databaseaccounts.md#databaseaccountkeysmetadata)
 * [DiagnosticLogSettings](~/microsoft.documentdb/2022-08-15-preview/databaseaccounts.md#diagnosticlogsettings)
 * [GremlinDatabaseRestoreResource](~/microsoft.documentdb/2022-08-15-preview/databaseaccounts.md#gremlindatabaserestoreresource)
 
@@ -344,7 +335,6 @@ Added:
 * [BackupPolicyMigrationState](~/microsoft.documentdb/2021-06-15/databaseaccounts.md#backuppolicymigrationstate)
 * [DatabaseRestoreResource](~/microsoft.documentdb/2021-06-15/databaseaccounts.md#databaserestoreresource)
 * [RestoreParameters](~/microsoft.documentdb/2021-06-15/databaseaccounts.md#restoreparameters)
-* [SystemData](~/microsoft.documentdb/2021-06-15/databaseaccounts.md#systemdata)
 
 Updated:
 
@@ -375,7 +365,6 @@ Removed:
 * [DefaultRequestDatabaseAccountCreateUpdateProperties](~/microsoft.documentdb/2021-04-15/databaseaccounts.md#defaultrequestdatabaseaccountcreateupdateproperties)
 * [RestoreParameters](~/microsoft.documentdb/2021-04-15/databaseaccounts.md#restoreparameters)
 * [RestoreReqeustDatabaseAccountCreateUpdateProperties](~/microsoft.documentdb/2021-04-15/databaseaccounts.md#restorereqeustdatabaseaccountcreateupdateproperties)
-* [SystemData](~/microsoft.documentdb/2021-04-15/databaseaccounts.md#systemdata)
 
 Updated:
 
@@ -392,7 +381,6 @@ Added:
 * [DefaultRequestDatabaseAccountCreateUpdateProperties](~/microsoft.documentdb/2021-04-01-preview/databaseaccounts.md#defaultrequestdatabaseaccountcreateupdateproperties)
 * [RestoreParameters](~/microsoft.documentdb/2021-04-01-preview/databaseaccounts.md#restoreparameters)
 * [RestoreReqeustDatabaseAccountCreateUpdateProperties](~/microsoft.documentdb/2021-04-01-preview/databaseaccounts.md#restorereqeustdatabaseaccountcreateupdateproperties)
-* [SystemData](~/microsoft.documentdb/2021-04-01-preview/databaseaccounts.md#systemdata)
 
 Updated:
 
@@ -409,7 +397,6 @@ Removed:
 * [DefaultRequestDatabaseAccountCreateUpdateProperties](~/microsoft.documentdb/2021-03-15/databaseaccounts.md#defaultrequestdatabaseaccountcreateupdateproperties)
 * [RestoreParameters](~/microsoft.documentdb/2021-03-15/databaseaccounts.md#restoreparameters)
 * [RestoreReqeustDatabaseAccountCreateUpdateProperties](~/microsoft.documentdb/2021-03-15/databaseaccounts.md#restorereqeustdatabaseaccountcreateupdateproperties)
-* [SystemData](~/microsoft.documentdb/2021-03-15/databaseaccounts.md#systemdata)
 
 Updated:
 
@@ -426,7 +413,6 @@ Added:
 * [DefaultRequestDatabaseAccountCreateUpdateProperties](~/microsoft.documentdb/2021-03-01-preview/databaseaccounts.md#defaultrequestdatabaseaccountcreateupdateproperties)
 * [RestoreParameters](~/microsoft.documentdb/2021-03-01-preview/databaseaccounts.md#restoreparameters)
 * [RestoreReqeustDatabaseAccountCreateUpdateProperties](~/microsoft.documentdb/2021-03-01-preview/databaseaccounts.md#restorereqeustdatabaseaccountcreateupdateproperties)
-* [SystemData](~/microsoft.documentdb/2021-03-01-preview/databaseaccounts.md#systemdata)
 
 Updated:
 
@@ -461,7 +447,6 @@ Removed:
 * [ManagedServiceIdentityUserAssignedIdentities](~/microsoft.documentdb/2020-09-01/databaseaccounts.md#managedserviceidentityuserassignedidentities)
 * [RestoreParameters](~/microsoft.documentdb/2020-09-01/databaseaccounts.md#restoreparameters)
 * [RestoreReqeustDatabaseAccountCreateUpdateProperties](~/microsoft.documentdb/2020-09-01/databaseaccounts.md#restorereqeustdatabaseaccountcreateupdateproperties)
-* [SystemData](~/microsoft.documentdb/2020-09-01/databaseaccounts.md#systemdata)
 
 Updated:
 
@@ -486,7 +471,6 @@ Added:
 * [PeriodicModeProperties](~/microsoft.documentdb/2020-06-01-preview/databaseaccounts.md#periodicmodeproperties)
 * [RestoreParameters](~/microsoft.documentdb/2020-06-01-preview/databaseaccounts.md#restoreparameters)
 * [RestoreReqeustDatabaseAccountCreateUpdateProperties](~/microsoft.documentdb/2020-06-01-preview/databaseaccounts.md#restorereqeustdatabaseaccountcreateupdateproperties)
-* [SystemData](~/microsoft.documentdb/2020-06-01-preview/databaseaccounts.md#systemdata)
 
 Updated:
 
@@ -514,10 +498,6 @@ Updated:
 
 
 ## 2020-03-01
-
-Added:
-
-* [PrivateEndpointConnection](~/microsoft.documentdb/2020-03-01/databaseaccounts.md#privateendpointconnection)
 
 Updated:
 

@@ -86,7 +86,6 @@ Updated:
 Added:
 
 * [DiskSecurityProfile](~/microsoft.compute/2020-12-01/disks.md#disksecurityprofile)
-* [PropertyUpdatesInProgress](~/microsoft.compute/2020-12-01/disks.md#propertyupdatesinprogress)
 
 Updated:
 
@@ -126,10 +125,6 @@ Updated:
 
 
 ## 2019-11-01
-
-Added:
-
-* [ShareInfoElement](~/microsoft.compute/2019-11-01/disks.md#shareinfoelement)
 
 Updated:
 

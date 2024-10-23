@@ -59,10 +59,6 @@ Updated:
 
 ## 2020-04-01-preview
 
-Added:
-
-* [SystemData](~/microsoft.keyvault/2020-04-01-preview/vaults.md#systemdata)
-
 Updated:
 
 * [Microsoft.KeyVault/vaults](~/microsoft.keyvault/2020-04-01-preview/vaults.md#microsoftkeyvaultvaults): Added property 'systemData'
@@ -73,8 +69,6 @@ Updated:
 
 Updated:
 
-* [PrivateEndpointConnectionItem](~/microsoft.keyvault/2019-09-01/vaults.md#privateendpointconnectionitem): Added property 'etag'
-* [PrivateEndpointConnectionItem](~/microsoft.keyvault/2019-09-01/vaults.md#privateendpointconnectionitem): Added property 'id'
 * [VaultProperties](~/microsoft.keyvault/2019-09-01/vaults.md#vaultproperties): Added property 'enableRbacAuthorization'
 * [VaultProperties](~/microsoft.keyvault/2019-09-01/vaults.md#vaultproperties): Added property 'hsmPoolResourceId'
 * [VaultProperties](~/microsoft.keyvault/2019-09-01/vaults.md#vaultproperties): Added property 'provisioningState'
@@ -83,10 +77,6 @@ Updated:
 
 
 ## 2018-02-14
-
-Added:
-
-* [PrivateEndpointConnectionItem](~/microsoft.keyvault/2018-02-14/vaults.md#privateendpointconnectionitem)
 
 Updated:
 
