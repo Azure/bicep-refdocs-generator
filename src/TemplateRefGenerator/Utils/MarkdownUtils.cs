@@ -13,6 +13,13 @@ public class MarkdownUtils
     public static string GetDocAnchor(string headingText)
         => "#" + Regex.Replace(headingText, "[^a-zA-Z0-9-]", "").ToLowerInvariant();
 
-    public static string EscapeNewlines(string input)
-        => Regex.Replace(input, "(\r|)\n", "<br />");
+    public static string Ecsape(string input) => input
+        .Replace("<br />", "\n")
+        .Replace("<br/>", "\n")
+        .Replace("<br>", "\n")
+        .Replace("</br>", "\n")
+        .Replace("<", "&lt;")
+        .Replace(">", "&gt;")
+        .Replace("\r", "")
+        .Replace("\n", "<br />");
 }

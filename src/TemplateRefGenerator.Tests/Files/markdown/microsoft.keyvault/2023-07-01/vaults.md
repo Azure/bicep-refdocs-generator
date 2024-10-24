@@ -8,7 +8,7 @@ ms.topic: reference
 ms.date: 09/13/2024
 ms.author: tomfitz
 ---
-# # Microsoft.KeyVault vaults 2023-07-01
+# Microsoft.KeyVault vaults 2023-07-01
 
 > [!div class="op_single_selector" title1="API Versions:"]
 > - [Latest](../vaults.md)
@@ -139,7 +139,7 @@ resource symbolicname 'Microsoft.KeyVault/vaults@2023-07-01' = {
 | location | The supported Azure location where the key vault should be created. | string (required) |
 | name | The resource name | string <br /><br />Constraints:<br />Pattern = `^[a-zA-Z0-9-]{3,24}$` (required) |
 | properties | Properties of the vault | [VaultProperties](#vaultproperties) (required) |
-| tags | The tags that will be assigned to the key vault. | [VaultCreateOrUpdateParametersTags](#vaultcreateorupdateparameterstags) |
+| tags | Resource tags | Dictionary of tag names and values. See [Tags in templates](/azure/azure-resource-manager/management/tag-resources#arm-templates) |
 
 ### NetworkRuleSet
 
@@ -187,7 +187,7 @@ resource symbolicname 'Microsoft.KeyVault/vaults@2023-07-01' = {
 | provisioningState | Provisioning state of the vault. | 'RegisteringDns'<br />'Succeeded' |
 | publicNetworkAccess | Property to specify whether the vault will accept traffic from public internet. If set to 'disabled' all traffic except private endpoint traffic and that that originates from trusted services will be blocked. This will override the set firewall rules, meaning that even if the firewall rules are present we will not honor the rules. | string |
 | sku | SKU details | [Sku](#sku) (required) |
-| softDeleteRetentionInDays | softDelete data retention days. It accepts >=7 and <=90. | int |
+| softDeleteRetentionInDays | softDelete data retention days. It accepts &gt;=7 and &lt;=90. | int |
 | tenantId | The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault. | string <br /><br />Constraints:<br />Min length = 36<br />Max length = 36<br />Pattern = `^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$` (required) |
 | vaultUri | The URI of the vault for performing operations on keys and secrets. | string |
 
@@ -331,11 +331,12 @@ To create a Microsoft.KeyVault/vaults resource, add the following JSON to your t
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
-| type | The resource type | 'Microsoft.KeyVault/vaults' |
+| apiVersion | The api version | '2023-07-01' |
 | location | The supported Azure location where the key vault should be created. | string (required) |
 | name | The resource name | string <br /><br />Constraints:<br />Pattern = `^[a-zA-Z0-9-]{3,24}$` (required) |
 | properties | Properties of the vault | [VaultProperties](#vaultproperties-1) (required) |
-| tags | The tags that will be assigned to the key vault. | [VaultCreateOrUpdateParametersTags](#vaultcreateorupdateparameterstags-1) |
+| tags | Resource tags | Dictionary of tag names and values. See [Tags in templates](/azure/azure-resource-manager/management/tag-resources#arm-templates) |
+| type | The resource type | 'Microsoft.KeyVault/vaults' |
 
 ### NetworkRuleSet
 
@@ -383,7 +384,7 @@ To create a Microsoft.KeyVault/vaults resource, add the following JSON to your t
 | provisioningState | Provisioning state of the vault. | 'RegisteringDns'<br />'Succeeded' |
 | publicNetworkAccess | Property to specify whether the vault will accept traffic from public internet. If set to 'disabled' all traffic except private endpoint traffic and that that originates from trusted services will be blocked. This will override the set firewall rules, meaning that even if the firewall rules are present we will not honor the rules. | string |
 | sku | SKU details | [Sku](#sku-1) (required) |
-| softDeleteRetentionInDays | softDelete data retention days. It accepts >=7 and <=90. | int |
+| softDeleteRetentionInDays | softDelete data retention days. It accepts &gt;=7 and &lt;=90. | int |
 | tenantId | The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault. | string <br /><br />Constraints:<br />Min length = 36<br />Max length = 36<br />Pattern = `^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$` (required) |
 | vaultUri | The URI of the vault for performing operations on keys and secrets. | string |
 
@@ -554,11 +555,11 @@ resource "azapi_resource" "symbolicname" {
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
-| type | The resource type | "Microsoft.KeyVault/vaults@2023-07-01" |
 | location | The supported Azure location where the key vault should be created. | string (required) |
 | name | The resource name | string <br /><br />Constraints:<br />Pattern = `^[a-zA-Z0-9-]{3,24}$` (required) |
 | properties | Properties of the vault | [VaultProperties](#vaultproperties-2) (required) |
-| tags | The tags that will be assigned to the key vault. | [VaultCreateOrUpdateParametersTags](#vaultcreateorupdateparameterstags-2) |
+| tags | Resource tags | Dictionary of tag names and values. |
+| type | The resource type | "Microsoft.KeyVault/vaults@2023-07-01" |
 
 ### NetworkRuleSet
 
@@ -606,7 +607,7 @@ resource "azapi_resource" "symbolicname" {
 | provisioningState | Provisioning state of the vault. | 'RegisteringDns'<br />'Succeeded' |
 | publicNetworkAccess | Property to specify whether the vault will accept traffic from public internet. If set to 'disabled' all traffic except private endpoint traffic and that that originates from trusted services will be blocked. This will override the set firewall rules, meaning that even if the firewall rules are present we will not honor the rules. | string |
 | sku | SKU details | [Sku](#sku-2) (required) |
-| softDeleteRetentionInDays | softDelete data retention days. It accepts >=7 and <=90. | int |
+| softDeleteRetentionInDays | softDelete data retention days. It accepts &gt;=7 and &lt;=90. | int |
 | tenantId | The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault. | string <br /><br />Constraints:<br />Min length = 36<br />Max length = 36<br />Pattern = `^[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}$` (required) |
 | vaultUri | The URI of the vault for performing operations on keys and secrets. | string |
 

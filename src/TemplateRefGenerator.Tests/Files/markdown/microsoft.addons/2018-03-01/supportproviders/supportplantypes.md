@@ -8,7 +8,7 @@ ms.topic: reference
 ms.date: 09/13/2024
 ms.author: tomfitz
 ---
-# # Microsoft.Addons supportProviders/supportPlanTypes 2018-03-01
+# Microsoft.Addons supportProviders/supportPlanTypes 2018-03-01
 
 > [!div class="op_single_selector" title1="API Versions:"]
 > - [Latest](../../supportproviders/supportplantypes.md)
@@ -41,8 +41,8 @@ resource symbolicname 'Microsoft.Addons/supportProviders/supportPlanTypes@2018-0
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
-| parent | In Bicep, you can specify the parent resource for a child resource. You only need to add this property when the child resource is declared outside of the parent resource.<br /><br />For more information, see [Child resource outside parent resource](/azure/azure-resource-manager/bicep/child-resource-name-type#outside-parent-resource). | Symbolic name for resource of type: [supportProviders](~/microsoft.addons/supportproviders.md) | 
 | name | The resource name | 'Advanced'<br />'Essential'<br />'Standard' (required) |
+| parent | In Bicep, you can specify the parent resource for a child resource. You only need to add this property when the child resource is declared outside of the parent resource.<br /><br />For more information, see [Child resource outside parent resource](/azure/azure-resource-manager/bicep/child-resource-name-type#outside-parent-resource). | Symbolic name for resource of type: [supportProviders](~/microsoft.addons/supportproviders.md) |
 
 
 
@@ -75,8 +75,9 @@ To create a Microsoft.Addons/supportProviders/supportPlanTypes resource, add the
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
-| type | The resource type | 'Microsoft.Addons/supportProviders/supportPlanTypes' |
+| apiVersion | The api version | '2018-03-01' |
 | name | The resource name | 'Advanced'<br />'Essential'<br />'Standard' (required) |
+| type | The resource type | 'Microsoft.Addons/supportProviders/supportPlanTypes' |
 
 
 
@@ -108,9 +109,9 @@ resource "azapi_resource" "symbolicname" {
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
-| parent_id | The ID of the resource that is the parent for this resource. | ID for resource of type: [supportProviders](~/microsoft.addons/supportproviders.md) | 
-| type | The resource type | "Microsoft.Addons/supportProviders/supportPlanTypes@2018-03-01" |
 | name | The resource name | 'Advanced'<br />'Essential'<br />'Standard' (required) |
+| parent_id | The ID of the resource that is the parent for this resource. | ID for resource of type: [supportProviders](~/microsoft.addons/supportproviders.md) |
+| type | The resource type | "Microsoft.Addons/supportProviders/supportPlanTypes@2018-03-01" |
 
 
 ::: zone-end
