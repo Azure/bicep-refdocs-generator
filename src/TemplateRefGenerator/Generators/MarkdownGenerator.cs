@@ -825,8 +825,10 @@ For **{discSample.DiscriminatorValue}**, use:
 
             foreach (var property in propertyData)
             {
+                var description = MarkdownUtils.ConvertDocsLinks(property.Description ?? "");
+
                 sb.Append($"""
-| {property.Name} | {MarkdownUtils.Ecsape(property.Description ?? "")} | {property.Type} |
+| {property.Name} | {MarkdownUtils.Escape(description)} | {property.Type} |
 
 """);
             }

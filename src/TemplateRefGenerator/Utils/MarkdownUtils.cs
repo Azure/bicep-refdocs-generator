@@ -13,7 +13,7 @@ public class MarkdownUtils
     public static string GetDocAnchor(string headingText)
         => "#" + Regex.Replace(headingText, "[^a-zA-Z0-9-]", "").ToLowerInvariant();
 
-    public static string Ecsape(string input) => input
+    public static string Escape(string input) => input
         .Replace("<br />", "\n")
         .Replace("<br/>", "\n")
         .Replace("<br>", "\n")
@@ -22,4 +22,9 @@ public class MarkdownUtils
         .Replace(">", "&gt;")
         .Replace("\r", "")
         .Replace("\n", "<br />");
+
+    public static string ConvertDocsLinks(string input) => input
+        // Remove hostname so that links under the same domain are relative
+        .Replace("https://docs.microsoft.com/", "/")
+        .Replace("https://learn.microsoft.com/", "/");
 }

@@ -25,7 +25,7 @@ function GetResourceTypes {
 }
 
 $quickstartLinks = @()
-$metadataPaths = Get-ChildItem $QuickStartsRepoPath -File -Recurse -Include "metadata.json"
+$metadataPaths = Get-ChildItem $QuickStartsRepoPath -File -Recurse -Include "metadata.json" | Sort-Object FullName
 foreach ($metadataPath in $metadataPaths) {
     Write-Host "Processing $metadataPath"
     $templatePath = Join-Path $metadataPath.DirectoryName "azuredeploy.json" -Resolve
@@ -39,7 +39,7 @@ foreach ($metadataPath in $metadataPaths) {
     $templateContent = Get-Content $templatePath | ConvertFrom-Json
     $resourceTypes = GetResourceTypes($templateContent)
 
-    $quickstartLinks += @{
+    $quickstartLinks += [ordered]@{
         Title = $displayName;
         Description = $description;
         Path = [System.IO.Path]::GetRelativePath($QuickStartsRepoPath, "$templatePath/..").Replace("\\", "/")
@@ -48,7 +48,7 @@ foreach ($metadataPath in $metadataPaths) {
     }
 }
 
-$samples = @{
+$samples = [ordered]@{
     "`$schema" = "../samples.schema.json";
     QuickstartLinks = $quickstartLinks;
 }
