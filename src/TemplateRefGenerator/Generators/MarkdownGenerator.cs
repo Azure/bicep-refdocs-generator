@@ -276,9 +276,10 @@ The following quickstart samples deploy this resource type.
             foreach (var link in matchingLinks)
             {
                 var bicepUrl = $"https://github.com/Azure/azure-quickstart-templates/tree/master/{link.Path}/main.bicep";
+                var description = MarkdownUtils.ConvertDocsLinks(link.Description);
 
                 sb.Append($"""
-> | [{link.Title}]({bicepUrl}) | {link.Description} |
+> | [{link.Title}]({bicepUrl}) | {MarkdownUtils.Escape(description)} |
 
 """);
             }
@@ -408,9 +409,10 @@ The following quickstart templates deploy this resource type.
                 var templateUrl = $"https://github.com/Azure/azure-quickstart-templates/tree/master/{link.Path}";
                 var rawTemplateUrl = $"https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/{link.Path}/azuredeploy.json";
                 var deployUrl = $"https://portal.azure.com/#create/Microsoft.Template/uri/{Uri.EscapeDataString(rawTemplateUrl)}";
+                var description = MarkdownUtils.ConvertDocsLinks(link.Description);
 
                 sb.Append($"""
-> | [{link.Title}]({templateUrl})<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)]({deployUrl}) | {link.Description} |
+> | [{link.Title}]({templateUrl})<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)]({deployUrl}) | {MarkdownUtils.Escape(description)} |
 
 """);
             }

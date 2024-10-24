@@ -24,7 +24,11 @@ public class MarkdownUtils
         .Replace("\n", "<br />");
 
     public static string ConvertDocsLinks(string input) => input
-        // Remove hostname so that links under the same domain are relative
+        // Remove hostname and /en-us/ prefix so that links under the same domain are relative
+        .Replace("http://docs.microsoft.com/", "https://docs.microsoft.com/")
+        .Replace("http://learn.microsoft.com/", "https://learn.microsoft.com/")
+        .Replace("https://docs.microsoft.com/en-us/", "https://docs.microsoft.com/")
+        .Replace("https://learn.microsoft.com/en-us/", "https://learn.microsoft.com/")
         .Replace("https://docs.microsoft.com/", "/")
         .Replace("https://learn.microsoft.com/", "/");
 }

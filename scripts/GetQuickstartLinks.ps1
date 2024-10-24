@@ -33,7 +33,7 @@ foreach ($metadataPath in $metadataPaths) {
     $hasBicep = (Test-Path $bicepPath -PathType Leaf)
 
     $metadataContent = Get-Content $metadataPath.FullName | ConvertFrom-Json
-    $description = $metadataContent.description.Replace("/en-us/", "/").Replace("http://", "https://").Replace("https://docs.microsoft.com/", "/")
+    $description = $metadataContent.description
     $displayName = $metadataContent.itemDisplayName
 
     $templateContent = Get-Content $templatePath | ConvertFrom-Json
