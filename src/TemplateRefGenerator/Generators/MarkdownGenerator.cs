@@ -826,7 +826,7 @@ For **{discSample.DiscriminatorValue}**, use:
             foreach (var property in propertyData)
             {
                 sb.Append($"""
-| {property.Name} | {MarkdownUtils.EscapeNewlines(property.Description ?? "")} | {property.Type} |
+| {property.Name} | {MarkdownUtils.Ecsape(property.Description ?? "")} | {property.Type} |
 
 """);
             }
