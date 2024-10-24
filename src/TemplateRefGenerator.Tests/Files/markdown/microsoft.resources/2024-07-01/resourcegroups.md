@@ -8,7 +8,7 @@ ms.topic: reference
 ms.date: 09/13/2024
 ms.author: tomfitz
 ---
-# # Microsoft.Resources resourceGroups 2024-07-01
+# Microsoft.Resources resourceGroups 2024-07-01
 
 > [!div class="op_single_selector" title1="API Versions:"]
 > - [Latest](../resourcegroups.md)
@@ -86,7 +86,7 @@ resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
 | managedBy | The ID of the resource that manages this resource group. | string |
 | name | The resource name | string <br /><br />Constraints:<br />Min length = 1<br />Max length = 1<br />Pattern = `^[-\w\._\(\)]+$` (required) |
 | properties | The resource group properties. | [ResourceGroupProperties](#resourcegroupproperties) |
-| tags | The tags attached to the resource group. | [ResourceGroupTags](#resourcegrouptags) |
+| tags | Resource tags | Dictionary of tag names and values. See [Tags in templates](/azure/azure-resource-manager/management/tag-resources#arm-templates) |
 
 ### ResourceGroupProperties
 
@@ -149,12 +149,13 @@ To create a Microsoft.Resources/resourceGroups resource, add the following JSON 
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
-| type | The resource type | 'Microsoft.Resources/resourceGroups' |
+| apiVersion | The api version | '2024-07-01' |
 | location | The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations. | string (required) |
 | managedBy | The ID of the resource that manages this resource group. | string |
 | name | The resource name | string <br /><br />Constraints:<br />Min length = 1<br />Max length = 1<br />Pattern = `^[-\w\._\(\)]+$` (required) |
 | properties | The resource group properties. | [ResourceGroupProperties](#resourcegroupproperties-1) |
-| tags | The tags attached to the resource group. | [ResourceGroupTags](#resourcegrouptags-1) |
+| tags | Resource tags | Dictionary of tag names and values. See [Tags in templates](/azure/azure-resource-manager/management/tag-resources#arm-templates) |
+| type | The resource type | 'Microsoft.Resources/resourceGroups' |
 
 ### ResourceGroupProperties
 
@@ -218,12 +219,12 @@ resource "azapi_resource" "symbolicname" {
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
-| type | The resource type | "Microsoft.Resources/resourceGroups@2024-07-01" |
 | location | The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations. | string (required) |
 | managedBy | The ID of the resource that manages this resource group. | string |
 | name | The resource name | string <br /><br />Constraints:<br />Min length = 1<br />Max length = 1<br />Pattern = `^[-\w\._\(\)]+$` (required) |
 | properties | The resource group properties. | [ResourceGroupProperties](#resourcegroupproperties-2) |
-| tags | The tags attached to the resource group. | [ResourceGroupTags](#resourcegrouptags-2) |
+| tags | Resource tags | Dictionary of tag names and values. |
+| type | The resource type | "Microsoft.Resources/resourceGroups@2024-07-01" |
 
 ### ResourceGroupProperties
 

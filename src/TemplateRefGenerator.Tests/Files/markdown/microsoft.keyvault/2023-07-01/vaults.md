@@ -8,7 +8,7 @@ ms.topic: reference
 ms.date: 09/13/2024
 ms.author: tomfitz
 ---
-# # Microsoft.KeyVault vaults 2023-07-01
+# Microsoft.KeyVault vaults 2023-07-01
 
 > [!div class="op_single_selector" title1="API Versions:"]
 > - [Latest](../vaults.md)
@@ -139,7 +139,7 @@ resource symbolicname 'Microsoft.KeyVault/vaults@2023-07-01' = {
 | location | The supported Azure location where the key vault should be created. | string (required) |
 | name | The resource name | string <br /><br />Constraints:<br />Pattern = `^[a-zA-Z0-9-]{3,24}$` (required) |
 | properties | Properties of the vault | [VaultProperties](#vaultproperties) (required) |
-| tags | The tags that will be assigned to the key vault. | [VaultCreateOrUpdateParametersTags](#vaultcreateorupdateparameterstags) |
+| tags | Resource tags | Dictionary of tag names and values. See [Tags in templates](/azure/azure-resource-manager/management/tag-resources#arm-templates) |
 
 ### NetworkRuleSet
 
@@ -331,11 +331,12 @@ To create a Microsoft.KeyVault/vaults resource, add the following JSON to your t
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
-| type | The resource type | 'Microsoft.KeyVault/vaults' |
+| apiVersion | The api version | '2023-07-01' |
 | location | The supported Azure location where the key vault should be created. | string (required) |
 | name | The resource name | string <br /><br />Constraints:<br />Pattern = `^[a-zA-Z0-9-]{3,24}$` (required) |
 | properties | Properties of the vault | [VaultProperties](#vaultproperties-1) (required) |
-| tags | The tags that will be assigned to the key vault. | [VaultCreateOrUpdateParametersTags](#vaultcreateorupdateparameterstags-1) |
+| tags | Resource tags | Dictionary of tag names and values. See [Tags in templates](/azure/azure-resource-manager/management/tag-resources#arm-templates) |
+| type | The resource type | 'Microsoft.KeyVault/vaults' |
 
 ### NetworkRuleSet
 
@@ -554,11 +555,11 @@ resource "azapi_resource" "symbolicname" {
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
-| type | The resource type | "Microsoft.KeyVault/vaults@2023-07-01" |
 | location | The supported Azure location where the key vault should be created. | string (required) |
 | name | The resource name | string <br /><br />Constraints:<br />Pattern = `^[a-zA-Z0-9-]{3,24}$` (required) |
 | properties | Properties of the vault | [VaultProperties](#vaultproperties-2) (required) |
-| tags | The tags that will be assigned to the key vault. | [VaultCreateOrUpdateParametersTags](#vaultcreateorupdateparameterstags-2) |
+| tags | Resource tags | Dictionary of tag names and values. |
+| type | The resource type | "Microsoft.KeyVault/vaults@2023-07-01" |
 
 ### NetworkRuleSet
 

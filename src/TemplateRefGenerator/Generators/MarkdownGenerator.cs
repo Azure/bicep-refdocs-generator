@@ -712,6 +712,94 @@ For **{discSample.DiscriminatorValue}**, use:
         return constraints.Any() ? $" {Br}{Br}" + JoinWithBr("Constraints:", JoinWithBr(constraints)) : "";
     }
 
+    private record PropertyData(
+        string Name,
+        string? Description,
+        string Type);
+
+    private static IEnumerable<PropertyData> GetProperties(
+        ResourceMetadata resource,
+        DeploymentType deploymentType,
+        string typeName,
+        IReadOnlyDictionary<string, ObjectTypeProperty> properties,
+        IEnumerable<PropertyRemark> propertyRemarks,
+        int anchorIndex)
+    {
+        var remarksByPropertyName = propertyRemarks.ToDictionary(x => x.PropertyName, StringComparer.OrdinalIgnoreCase);
+        var isResourceType = (typeName == resource.ResourceType);
+
+        if (isResourceType)
+        {
+            switch (deploymentType)
+            {
+                case DeploymentType.Bicep:
+                    if (Utils.IsChildResource(resource.UnqualifiedResourceType))
+                    {
+                        var parentType = Utils.GetParentResource(resource.ResourceType);
+                        var parentTypeUnqualified = Utils.GetParentResource(resource.UnqualifiedResourceType);
+
+                        yield return new(
+                            "parent",
+                            $"In Bicep, you can specify the parent resource for a child resource. You only need to add this property when the child resource is declared outside of the parent resource.{Br}{Br}For more information, see [Child resource outside parent resource](/azure/azure-resource-manager/bicep/child-resource-name-type#outside-parent-resource).",
+                            $"Symbolic name for resource of type: [{parentTypeUnqualified}](~/{parentType.ToLowerInvariant()}.md)");
+                    }
+                    break;
+                case DeploymentType.Terraform:
+                    if (Utils.IsChildResource(resource.UnqualifiedResourceType))
+                    {
+                        var parentType = Utils.GetParentResource(resource.ResourceType);
+                        var parentTypeUnqualified = Utils.GetParentResource(resource.UnqualifiedResourceType);
+
+                        yield return new(
+                            "parent_id",
+                            $"The ID of the resource that is the parent for this resource.",
+                            $"ID for resource of type: [{parentTypeUnqualified}](~/{parentType.ToLowerInvariant()}.md)");
+                    }
+
+                    yield return new(
+                        "type",
+                        "The resource type",
+                        $"\"{resource.ResourceType}@{resource.ApiVersion}\"");
+                    break;
+                case DeploymentType.Json:
+                    yield return new(
+                        "type",
+                        "The resource type",
+                        $"'{resource.ResourceType}'");
+                    yield return new(
+                        "apiVersion",
+                        "The api version",
+                        $"'{resource.ApiVersion}'");
+                    break;
+            }
+        }
+
+        foreach (var (propName, prop) in GetOrderedWritableProperties(properties))
+        {
+            if (isResourceType && propName == "tags")
+            {
+                var tagsType = deploymentType != DeploymentType.Terraform ?
+                    "Dictionary of tag names and values. See [Tags in templates](/azure/azure-resource-manager/management/tag-resources#arm-templates)" :
+                    "Dictionary of tag names and values.";
+
+                yield return new(
+                    "tags",
+                    "Resource tags",
+                    tagsType);
+                continue;
+            }
+
+            var remark = remarksByPropertyName.TryGetValue(propName, out var value) ? value : null;
+            var description = remark?.Description ?? prop.Description;
+            var requiredSuffix = prop.Flags.HasFlag(ObjectTypePropertyFlags.Required) ? " (required)" : "";
+
+            yield return new(
+                propName,
+                description,
+                $"{GetTypeValue(prop.Type.Type, anchorIndex)}{requiredSuffix}");
+        }
+    }
+
     public static string GetPropertyValues(ResourceMetadata resource, DeploymentType deploymentType, ImmutableArray<NamedType> namedTypes, RemarksFile remarks, int anchorIndex)
     {
         var anchorSuffix = anchorIndex > 0 ? $"-{anchorIndex}" : "";
@@ -732,57 +820,13 @@ For **{discSample.DiscriminatorValue}**, use:
             var remarksByPropertyName = remarksByObjectName[typeName]
                 .ToDictionary(x => x.PropertyName, StringComparer.OrdinalIgnoreCase);
 
-            if (typeName == resource.ResourceType)
+            var propertyData = GetProperties(resource, deploymentType, typeName, properties, remarksByObjectName[typeName], anchorIndex)
+                .OrderBy(x => x.Name, StringComparer.OrdinalIgnoreCase);
+
+            foreach (var property in propertyData)
             {
-                switch (deploymentType)
-                {
-                    case DeploymentType.Bicep:
-                        if (Utils.IsChildResource(resource.UnqualifiedResourceType))
-                        {
-                            var parentType = Utils.GetParentResource(resource.ResourceType);
-                            var parentTypeUnqualified = Utils.GetParentResource(resource.UnqualifiedResourceType);
-
-                            sb.Append($"""
-| parent | In Bicep, you can specify the parent resource for a child resource. You only need to add this property when the child resource is declared outside of the parent resource.<br /><br />For more information, see [Child resource outside parent resource](/azure/azure-resource-manager/bicep/child-resource-name-type#outside-parent-resource). | Symbolic name for resource of type: [{parentTypeUnqualified}](~/{parentType.ToLowerInvariant()}.md) | 
-
-""");   
-                        }
-                        break;
-                    case DeploymentType.Terraform:
-                        if (Utils.IsChildResource(resource.UnqualifiedResourceType))
-                        {
-                            var parentType = Utils.GetParentResource(resource.ResourceType);
-                            var parentTypeUnqualified = Utils.GetParentResource(resource.UnqualifiedResourceType);
-
-                            sb.Append($"""
-| parent_id | The ID of the resource that is the parent for this resource. | ID for resource of type: [{parentTypeUnqualified}](~/{parentType.ToLowerInvariant()}.md) | 
-
-""");
-                        }
-
-                        sb.Append($"""
-| type | The resource type | "{resource.ResourceType}@{resource.ApiVersion}" |
-
-""");
-                        break;
-                    case DeploymentType.Json:
-                        sb.Append($"""
-| type | The resource type | '{resource.ResourceType}' |
-
-""");
-                        break;
-                }
-            }
-
-            foreach (var (propName, prop) in GetOrderedWritableProperties(properties))
-            {
-                var remark = remarksByPropertyName.TryGetValue(propName, out var value) ? value : null;
-                var description = remark?.Description ?? prop.Description ?? "";
-
-                var requiredSuffix = prop.Flags.HasFlag(ObjectTypePropertyFlags.Required) ? " (required)" : "";
-
                 sb.Append($"""
-| {propName} | {MarkdownUtils.EscapeNewlines(description)} | {GetTypeValue(prop.Type.Type, anchorIndex)}{requiredSuffix} |
+| {property.Name} | {MarkdownUtils.EscapeNewlines(property.Description ?? "")} | {property.Type} |
 
 """);
             }
@@ -843,7 +887,7 @@ For **{discSample.DiscriminatorValue}**, use:
 
         var namedTypes = GetNamedTypes(resource);
         var remarks = remarksLoader.GetRemarks(providerNamespace);
-        var pageTitle = isLatestVersionPage ? $"# {resource.Provider} {resource.UnqualifiedResourceType}" : $"# {resource.Provider} {resource.UnqualifiedResourceType} {resource.ApiVersion}";
+        var pageTitle = isLatestVersionPage ? $"{resource.Provider} {resource.UnqualifiedResourceType}" : $"{resource.Provider} {resource.UnqualifiedResourceType} {resource.ApiVersion}";
 
         return $"""
 {GetHeading(pageMetadata, resource, isLatestVersionPage)}

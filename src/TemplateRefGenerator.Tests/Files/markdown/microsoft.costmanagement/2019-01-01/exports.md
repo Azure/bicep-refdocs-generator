@@ -8,7 +8,7 @@ ms.topic: reference
 ms.date: 09/13/2024
 ms.author: tomfitz
 ---
-# # Microsoft.CostManagement exports 2019-01-01
+# Microsoft.CostManagement exports 2019-01-01
 
 > [!div class="op_single_selector" title1="API Versions:"]
 > - [Latest](../exports.md)
@@ -385,9 +385,10 @@ To create a Microsoft.CostManagement/exports resource, add the following JSON to
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
-| type | The resource type | 'Microsoft.CostManagement/exports' |
+| apiVersion | The api version | '2019-01-01' |
 | name | The resource name | string (required) |
 | properties | The properties of the export. | [ExportProperties](#exportproperties-1) |
+| type | The resource type | 'Microsoft.CostManagement/exports' |
 
 ### QueryAggregation
 
@@ -611,9 +612,9 @@ resource "azapi_resource" "symbolicname" {
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
-| type | The resource type | "Microsoft.CostManagement/exports@2019-01-01" |
 | name | The resource name | string (required) |
 | properties | The properties of the export. | [ExportProperties](#exportproperties-2) |
+| type | The resource type | "Microsoft.CostManagement/exports@2019-01-01" |
 
 ### QueryAggregation
 

@@ -8,7 +8,7 @@ ms.topic: reference
 ms.date: 09/13/2024
 ms.author: tomfitz
 ---
-# # Microsoft.Compute disks 2024-03-02
+# Microsoft.Compute disks 2024-03-02
 
 > [!div class="op_single_selector" title1="API Versions:"]
 > - [Latest](../disks.md)
@@ -271,7 +271,7 @@ resource symbolicname 'Microsoft.Compute/disks@2024-03-02' = {
 | name | The resource name | string (required) |
 | properties | Disk resource properties. | [DiskProperties](#diskproperties) |
 | sku | The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, StandardSSD_ZRS, or PremiumV2_LRS. | [DiskSku](#disksku) |
-| tags | Resource tags | [ResourceTags](#resourcetags) |
+| tags | Resource tags | Dictionary of tag names and values. See [Tags in templates](/azure/azure-resource-manager/management/tag-resources#arm-templates) |
 | zones | The Logical zone list for Disk. | string[] |
 
 ### PurchasePlan
@@ -547,13 +547,14 @@ To create a Microsoft.Compute/disks resource, add the following JSON to your tem
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
-| type | The resource type | 'Microsoft.Compute/disks' |
+| apiVersion | The api version | '2024-03-02' |
 | extendedLocation | The extended location where the disk will be created. Extended location cannot be changed. | [ExtendedLocation](#extendedlocation-1) |
 | location | Resource location | string (required) |
 | name | The resource name | string (required) |
 | properties | Disk resource properties. | [DiskProperties](#diskproperties-1) |
 | sku | The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, StandardSSD_ZRS, or PremiumV2_LRS. | [DiskSku](#disksku-1) |
-| tags | Resource tags | [ResourceTags](#resourcetags-1) |
+| tags | Resource tags | Dictionary of tag names and values. See [Tags in templates](/azure/azure-resource-manager/management/tag-resources#arm-templates) |
+| type | The resource type | 'Microsoft.Compute/disks' |
 | zones | The Logical zone list for Disk. | string[] |
 
 ### PurchasePlan
@@ -838,13 +839,13 @@ resource "azapi_resource" "symbolicname" {
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
-| type | The resource type | "Microsoft.Compute/disks@2024-03-02" |
 | extendedLocation | The extended location where the disk will be created. Extended location cannot be changed. | [ExtendedLocation](#extendedlocation-2) |
 | location | Resource location | string (required) |
 | name | The resource name | string (required) |
 | properties | Disk resource properties. | [DiskProperties](#diskproperties-2) |
 | sku | The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, StandardSSD_ZRS, or PremiumV2_LRS. | [DiskSku](#disksku-2) |
-| tags | Resource tags | [ResourceTags](#resourcetags-2) |
+| tags | Resource tags | Dictionary of tag names and values. |
+| type | The resource type | "Microsoft.Compute/disks@2024-03-02" |
 | zones | The Logical zone list for Disk. | string[] |
 
 ### PurchasePlan
