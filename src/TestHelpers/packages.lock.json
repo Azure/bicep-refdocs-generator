@@ -4,11 +4,11 @@
     "net8.0": {
       "Azure.Bicep.Types.Az": {
         "type": "Direct",
-        "requested": "[0.2.706, )",
-        "resolved": "0.2.706",
-        "contentHash": "EARENUa1cDptvOIhh+5HOWfgT2H8yHnfzZWKlKowr0nJcZXw50Ko2nAxvT1HF5Ls5lyUqs2pErk62puCJ8Gk8Q==",
+        "requested": "[0.2.712, )",
+        "resolved": "0.2.712",
+        "contentHash": "5W6u9jBRWqhDDBYS1GjmeCrM6U6EIWPTCIu27LTqWlPoaSbqnlEvJXAdhUkyzF6e93rTg0epxtrY4FIzFbeCCw==",
         "dependencies": {
-          "Azure.Bicep.Types": "0.5.81"
+          "Azure.Bicep.Types": "0.5.110"
         }
       },
       "DiffPlex": {
@@ -85,10 +85,10 @@
       },
       "Azure.Bicep.Types": {
         "type": "Transitive",
-        "resolved": "0.5.81",
-        "contentHash": "A/7KLe6jwmS1Dc04tGPc5ABkQfxfgb1dtjvji772s9ji/5tG9nkb/n0aSdd45jJzga0eUvbA9uwjzDIXreW6Lg==",
+        "resolved": "0.5.110",
+        "contentHash": "TDnw+a21qLw5Q89FxhZZYuNBIMCiT0n4Eq+bfpgrKn7vjHSyVKOc/3ipKsqHkifHqGEXx3++DY23FC8PmKHg7Q==",
         "dependencies": {
-          "System.Text.Json": "8.0.4"
+          "System.Text.Json": "8.0.5"
         }
       },
       "Microsoft.ApplicationInsights": {
@@ -201,18 +201,10 @@
         "resolved": "4.4.0",
         "contentHash": "cJV7ScGW7EhatRsjehfvvYVBvtiSMKgN8bOVI0bQhnF5bU7vnHVIsH49Kva7i7GWaWYvmEzkYVk1TC+gZYBEog=="
       },
-      "System.Text.Encodings.Web": {
-        "type": "Transitive",
-        "resolved": "8.0.0",
-        "contentHash": "yev/k9GHAEGx2Rg3/tU6MQh4HGBXJs70y7j1LaM1i/ER9po+6nnQ6RRqTJn1E7Xu0fbIFK80Nh5EoODxrbxwBQ=="
-      },
       "System.Text.Json": {
         "type": "Transitive",
-        "resolved": "8.0.4",
-        "contentHash": "bAkhgDJ88XTsqczoxEMliSrpijKZHhbJQldhAmObj/RbrN3sU5dcokuXmWJWsdQAhiMJ9bTayWsL1C9fbbCRhw==",
-        "dependencies": {
-          "System.Text.Encodings.Web": "8.0.0"
-        }
+        "resolved": "8.0.5",
+        "contentHash": "0f1B50Ss7rqxXiaBJyzUu9bWFOO2/zSlifZ/UNMdiIpDYe4cY4LQQicP4nirK1OS31I43rn062UIJ1Q9bpmHpg=="
       }
     }
   }
