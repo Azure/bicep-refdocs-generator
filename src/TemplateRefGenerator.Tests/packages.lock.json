@@ -4,11 +4,11 @@
     "net8.0": {
       "Azure.Bicep.Types.Az": {
         "type": "Direct",
-        "requested": "[0.2.706, )",
-        "resolved": "0.2.706",
-        "contentHash": "EARENUa1cDptvOIhh+5HOWfgT2H8yHnfzZWKlKowr0nJcZXw50Ko2nAxvT1HF5Ls5lyUqs2pErk62puCJ8Gk8Q==",
+        "requested": "[0.2.712, )",
+        "resolved": "0.2.712",
+        "contentHash": "5W6u9jBRWqhDDBYS1GjmeCrM6U6EIWPTCIu27LTqWlPoaSbqnlEvJXAdhUkyzF6e93rTg0epxtrY4FIzFbeCCw==",
         "dependencies": {
-          "Azure.Bicep.Types": "0.5.81"
+          "Azure.Bicep.Types": "0.5.110"
         }
       },
       "FluentAssertions": {
@@ -196,11 +196,11 @@
       },
       "System.IO.Abstractions": {
         "type": "Transitive",
-        "resolved": "21.0.29",
-        "contentHash": "EqqngPcNhqjGHKYVjhfU8D/l3rj/m00VaXxuRrWjal38Kw8kqN3f63sj69b/8Q6OAeJkA/nbWsn/iwPMqCQvfg==",
+        "resolved": "21.1.3",
+        "contentHash": "WgLx25YHAepNu5Wym1kBqYLqYMo/lmGakWILFYtpEtuxAVoeWvAj2U6oVfqmikPXVYit19tTGWnfbZhVUNjkrg==",
         "dependencies": {
-          "TestableIO.System.IO.Abstractions": "21.0.29",
-          "TestableIO.System.IO.Abstractions.Wrappers": "21.0.29"
+          "TestableIO.System.IO.Abstractions": "21.1.3",
+          "TestableIO.System.IO.Abstractions.Wrappers": "21.1.3"
         }
       },
       "System.Reflection.Metadata": {
@@ -220,15 +220,15 @@
       },
       "TestableIO.System.IO.Abstractions": {
         "type": "Transitive",
-        "resolved": "21.0.29",
-        "contentHash": "3TtSs2i0m0QqpAI4EzR1vZXQuHNw5grBy0rDKqMkWi6ySEZ+yhN9HACgIyEq7gDXPLrtQI18ud/OtI0qVhP8Mg=="
+        "resolved": "21.1.3",
+        "contentHash": "qe/gIjOPCoyiSCToouJx/vCvcTQXVGj/eJVRK/7s2F8yIv0zvEpjByfXZvS3yqmcpg0/S6x6w7DvNyPrLe/RRw=="
       },
       "TestableIO.System.IO.Abstractions.Wrappers": {
         "type": "Transitive",
-        "resolved": "21.0.29",
-        "contentHash": "bm1stQx3rGV2qBW2xAAvl8ODVGNVkiAkqNsE+LsKfhMamBUa07IgsgMc9X/zBHc5yfAJOqJIUArQ56DDgwGyYA==",
+        "resolved": "21.1.3",
+        "contentHash": "5LEVwt5+K5TnL1ekfCbQszlgRnO77plpgQAgkXL7wXKGd0PQWE01eSss0+L7E8GGLGbtD7mzYJVq/bd79ZDBlQ==",
         "dependencies": {
-          "TestableIO.System.IO.Abstractions": "21.0.29"
+          "TestableIO.System.IO.Abstractions": "21.1.3"
         }
       },
       "templaterefgenerator": {
@@ -236,13 +236,13 @@
         "dependencies": {
           "Azure.Bicep.Types": "[0.5.110, )",
           "CommandLineParser": "[2.9.1, )",
-          "System.IO.Abstractions": "[21.0.29, )"
+          "System.IO.Abstractions": "[21.1.3, )"
         }
       },
       "testhelpers": {
         "type": "Project",
         "dependencies": {
-          "Azure.Bicep.Types.Az": "[0.2.706, )",
+          "Azure.Bicep.Types.Az": "[0.2.712, )",
           "DiffPlex": "[1.7.2, )",
           "FluentAssertions": "[6.12.2, )",
           "JsonDiffPatch.Net": "[2.3.0, )",
