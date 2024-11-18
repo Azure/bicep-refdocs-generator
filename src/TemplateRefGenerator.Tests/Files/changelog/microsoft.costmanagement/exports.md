@@ -11,6 +11,10 @@ ms.author: tomfitz
 
 This article describes the properties that changed in each API version for [microsoft.costmanagement/exports](~/microsoft.costmanagement/exports.md). It only covers properties that are available during deployments.
 
+## 2024-08-01
+
+No properties added, updated or removed.
+
 ## 2023-11-01
 
 No properties added, updated or removed.

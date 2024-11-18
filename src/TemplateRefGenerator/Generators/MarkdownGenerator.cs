@@ -745,6 +745,14 @@ For **{discSample.DiscriminatorValue}**, use:
                             $"In Bicep, you can specify the parent resource for a child resource. You only need to add this property when the child resource is declared outside of the parent resource.{Br}{Br}For more information, see [Child resource outside parent resource](/azure/azure-resource-manager/bicep/child-resource-name-type#outside-parent-resource).",
                             $"Symbolic name for resource of type: [{parentTypeUnqualified}](~/{parentType.ToLowerInvariant()}.md)");
                     }
+                    else if (resource.Type.ScopeType == ScopeType.Unknown ||
+                        resource.Type.ScopeType.HasFlag(ScopeType.Extension))
+                    {
+                        yield return new(
+                            "scope",
+                            "Use when creating a resource at a scope that is different than the deployment scope.",
+                            "Set this property to the symbolic name of a resource to apply the [extension resource](/azure/azure-resource-manager/bicep/scope-extension-resources).");
+                    }
                     break;
                 case DeploymentType.Terraform:
                     if (Utils.IsChildResource(resource.UnqualifiedResourceType))
@@ -756,6 +764,14 @@ For **{discSample.DiscriminatorValue}**, use:
                             "parent_id",
                             $"The ID of the resource that is the parent for this resource.",
                             $"ID for resource of type: [{parentTypeUnqualified}](~/{parentType.ToLowerInvariant()}.md)");
+                    }
+                    else if (resource.Type.ScopeType == ScopeType.Unknown ||
+                        resource.Type.ScopeType.HasFlag(ScopeType.Extension))
+                    {
+                        yield return new(
+                            "parent_id",
+                            "The ID of the resource to apply this extension resource to.",
+                            "string (required)");
                     }
 
                     yield return new(

@@ -476,6 +476,9 @@ resource "azapi_resource" "symbolicname" {
   type = "Microsoft.KeyVault/vaults@2023-07-01"
   name = "string"
   location = "string"
+  tags = {
+    {customized property} = "string"
+  }
   body = jsonencode({
     properties = {
       accessPolicies = [
@@ -532,9 +535,6 @@ resource "azapi_resource" "symbolicname" {
       vaultUri = "string"
     }
   })
-  tags = {
-    {customized property} = "string"
-  }
 }
 ```
 ## Property values

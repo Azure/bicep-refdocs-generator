@@ -12,6 +12,7 @@ ms.author: tomfitz
 
 > [!div class="op_single_selector" title1="API Versions:"]
 > - [Latest](../exports.md)
+> - [2024-08-01](../2024-08-01/exports.md)
 > - [2023-11-01](../2023-11-01/exports.md)
 > - [2023-09-01](../2023-09-01/exports.md)
 > - [2023-08-01](../2023-08-01/exports.md)
@@ -169,6 +170,7 @@ resource symbolicname 'Microsoft.CostManagement/exports@2019-01-01' = {
 | ---- | ----------- | ------------ |
 | name | The resource name | string (required) |
 | properties | The properties of the export. | [ExportProperties](#exportproperties) |
+| scope | Use when creating a resource at a scope that is different than the deployment scope. | Set this property to the symbolic name of a resource to apply the [extension resource](/azure/azure-resource-manager/bicep/scope-extension-resources). |
 
 ### QueryAggregation
 
@@ -613,6 +615,7 @@ resource "azapi_resource" "symbolicname" {
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
 | name | The resource name | string (required) |
+| parent_id | The ID of the resource to apply this extension resource to. | string (required) |
 | properties | The properties of the export. | [ExportProperties](#exportproperties-2) |
 | type | The resource type | "Microsoft.CostManagement/exports@2019-01-01" |
 

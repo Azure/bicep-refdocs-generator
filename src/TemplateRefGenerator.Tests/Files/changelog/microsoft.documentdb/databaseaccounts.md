@@ -11,6 +11,31 @@ ms.author: tomfitz
 
 This article describes the properties that changed in each API version for [microsoft.documentdb/databaseaccounts](~/microsoft.documentdb/databaseaccounts.md). It only covers properties that are available during deployments.
 
+## 2024-09-01-preview
+
+Added:
+
+* [DiagnosticLogSettings](~/microsoft.documentdb/2024-09-01-preview/databaseaccounts.md#diagnosticlogsettings)
+
+Updated:
+
+* [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-09-01-preview/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Added property 'capacityMode'
+* [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-09-01-preview/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Added property 'capacityModeChangeTransitionState'
+* [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-09-01-preview/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Added property 'defaultPriorityLevel'
+* [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-09-01-preview/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Added property 'diagnosticLogSettings'
+* [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-09-01-preview/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Added property 'enableMaterializedViews'
+* [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-09-01-preview/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Added property 'enablePerRegionPerPartitionAutoscale'
+* [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-09-01-preview/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Added property 'enablePriorityBasedExecution'
+* [RestoreParameters](~/microsoft.documentdb/2024-09-01-preview/databaseaccounts.md#restoreparameters): Added property 'sourceBackupLocation'
+
+
+## 2024-08-15
+
+Updated:
+
+* [RestoreParameters](~/microsoft.documentdb/2024-08-15/databaseaccounts.md#restoreparameters): Added property 'restoreWithTtlDisabled'
+
+
 ## 2024-05-15
 
 Removed:
