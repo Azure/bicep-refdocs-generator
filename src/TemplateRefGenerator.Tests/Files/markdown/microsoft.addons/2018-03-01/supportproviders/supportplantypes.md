@@ -32,6 +32,7 @@ To create a Microsoft.Addons/supportProviders/supportPlanTypes resource, add the
 
 ```bicep
 resource symbolicname 'Microsoft.Addons/supportProviders/supportPlanTypes@2018-03-01' = {
+  parent: resourceSymbolicName
   name: 'string'
 }
 ```

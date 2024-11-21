@@ -53,7 +53,7 @@ public class CodeSampleGenerator
 
     private static GenerateResult GenerateBicep(MarkdownGenerator.ResourceMetadata resource, ImmutableArray<MarkdownGenerator.NamedType> namedTypes)
     {
-        var mainSample = GetStringBuilderResult(sb => GenerateBicep(sb, 0, resource.Type, "", new()));
+        var mainSample = GetStringBuilderResult(sb => GenerateBicep(resource, sb, 0, resource.Type, "", new()));
 
         var discriminatedSamples = new Dictionary<DiscriminatedObjectType, ImmutableArray<DiscriminatedObjectSample>>();
         foreach (var discriminatedObject in namedTypes.Select(x => x.Type).OfType<DiscriminatedObjectType>())
@@ -61,7 +61,7 @@ public class CodeSampleGenerator
             var samples = new List<DiscriminatedObjectSample>();
             foreach (var element in discriminatedObject.Elements)
             {
-                var discSample = GetStringBuilderResult(sb => GenerateBicep(sb, 0, element.Value.Type, null, new()));
+                var discSample = GetStringBuilderResult(sb => GenerateBicep(resource, sb, 0, element.Value.Type, null, new()));
                 samples.Add(new(discSample, element.Key));
             }
 
@@ -71,7 +71,7 @@ public class CodeSampleGenerator
         return new(mainSample, discriminatedSamples.ToImmutableDictionary());
     }
 
-    private static void GenerateBicep(StringBuilder sb, int indentLevel, TypeBase type, string? path, HashSet<TypeBase> visited)
+    private static void GenerateBicep(MarkdownGenerator.ResourceMetadata resource, StringBuilder sb, int indentLevel, TypeBase type, string? path, HashSet<TypeBase> visited)
     {
         var indent = GetIndent(indentLevel);
         var propIndent = GetIndent(indentLevel + 1);
@@ -96,7 +96,7 @@ public class CodeSampleGenerator
         {
             case ResourceType resourceType:
                 sb.Append($"resource symbolicname '{resourceType.Name}' = ");
-                GenerateBicep(sb, 0, resourceType.Body.Type, "", visited);
+                GenerateBicep(resource, sb, 0, resourceType.Body.Type, "", visited);
                 break;
 
             case ObjectType objectType:
@@ -110,20 +110,34 @@ public class CodeSampleGenerator
                 }
 
                 sb.AppendLine("{");
+
+                if (path == "")
+                {
+                    if (Utils.IsChildResource(resource.UnqualifiedResourceType))
+                    {
+                        AddProperty("parent", () => sb.Append($"resourceSymbolicName"));
+                    }
+                    else if (resource.Type.ScopeType == ScopeType.Unknown ||
+                        resource.Type.ScopeType.HasFlag(ScopeType.Extension))
+                    {
+                        AddProperty("scope", () => sb.Append($"resourceSymbolicName or scope"));
+                    }
+                }
+
                 foreach (var (name, prop) in MarkdownGenerator.GetOrderedWritableProperties(objectType.Properties))
                 {
-                    AddProperty(name, () => GenerateBicep(sb, indentLevel + 1, prop.Type.Type, $"{path}.{name}", visited));
+                    AddProperty(name, () => GenerateBicep(resource, sb, indentLevel + 1, prop.Type.Type, $"{path}.{name}", visited));
                 }
                 if (!props.Any() && additionalPropType is {})
                 {
-                    AddProperty("{customized property}", () => GenerateBicep(sb, indentLevel + 1, additionalPropType.Type, $"{path}.*", visited));
+                    AddProperty("{customized property}", () => GenerateBicep(resource, sb, indentLevel + 1, additionalPropType.Type, $"{path}.*", visited));
                 }
                 sb.Append(indent + "}");
                 break;
             case ArrayType arrayType:
                 sb.AppendLine("[");
                 sb.Append(propIndent);
-                GenerateBicep(sb, indentLevel + 1, arrayType.ItemType.Type, $"{path}[*]", visited);
+                GenerateBicep(resource, sb, indentLevel + 1, arrayType.ItemType.Type, $"{path}[*]", visited);
                 sb.AppendLine();
                 sb.Append(indent + "]");
                 break;
@@ -145,7 +159,7 @@ public class CodeSampleGenerator
                 foreach (var (name, prop) in MarkdownGenerator.GetOrderedWritableProperties(objectType.BaseProperties))
                 {
                     sb.Append($"{propIndent}{name}: ");
-                    GenerateBicep(sb, indentLevel + 1, prop.Type.Type, $"{path}.{name}", visited);
+                    GenerateBicep(resource, sb, indentLevel + 1, prop.Type.Type, $"{path}.{name}", visited);
                     sb.AppendLine();
                 }
                 sb.AppendLine($"{propIndent}{objectType.Discriminator}: 'string'");
@@ -349,6 +363,12 @@ public class CodeSampleGenerator
 
                     AddProperty("type", () => sb.Append($"\"{resource.ResourceType}@{resource.ApiVersion}\""));
                     AddProperty("name", () => sb.Append($"\"string\""));
+
+                    if (resource.Type.ScopeType == ScopeType.Unknown ||
+                        resource.Type.ScopeType.HasFlag(ScopeType.Extension))
+                    {
+                        AddProperty("parent_id", () => sb.Append($"\"string\""));
+                    }
                 }
 
                 var bodyProps = props.Where(x => path == "" && TerraformBodyProperties.Contains(x.Key)).ToList();

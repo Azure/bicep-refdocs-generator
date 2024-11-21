@@ -46,6 +46,7 @@ To create a Microsoft.CostManagement/exports resource, add the following Bicep t
 
 ```bicep
 resource symbolicname 'Microsoft.CostManagement/exports@2019-01-01' = {
+  scope: resourceSymbolicName or scope
   name: 'string'
   properties: {
     definition: {
@@ -491,6 +492,7 @@ To create a Microsoft.CostManagement/exports resource, add the following Terrafo
 resource "azapi_resource" "symbolicname" {
   type = "Microsoft.CostManagement/exports@2019-01-01"
   name = "string"
+  parent_id = "string"
   body = jsonencode({
     properties = {
       definition = {
