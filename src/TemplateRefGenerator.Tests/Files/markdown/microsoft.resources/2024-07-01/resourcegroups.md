@@ -204,13 +204,13 @@ resource "azapi_resource" "symbolicname" {
   name = "string"
   location = "string"
   managedBy = "string"
+  tags = {
+    {customized property} = "string"
+  }
   body = jsonencode({
     properties = {
     }
   })
-  tags = {
-    {customized property} = "string"
-  }
 }
 ```
 ## Property values

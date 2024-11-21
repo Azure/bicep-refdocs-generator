@@ -623,12 +623,21 @@ To create a Microsoft.Compute/disks resource, add the following Terraform to you
 resource "azapi_resource" "symbolicname" {
   type = "Microsoft.Compute/disks@2024-03-02"
   name = "string"
-  extendedLocation = {
-    name = "string"
-    type = "string"
-  }
   location = "string"
+  sku = {
+    name = "string"
+  }
+  tags = {
+    {customized property} = "string"
+  }
+  zones = [
+    "string"
+  ]
   body = jsonencode({
+    extendedLocation = {
+      name = "string"
+      type = "string"
+    }
     properties = {
       burstingEnabled = bool
       completionPercent = int
@@ -712,15 +721,6 @@ resource "azapi_resource" "symbolicname" {
       tier = "string"
     }
   })
-  sku = {
-    name = "string"
-  }
-  tags = {
-    {customized property} = "string"
-  }
-  zones = [
-    "string"
-  ]
 }
 ```
 ## Property values

@@ -306,6 +306,7 @@ public class CodeSampleGenerator
         return new(mainSample, discriminatedSamples.ToImmutableDictionary());
     }
 
+    private static readonly HashSet<string> TerraformBodyProperties = new(StringComparer.OrdinalIgnoreCase) { "properties", "extendedLocation" };
     private static void GenerateTerraform(MarkdownGenerator.ResourceMetadata resource, StringBuilder sb, int indentLevel, TypeBase type, string? path, HashSet<TypeBase> visited)
     {
         if (visited.Contains(type))
@@ -349,21 +350,24 @@ public class CodeSampleGenerator
                     AddProperty("type", () => sb.Append($"\"{resource.ResourceType}@{resource.ApiVersion}\""));
                     AddProperty("name", () => sb.Append($"\"string\""));
                 }
-            
-                foreach (var (name, prop) in props)
-                {
-                    if (path == "" && name == "properties")
-                    {
-                        AddProperty("body", () => {
-                            sb.AppendLine($"jsonencode({{");
-                            AddProperty("  properties", () => GenerateTerraform(resource, sb, indentLevel + 2, prop.Type.Type, $"{path}.{name}", visited));
-                            sb.Append($"{propIndent}}})");
-                        });
-                        continue;
-                    }
 
+                var bodyProps = props.Where(x => path == "" && TerraformBodyProperties.Contains(x.Key)).ToList();
+                foreach (var (name, prop) in props.Except(bodyProps))
+                {
                     AddProperty(name, () => GenerateTerraform(resource, sb, indentLevel + 1, prop.Type.Type, $"{path}.{name}", visited));
                 }
+                if (bodyProps.Any())
+                {
+                    AddProperty("body", () => {
+                        sb.AppendLine($"jsonencode({{");
+                        foreach (var (name, prop) in bodyProps)
+                        {
+                            AddProperty($"  {name}", () => GenerateTerraform(resource, sb, indentLevel + 2, prop.Type.Type, $"{path}.{name}", visited));
+                        }
+                        sb.Append($"{propIndent}}})");
+                    });
+                }
+
                 if (!props.Any() && additionalPropType is {})
                 {
                     AddProperty("{customized property}", () => GenerateTerraform(resource, sb, indentLevel + 1, additionalPropType.Type, $"{path}.*", visited));
