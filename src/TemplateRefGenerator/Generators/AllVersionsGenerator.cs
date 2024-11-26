@@ -11,7 +11,7 @@ using static TemplateRefGenerator.MarkdownGenerator;
 namespace TemplateRefGenerator;
 public class AllVersionsGenerator
 {
-    private static string GetHeading(PageMetadata metadata, GroupedTypes groupedTypes)
+    private static string GetHeading(GroupedTypes groupedTypes)
     {
         return $"""
 ---
@@ -53,10 +53,10 @@ ms.topic: reference
         return sb.ToString();
     }
 
-    public static string GenerateMarkdown(PageMetadata pageMetadata, GroupedTypes groupedTypes)
+    public static string GenerateMarkdown(GroupedTypes groupedTypes)
     {
         return $"""
-{GetHeading(pageMetadata, groupedTypes)}
+{GetHeading(groupedTypes)}
 # {groupedTypes.ProviderNamespace} resource types
 
 This article lists the available versions for each resource type.

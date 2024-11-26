@@ -54,7 +54,7 @@ public class MainGenerator
         }
     }
 
-    public void Generate(MarkdownGenerator.PageMetadata metadata, Options options)
+    public void Generate(Options options)
     {
         MarkdownGenerator mdGenerator = new(resourceTypeProvider);
         ChangelogGenerator changelogGenerator = new(resourceTypeProvider);
@@ -79,7 +79,7 @@ public class MainGenerator
                     var unqualifiedResourceType = typeName.Substring(typeName.IndexOf('/') + 1);
 
                     var mdPath = $"{groupedTypes.ProviderNamespace}/{apiVersion}/{unqualifiedResourceType}.md".ToLowerInvariant();
-                    var mdContent = MarkdownGenerator.GenerateMarkdown(metadata, groupedTypes, resourceType, configLoader, remarksLoader, isLatestVersionPage: false);
+                    var mdContent = MarkdownGenerator.GenerateMarkdown(groupedTypes, resourceType, configLoader, remarksLoader, isLatestVersionPage: false);
                     WriteFile(options, mdPath, mdContent);
                 }
             }
@@ -91,12 +91,12 @@ public class MainGenerator
                 var unqualifiedResourceType = typeName.Substring(typeName.IndexOf('/') + 1);
 
                 var mdPath = $"{groupedTypes.ProviderNamespace}/{unqualifiedResourceType}.md".ToLowerInvariant();
-                var mdContent = MarkdownGenerator.GenerateMarkdown(metadata, groupedTypes, resourceType, configLoader, remarksLoader, isLatestVersionPage: true);
+                var mdContent = MarkdownGenerator.GenerateMarkdown(groupedTypes, resourceType, configLoader, remarksLoader, isLatestVersionPage: true);
                 WriteFile(options, mdPath, mdContent);
             }
 
             var allVersionsPath = $"{groupedTypes.ProviderNamespace}/allversions.md".ToLowerInvariant();
-            var allVersionsMd = AllVersionsGenerator.GenerateMarkdown(metadata, groupedTypes);
+            var allVersionsMd = AllVersionsGenerator.GenerateMarkdown(groupedTypes);
             WriteFile(options, allVersionsPath, allVersionsMd);
 
             var referenceTocPath = $"{groupedTypes.ProviderNamespace}/toc.yml".ToLowerInvariant();
@@ -110,12 +110,12 @@ public class MainGenerator
                 var unqualifiedResourceType = typeName.Substring(typeName.IndexOf('/') + 1);
 
                 var mdPath = $"{groupedTypes.ProviderNamespace}/change-log/{unqualifiedResourceType}.md".ToLowerInvariant();
-                var mdContent = ChangelogGenerator.GenerateChangeLog(metadata, resourceTypeChange);
+                var mdContent = ChangelogGenerator.GenerateChangeLog(resourceTypeChange);
                 WriteFile(options, mdPath, mdContent);
             }
 
             var summaryChangelogPath = $"{groupedTypes.ProviderNamespace}/change-log/summary.md".ToLowerInvariant();
-            var summaryChangelogMd = ChangelogGenerator.GenerateSummaryChangeLog(metadata, changeLog);
+            var summaryChangelogMd = ChangelogGenerator.GenerateSummaryChangeLog(changeLog);
             WriteFile(options, summaryChangelogPath, summaryChangelogMd);
 
             var changeLogTocPath = $"{groupedTypes.ProviderNamespace}/change-log/toc.yml".ToLowerInvariant();
