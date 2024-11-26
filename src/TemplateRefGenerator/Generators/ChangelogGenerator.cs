@@ -93,11 +93,8 @@ public class ChangelogGenerator
 ---
 title: API change log for {changeLog.ResourceType}
 description: Describes changes between API versions for {changeLog.ResourceType}.
-author: {metadata.Author}
 ms.service: azure-resource-manager
 ms.topic: reference
-ms.date: {metadata.Date.ToString("MM/dd/yyyy")}
-ms.author: {metadata.MsAuthor}
 ---
 """;
     }
@@ -120,11 +117,8 @@ This article describes the properties that changed in each API version for [{cha
 ---
 title: API change log for {changeLog.ProviderNamespace} deployment resource types
 description: Describes changes between API versions for {changeLog.ProviderNamespace}.
-author: {metadata.Author}
 ms.service: azure-resource-manager
 ms.topic: reference
-ms.date: {metadata.Date.ToString("MM/dd/yyyy")}
-ms.author: {metadata.MsAuthor}
 ---
 """;
     }

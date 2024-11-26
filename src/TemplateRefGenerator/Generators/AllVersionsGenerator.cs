@@ -17,11 +17,8 @@ public class AllVersionsGenerator
 ---
 title: Azure Resource Manager template reference for {groupedTypes.ProviderNamespace}"
 description: Azure Resource Manager template reference for the {groupedTypes.ProviderNamespace} resource provider. Includes all resource types and versions.";
-author: {metadata.Author}
 ms.service: azure-resource-manager
 ms.topic: reference
-ms.date: {metadata.Date.ToString("MM/dd/yyyy")}
-ms.author: {metadata.MsAuthor}
 ---
 """;
     }
