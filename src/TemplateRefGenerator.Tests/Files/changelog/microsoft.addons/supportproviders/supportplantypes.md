@@ -1,11 +1,8 @@
 ---
 title: API change log for Microsoft.Addons/supportProviders/supportPlanTypes
 description: Describes changes between API versions for Microsoft.Addons/supportProviders/supportPlanTypes.
-author: tfitzmac
 ms.service: azure-resource-manager
 ms.topic: reference
-ms.date: 09/13/2024
-ms.author: tomfitz
 ---
 # API version change log for deployment of Microsoft.Addons/supportProviders/supportPlanTypes
 

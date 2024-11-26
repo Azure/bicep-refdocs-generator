@@ -39,8 +39,7 @@ public class MarkdownGeneratorTests
         var groupedTypes = mdGenerator.GetGroupedTypes()
             .First(x => StringComparer.OrdinalIgnoreCase.Equals(x.ProviderNamespace, providerNamespace));
 
-        var metadata = new MarkdownGenerator.PageMetadata(Date: DateTime.Parse("09/13/2024"), Author: "tfitzmac", MsAuthor: "tomfitz");
-        var markdown = MarkdownGenerator.GenerateMarkdown(metadata, groupedTypes, resourceType, new(), new(), isLatestVersionPage: false);
+        var markdown = MarkdownGenerator.GenerateMarkdown(groupedTypes, resourceType, new(), new(), isLatestVersionPage: false);
 
         markdownFile.WriteToOutputFolder(markdown);
         markdownFile.ShouldHaveExpectedValue();

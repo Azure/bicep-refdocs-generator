@@ -43,11 +43,6 @@ public class MarkdownGenerator
         GroupedTypes GroupedTypes,
         ImmutableDictionary<string, string> FilesByPath);
 
-    public record PageMetadata(
-        DateTime Date,
-        string Author,
-        string MsAuthor);
-
     public record ResourceMetadata(
         string Provider,
         string ResourceType,
@@ -77,7 +72,7 @@ public class MarkdownGenerator
         => properties.Where(x => !x.Value.Flags.HasFlag(ObjectTypePropertyFlags.ReadOnly))
             .OrderBy(x => x.Key, StringComparer.OrdinalIgnoreCase);
 
-    private static string GetHeading(PageMetadata metadata, ResourceMetadata resource, bool isLatestVersionPage)
+    private static string GetHeading(ResourceMetadata resource, bool isLatestVersionPage)
     {
         var pageTitle = isLatestVersionPage ? resource.ResourceType : $"{resource.ResourceType} {resource.ApiVersion}";
         var apiVersion = isLatestVersionPage ? "latest" : resource.ApiVersion;
@@ -86,12 +81,9 @@ public class MarkdownGenerator
 ---
 title: {pageTitle}
 description: Azure {resource.ResourceType} syntax and properties to use in Azure Resource Manager templates for deploying the resource. API version {apiVersion}
-author: {metadata.Author}
 zone_pivot_groups: deployment-languages-reference
 ms.service: azure-resource-manager
 ms.topic: reference
-ms.date: {metadata.Date.ToString("MM/dd/yyyy")}
-ms.author: {metadata.MsAuthor}
 ---
 """;
     }
@@ -891,7 +883,7 @@ For **{discSample.DiscriminatorValue}**, use:
         return sb.ToString();
     }
 
-    public static string GenerateMarkdown(PageMetadata pageMetadata, GroupedTypes groupedTypes, ResourceType resourceType, ConfigLoader configLoader, RemarksLoader remarksLoader, bool isLatestVersionPage)
+    public static string GenerateMarkdown(GroupedTypes groupedTypes, ResourceType resourceType, ConfigLoader configLoader, RemarksLoader remarksLoader, bool isLatestVersionPage)
     {
         var resourceTypeName = resourceType.Name.Split('@')[0];
         var apiVersion = resourceType.Name.Split('@')[1];
@@ -910,7 +902,7 @@ For **{discSample.DiscriminatorValue}**, use:
         var pageTitle = isLatestVersionPage ? $"{resource.Provider} {resource.UnqualifiedResourceType}" : $"{resource.Provider} {resource.UnqualifiedResourceType} {resource.ApiVersion}";
 
         return $"""
-{GetHeading(pageMetadata, resource, isLatestVersionPage)}
+{GetHeading(resource, isLatestVersionPage)}
 # {pageTitle}
 
 {GetApiVersionLinks(groupedTypes, resource, isLatestVersionPage)}

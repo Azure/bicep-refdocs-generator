@@ -61,7 +61,6 @@ class Program
         MainGenerator generator = new(fileSystem, new(fileSystem, options.SourceFolder), new(), new());
 
         generator.Generate(
-            new(Date: DateTime.Today, Author: "tfitzmac", MsAuthor: "tomfitz"),
             new(options.OutputFolder, options.ProviderNamespace));
 
         return 0;

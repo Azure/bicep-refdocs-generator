@@ -1,11 +1,8 @@
 ---
 title: Azure Resource Manager template reference for Microsoft.DocumentDB"
 description: Azure Resource Manager template reference for the Microsoft.DocumentDB resource provider. Includes all resource types and versions.";
-author: tfitzmac
 ms.service: azure-resource-manager
 ms.topic: reference
-ms.date: 09/13/2024
-ms.author: tomfitz
 ---
 # Microsoft.DocumentDB resource types
 

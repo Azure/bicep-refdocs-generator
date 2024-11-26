@@ -1,12 +1,9 @@
 ---
 title: Microsoft.Compute/disks 2024-03-02
 description: Azure Microsoft.Compute/disks syntax and properties to use in Azure Resource Manager templates for deploying the resource. API version 2024-03-02
-author: tfitzmac
 zone_pivot_groups: deployment-languages-reference
 ms.service: azure-resource-manager
 ms.topic: reference
-ms.date: 09/13/2024
-ms.author: tomfitz
 ---
 # Microsoft.Compute disks 2024-03-02
 

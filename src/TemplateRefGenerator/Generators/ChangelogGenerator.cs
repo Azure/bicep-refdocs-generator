@@ -87,25 +87,22 @@ public class ChangelogGenerator
         return new(typeName, [.. versionChanges]);
     }
 
-    private static string GetHeading(PageMetadata metadata, ResourceTypeChangeLog changeLog)
+    private static string GetHeading(ResourceTypeChangeLog changeLog)
     {
         return $"""
 ---
 title: API change log for {changeLog.ResourceType}
 description: Describes changes between API versions for {changeLog.ResourceType}.
-author: {metadata.Author}
 ms.service: azure-resource-manager
 ms.topic: reference
-ms.date: {metadata.Date.ToString("MM/dd/yyyy")}
-ms.author: {metadata.MsAuthor}
 ---
 """;
     }
 
-    public static string GenerateChangeLog(PageMetadata metadata, ResourceTypeChangeLog changeLog)
+    public static string GenerateChangeLog(ResourceTypeChangeLog changeLog)
     {
         return $"""
-{GetHeading(metadata, changeLog)}
+{GetHeading(changeLog)}
 # API version change log for deployment of {changeLog.ResourceType}
 
 This article describes the properties that changed in each API version for [{changeLog.ResourceType.ToLowerInvariant()}](~/{changeLog.ResourceType.ToLowerInvariant()}.md). It only covers properties that are available during deployments.
@@ -114,25 +111,22 @@ This article describes the properties that changed in each API version for [{cha
 """;
     }
 
-    private static string GetSummaryHeading(PageMetadata metadata, ProviderChangeLog changeLog)
+    private static string GetSummaryHeading(ProviderChangeLog changeLog)
     {
         return $"""
 ---
 title: API change log for {changeLog.ProviderNamespace} deployment resource types
 description: Describes changes between API versions for {changeLog.ProviderNamespace}.
-author: {metadata.Author}
 ms.service: azure-resource-manager
 ms.topic: reference
-ms.date: {metadata.Date.ToString("MM/dd/yyyy")}
-ms.author: {metadata.MsAuthor}
 ---
 """;
     }
 
-    public static string GenerateSummaryChangeLog(PageMetadata metadata, ProviderChangeLog changeLog)
+    public static string GenerateSummaryChangeLog(ProviderChangeLog changeLog)
     {
         return $"""
-{GetSummaryHeading(metadata, changeLog)}
+{GetSummaryHeading(changeLog)}
 
 # Change log for deployment of {changeLog.ProviderNamespace} resource types
 

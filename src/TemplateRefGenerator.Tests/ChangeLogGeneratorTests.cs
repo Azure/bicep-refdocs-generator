@@ -41,8 +41,7 @@ public class ChangeLogGeneratorTests
         var changelog = changelogGenerator.GetChanges(groupedTypes);
         var resourceTypeChange = changelog.ResourceTypeChanges.First(x => StringComparer.OrdinalIgnoreCase.Equals(x.ResourceType, $"{providerNamespace}/{unqualifiedResourceType}"));
 
-        var metadata = new MarkdownGenerator.PageMetadata(Date: DateTime.Parse("09/13/2024"), Author: "tfitzmac", MsAuthor: "tomfitz");
-        var markdown = ChangelogGenerator.GenerateChangeLog(metadata, resourceTypeChange);
+        var markdown = ChangelogGenerator.GenerateChangeLog(resourceTypeChange);
 
         markdownFile.WriteToOutputFolder(markdown);
         markdownFile.ShouldHaveExpectedValue();
@@ -68,8 +67,7 @@ public class ChangeLogGeneratorTests
 
         var changelog = changelogGenerator.GetChanges(groupedTypes);
 
-        var metadata = new MarkdownGenerator.PageMetadata(Date: DateTime.Parse("09/13/2024"), Author: "tfitzmac", MsAuthor: "tomfitz");
-        var markdown = ChangelogGenerator.GenerateSummaryChangeLog(metadata, changelog);
+        var markdown = ChangelogGenerator.GenerateSummaryChangeLog(changelog);
 
         markdownFile.WriteToOutputFolder(markdown);
         markdownFile.ShouldHaveExpectedValue();

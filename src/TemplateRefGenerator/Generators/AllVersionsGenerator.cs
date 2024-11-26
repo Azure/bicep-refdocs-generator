@@ -11,17 +11,14 @@ using static TemplateRefGenerator.MarkdownGenerator;
 namespace TemplateRefGenerator;
 public class AllVersionsGenerator
 {
-    private static string GetHeading(PageMetadata metadata, GroupedTypes groupedTypes)
+    private static string GetHeading(GroupedTypes groupedTypes)
     {
         return $"""
 ---
 title: Azure Resource Manager template reference for {groupedTypes.ProviderNamespace}"
 description: Azure Resource Manager template reference for the {groupedTypes.ProviderNamespace} resource provider. Includes all resource types and versions.";
-author: {metadata.Author}
 ms.service: azure-resource-manager
 ms.topic: reference
-ms.date: {metadata.Date.ToString("MM/dd/yyyy")}
-ms.author: {metadata.MsAuthor}
 ---
 """;
     }
@@ -56,10 +53,10 @@ ms.author: {metadata.MsAuthor}
         return sb.ToString();
     }
 
-    public static string GenerateMarkdown(PageMetadata pageMetadata, GroupedTypes groupedTypes)
+    public static string GenerateMarkdown(GroupedTypes groupedTypes)
     {
         return $"""
-{GetHeading(pageMetadata, groupedTypes)}
+{GetHeading(groupedTypes)}
 # {groupedTypes.ProviderNamespace} resource types
 
 This article lists the available versions for each resource type.

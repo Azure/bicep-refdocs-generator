@@ -1,12 +1,9 @@
 ---
 title: Microsoft.Resources/resourceGroups 2024-07-01
 description: Azure Microsoft.Resources/resourceGroups syntax and properties to use in Azure Resource Manager templates for deploying the resource. API version 2024-07-01
-author: tfitzmac
 zone_pivot_groups: deployment-languages-reference
 ms.service: azure-resource-manager
 ms.topic: reference
-ms.date: 09/13/2024
-ms.author: tomfitz
 ---
 # Microsoft.Resources resourceGroups 2024-07-01
 

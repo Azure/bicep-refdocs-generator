@@ -1,11 +1,8 @@
 ---
 title: API change log for Microsoft.KeyVault/vaults
 description: Describes changes between API versions for Microsoft.KeyVault/vaults.
-author: tfitzmac
 ms.service: azure-resource-manager
 ms.topic: reference
-ms.date: 09/13/2024
-ms.author: tomfitz
 ---
 # API version change log for deployment of Microsoft.KeyVault/vaults
 
