@@ -1,11 +1,8 @@
 ---
 title: API change log for Microsoft.DocumentDB deployment resource types
 description: Describes changes between API versions for Microsoft.DocumentDB.
-author: tfitzmac
 ms.service: azure-resource-manager
 ms.topic: reference
-ms.date: 09/13/2024
-ms.author: tomfitz
 ---
 
 # Change log for deployment of Microsoft.DocumentDB resource types

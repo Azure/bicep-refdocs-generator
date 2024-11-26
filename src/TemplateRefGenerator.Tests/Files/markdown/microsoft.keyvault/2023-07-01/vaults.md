@@ -1,12 +1,9 @@
 ---
 title: Microsoft.KeyVault/vaults 2023-07-01
 description: Azure Microsoft.KeyVault/vaults syntax and properties to use in Azure Resource Manager templates for deploying the resource. API version 2023-07-01
-author: tfitzmac
 zone_pivot_groups: deployment-languages-reference
 ms.service: azure-resource-manager
 ms.topic: reference
-ms.date: 09/13/2024
-ms.author: tomfitz
 ---
 # Microsoft.KeyVault vaults 2023-07-01
 
