@@ -41,4 +41,23 @@ public class TocGeneratorTests
         tocFile.WriteToOutputFolder(tocContents);
         tocFile.ShouldHaveExpectedValue();
     }
+
+    [TestMethod]
+    [TestCategory(BaselineHelper.BaselineTestCategory)]
+    [EmbeddedFilesTestData(@"^Files/roottoc/toc.yml$")]
+    public void Root_toc_generation_works(EmbeddedFile embeddedFile)
+    {
+        var baselineFolder = BaselineFolder.BuildOutputFolder(TestContext, embeddedFile);
+        var tocFile = baselineFolder.GetBaselineFile(embeddedFile.FileName);
+
+        var typeProvider = new ResourceTypeProvider(new AzTypeLoader());
+        var mdGenerator = new MarkdownGenerator(typeProvider);
+
+        var groupedTypes = mdGenerator.GetGroupedTypes().Select(x => x.ProviderNamespace).ToList();
+
+        var tocContents = TocGenerator.GenerateRootToc(new(), groupedTypes);
+
+        tocFile.WriteToOutputFolder(tocContents);
+        tocFile.ShouldHaveExpectedValue();
+    }
 }

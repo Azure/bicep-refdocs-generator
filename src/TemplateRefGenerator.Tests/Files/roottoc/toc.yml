@@ -1,0 +1,1045 @@
+- name: Overview
+  items:
+  - name: Define resources
+    href: index.md
+- name: Change log
+  items:
+  - name: AAD
+    href: ./microsoft.aad/change-log/toc.yml
+  - name: Aadiam
+    href: ./microsoft.aadiam/change-log/toc.yml
+  - name: Add Ons
+    href: ./microsoft.addons/change-log/toc.yml
+  - name: Advisor
+    href: ./microsoft.advisor/change-log/toc.yml
+  - name: AKS
+    href: ./microsoft.containerservice/change-log/toc.yml
+  - name: AKS Azure Arc enabled
+    href: ./microsoft.hybridcontainerservice/change-log/toc.yml
+  - name: Alerts Management
+    href: ./microsoft.alertsmanagement/change-log/toc.yml
+  - name: Analysis Services
+    href: ./microsoft.analysisservices/change-log/toc.yml
+  - name: API Center
+    href: ./microsoft.apicenter/change-log/toc.yml
+  - name: API Management
+    href: ./microsoft.apimanagement/change-log/toc.yml
+  - name: App Compliance Automation
+    href: ./microsoft.appcomplianceautomation/change-log/toc.yml
+  - name: App Configuration
+    href: ./microsoft.appconfiguration/change-log/toc.yml
+  - name: Astronomer Astro
+    href: ./astronomer.astro/change-log/toc.yml
+  - name: Attestation
+    href: ./microsoft.attestation/change-log/toc.yml
+  - name: Authorization
+    href: ./microsoft.authorization/change-log/toc.yml
+  - name: Automanage
+    href: ./microsoft.automanage/change-log/toc.yml
+  - name: Automation
+    href: ./microsoft.automation/change-log/toc.yml
+  - name: AWS Connector
+    href: ./microsoft.awsconnector/change-log/toc.yml
+  - name: Azure AD B2C
+    href: ./microsoft.azureactivedirectory/change-log/toc.yml
+  - name: Azure Arc Connected VMware vSphere
+    href: ./microsoft.connectedvmwarevsphere/change-log/toc.yml
+  - name: Azure Arc Data
+    href: ./microsoft.azurearcdata/change-log/toc.yml
+  - name: Azure Arc Enabled SCVMM
+    href: ./microsoft.scvmm/change-log/toc.yml
+  - name: Azure Blueprints
+    href: ./microsoft.blueprint/change-log/toc.yml
+  - name: Azure Data
+    href: ./microsoft.azuredata/change-log/toc.yml
+  - name: Azure Data Transfer
+    href: ./microsoft.azuredatatransfer/change-log/toc.yml
+  - name: Azure Digital Twins
+    href: ./microsoft.digitaltwins/change-log/toc.yml
+  - name: Azure FarmBeats
+    href: ./microsoft.agfoodplatform/change-log/toc.yml
+  - name: Azure Fleet
+    href: ./microsoft.azurefleet/change-log/toc.yml
+  - name: Azure Lab Services
+    href: ./microsoft.labservices/change-log/toc.yml
+  - name: Azure Large Instance
+    href: ./microsoft.azurelargeinstance/change-log/toc.yml
+  - name: Azure Load Testing
+    href: ./microsoft.loadtestservice/change-log/toc.yml
+  - name: Azure Playwright Service
+    href: ./microsoft.azureplaywrightservice/change-log/toc.yml
+  - name: Azure Private 5G Core
+    href: ./microsoft.mobilenetwork/change-log/toc.yml
+  - name: Azure Reservations
+    href: ./microsoft.capacity/change-log/toc.yml
+  - name: Azure Sentinel
+    href: ./microsoft.securityinsights/change-log/toc.yml
+  - name: Azure Sphere
+    href: ./microsoft.azuresphere/change-log/toc.yml
+  - name: Azure Spring Apps
+    href: ./microsoft.appplatform/change-log/toc.yml
+  - name: Azure Stack
+    href: ./microsoft.azurestack/change-log/toc.yml
+  - name: Azure Stack HCI
+    href: ./microsoft.azurestackhci/change-log/toc.yml
+  - name: Azure VMware Solution
+    href: ./microsoft.avs/change-log/toc.yml
+  - name: Baremetal Infrastructure
+    href: ./microsoft.baremetalinfrastructure/change-log/toc.yml
+  - name: Batch
+    href: ./microsoft.batch/change-log/toc.yml
+  - name: Billing
+    href: ./microsoft.billing/change-log/toc.yml
+  - name: Billing Benefits
+    href: ./microsoft.billingbenefits/change-log/toc.yml
+  - name: Bot Service
+    href: ./microsoft.botservice/change-log/toc.yml
+  - name: Cache
+    href: ./microsoft.cache/change-log/toc.yml
+  - name: CDN
+    href: ./microsoft.cdn/change-log/toc.yml
+  - name: Certificate Registration
+    href: ./microsoft.certificateregistration/change-log/toc.yml
+  - name: Change Analysis
+    href: ./microsoft.changeanalysis/change-log/toc.yml
+  - name: Chaos Studio
+    href: ./microsoft.chaos/change-log/toc.yml
+  - name: Codesigning
+    href: ./microsoft.codesigning/change-log/toc.yml
+  - name: Cognitive Services
+    href: ./microsoft.cognitiveservices/change-log/toc.yml
+  - name: Communication Services
+    href: ./microsoft.communication/change-log/toc.yml
+  - name: Community
+    href: ./microsoft.community/change-log/toc.yml
+  - name: Compute
+    href: ./microsoft.compute/change-log/toc.yml
+  - name: Confidential Ledger
+    href: ./microsoft.confidentialledger/change-log/toc.yml
+  - name: Confluent
+    href: ./microsoft.confluent/change-log/toc.yml
+  - name: Consumption
+    href: ./microsoft.consumption/change-log/toc.yml
+  - name: Container Apps
+    href: ./microsoft.app/change-log/toc.yml
+  - name: Container Instance
+    href: ./microsoft.containerinstance/change-log/toc.yml
+  - name: Container Registry
+    href: ./microsoft.containerregistry/change-log/toc.yml
+  - name: Container Storage
+    href: ./microsoft.containerstorage/change-log/toc.yml
+  - name: Contoso
+    href: ./microsoft.contoso/change-log/toc.yml
+  - name: Cosmos DB
+    href: ./microsoft.documentdb/change-log/toc.yml
+  - name: Cost Management
+    href: ./microsoft.costmanagement/change-log/toc.yml
+  - name: Custom Providers
+    href: ./microsoft.customproviders/change-log/toc.yml
+  - name: Customer Insights
+    href: ./microsoft.customerinsights/change-log/toc.yml
+  - name: Dashboard
+    href: ./microsoft.dashboard/change-log/toc.yml
+  - name: Data Box
+    href: ./microsoft.databox/change-log/toc.yml
+  - name: Data Box Edge
+    href: ./microsoft.databoxedge/change-log/toc.yml
+  - name: Data Catalog
+    href: ./microsoft.datacatalog/change-log/toc.yml
+  - name: Data Factory
+    href: ./microsoft.datafactory/change-log/toc.yml
+  - name: Data Lake Analytics
+    href: ./microsoft.datalakeanalytics/change-log/toc.yml
+  - name: Data Lake Store
+    href: ./microsoft.datalakestore/change-log/toc.yml
+  - name: Data Migration
+    href: ./microsoft.datamigration/change-log/toc.yml
+  - name: Data Protection
+    href: ./microsoft.dataprotection/change-log/toc.yml
+  - name: Data Replication
+    href: ./microsoft.datareplication/change-log/toc.yml
+  - name: Data Share
+    href: ./microsoft.datashare/change-log/toc.yml
+  - name: Database Watcher
+    href: ./microsoft.databasewatcher/change-log/toc.yml
+  - name: Databricks
+    href: ./microsoft.databricks/change-log/toc.yml
+  - name: Datadog
+    href: ./microsoft.datadog/change-log/toc.yml
+  - name: Delegated Network
+    href: ./microsoft.delegatednetwork/change-log/toc.yml
+  - name: Desktop Virtualization
+    href: ./microsoft.desktopvirtualization/change-log/toc.yml
+  - name: Dev Center
+    href: ./microsoft.devcenter/change-log/toc.yml
+  - name: Dev Hub
+    href: ./microsoft.devhub/change-log/toc.yml
+  - name: Device Registry
+    href: ./microsoft.deviceregistry/change-log/toc.yml
+  - name: Device Update for IoT Hub
+    href: ./microsoft.deviceupdate/change-log/toc.yml
+  - name: DevOps
+    href: ./microsoft.devops/change-log/toc.yml
+  - name: DevOps Infrastructure
+    href: ./microsoft.devopsinfrastructure/change-log/toc.yml
+  - name: DevSpaces
+    href: ./microsoft.devspaces/change-log/toc.yml
+  - name: DevTest Labs
+    href: ./microsoft.devtestlab/change-log/toc.yml
+  - name: Domain Registration
+    href: ./microsoft.domainregistration/change-log/toc.yml
+  - name: Dynatrace
+    href: ./dynatrace.observability/change-log/toc.yml
+  - name: Easm
+    href: ./microsoft.easm/change-log/toc.yml
+  - name: Edge
+    href: ./microsoft.edge/change-log/toc.yml
+  - name: Edge Marketplace
+    href: ./microsoft.edgemarketplace/change-log/toc.yml
+  - name: Edge Order
+    href: ./microsoft.edgeorder/change-log/toc.yml
+  - name: Edge Zones
+    href: ./microsoft.edgezones/change-log/toc.yml
+  - name: Education
+    href: ./microsoft.education/change-log/toc.yml
+  - name: Elastic
+    href: ./microsoft.elastic/change-log/toc.yml
+  - name: Elastic SAN
+    href: ./microsoft.elasticsan/change-log/toc.yml
+  - name: Engagement Fabric
+    href: ./microsoft.engagementfabric/change-log/toc.yml
+  - name: Enterprise Knowledge Graph
+    href: ./microsoft.enterpriseknowledgegraph/change-log/toc.yml
+  - name: Event Grid
+    href: ./microsoft.eventgrid/change-log/toc.yml
+  - name: Event Hub
+    href: ./microsoft.eventhub/change-log/toc.yml
+  - name: Extended Location
+    href: ./microsoft.extendedlocation/change-log/toc.yml
+  - name: Fabric
+    href: ./microsoft.fabric/change-log/toc.yml
+  - name: Features
+    href: ./microsoft.features/change-log/toc.yml
+  - name: Fluid Relay
+    href: ./microsoft.fluidrelay/change-log/toc.yml
+  - name: Graph Services
+    href: ./microsoft.graphservices/change-log/toc.yml
+  - name: Guest Configuration
+    href: ./microsoft.guestconfiguration/change-log/toc.yml
+  - name: HanaOnAzure
+    href: ./microsoft.hanaonazure/change-log/toc.yml
+  - name: Hardware Security Modules
+    href: ./microsoft.hardwaresecuritymodules/change-log/toc.yml
+  - name: HDInsight
+    href: ./microsoft.hdinsight/change-log/toc.yml
+  - name: Health Bot
+    href: ./microsoft.healthbot/change-log/toc.yml
+  - name: Health Data AI Services
+    href: ./microsoft.healthdataaiservices/change-log/toc.yml
+  - name: Healthcare APIs
+    href: ./microsoft.healthcareapis/change-log/toc.yml
+  - name: Help
+    href: ./microsoft.help/change-log/toc.yml
+  - name: Hybrid Cloud
+    href: ./microsoft.hybridcloud/change-log/toc.yml
+  - name: Hybrid Compute
+    href: ./microsoft.hybridcompute/change-log/toc.yml
+  - name: Hybrid Connectivity
+    href: ./microsoft.hybridconnectivity/change-log/toc.yml
+  - name: Hybrid Data
+    href: ./microsoft.hybriddata/change-log/toc.yml
+  - name: Hybrid Kubernetes
+    href: ./microsoft.kubernetes/change-log/toc.yml
+  - name: Hybrid Network
+    href: ./microsoft.hybridnetwork/change-log/toc.yml
+  - name: ImportExport
+    href: ./microsoft.importexport/change-log/toc.yml
+  - name: Informatica Datamanagement
+    href: ./informatica.datamanagement/change-log/toc.yml
+  - name: Insights
+    href: ./microsoft.insights/change-log/toc.yml
+  - name: Integration Spaces
+    href: ./microsoft.integrationspaces/change-log/toc.yml
+  - name: Intune
+    href: ./microsoft.intune/change-log/toc.yml
+  - name: IoT Central
+    href: ./microsoft.iotcentral/change-log/toc.yml
+  - name: IoT Firmware Defense
+    href: ./microsoft.iotfirmwaredefense/change-log/toc.yml
+  - name: IoT Hub
+    href: ./microsoft.devices/change-log/toc.yml
+  - name: IoT Operations
+    href: ./microsoft.iotoperations/change-log/toc.yml
+  - name: IoT Operations Data Processor
+    href: ./microsoft.iotoperationsdataprocessor/change-log/toc.yml
+  - name: IoT Operations MQ
+    href: ./microsoft.iotoperationsmq/change-log/toc.yml
+  - name: IoT Operations Orchestrator
+    href: ./microsoft.iotoperationsorchestrator/change-log/toc.yml
+  - name: Key Vault
+    href: ./microsoft.keyvault/change-log/toc.yml
+  - name: Kubernetes Configuration
+    href: ./microsoft.kubernetesconfiguration/change-log/toc.yml
+  - name: Kubernetes Runtime
+    href: ./microsoft.kubernetesruntime/change-log/toc.yml
+  - name: Kusto
+    href: ./microsoft.kusto/change-log/toc.yml
+  - name: Logic
+    href: ./microsoft.logic/change-log/toc.yml
+  - name: Logz
+    href: ./microsoft.logz/change-log/toc.yml
+  - name: Machine Learning
+    href: ./microsoft.machinelearning/change-log/toc.yml
+  - name: Machine Learning Services
+    href: ./microsoft.machinelearningservices/change-log/toc.yml
+  - name: Maintenance
+    href: ./microsoft.maintenance/change-log/toc.yml
+  - name: Managed Identity
+    href: ./microsoft.managedidentity/change-log/toc.yml
+  - name: Managed Network
+    href: ./microsoft.managednetwork/change-log/toc.yml
+  - name: Managed Network Fabric
+    href: ./microsoft.managednetworkfabric/change-log/toc.yml
+  - name: Managed Services
+    href: ./microsoft.managedservices/change-log/toc.yml
+  - name: Management
+    href: ./microsoft.management/change-log/toc.yml
+  - name: Management Partner
+    href: ./microsoft.managementpartner/change-log/toc.yml
+  - name: Maps
+    href: ./microsoft.maps/change-log/toc.yml
+  - name: MariaDB
+    href: ./microsoft.dbformariadb/change-log/toc.yml
+  - name: Marketplace
+    href: ./microsoft.marketplace/change-log/toc.yml
+  - name: Marketplace Ordering
+    href: ./microsoft.marketplaceordering/change-log/toc.yml
+  - name: Media
+    href: ./microsoft.media/change-log/toc.yml
+  - name: Microsoft.AzureBridge.Admin
+    href: ./microsoft.azurebridge.admin/change-log/toc.yml
+  - name: Microsoft.Backup.Admin
+    href: ./microsoft.backup.admin/change-log/toc.yml
+  - name: Microsoft.Compute.Admin
+    href: ./microsoft.compute.admin/change-log/toc.yml
+  - name: Microsoft.ContainerRegistry.Admin
+    href: ./microsoft.containerregistry.admin/change-log/toc.yml
+  - name: Microsoft.Deployment.Admin
+    href: ./microsoft.deployment.admin/change-log/toc.yml
+  - name: Microsoft.Dynamics365FraudProtection
+    href: ./microsoft.dynamics365fraudprotection/change-log/toc.yml
+  - name: Microsoft.Fabric.Admin
+    href: ./microsoft.fabric.admin/change-log/toc.yml
+  - name: microsoft.gallery.admin
+    href: ./microsoft.gallery.admin/change-log/toc.yml
+  - name: Microsoft.InfrastructureInsights.Admin
+    href: ./microsoft.infrastructureinsights.admin/change-log/toc.yml
+  - name: Microsoft.M365SecurityAndCompliance
+    href: ./microsoft.m365securityandcompliance/change-log/toc.yml
+  - name: Microsoft.MobilePacketCore
+    href: ./microsoft.mobilepacketcore/change-log/toc.yml
+  - name: Microsoft.Monitor
+    href: ./microsoft.monitor/change-log/toc.yml
+  - name: Microsoft.Network.Admin
+    href: ./microsoft.network.admin/change-log/toc.yml
+  - name: Microsoft.Storage.Admin
+    href: ./microsoft.storage.admin/change-log/toc.yml
+  - name: Microsoft.StorageActions
+    href: ./microsoft.storageactions/change-log/toc.yml
+  - name: Microsoft.Subscriptions.Admin
+    href: ./microsoft.subscriptions.admin/change-log/toc.yml
+  - name: Microsoft.Update.Admin
+    href: ./microsoft.update.admin/change-log/toc.yml
+  - name: Migrate
+    href: ./microsoft.migrate/change-log/toc.yml
+  - name: Mixed Reality
+    href: ./microsoft.mixedreality/change-log/toc.yml
+  - name: MySQL
+    href: ./microsoft.dbformysql/change-log/toc.yml
+  - name: Neon Postgres
+    href: ./neon.postgres/change-log/toc.yml
+  - name: NetApp
+    href: ./microsoft.netapp/change-log/toc.yml
+  - name: Network
+    href: ./microsoft.network/change-log/toc.yml
+  - name: Network Analytics
+    href: ./microsoft.networkanalytics/change-log/toc.yml
+  - name: Network Cloud
+    href: ./microsoft.networkcloud/change-log/toc.yml
+  - name: Network Function
+    href: ./microsoft.networkfunction/change-log/toc.yml
+  - name: NewRelic Observability
+    href: ./newrelic.observability/change-log/toc.yml
+  - name: Nginx Nginxplus
+    href: ./nginx.nginxplus/change-log/toc.yml
+  - name: Notification Hubs
+    href: ./microsoft.notificationhubs/change-log/toc.yml
+  - name: OffAzure
+    href: ./microsoft.offazure/change-log/toc.yml
+  - name: OffAzure Spring Boot
+    href: ./microsoft.offazurespringboot/change-log/toc.yml
+  - name: Open Energy Platform
+    href: ./microsoft.openenergyplatform/change-log/toc.yml
+  - name: Operational Insights
+    href: ./microsoft.operationalinsights/change-log/toc.yml
+  - name: Operations Management
+    href: ./microsoft.operationsmanagement/change-log/toc.yml
+  - name: Oracle Database
+    href: ./oracle.database/change-log/toc.yml
+  - name: Orbital
+    href: ./microsoft.orbital/change-log/toc.yml
+  - name: PaloAlto Networks Cloudngfw
+    href: ./paloaltonetworks.cloudngfw/change-log/toc.yml
+  - name: Peering
+    href: ./microsoft.peering/change-log/toc.yml
+  - name: Policy Insights
+    href: ./microsoft.policyinsights/change-log/toc.yml
+  - name: Portal
+    href: ./microsoft.portal/change-log/toc.yml
+  - name: Portal Services
+    href: ./microsoft.portalservices/change-log/toc.yml
+  - name: PostgreSQL
+    href: ./microsoft.dbforpostgresql/change-log/toc.yml
+  - name: Power BI
+    href: ./microsoft.powerbi/change-log/toc.yml
+  - name: Power BI Dedicated
+    href: ./microsoft.powerbidedicated/change-log/toc.yml
+  - name: Power Platform
+    href: ./microsoft.powerplatform/change-log/toc.yml
+  - name: Professional Service
+    href: ./microsoft.professionalservice/change-log/toc.yml
+  - name: Programmable Connectivity
+    href: ./microsoft.programmableconnectivity/change-log/toc.yml
+  - name: Provider Hub
+    href: ./microsoft.providerhub/change-log/toc.yml
+  - name: Purview
+    href: ./microsoft.purview/change-log/toc.yml
+  - name: Quantum
+    href: ./microsoft.quantum/change-log/toc.yml
+  - name: Qumulo Storage
+    href: ./qumulo.storage/change-log/toc.yml
+  - name: Quota
+    href: ./microsoft.quota/change-log/toc.yml
+  - name: Recommendations Service
+    href: ./microsoft.recommendationsservice/change-log/toc.yml
+  - name: Recovery Services
+    href: ./microsoft.recoveryservices/change-log/toc.yml
+  - name: Red Hat OpenShift
+    href: ./microsoft.redhatopenshift/change-log/toc.yml
+  - name: Relay
+    href: ./microsoft.relay/change-log/toc.yml
+  - name: Resource Connector
+    href: ./microsoft.resourceconnector/change-log/toc.yml
+  - name: Resource Graph
+    href: ./microsoft.resourcegraph/change-log/toc.yml
+  - name: Resource Health
+    href: ./microsoft.resourcehealth/change-log/toc.yml
+  - name: Resources
+    href: ./microsoft.resources/change-log/toc.yml
+  - name: Scheduler
+    href: ./microsoft.scheduler/change-log/toc.yml
+  - name: Scom
+    href: ./microsoft.scom/change-log/toc.yml
+  - name: Search
+    href: ./microsoft.search/change-log/toc.yml
+  - name: SecretSyncController
+    href: ./microsoft.secretsynccontroller/change-log/toc.yml
+  - name: Security
+    href: ./microsoft.security/change-log/toc.yml
+  - name: SecurityAndCompliance
+    href: ./microsoft.securityandcompliance/change-log/toc.yml
+  - name: Serial Console
+    href: ./microsoft.serialconsole/change-log/toc.yml
+  - name: Service Bus
+    href: ./microsoft.servicebus/change-log/toc.yml
+  - name: Service Fabric
+    href: ./microsoft.servicefabric/change-log/toc.yml
+  - name: Service Fabric Mesh
+    href: ./microsoft.servicefabricmesh/change-log/toc.yml
+  - name: Service Linker
+    href: ./microsoft.servicelinker/change-log/toc.yml
+  - name: Service Networking
+    href: ./microsoft.servicenetworking/change-log/toc.yml
+  - name: SignalR Service
+    href: ./microsoft.signalrservice/change-log/toc.yml
+  - name: Software Plan
+    href: ./microsoft.softwareplan/change-log/toc.yml
+  - name: Solutions
+    href: ./microsoft.solutions/change-log/toc.yml
+  - name: SplitIO Experimentation
+    href: ./splitio.experimentation/change-log/toc.yml
+  - name: SQL
+    href: ./microsoft.sql/change-log/toc.yml
+  - name: SQL Virtual Machine
+    href: ./microsoft.sqlvirtualmachine/change-log/toc.yml
+  - name: Standby Pool
+    href: ./microsoft.standbypool/change-log/toc.yml
+  - name: Storage
+    href: ./microsoft.storage/change-log/toc.yml
+  - name: Storage Cache
+    href: ./microsoft.storagecache/change-log/toc.yml
+  - name: Storage Mover
+    href: ./microsoft.storagemover/change-log/toc.yml
+  - name: Storage Pool
+    href: ./microsoft.storagepool/change-log/toc.yml
+  - name: Storage Sync
+    href: ./microsoft.storagesync/change-log/toc.yml
+  - name: StorSimple
+    href: ./microsoft.storsimple/change-log/toc.yml
+  - name: Stream Analytics
+    href: ./microsoft.streamanalytics/change-log/toc.yml
+  - name: Subscription
+    href: ./microsoft.subscription/change-log/toc.yml
+  - name: Support
+    href: ./microsoft.support/change-log/toc.yml
+  - name: Synapse
+    href: ./microsoft.synapse/change-log/toc.yml
+  - name: Syntex
+    href: ./microsoft.syntex/change-log/toc.yml
+  - name: Test Base
+    href: ./microsoft.testbase/change-log/toc.yml
+  - name: Time Series Insights
+    href: ./microsoft.timeseriesinsights/change-log/toc.yml
+  - name: Verified ID
+    href: ./microsoft.verifiedid/change-log/toc.yml
+  - name: Video Indexer
+    href: ./microsoft.videoindexer/change-log/toc.yml
+  - name: Virtual Machine Images
+    href: ./microsoft.virtualmachineimages/change-log/toc.yml
+  - name: Visual Studio
+    href: ./microsoft.visualstudio/change-log/toc.yml
+  - name: VMWare CloudSimple
+    href: ./microsoft.vmwarecloudsimple/change-log/toc.yml
+  - name: Voice Services
+    href: ./microsoft.voiceservices/change-log/toc.yml
+  - name: Web
+    href: ./microsoft.web/change-log/toc.yml
+  - name: Windows ESU
+    href: ./microsoft.windowsesu/change-log/toc.yml
+  - name: Windows IoT
+    href: ./microsoft.windowsiot/change-log/toc.yml
+  - name: Workload Monitor
+    href: ./microsoft.workloadmonitor/change-log/toc.yml
+  - name: Workloads
+    href: ./microsoft.workloads/change-log/toc.yml
+- name: Reference
+  expanded: true
+  items:
+  - name: AAD
+    href: ./microsoft.aad/toc.yml
+  - name: Aadiam
+    href: ./microsoft.aadiam/toc.yml
+  - name: Add Ons
+    href: ./microsoft.addons/toc.yml
+  - name: Advisor
+    href: ./microsoft.advisor/toc.yml
+  - name: AKS
+    href: ./microsoft.containerservice/toc.yml
+  - name: AKS Azure Arc enabled
+    href: ./microsoft.hybridcontainerservice/toc.yml
+  - name: Alerts Management
+    href: ./microsoft.alertsmanagement/toc.yml
+  - name: Analysis Services
+    href: ./microsoft.analysisservices/toc.yml
+  - name: API Center
+    href: ./microsoft.apicenter/toc.yml
+  - name: API Management
+    href: ./microsoft.apimanagement/toc.yml
+  - name: App Compliance Automation
+    href: ./microsoft.appcomplianceautomation/toc.yml
+  - name: App Configuration
+    href: ./microsoft.appconfiguration/toc.yml
+  - name: Astronomer Astro
+    href: ./astronomer.astro/toc.yml
+  - name: Attestation
+    href: ./microsoft.attestation/toc.yml
+  - name: Authorization
+    href: ./microsoft.authorization/toc.yml
+  - name: Automanage
+    href: ./microsoft.automanage/toc.yml
+  - name: Automation
+    href: ./microsoft.automation/toc.yml
+  - name: AWS Connector
+    href: ./microsoft.awsconnector/toc.yml
+  - name: Azure AD B2C
+    href: ./microsoft.azureactivedirectory/toc.yml
+  - name: Azure Arc Connected VMware vSphere
+    href: ./microsoft.connectedvmwarevsphere/toc.yml
+  - name: Azure Arc Data
+    href: ./microsoft.azurearcdata/toc.yml
+  - name: Azure Arc Enabled SCVMM
+    href: ./microsoft.scvmm/toc.yml
+  - name: Azure Blueprints
+    href: ./microsoft.blueprint/toc.yml
+  - name: Azure Data
+    href: ./microsoft.azuredata/toc.yml
+  - name: Azure Data Transfer
+    href: ./microsoft.azuredatatransfer/toc.yml
+  - name: Azure Digital Twins
+    href: ./microsoft.digitaltwins/toc.yml
+  - name: Azure FarmBeats
+    href: ./microsoft.agfoodplatform/toc.yml
+  - name: Azure Fleet
+    href: ./microsoft.azurefleet/toc.yml
+  - name: Azure Lab Services
+    href: ./microsoft.labservices/toc.yml
+  - name: Azure Large Instance
+    href: ./microsoft.azurelargeinstance/toc.yml
+  - name: Azure Load Testing
+    href: ./microsoft.loadtestservice/toc.yml
+  - name: Azure Playwright Service
+    href: ./microsoft.azureplaywrightservice/toc.yml
+  - name: Azure Private 5G Core
+    href: ./microsoft.mobilenetwork/toc.yml
+  - name: Azure Reservations
+    href: ./microsoft.capacity/toc.yml
+  - name: Azure Sentinel
+    href: ./microsoft.securityinsights/toc.yml
+  - name: Azure Sphere
+    href: ./microsoft.azuresphere/toc.yml
+  - name: Azure Spring Apps
+    href: ./microsoft.appplatform/toc.yml
+  - name: Azure Stack
+    href: ./microsoft.azurestack/toc.yml
+  - name: Azure Stack HCI
+    href: ./microsoft.azurestackhci/toc.yml
+  - name: Azure VMware Solution
+    href: ./microsoft.avs/toc.yml
+  - name: Baremetal Infrastructure
+    href: ./microsoft.baremetalinfrastructure/toc.yml
+  - name: Batch
+    href: ./microsoft.batch/toc.yml
+  - name: Billing
+    href: ./microsoft.billing/toc.yml
+  - name: Billing Benefits
+    href: ./microsoft.billingbenefits/toc.yml
+  - name: Bot Service
+    href: ./microsoft.botservice/toc.yml
+  - name: Cache
+    href: ./microsoft.cache/toc.yml
+  - name: CDN
+    href: ./microsoft.cdn/toc.yml
+  - name: Certificate Registration
+    href: ./microsoft.certificateregistration/toc.yml
+  - name: Change Analysis
+    href: ./microsoft.changeanalysis/toc.yml
+  - name: Chaos Studio
+    href: ./microsoft.chaos/toc.yml
+  - name: Codesigning
+    href: ./microsoft.codesigning/toc.yml
+  - name: Cognitive Services
+    href: ./microsoft.cognitiveservices/toc.yml
+  - name: Communication Services
+    href: ./microsoft.communication/toc.yml
+  - name: Community
+    href: ./microsoft.community/toc.yml
+  - name: Compute
+    href: ./microsoft.compute/toc.yml
+  - name: Confidential Ledger
+    href: ./microsoft.confidentialledger/toc.yml
+  - name: Confluent
+    href: ./microsoft.confluent/toc.yml
+  - name: Consumption
+    href: ./microsoft.consumption/toc.yml
+  - name: Container Apps
+    href: ./microsoft.app/toc.yml
+  - name: Container Instance
+    href: ./microsoft.containerinstance/toc.yml
+  - name: Container Registry
+    href: ./microsoft.containerregistry/toc.yml
+  - name: Container Storage
+    href: ./microsoft.containerstorage/toc.yml
+  - name: Contoso
+    href: ./microsoft.contoso/toc.yml
+  - name: Cosmos DB
+    href: ./microsoft.documentdb/toc.yml
+  - name: Cost Management
+    href: ./microsoft.costmanagement/toc.yml
+  - name: Custom Providers
+    href: ./microsoft.customproviders/toc.yml
+  - name: Customer Insights
+    href: ./microsoft.customerinsights/toc.yml
+  - name: Dashboard
+    href: ./microsoft.dashboard/toc.yml
+  - name: Data Box
+    href: ./microsoft.databox/toc.yml
+  - name: Data Box Edge
+    href: ./microsoft.databoxedge/toc.yml
+  - name: Data Catalog
+    href: ./microsoft.datacatalog/toc.yml
+  - name: Data Factory
+    href: ./microsoft.datafactory/toc.yml
+  - name: Data Lake Analytics
+    href: ./microsoft.datalakeanalytics/toc.yml
+  - name: Data Lake Store
+    href: ./microsoft.datalakestore/toc.yml
+  - name: Data Migration
+    href: ./microsoft.datamigration/toc.yml
+  - name: Data Protection
+    href: ./microsoft.dataprotection/toc.yml
+  - name: Data Replication
+    href: ./microsoft.datareplication/toc.yml
+  - name: Data Share
+    href: ./microsoft.datashare/toc.yml
+  - name: Database Watcher
+    href: ./microsoft.databasewatcher/toc.yml
+  - name: Databricks
+    href: ./microsoft.databricks/toc.yml
+  - name: Datadog
+    href: ./microsoft.datadog/toc.yml
+  - name: Delegated Network
+    href: ./microsoft.delegatednetwork/toc.yml
+  - name: Desktop Virtualization
+    href: ./microsoft.desktopvirtualization/toc.yml
+  - name: Dev Center
+    href: ./microsoft.devcenter/toc.yml
+  - name: Dev Hub
+    href: ./microsoft.devhub/toc.yml
+  - name: Device Registry
+    href: ./microsoft.deviceregistry/toc.yml
+  - name: Device Update for IoT Hub
+    href: ./microsoft.deviceupdate/toc.yml
+  - name: DevOps
+    href: ./microsoft.devops/toc.yml
+  - name: DevOps Infrastructure
+    href: ./microsoft.devopsinfrastructure/toc.yml
+  - name: DevSpaces
+    href: ./microsoft.devspaces/toc.yml
+  - name: DevTest Labs
+    href: ./microsoft.devtestlab/toc.yml
+  - name: Domain Registration
+    href: ./microsoft.domainregistration/toc.yml
+  - name: Dynatrace
+    href: ./dynatrace.observability/toc.yml
+  - name: Easm
+    href: ./microsoft.easm/toc.yml
+  - name: Edge
+    href: ./microsoft.edge/toc.yml
+  - name: Edge Marketplace
+    href: ./microsoft.edgemarketplace/toc.yml
+  - name: Edge Order
+    href: ./microsoft.edgeorder/toc.yml
+  - name: Edge Zones
+    href: ./microsoft.edgezones/toc.yml
+  - name: Education
+    href: ./microsoft.education/toc.yml
+  - name: Elastic
+    href: ./microsoft.elastic/toc.yml
+  - name: Elastic SAN
+    href: ./microsoft.elasticsan/toc.yml
+  - name: Engagement Fabric
+    href: ./microsoft.engagementfabric/toc.yml
+  - name: Enterprise Knowledge Graph
+    href: ./microsoft.enterpriseknowledgegraph/toc.yml
+  - name: Event Grid
+    href: ./microsoft.eventgrid/toc.yml
+  - name: Event Hub
+    href: ./microsoft.eventhub/toc.yml
+  - name: Extended Location
+    href: ./microsoft.extendedlocation/toc.yml
+  - name: Fabric
+    href: ./microsoft.fabric/toc.yml
+  - name: Features
+    href: ./microsoft.features/toc.yml
+  - name: Fluid Relay
+    href: ./microsoft.fluidrelay/toc.yml
+  - name: Graph Services
+    href: ./microsoft.graphservices/toc.yml
+  - name: Guest Configuration
+    href: ./microsoft.guestconfiguration/toc.yml
+  - name: HanaOnAzure
+    href: ./microsoft.hanaonazure/toc.yml
+  - name: Hardware Security Modules
+    href: ./microsoft.hardwaresecuritymodules/toc.yml
+  - name: HDInsight
+    href: ./microsoft.hdinsight/toc.yml
+  - name: Health Bot
+    href: ./microsoft.healthbot/toc.yml
+  - name: Health Data AI Services
+    href: ./microsoft.healthdataaiservices/toc.yml
+  - name: Healthcare APIs
+    href: ./microsoft.healthcareapis/toc.yml
+  - name: Help
+    href: ./microsoft.help/toc.yml
+  - name: Hybrid Cloud
+    href: ./microsoft.hybridcloud/toc.yml
+  - name: Hybrid Compute
+    href: ./microsoft.hybridcompute/toc.yml
+  - name: Hybrid Connectivity
+    href: ./microsoft.hybridconnectivity/toc.yml
+  - name: Hybrid Data
+    href: ./microsoft.hybriddata/toc.yml
+  - name: Hybrid Kubernetes
+    href: ./microsoft.kubernetes/toc.yml
+  - name: Hybrid Network
+    href: ./microsoft.hybridnetwork/toc.yml
+  - name: ImportExport
+    href: ./microsoft.importexport/toc.yml
+  - name: Informatica Datamanagement
+    href: ./informatica.datamanagement/toc.yml
+  - name: Insights
+    href: ./microsoft.insights/toc.yml
+  - name: Integration Spaces
+    href: ./microsoft.integrationspaces/toc.yml
+  - name: Intune
+    href: ./microsoft.intune/toc.yml
+  - name: IoT Central
+    href: ./microsoft.iotcentral/toc.yml
+  - name: IoT Firmware Defense
+    href: ./microsoft.iotfirmwaredefense/toc.yml
+  - name: IoT Hub
+    href: ./microsoft.devices/toc.yml
+  - name: IoT Operations
+    href: ./microsoft.iotoperations/toc.yml
+  - name: IoT Operations Data Processor
+    href: ./microsoft.iotoperationsdataprocessor/toc.yml
+  - name: IoT Operations MQ
+    href: ./microsoft.iotoperationsmq/toc.yml
+  - name: IoT Operations Orchestrator
+    href: ./microsoft.iotoperationsorchestrator/toc.yml
+  - name: Key Vault
+    href: ./microsoft.keyvault/toc.yml
+  - name: Kubernetes Configuration
+    href: ./microsoft.kubernetesconfiguration/toc.yml
+  - name: Kubernetes Runtime
+    href: ./microsoft.kubernetesruntime/toc.yml
+  - name: Kusto
+    href: ./microsoft.kusto/toc.yml
+  - name: Logic
+    href: ./microsoft.logic/toc.yml
+  - name: Logz
+    href: ./microsoft.logz/toc.yml
+  - name: Machine Learning
+    href: ./microsoft.machinelearning/toc.yml
+  - name: Machine Learning Services
+    href: ./microsoft.machinelearningservices/toc.yml
+  - name: Maintenance
+    href: ./microsoft.maintenance/toc.yml
+  - name: Managed Identity
+    href: ./microsoft.managedidentity/toc.yml
+  - name: Managed Network
+    href: ./microsoft.managednetwork/toc.yml
+  - name: Managed Network Fabric
+    href: ./microsoft.managednetworkfabric/toc.yml
+  - name: Managed Services
+    href: ./microsoft.managedservices/toc.yml
+  - name: Management
+    href: ./microsoft.management/toc.yml
+  - name: Management Partner
+    href: ./microsoft.managementpartner/toc.yml
+  - name: Maps
+    href: ./microsoft.maps/toc.yml
+  - name: MariaDB
+    href: ./microsoft.dbformariadb/toc.yml
+  - name: Marketplace
+    href: ./microsoft.marketplace/toc.yml
+  - name: Marketplace Ordering
+    href: ./microsoft.marketplaceordering/toc.yml
+  - name: Media
+    href: ./microsoft.media/toc.yml
+  - name: Microsoft.AzureBridge.Admin
+    href: ./microsoft.azurebridge.admin/toc.yml
+  - name: Microsoft.Backup.Admin
+    href: ./microsoft.backup.admin/toc.yml
+  - name: Microsoft.Compute.Admin
+    href: ./microsoft.compute.admin/toc.yml
+  - name: Microsoft.ContainerRegistry.Admin
+    href: ./microsoft.containerregistry.admin/toc.yml
+  - name: Microsoft.Deployment.Admin
+    href: ./microsoft.deployment.admin/toc.yml
+  - name: Microsoft.Dynamics365FraudProtection
+    href: ./microsoft.dynamics365fraudprotection/toc.yml
+  - name: Microsoft.Fabric.Admin
+    href: ./microsoft.fabric.admin/toc.yml
+  - name: microsoft.gallery.admin
+    href: ./microsoft.gallery.admin/toc.yml
+  - name: Microsoft.InfrastructureInsights.Admin
+    href: ./microsoft.infrastructureinsights.admin/toc.yml
+  - name: Microsoft.M365SecurityAndCompliance
+    href: ./microsoft.m365securityandcompliance/toc.yml
+  - name: Microsoft.MobilePacketCore
+    href: ./microsoft.mobilepacketcore/toc.yml
+  - name: Microsoft.Monitor
+    href: ./microsoft.monitor/toc.yml
+  - name: Microsoft.Network.Admin
+    href: ./microsoft.network.admin/toc.yml
+  - name: Microsoft.Storage.Admin
+    href: ./microsoft.storage.admin/toc.yml
+  - name: Microsoft.StorageActions
+    href: ./microsoft.storageactions/toc.yml
+  - name: Microsoft.Subscriptions.Admin
+    href: ./microsoft.subscriptions.admin/toc.yml
+  - name: Microsoft.Update.Admin
+    href: ./microsoft.update.admin/toc.yml
+  - name: Migrate
+    href: ./microsoft.migrate/toc.yml
+  - name: Mixed Reality
+    href: ./microsoft.mixedreality/toc.yml
+  - name: MySQL
+    href: ./microsoft.dbformysql/toc.yml
+  - name: Neon Postgres
+    href: ./neon.postgres/toc.yml
+  - name: NetApp
+    href: ./microsoft.netapp/toc.yml
+  - name: Network
+    href: ./microsoft.network/toc.yml
+  - name: Network Analytics
+    href: ./microsoft.networkanalytics/toc.yml
+  - name: Network Cloud
+    href: ./microsoft.networkcloud/toc.yml
+  - name: Network Function
+    href: ./microsoft.networkfunction/toc.yml
+  - name: NewRelic Observability
+    href: ./newrelic.observability/toc.yml
+  - name: Nginx Nginxplus
+    href: ./nginx.nginxplus/toc.yml
+  - name: Notification Hubs
+    href: ./microsoft.notificationhubs/toc.yml
+  - name: OffAzure
+    href: ./microsoft.offazure/toc.yml
+  - name: OffAzure Spring Boot
+    href: ./microsoft.offazurespringboot/toc.yml
+  - name: Open Energy Platform
+    href: ./microsoft.openenergyplatform/toc.yml
+  - name: Operational Insights
+    href: ./microsoft.operationalinsights/toc.yml
+  - name: Operations Management
+    href: ./microsoft.operationsmanagement/toc.yml
+  - name: Oracle Database
+    href: ./oracle.database/toc.yml
+  - name: Orbital
+    href: ./microsoft.orbital/toc.yml
+  - name: PaloAlto Networks Cloudngfw
+    href: ./paloaltonetworks.cloudngfw/toc.yml
+  - name: Peering
+    href: ./microsoft.peering/toc.yml
+  - name: Policy Insights
+    href: ./microsoft.policyinsights/toc.yml
+  - name: Portal
+    href: ./microsoft.portal/toc.yml
+  - name: Portal Services
+    href: ./microsoft.portalservices/toc.yml
+  - name: PostgreSQL
+    href: ./microsoft.dbforpostgresql/toc.yml
+  - name: Power BI
+    href: ./microsoft.powerbi/toc.yml
+  - name: Power BI Dedicated
+    href: ./microsoft.powerbidedicated/toc.yml
+  - name: Power Platform
+    href: ./microsoft.powerplatform/toc.yml
+  - name: Professional Service
+    href: ./microsoft.professionalservice/toc.yml
+  - name: Programmable Connectivity
+    href: ./microsoft.programmableconnectivity/toc.yml
+  - name: Provider Hub
+    href: ./microsoft.providerhub/toc.yml
+  - name: Purview
+    href: ./microsoft.purview/toc.yml
+  - name: Quantum
+    href: ./microsoft.quantum/toc.yml
+  - name: Qumulo Storage
+    href: ./qumulo.storage/toc.yml
+  - name: Quota
+    href: ./microsoft.quota/toc.yml
+  - name: Recommendations Service
+    href: ./microsoft.recommendationsservice/toc.yml
+  - name: Recovery Services
+    href: ./microsoft.recoveryservices/toc.yml
+  - name: Red Hat OpenShift
+    href: ./microsoft.redhatopenshift/toc.yml
+  - name: Relay
+    href: ./microsoft.relay/toc.yml
+  - name: Resource Connector
+    href: ./microsoft.resourceconnector/toc.yml
+  - name: Resource Graph
+    href: ./microsoft.resourcegraph/toc.yml
+  - name: Resource Health
+    href: ./microsoft.resourcehealth/toc.yml
+  - name: Resources
+    href: ./microsoft.resources/toc.yml
+  - name: Scheduler
+    href: ./microsoft.scheduler/toc.yml
+  - name: Scom
+    href: ./microsoft.scom/toc.yml
+  - name: Search
+    href: ./microsoft.search/toc.yml
+  - name: SecretSyncController
+    href: ./microsoft.secretsynccontroller/toc.yml
+  - name: Security
+    href: ./microsoft.security/toc.yml
+  - name: SecurityAndCompliance
+    href: ./microsoft.securityandcompliance/toc.yml
+  - name: Serial Console
+    href: ./microsoft.serialconsole/toc.yml
+  - name: Service Bus
+    href: ./microsoft.servicebus/toc.yml
+  - name: Service Fabric
+    href: ./microsoft.servicefabric/toc.yml
+  - name: Service Fabric Mesh
+    href: ./microsoft.servicefabricmesh/toc.yml
+  - name: Service Linker
+    href: ./microsoft.servicelinker/toc.yml
+  - name: Service Networking
+    href: ./microsoft.servicenetworking/toc.yml
+  - name: SignalR Service
+    href: ./microsoft.signalrservice/toc.yml
+  - name: Software Plan
+    href: ./microsoft.softwareplan/toc.yml
+  - name: Solutions
+    href: ./microsoft.solutions/toc.yml
+  - name: SplitIO Experimentation
+    href: ./splitio.experimentation/toc.yml
+  - name: SQL
+    href: ./microsoft.sql/toc.yml
+  - name: SQL Virtual Machine
+    href: ./microsoft.sqlvirtualmachine/toc.yml
+  - name: Standby Pool
+    href: ./microsoft.standbypool/toc.yml
+  - name: Storage
+    href: ./microsoft.storage/toc.yml
+  - name: Storage Cache
+    href: ./microsoft.storagecache/toc.yml
+  - name: Storage Mover
+    href: ./microsoft.storagemover/toc.yml
+  - name: Storage Pool
+    href: ./microsoft.storagepool/toc.yml
+  - name: Storage Sync
+    href: ./microsoft.storagesync/toc.yml
+  - name: StorSimple
+    href: ./microsoft.storsimple/toc.yml
+  - name: Stream Analytics
+    href: ./microsoft.streamanalytics/toc.yml
+  - name: Subscription
+    href: ./microsoft.subscription/toc.yml
+  - name: Support
+    href: ./microsoft.support/toc.yml
+  - name: Synapse
+    href: ./microsoft.synapse/toc.yml
+  - name: Syntex
+    href: ./microsoft.syntex/toc.yml
+  - name: Test Base
+    href: ./microsoft.testbase/toc.yml
+  - name: Time Series Insights
+    href: ./microsoft.timeseriesinsights/toc.yml
+  - name: Verified ID
+    href: ./microsoft.verifiedid/toc.yml
+  - name: Video Indexer
+    href: ./microsoft.videoindexer/toc.yml
+  - name: Virtual Machine Images
+    href: ./microsoft.virtualmachineimages/toc.yml
+  - name: Visual Studio
+    href: ./microsoft.visualstudio/toc.yml
+  - name: VMWare CloudSimple
+    href: ./microsoft.vmwarecloudsimple/toc.yml
+  - name: Voice Services
+    href: ./microsoft.voiceservices/toc.yml
+  - name: Web
+    href: ./microsoft.web/toc.yml
+  - name: Windows ESU
+    href: ./microsoft.windowsesu/toc.yml
+  - name: Windows IoT
+    href: ./microsoft.windowsiot/toc.yml
+  - name: Workload Monitor
+    href: ./microsoft.workloadmonitor/toc.yml
+  - name: Workloads
+    href: ./microsoft.workloads/toc.yml
