@@ -112,11 +112,26 @@ public static class TocGenerator
         return sb.ToString();
     }
 
+    private record RootTocEntry(
+        string Name,
+        string DisplayName,
+        string MainHref,
+        string ChangeLogHref);
+
     public static string GenerateRootToc(ConfigLoader configLoader, IReadOnlyList<string> providerNamespaces)
     {
         var sb = new StringBuilder();
         var config = configLoader.GetConfiguration();
         var titleMapping = config.TocTitleMapping.ToDictionary(x => x.Key, x => x.Value, StringComparer.OrdinalIgnoreCase);
+
+        var tocEntries = providerNamespaces.Select(provider => 
+            new RootTocEntry(
+                Name: titleMapping.TryGetValue(provider, out var title) ? title : provider,
+                DisplayName: provider,
+                MainHref: $"./{provider.ToLowerInvariant()}/toc.yml",
+                ChangeLogHref: $"./{provider.ToLowerInvariant()}/change-log/toc.yml"))
+            .OrderBy(x => x.Name, StringComparer.OrdinalIgnoreCase)
+            .ToArray();
 
         sb.Append($"""
 - name: Overview
@@ -131,13 +146,11 @@ public static class TocGenerator
   items:
 
 """);
-        foreach (var provider in providerNamespaces)
+        foreach (var tocEntry in tocEntries)
         {
-            var tocTitle = titleMapping.TryGetValue(provider, out var title) ? title : provider;
-
         sb.Append($"""
-  - name: {tocTitle}
-    href: ./{provider}/change-log/toc.yml
+  - name: {tocEntry.Name}
+    href: {tocEntry.ChangeLogHref}
 
 """);
         }
@@ -148,13 +161,11 @@ public static class TocGenerator
   items:
 
 """);
-        foreach (var provider in providerNamespaces)
+        foreach (var tocEntry in tocEntries)
         {
-            var tocTitle = titleMapping.TryGetValue(provider, out var title) ? title : provider;
-
         sb.Append($"""
-  - name: {tocTitle}
-    href: ./{provider}/toc.yml
+  - name: {tocEntry.Name}
+    href: {tocEntry.MainHref}
 
 """);
         }
