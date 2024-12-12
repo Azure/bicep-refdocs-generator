@@ -84,11 +84,11 @@ public class RemarksLoader
     }
 
     public string GetCodeSample(string providerNamespace, CodeSample sample)
-        => Utils.ReadManifestFile("remarks", providerNamespace.ToLowerInvariant(), sample.Path).Trim('\r', '\n');
+        => Utils.ReadManifestFile("settings/remarks", providerNamespace.ToLowerInvariant(), sample.Path).Trim('\r', '\n');
 
     public RemarksFile GetRemarks(string providerNamespace)
     {
-        var pathComponents = new[] { "remarks", providerNamespace.ToLowerInvariant(), "remarks.json" };
+        var pathComponents = new[] { "settings/remarks", providerNamespace.ToLowerInvariant(), "remarks.json" };
         if (Utils.TryReadManifestFile(pathComponents) is not {} contents)
         {
             return RemarksFile.Empty;

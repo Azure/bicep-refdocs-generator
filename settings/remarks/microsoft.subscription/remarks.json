@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schemas/remarks.schema.json",
+  "ResourceRemarks": [
+    {
+      "ResourceTypes": [
+        "microsoft.subscription/aliases"
+      ],
+      "Description": "You can use the `Microsoft.Subscription/aliases` resource to create a new subscription, but not to update an existing subscription. if you attempt to update properties through the `aliases` resource type, those changes aren't retained.\n\nTo rename a subscription, use the [Rename operation](/rest/api/subscription/subscription/rename)."
+    }
+  ]
+}

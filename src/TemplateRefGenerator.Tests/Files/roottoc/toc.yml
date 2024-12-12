@@ -118,6 +118,8 @@
     href: ./microsoft.confidentialledger/change-log/toc.yml
   - name: Confluent
     href: ./microsoft.confluent/change-log/toc.yml
+  - name: Connected Cache
+    href: ./microsoft.connectedcache/change-log/toc.yml
   - name: Consumption
     href: ./microsoft.consumption/change-log/toc.yml
   - name: Container Apps
@@ -188,6 +190,8 @@
     href: ./microsoft.devtestlab/change-log/toc.yml
   - name: Domain Registration
     href: ./microsoft.domainregistration/change-log/toc.yml
+  - name: Durable Task
+    href: ./microsoft.durabletask/change-log/toc.yml
   - name: Dynatrace
     href: ./dynatrace.observability/change-log/toc.yml
   - name: Easm
@@ -222,6 +226,8 @@
     href: ./microsoft.features/change-log/toc.yml
   - name: Fluid Relay
     href: ./microsoft.fluidrelay/change-log/toc.yml
+  - name: Github Network
+    href: ./github.network/change-log/toc.yml
   - name: Graph Services
     href: ./microsoft.graphservices/change-log/toc.yml
   - name: Guest Configuration
@@ -252,6 +258,8 @@
     href: ./microsoft.kubernetes/change-log/toc.yml
   - name: Hybrid Network
     href: ./microsoft.hybridnetwork/change-log/toc.yml
+  - name: Impact
+    href: ./microsoft.impact/change-log/toc.yml
   - name: ImportExport
     href: ./microsoft.importexport/change-log/toc.yml
   - name: Informatica Datamanagement
@@ -336,8 +344,6 @@
     href: ./microsoft.infrastructureinsights.admin/change-log/toc.yml
   - name: Microsoft.M365SecurityAndCompliance
     href: ./microsoft.m365securityandcompliance/change-log/toc.yml
-  - name: Microsoft.MobilePacketCore
-    href: ./microsoft.mobilepacketcore/change-log/toc.yml
   - name: Microsoft.Monitor
     href: ./microsoft.monitor/change-log/toc.yml
   - name: Microsoft.Network.Admin
@@ -639,6 +645,8 @@
     href: ./microsoft.confidentialledger/toc.yml
   - name: Confluent
     href: ./microsoft.confluent/toc.yml
+  - name: Connected Cache
+    href: ./microsoft.connectedcache/toc.yml
   - name: Consumption
     href: ./microsoft.consumption/toc.yml
   - name: Container Apps
@@ -709,6 +717,8 @@
     href: ./microsoft.devtestlab/toc.yml
   - name: Domain Registration
     href: ./microsoft.domainregistration/toc.yml
+  - name: Durable Task
+    href: ./microsoft.durabletask/toc.yml
   - name: Dynatrace
     href: ./dynatrace.observability/toc.yml
   - name: Easm
@@ -743,6 +753,8 @@
     href: ./microsoft.features/toc.yml
   - name: Fluid Relay
     href: ./microsoft.fluidrelay/toc.yml
+  - name: Github Network
+    href: ./github.network/toc.yml
   - name: Graph Services
     href: ./microsoft.graphservices/toc.yml
   - name: Guest Configuration
@@ -773,6 +785,8 @@
     href: ./microsoft.kubernetes/toc.yml
   - name: Hybrid Network
     href: ./microsoft.hybridnetwork/toc.yml
+  - name: Impact
+    href: ./microsoft.impact/toc.yml
   - name: ImportExport
     href: ./microsoft.importexport/toc.yml
   - name: Informatica Datamanagement
@@ -857,8 +871,6 @@
     href: ./microsoft.infrastructureinsights.admin/toc.yml
   - name: Microsoft.M365SecurityAndCompliance
     href: ./microsoft.m365securityandcompliance/toc.yml
-  - name: Microsoft.MobilePacketCore
-    href: ./microsoft.mobilepacketcore/toc.yml
   - name: Microsoft.Monitor
     href: ./microsoft.monitor/toc.yml
   - name: Microsoft.Network.Admin

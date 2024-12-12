@@ -8,6 +8,40 @@ ms.topic: reference
 
 This article describes the properties that changed in each API version for [microsoft.documentdb/databaseaccounts](~/microsoft.documentdb/databaseaccounts.md). It only covers properties that are available during deployments.
 
+## 2024-12-01-preview
+
+Added:
+
+* [DiagnosticLogSettings](~/microsoft.documentdb/2024-12-01-preview/databaseaccounts.md#diagnosticlogsettings)
+
+Updated:
+
+* [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-12-01-preview/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Added property 'capacityMode'
+* [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-12-01-preview/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Added property 'capacityModeChangeTransitionState'
+* [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-12-01-preview/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Added property 'defaultPriorityLevel'
+* [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-12-01-preview/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Added property 'diagnosticLogSettings'
+* [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-12-01-preview/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Added property 'enableMaterializedViews'
+* [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-12-01-preview/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Added property 'enablePriorityBasedExecution'
+* [RestoreParameters](~/microsoft.documentdb/2024-12-01-preview/databaseaccounts.md#restoreparameters): Added property 'sourceBackupLocation'
+
+
+## 2024-11-15
+
+Removed:
+
+* [DiagnosticLogSettings](~/microsoft.documentdb/2024-11-15/databaseaccounts.md#diagnosticlogsettings)
+
+Updated:
+
+* [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-11-15/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Removed property 'capacityMode'
+* [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-11-15/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Removed property 'capacityModeChangeTransitionState'
+* [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-11-15/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Removed property 'defaultPriorityLevel'
+* [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-11-15/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Removed property 'diagnosticLogSettings'
+* [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-11-15/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Removed property 'enableMaterializedViews'
+* [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](~/microsoft.documentdb/2024-11-15/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties): Removed property 'enablePriorityBasedExecution'
+* [RestoreParameters](~/microsoft.documentdb/2024-11-15/databaseaccounts.md#restoreparameters): Removed property 'sourceBackupLocation'
+
+
 ## 2024-09-01-preview
 
 Added:

@@ -9,6 +9,8 @@ ms.topic: reference
 
 > [!div class="op_single_selector" title1="API Versions:"]
 > - [Latest](../databaseaccounts.md)
+> - [2024-12-01-preview](../2024-12-01-preview/databaseaccounts.md)
+> - [2024-11-15](../2024-11-15/databaseaccounts.md)
 > - [2024-09-01-preview](../2024-09-01-preview/databaseaccounts.md)
 > - [2024-08-15](../2024-08-15/databaseaccounts.md)
 > - [2024-05-15](../2024-05-15/databaseaccounts.md)

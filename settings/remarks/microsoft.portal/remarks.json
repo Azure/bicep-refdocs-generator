@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schemas/remarks.schema.json",
+  "ResourceRemarks": [
+    {
+      "ResourceTypes": [
+        "microsoft.portal/dashboards"
+      ],
+      "Description": "For more information about creating dashboards, see [The structure of Azure dashboards](/azure/azure-portal/azure-portal-dashboards-structure)."
+    }
+  ]
+}
