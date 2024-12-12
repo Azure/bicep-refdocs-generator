@@ -147,8 +147,7 @@ resource symbolicname 'Microsoft.Compute/disks@2024-03-02' = {
   ]
 }
 ```
-## Property values
-
+## Property Values
 ### CreationData
 
 | Name | Description | Value |
@@ -299,8 +298,8 @@ resource symbolicname 'Microsoft.Compute/disks@2024-03-02' = {
 | architecture | CPU architecture supported by an OS disk. | 'Arm64'<br />'x64' |
 | diskControllerTypes | The disk controllers that an OS disk supports. If set it can be SCSI or SCSI, NVME or NVME, SCSI. | string |
 
-
-## Azure Verified Modules
+## Usage Examples
+### Azure Verified Modules
 
 The following [Azure Verified Modules](https://aka.ms/avm) can be used to deploy this resource type.
 
@@ -309,9 +308,9 @@ The following [Azure Verified Modules](https://aka.ms/avm) can be used to deploy
 > | ----- | ----- |
 > | [Compute Disk](https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/compute/disk) | AVM Resource Module for Compute Disk |
 
-## Quickstart samples
+### Azure Quickstart Samples
 
-The following quickstart samples deploy this resource type.
+The following [Azure Quickstart templates](https://aka.ms/azqst) contain Bicep samples for deploying this resource type.
 
 > [!div class="mx-tableFixed"]
 > | Bicep File | Description |
@@ -438,8 +437,7 @@ To create a Microsoft.Compute/disks resource, add the following JSON to your tem
   "zones": [ "string" ]
 }
 ```
-## Property values
-
+## Property Values
 ### CreationData
 
 | Name | Description | Value |
@@ -592,10 +590,10 @@ To create a Microsoft.Compute/disks resource, add the following JSON to your tem
 | architecture | CPU architecture supported by an OS disk. | 'Arm64'<br />'x64' |
 | diskControllerTypes | The disk controllers that an OS disk supports. If set it can be SCSI or SCSI, NVME or NVME, SCSI. | string |
 
+## Usage Examples
+### Azure Quickstart Templates
 
-## Quickstart templates
-
-The following quickstart templates deploy this resource type.
+The following [Azure Quickstart templates](https://aka.ms/azqst) deploy this resource type.
 
 > [!div class="mx-tableFixed"]
 > | Template | Description |
@@ -731,8 +729,7 @@ resource "azapi_resource" "symbolicname" {
   })
 }
 ```
-## Property values
-
+## Property Values
 ### CreationData
 
 | Name | Description | Value |
@@ -884,8 +881,8 @@ resource "azapi_resource" "symbolicname" {
 | architecture | CPU architecture supported by an OS disk. | 'Arm64'<br />'x64' |
 | diskControllerTypes | The disk controllers that an OS disk supports. If set it can be SCSI or SCSI, NVME or NVME, SCSI. | string |
 
-
-## Azure Verified Modules
+## Usage Examples
+### Azure Verified Modules
 
 The following [Azure Verified Modules](https://aka.ms/avm) can be used to deploy this resource type.
 

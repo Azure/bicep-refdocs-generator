@@ -216,8 +216,7 @@ For **Periodic**, use:
 }
 ```
 
-## Property values
-
+## Property Values
 ### AnalyticalStorageConfiguration
 
 | Name | Description | Value |
@@ -418,10 +417,10 @@ For **Periodic**, use:
 | id | Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}. | string |
 | ignoreMissingVNetServiceEndpoint | Create firewall rule before the virtual network has vnet service endpoint enabled. | bool |
 
+## Usage Examples
+### Azure Quickstart Samples
 
-## Quickstart samples
-
-The following quickstart samples deploy this resource type.
+The following [Azure Quickstart templates](https://aka.ms/azqst) contain Bicep samples for deploying this resource type.
 
 > [!div class="mx-tableFixed"]
 > | Bicep File | Description |
@@ -611,8 +610,7 @@ For **Periodic**, use:
 }
 ```
 
-## Property values
-
+## Property Values
 ### AnalyticalStorageConfiguration
 
 | Name | Description | Value |
@@ -815,10 +813,10 @@ For **Periodic**, use:
 | id | Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}. | string |
 | ignoreMissingVNetServiceEndpoint | Create firewall rule before the virtual network has vnet service endpoint enabled. | bool |
 
+## Usage Examples
+### Azure Quickstart Templates
 
-## Quickstart templates
-
-The following quickstart templates deploy this resource type.
+The following [Azure Quickstart templates](https://aka.ms/azqst) deploy this resource type.
 
 > [!div class="mx-tableFixed"]
 > | Template | Description |
@@ -1020,8 +1018,7 @@ For **Periodic**, use:
 }
 ```
 
-## Property values
-
+## Property Values
 ### AnalyticalStorageConfiguration
 
 | Name | Description | Value |
@@ -1222,7 +1219,6 @@ For **Periodic**, use:
 | ---- | ----------- | ------------ |
 | id | Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}. | string |
 | ignoreMissingVNetServiceEndpoint | Create firewall rule before the virtual network has vnet service endpoint enabled. | bool |
-
 
 
 ::: zone-end

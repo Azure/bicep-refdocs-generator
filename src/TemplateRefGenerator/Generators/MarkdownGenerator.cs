@@ -155,7 +155,7 @@ ms.topic: reference
         return sb.ToString();
     }
 
-    private static string GetBicepQuickstartsSection(SamplesFile samples, ResourceMetadata resource)
+    private static string? GetBicepQuickstartsSection(SamplesFile samples, ResourceMetadata resource)
     {
         var matchingLinks = samples.QuickstartLinks
             .Where(x => x.ResourceTypes.Contains(resource.ResourceType, StringComparer.OrdinalIgnoreCase))
@@ -164,14 +164,14 @@ ms.topic: reference
 
         if (!matchingLinks.Any())
         {
-            return "";
+            return null;
         }
 
         var sb = new StringBuilder();
         sb.Append($"""
-## Quickstart samples
+### Azure Quickstart Samples
 
-The following quickstart samples deploy this resource type.
+The following [Azure Quickstart templates](https://aka.ms/azqst) contain Bicep samples for deploying this resource type.
 
 > [!div class="mx-tableFixed"]
 > | Bicep File | Description |
@@ -207,9 +207,9 @@ The following quickstart samples deploy this resource type.
 
         var sb = new StringBuilder();
         sb.Append($"""
-## Quickstart templates
+### Azure Quickstart Templates
 
-The following quickstart templates deploy this resource type.
+The following [Azure Quickstart templates](https://aka.ms/azqst) deploy this resource type.
 
 > [!div class="mx-tableFixed"]
 > | Template | Description |
@@ -234,7 +234,7 @@ The following quickstart templates deploy this resource type.
         return sb.ToString();
     }
 
-    private static string GetAvmSection(SamplesFile samples, AvmLinkType linkType, ResourceMetadata resource)
+    private static string? GetAvmSection(SamplesFile samples, AvmLinkType linkType, ResourceMetadata resource)
     {
         var matchingLinks = samples.AvmLinks
             .Where(x => StringComparer.OrdinalIgnoreCase.Equals(x.ResourceType, resource.ResourceType))
@@ -243,12 +243,12 @@ The following quickstart templates deploy this resource type.
 
         if (!matchingLinks.Any())
         {
-            return "";
+            return null;
         }
 
         var sb = new StringBuilder();
         sb.Append($"""
-## Azure Verified Modules
+### Azure Verified Modules
 
 The following [Azure Verified Modules](https://aka.ms/avm) can be used to deploy this resource type.
 
@@ -331,7 +331,6 @@ To create a {resource.ResourceType} resource, add the following Bicep to your te
 """);
 
         sb.Append(GetDeploymentRemarks(resource, remarks, DeploymentType.Bicep));
-        sb.Append(GetBicepSamples(remarksLoader, resource, remarks));
 
         foreach (var (discObjectType, discSamples) in samples.DiscrimatedSamples)
         {
@@ -357,22 +356,46 @@ For **{discSample.DiscriminatorValue}**, use:
             }
         }
 
-        sb.Append($"""
-## Property values
+        sb.Append(GenerateOptionalSection("Property Values", [
+            GetPropertyValues(resource, DeploymentType.Bicep, namedTypes, remarks, anchorIndex),
+        ]));
 
-{GetPropertyValues(resource, DeploymentType.Bicep, namedTypes, remarks, anchorIndex)}
-
-""");
-
-        sb.Append(GetAvmSection(configLoader.GetSamples(), AvmLinkType.Bicep, resource));
-
-        sb.Append(GetBicepQuickstartsSection(configLoader.GetSamples(), resource));
+        sb.Append(GenerateOptionalSection("Usage Examples", [
+            GetBicepSamplesSection(remarksLoader, resource, remarks),
+            GetAvmSection(configLoader.GetSamples(), AvmLinkType.Bicep, resource),
+            GetBicepQuickstartsSection(configLoader.GetSamples(), resource),
+        ]));
 
         sb.Append($"""
 
 ::: zone-end
 
 """);
+
+        return sb.ToString();
+    }
+
+    private static string GenerateOptionalSection(string heading, string?[] sections)
+    {
+        var sb = new StringBuilder();
+
+        if (!sections.Any(x => x is {}))
+        {
+            return "";
+        }
+
+        sb.Append($"""
+## {heading}
+
+""");
+
+        foreach (var section in sections)
+        {
+            if (section is {})
+            {
+                sb.Append(section);
+            }
+        }
 
         return sb.ToString();
     }
@@ -462,14 +485,13 @@ For **{discSample.DiscriminatorValue}**, use:
             }
         }
 
-        sb.Append($"""
-## Property values
+        sb.Append(GenerateOptionalSection("Property Values", [
+            GetPropertyValues(resource, DeploymentType.Json, namedTypes, remarks, anchorIndex),
+        ]));
 
-{GetPropertyValues(resource, DeploymentType.Json, namedTypes, remarks, anchorIndex)}
-
-""");
-
-        sb.Append(GetJsonQuickstartsSection(configLoader.GetSamples(), resource));
+        sb.Append(GenerateOptionalSection("Usage Examples", [
+            GetJsonQuickstartsSection(configLoader.GetSamples(), resource),
+        ]));
 
         sb.Append($"""
 
@@ -564,14 +586,13 @@ For **{discSample.DiscriminatorValue}**, use:
             }
         }
 
-        sb.Append($"""
-## Property values
+        sb.Append(GenerateOptionalSection("Property Values", [
+            GetPropertyValues(resource, DeploymentType.Terraform, namedTypes, remarks, anchorIndex),
+        ]));
 
-{GetPropertyValues(resource, DeploymentType.Terraform, namedTypes, remarks, anchorIndex)}
-
-""");
-
-        sb.Append(GetAvmSection(configLoader.GetSamples(), AvmLinkType.Terraform, resource));
+        sb.Append(GenerateOptionalSection("Usage Examples", [
+            GetAvmSection(configLoader.GetSamples(), AvmLinkType.Terraform, resource),
+        ]));
 
         sb.Append($"""
 
@@ -582,18 +603,18 @@ For **{discSample.DiscriminatorValue}**, use:
         return sb.ToString();
     }
 
-    private static string GetBicepSamples(RemarksLoader remarksLoader, ResourceMetadata resource, RemarksFile remarks)
+    private static string? GetBicepSamplesSection(RemarksLoader remarksLoader, ResourceMetadata resource, RemarksFile remarks)
     {
         var bicepSamples = remarks.GetBicepSamples(resource).ToArray();
 
         if (!bicepSamples.Any())
         {
-            return "";
+            return null;
         }
 
         var sb = new StringBuilder();
         sb.Append($"""
-## Examples
+### Bicep Samples
 
 
 """);

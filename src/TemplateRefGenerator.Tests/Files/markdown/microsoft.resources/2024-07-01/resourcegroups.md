@@ -58,23 +58,7 @@ resource symbolicname 'Microsoft.Resources/resourceGroups@2024-07-01' = {
   }
 }
 ```
-## Examples
-
-A basic example of deploying a resource group.
-
-```bicep
-targetScope = 'subscription'
-
-resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
-  name: 'myResourceGroup'
-  location: deployment().location
-  tags: {
-    environment: 'production'
-  }
-}
-```
-## Property values
-
+## Property Values
 ### Microsoft.Resources/resourceGroups
 
 | Name | Description | Value |
@@ -95,8 +79,23 @@ resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
 
+## Usage Examples
+### Bicep Samples
 
-## Azure Verified Modules
+A basic example of deploying a resource group.
+
+```bicep
+targetScope = 'subscription'
+
+resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
+  name: 'myResourceGroup'
+  location: deployment().location
+  tags: {
+    environment: 'production'
+  }
+}
+```
+### Azure Verified Modules
 
 The following [Azure Verified Modules](https://aka.ms/avm) can be used to deploy this resource type.
 
@@ -105,9 +104,9 @@ The following [Azure Verified Modules](https://aka.ms/avm) can be used to deploy
 > | ----- | ----- |
 > | [Resource Group](https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/resources/resource-group) | AVM Resource Module for Resource Group |
 
-## Quickstart samples
+### Azure Quickstart Samples
 
-The following quickstart samples deploy this resource type.
+The following [Azure Quickstart templates](https://aka.ms/azqst) contain Bicep samples for deploying this resource type.
 
 > [!div class="mx-tableFixed"]
 > | Bicep File | Description |
@@ -150,8 +149,7 @@ To create a Microsoft.Resources/resourceGroups resource, add the following JSON 
   }
 }
 ```
-## Property values
-
+## Property Values
 ### Microsoft.Resources/resourceGroups
 
 | Name | Description | Value |
@@ -174,10 +172,10 @@ To create a Microsoft.Resources/resourceGroups resource, add the following JSON 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
 
+## Usage Examples
+### Azure Quickstart Templates
 
-## Quickstart templates
-
-The following quickstart templates deploy this resource type.
+The following [Azure Quickstart templates](https://aka.ms/azqst) deploy this resource type.
 
 > [!div class="mx-tableFixed"]
 > | Template | Description |
@@ -221,8 +219,7 @@ resource "azapi_resource" "symbolicname" {
   })
 }
 ```
-## Property values
-
+## Property Values
 ### Microsoft.Resources/resourceGroups
 
 | Name | Description | Value |
@@ -244,8 +241,8 @@ resource "azapi_resource" "symbolicname" {
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
 
-
-## Azure Verified Modules
+## Usage Examples
+### Azure Verified Modules
 
 The following [Azure Verified Modules](https://aka.ms/avm) can be used to deploy this resource type.
 

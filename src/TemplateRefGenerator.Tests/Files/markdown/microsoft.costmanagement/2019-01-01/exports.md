@@ -122,8 +122,7 @@ resource symbolicname 'Microsoft.CostManagement/exports@2019-01-01' = {
   }
 }
 ```
-## Property values
-
+## Property Values
 ### ExportDeliveryDestination
 
 | Name | Description | Value |
@@ -248,7 +247,6 @@ resource symbolicname 'Microsoft.CostManagement/exports@2019-01-01' = {
 | to | The end date to pull data to. | string (required) |
 
 
-
 ::: zone-end
 
 ::: zone pivot="deployment-language-arm-template"
@@ -341,8 +339,7 @@ To create a Microsoft.CostManagement/exports resource, add the following JSON to
   }
 }
 ```
-## Property values
-
+## Property Values
 ### ExportDeliveryDestination
 
 | Name | Description | Value |
@@ -467,7 +464,7 @@ To create a Microsoft.CostManagement/exports resource, add the following JSON to
 | from | The start date to pull data from. | string (required) |
 | to | The end date to pull data to. | string (required) |
 
-
+## Usage Examples
 
 ::: zone-end
 
@@ -569,8 +566,7 @@ resource "azapi_resource" "symbolicname" {
   })
 }
 ```
-## Property values
-
+## Property Values
 ### ExportDeliveryDestination
 
 | Name | Description | Value |
@@ -694,7 +690,6 @@ resource "azapi_resource" "symbolicname" {
 | ---- | ----------- | ------------ |
 | from | The start date to pull data from. | string (required) |
 | to | The end date to pull data to. | string (required) |
-
 
 
 ::: zone-end

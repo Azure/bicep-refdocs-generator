@@ -112,8 +112,7 @@ resource symbolicname 'Microsoft.KeyVault/vaults@2023-07-01' = {
   }
 }
 ```
-## Property values
-
+## Property Values
 ### AccessPolicyEntry
 
 | Name | Description | Value |
@@ -195,8 +194,8 @@ resource symbolicname 'Microsoft.KeyVault/vaults@2023-07-01' = {
 | id | Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'. | string (required) |
 | ignoreMissingVnetServiceEndpoint | Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured. | bool |
 
-
-## Azure Verified Modules
+## Usage Examples
+### Azure Verified Modules
 
 The following [Azure Verified Modules](https://aka.ms/avm) can be used to deploy this resource type.
 
@@ -205,9 +204,9 @@ The following [Azure Verified Modules](https://aka.ms/avm) can be used to deploy
 > | ----- | ----- |
 > | [Key Vault](https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/key-vault/vault) | AVM Resource Module for Key Vault |
 
-## Quickstart samples
+### Azure Quickstart Samples
 
-The following quickstart samples deploy this resource type.
+The following [Azure Quickstart templates](https://aka.ms/azqst) contain Bicep samples for deploying this resource type.
 
 > [!div class="mx-tableFixed"]
 > | Bicep File | Description |
@@ -319,8 +318,7 @@ To create a Microsoft.KeyVault/vaults resource, add the following JSON to your t
   }
 }
 ```
-## Property values
-
+## Property Values
 ### AccessPolicyEntry
 
 | Name | Description | Value |
@@ -404,10 +402,10 @@ To create a Microsoft.KeyVault/vaults resource, add the following JSON to your t
 | id | Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'. | string (required) |
 | ignoreMissingVnetServiceEndpoint | Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured. | bool |
 
+## Usage Examples
+### Azure Quickstart Templates
 
-## Quickstart templates
-
-The following quickstart templates deploy this resource type.
+The following [Azure Quickstart templates](https://aka.ms/azqst) deploy this resource type.
 
 > [!div class="mx-tableFixed"]
 > | Template | Description |
@@ -545,8 +543,7 @@ resource "azapi_resource" "symbolicname" {
   })
 }
 ```
-## Property values
-
+## Property Values
 ### AccessPolicyEntry
 
 | Name | Description | Value |
@@ -629,8 +626,8 @@ resource "azapi_resource" "symbolicname" {
 | id | Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'. | string (required) |
 | ignoreMissingVnetServiceEndpoint | Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured. | bool |
 
-
-## Azure Verified Modules
+## Usage Examples
+### Azure Verified Modules
 
 The following [Azure Verified Modules](https://aka.ms/avm) can be used to deploy this resource type.
 
