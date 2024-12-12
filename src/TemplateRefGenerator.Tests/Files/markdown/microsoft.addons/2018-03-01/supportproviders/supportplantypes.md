@@ -112,4 +112,5 @@ resource "azapi_resource" "symbolicname" {
 | type | The resource type | "Microsoft.Addons/supportProviders/supportPlanTypes@2018-03-01" |
 
 
+
 ::: zone-end

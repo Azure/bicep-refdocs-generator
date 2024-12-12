@@ -452,6 +452,7 @@ The following quickstart samples deploy this resource type.
 > | [Creates a Dapr pub-sub servicebus app using Container Apps](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.app/container-app-dapr-pubsub-servicebus/main.bicep) | Create a Dapr pub-sub servicebus app using Container Apps. |
 > | [Deploy Azure Data Explorer DB with Cosmos DB connection](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.kusto/kusto-cosmos-db/main.bicep) | Deploy Azure Data Explorer DB with Cosmos DB connection. |
 
+
 ::: zone-end
 
 ::: zone pivot="deployment-language-arm-template"
@@ -851,6 +852,7 @@ The following quickstart templates deploy this resource type.
 > | [Deploy Azure Data Explorer DB with Cosmos DB connection](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.kusto/kusto-cosmos-db)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.kusto%2Fkusto-cosmos-db%2Fazuredeploy.json) | Deploy Azure Data Explorer DB with Cosmos DB connection. |
 > | [Web App with a SQL Database, Azure Cosmos DB, Azure Search](https://github.com/Azure/azure-quickstart-templates/tree/master/demos/web-app-sql-docdb-search)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fdemos%2Fweb-app-sql-docdb-search%2Fazuredeploy.json) | This template provisions a Web App, a SQL Database, Azure Cosmos DB, Azure Search and Application Insights.  |
 
+
 ::: zone-end
 
 ::: zone pivot="deployment-language-terraform"
@@ -1220,6 +1222,7 @@ For **Periodic**, use:
 | ---- | ----------- | ------------ |
 | id | Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/subnets/{subnetName}. | string |
 | ignoreMissingVNetServiceEndpoint | Create firewall rule before the virtual network has vnet service endpoint enabled. | bool |
+
 
 
 ::: zone-end

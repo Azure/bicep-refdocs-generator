@@ -196,6 +196,15 @@ resource symbolicname 'Microsoft.KeyVault/vaults@2023-07-01' = {
 | ignoreMissingVnetServiceEndpoint | Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured. | bool |
 
 
+## Azure Verified Modules
+
+The following [Azure Verified Modules](https://aka.ms/avm) can be used to deploy this resource type.
+
+> [!div class="mx-tableFixed"]
+> | Module | Description |
+> | ----- | ----- |
+> | [Key Vault](https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/key-vault/vault) | AVM Resource Module for Key Vault |
+
 ## Quickstart samples
 
 The following quickstart samples deploy this resource type.
@@ -235,6 +244,7 @@ The following quickstart samples deploy this resource type.
 > | [Deploy the Sports Analytics on Azure Architecture](https://github.com/Azure/azure-quickstart-templates/tree/master/demos/sports-analytics-architecture/main.bicep) | Creates an Azure storage account with ADLS Gen 2 enabled, an Azure Data Factory instance with linked services for the storage account (an the Azure SQL Database if deployed), and an Azure Databricks instance. The AAD identity for the user deploying the template and the managed identity for the ADF instance will be granted the Storage Blob Data Contributor role on the storage account. There are also options to deploy an Azure Key Vault instance, an Azure SQL Database, and an Azure Event Hub (for streaming use cases). When an Azure Key Vault is deployed, the data factory managed identity and the AAD identity for the user deploying the template will be granted the Key Vault Secrets User role. |
 > | [FinOps hub](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.costmanagement/finops-hub/main.bicep) | This template creates a new FinOps hub instance, including Data Lake storage and a Data Factory. |
 > | [Testing environment for Azure Firewall Premium](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.network/azurefirewall-premium/main.bicep) | This template creates an Azure Firewall Premium and Firewall Policy with premium features such as Intrusion Inspection Detection (IDPS), TLS inspection and Web Category filtering |
+
 
 ::: zone-end
 
@@ -452,6 +462,7 @@ The following quickstart templates deploy this resource type.
 > | [This template encrypts a running Windows VMSS](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.compute/encrypt-running-vmss-windows)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.compute%2Fencrypt-running-vmss-windows%2Fazuredeploy.json) | This template enables encryption on a running Windows VM Scale Set |
 > | [upgrades an Azure Stack HCI 22H2 cluster to 23H2 cluster](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.azurestackhci/upgrade-cluster)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.azurestackhci%2Fupgrade-cluster%2Fazuredeploy.json) | This template upgrades an Azure Stack HCI 22H2 cluster to 23H2 cluster using an ARM template. |
 
+
 ::: zone-end
 
 ::: zone pivot="deployment-language-terraform"
@@ -617,6 +628,16 @@ resource "azapi_resource" "symbolicname" {
 | ---- | ----------- | ------------ |
 | id | Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'. | string (required) |
 | ignoreMissingVnetServiceEndpoint | Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured. | bool |
+
+
+## Azure Verified Modules
+
+The following [Azure Verified Modules](https://aka.ms/avm) can be used to deploy this resource type.
+
+> [!div class="mx-tableFixed"]
+> | Module | Description |
+> | ----- | ----- |
+> | [Key Vault](https://github.com/Azure/terraform-azurerm-avm-res-keyvault-vault) | AVM Resource Module for Key Vault |
 
 
 ::: zone-end
