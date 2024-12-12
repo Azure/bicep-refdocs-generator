@@ -696,4 +696,5 @@ resource "azapi_resource" "symbolicname" {
 | to | The end date to pull data to. | string (required) |
 
 
+
 ::: zone-end

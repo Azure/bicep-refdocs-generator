@@ -300,6 +300,15 @@ resource symbolicname 'Microsoft.Compute/disks@2024-03-02' = {
 | diskControllerTypes | The disk controllers that an OS disk supports. If set it can be SCSI or SCSI, NVME or NVME, SCSI. | string |
 
 
+## Azure Verified Modules
+
+The following [Azure Verified Modules](https://aka.ms/avm) can be used to deploy this resource type.
+
+> [!div class="mx-tableFixed"]
+> | Module | Description |
+> | ----- | ----- |
+> | [Compute Disk](https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/compute/disk) | AVM Resource Module for Compute Disk |
+
 ## Quickstart samples
 
 The following quickstart samples deploy this resource type.
@@ -310,6 +319,7 @@ The following quickstart samples deploy this resource type.
 > | [Create Disk & enable protection via Backup Vault](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.dataprotection/backup-create-disk-enable-protection/main.bicep) | Template that creates a disk and enables protection via Backup Vault |
 > | [Windows Docker Host with Portainer and Traefik pre-installed](https://github.com/Azure/azure-quickstart-templates/tree/master/application-workloads/traefik/docker-portainer-traefik-windows-vm/main.bicep) | Windows Docker Host with Portainer and Traefik pre-installed |
 > | [Windows Server VM with SSH](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.compute/vm-windows-ssh/main.bicep) | Deploy a single Windows VM with Open SSH enabled so that you can connect through SSH using key-based authentication. |
+
 
 ::: zone-end
 
@@ -600,6 +610,7 @@ The following quickstart templates deploy this resource type.
 > | [Windows Docker Host with Portainer and Traefik pre-installed](https://github.com/Azure/azure-quickstart-templates/tree/master/application-workloads/traefik/docker-portainer-traefik-windows-vm)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fapplication-workloads%2Ftraefik%2Fdocker-portainer-traefik-windows-vm%2Fazuredeploy.json) | Windows Docker Host with Portainer and Traefik pre-installed |
 > | [Windows Server VM with SSH](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.compute/vm-windows-ssh)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.compute%2Fvm-windows-ssh%2Fazuredeploy.json) | Deploy a single Windows VM with Open SSH enabled so that you can connect through SSH using key-based authentication. |
 
+
 ::: zone-end
 
 ::: zone pivot="deployment-language-terraform"
@@ -872,6 +883,16 @@ resource "azapi_resource" "symbolicname" {
 | acceleratedNetwork | True if the image from which the OS disk is created supports accelerated networking. | bool |
 | architecture | CPU architecture supported by an OS disk. | 'Arm64'<br />'x64' |
 | diskControllerTypes | The disk controllers that an OS disk supports. If set it can be SCSI or SCSI, NVME or NVME, SCSI. | string |
+
+
+## Azure Verified Modules
+
+The following [Azure Verified Modules](https://aka.ms/avm) can be used to deploy this resource type.
+
+> [!div class="mx-tableFixed"]
+> | Module | Description |
+> | ----- | ----- |
+> | [Compute Disk](https://github.com/Azure/terraform-azurerm-avm-res-compute-disk) | AVM Resource Module for Compute Disk |
 
 
 ::: zone-end
