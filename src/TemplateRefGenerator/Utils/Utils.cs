@@ -25,7 +25,7 @@ public static class Utils
         => TryReadManifestFile(pathComponents) ?? throw new InvalidOperationException($"File {GetManifestFilePath(pathComponents)} does not exist");
 
     public static string GetManifestFilePath(string[] pathComponents)
-        => $"Files/{string.Join('/', pathComponents)}";
+        => string.Join('/', pathComponents);
 
     public static T DeserializeJsonFile<T>(string filePath, string contents)
     {

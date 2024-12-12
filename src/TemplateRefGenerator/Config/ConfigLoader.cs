@@ -9,10 +9,10 @@ namespace TemplateRefGenerator;
 public class ConfigLoader
 {
     private Lazy<ConfigFile> ConfigFileLazy = 
-        new(() => Utils.DeserializeJsonFile<ConfigFile>("config/config.json", Utils.ReadManifestFile("config/config.json")));
+        new(() => Utils.DeserializeJsonFile<ConfigFile>("settings/config/config.json", Utils.ReadManifestFile("settings/config/config.json")));
 
     private Lazy<SamplesFile> SampleFileLazy = 
-        new(() => Utils.DeserializeJsonFile<SamplesFile>("samples/samples.json", Utils.ReadManifestFile("samples/samples.json")));
+        new(() => Utils.DeserializeJsonFile<SamplesFile>("settings/samples/samples.json", Utils.ReadManifestFile("settings/samples/samples.json")));
 
     public record ConfigFile(
         ImmutableDictionary<string, string> TocTitleMapping,

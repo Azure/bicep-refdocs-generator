@@ -1,0 +1,13 @@
+{
+  "$schema": "../../schemas/remarks.schema.json",
+  "ResourceRemarks": [
+    {
+      "ResourceTypes": [
+        "microsoft.keyvault/vaults",
+        "microsoft.keyvault/vaults/keys",
+        "microsoft.keyvault/vaults/secrets"
+      ],
+      "Description": "For guidance on using key vaults for secure values, see [Manage secrets by using Bicep](/azure/azure-resource-manager/bicep/scenarios-secrets).\n\nFor a quickstart on creating a secret, see [Quickstart: Set and retrieve a secret from Azure Key Vault using an ARM template](/azure/key-vault/secrets/quick-create-template).\n\nFor a quickstart on creating a key, see [Quickstart: Create an Azure key vault and a key by using ARM template](/azure/key-vault/keys/quick-create-template)."
+    }
+  ]
+}
