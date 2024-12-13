@@ -58,23 +58,7 @@ resource symbolicname 'Microsoft.Resources/resourceGroups@2024-07-01' = {
   }
 }
 ```
-## Examples
-
-A basic example of deploying a resource group.
-
-```bicep
-targetScope = 'subscription'
-
-resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
-  name: 'myResourceGroup'
-  location: deployment().location
-  tags: {
-    environment: 'production'
-  }
-}
-```
-## Property values
-
+## Property Values
 ### Microsoft.Resources/resourceGroups
 
 | Name | Description | Value |
@@ -95,10 +79,34 @@ resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
 
+## Usage Examples
+### Bicep Samples
 
-## Quickstart samples
+A basic example of deploying a resource group.
 
-The following quickstart samples deploy this resource type.
+```bicep
+targetScope = 'subscription'
+
+resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
+  name: 'myResourceGroup'
+  location: deployment().location
+  tags: {
+    environment: 'production'
+  }
+}
+```
+### Azure Verified Modules
+
+The following [Azure Verified Modules](https://aka.ms/avm) can be used to deploy this resource type.
+
+> [!div class="mx-tableFixed"]
+> | Module | Description |
+> | ----- | ----- |
+> | [Resource Group](https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/resources/resource-group) | AVM Resource Module for Resource Group |
+
+### Azure Quickstart Samples
+
+The following [Azure Quickstart templates](https://aka.ms/azqst) contain Bicep samples for deploying this resource type.
 
 > [!div class="mx-tableFixed"]
 > | Bicep File | Description |
@@ -109,6 +117,7 @@ The following quickstart samples deploy this resource type.
 > | [Create a resourceGroup, apply a lock and RBAC](https://github.com/Azure/azure-quickstart-templates/tree/master/subscription-deployments/create-rg-lock-role-assignment/main.bicep) | This template is a subscription level template that will create a resourceGroup, apply a lock the the resourceGroup and assign contributor permssions to the supplied principalId.  Currently, this template cannot be deployed via the Azure Portal. |
 > | [Create a subscription, resourceGroup and storageAccount](https://github.com/Azure/azure-quickstart-templates/tree/master/managementgroup-deployments/create-subscription-resourcegroup/main.bicep) | This template is a management group template that will create a subscription, a resourceGroup and a storageAccount in the same template.  It can be used for an Enterprise Agreement billing mode only.  The official documentation shows modifications needed for other types of accounts. |
 > | [Create an Azure Virtual Network Manager and sample VNETs](https://github.com/Azure/azure-quickstart-templates/tree/master/subscription-deployments/microsoft.network/virtual-network-manager-connectivity/main.bicep) | This template deploys an Azure Virtual Network Manager and sample virtual networks into the named resource group. It supports multiple connectivity topologies and network group membership types. |
+
 
 ::: zone-end
 
@@ -140,8 +149,7 @@ To create a Microsoft.Resources/resourceGroups resource, add the following JSON 
   }
 }
 ```
-## Property values
-
+## Property Values
 ### Microsoft.Resources/resourceGroups
 
 | Name | Description | Value |
@@ -164,10 +172,10 @@ To create a Microsoft.Resources/resourceGroups resource, add the following JSON 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
 
+## Usage Examples
+### Azure Quickstart Templates
 
-## Quickstart templates
-
-The following quickstart templates deploy this resource type.
+The following [Azure Quickstart templates](https://aka.ms/azqst) deploy this resource type.
 
 > [!div class="mx-tableFixed"]
 > | Template | Description |
@@ -178,6 +186,7 @@ The following quickstart templates deploy this resource type.
 > | [Create a resourceGroup, apply a lock and RBAC](https://github.com/Azure/azure-quickstart-templates/tree/master/subscription-deployments/create-rg-lock-role-assignment)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fsubscription-deployments%2Fcreate-rg-lock-role-assignment%2Fazuredeploy.json) | This template is a subscription level template that will create a resourceGroup, apply a lock the the resourceGroup and assign contributor permssions to the supplied principalId.  Currently, this template cannot be deployed via the Azure Portal. |
 > | [Create a subscription, resourceGroup and storageAccount](https://github.com/Azure/azure-quickstart-templates/tree/master/managementgroup-deployments/create-subscription-resourcegroup)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fmanagementgroup-deployments%2Fcreate-subscription-resourcegroup%2Fazuredeploy.json) | This template is a management group template that will create a subscription, a resourceGroup and a storageAccount in the same template.  It can be used for an Enterprise Agreement billing mode only.  The official documentation shows modifications needed for other types of accounts. |
 > | [Create an Azure Virtual Network Manager and sample VNETs](https://github.com/Azure/azure-quickstart-templates/tree/master/subscription-deployments/microsoft.network/virtual-network-manager-connectivity)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fsubscription-deployments%2Fmicrosoft.network%2Fvirtual-network-manager-connectivity%2Fazuredeploy.json) | This template deploys an Azure Virtual Network Manager and sample virtual networks into the named resource group. It supports multiple connectivity topologies and network group membership types. |
+
 
 ::: zone-end
 
@@ -210,8 +219,7 @@ resource "azapi_resource" "symbolicname" {
   })
 }
 ```
-## Property values
-
+## Property Values
 ### Microsoft.Resources/resourceGroups
 
 | Name | Description | Value |
@@ -232,6 +240,16 @@ resource "azapi_resource" "symbolicname" {
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
+
+## Usage Examples
+### Azure Verified Modules
+
+The following [Azure Verified Modules](https://aka.ms/avm) can be used to deploy this resource type.
+
+> [!div class="mx-tableFixed"]
+> | Module | Description |
+> | ----- | ----- |
+> | [Resource Group](https://github.com/Azure/terraform-azurerm-avm-res-resources-resourcegroup) | AVM Resource Module for Resource Group |
 
 
 ::: zone-end

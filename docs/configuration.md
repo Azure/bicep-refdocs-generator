@@ -10,6 +10,9 @@ This file can be found under [settings/samples/samples.json](../settings/samples
 
 `samples.json` is not manually maintained. It can be updated by running [scripts/UpdateSamples.ps1](../scripts/UpdateSamples.ps1).
 
+> [!NOTE]
+> This process is not currently automated. The script needs to be re-run to pick up the latest set of samples.
+
 ## Config
 
 This file can be found under [settings/config/config.json](../settings/config/config.json), and can be used to configure the generation process. The schema is available [here](../settings/config.schema.json).
