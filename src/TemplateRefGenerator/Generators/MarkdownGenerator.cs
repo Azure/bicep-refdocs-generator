@@ -8,6 +8,7 @@ using System.Collections.Immutable;
 using System.Linq;
 using System.Text;
 using Azure.Bicep.Types.Concrete;
+using static TemplateRefGenerator.ConfigLoader;
 using static TemplateRefGenerator.RemarksLoader;
 
 namespace TemplateRefGenerator;
@@ -154,6 +155,123 @@ ms.topic: reference
         return sb.ToString();
     }
 
+    private static string? GetBicepQuickstartsSection(SamplesFile samples, ResourceMetadata resource)
+    {
+        var matchingLinks = samples.QuickstartLinks
+            .Where(x => x.ResourceTypes.Contains(resource.ResourceType, StringComparer.OrdinalIgnoreCase))
+            .Where(x => x.HasBicep)
+            .OrderBy(x => x.Title).ToArray();
+
+        if (!matchingLinks.Any())
+        {
+            return null;
+        }
+
+        var sb = new StringBuilder();
+        sb.Append($"""
+### Azure Quickstart Samples
+
+The following [Azure Quickstart templates](https://aka.ms/azqst) contain Bicep samples for deploying this resource type.
+
+> [!div class="mx-tableFixed"]
+> | Bicep File | Description |
+> | ----- | ----- |
+
+""");
+        foreach (var link in matchingLinks)
+        {
+            var bicepUrl = $"https://github.com/Azure/azure-quickstart-templates/tree/master/{link.Path}/main.bicep";
+            var description = MarkdownUtils.ConvertDocsLinks(link.Description);
+
+            sb.Append($"""
+> | [{link.Title}]({bicepUrl}) | {MarkdownUtils.Escape(description)} |
+
+""");
+        }
+
+        sb.AppendLine("");
+
+        return sb.ToString();
+    }
+
+    private static string GetJsonQuickstartsSection(SamplesFile samples, ResourceMetadata resource)
+    {
+        var matchingLinks = samples.QuickstartLinks
+            .Where(x => x.ResourceTypes.Contains(resource.ResourceType, StringComparer.OrdinalIgnoreCase))
+            .OrderBy(x => x.Title).ToArray();
+
+        if (!matchingLinks.Any())
+        {
+            return "";
+        }
+
+        var sb = new StringBuilder();
+        sb.Append($"""
+### Azure Quickstart Templates
+
+The following [Azure Quickstart templates](https://aka.ms/azqst) deploy this resource type.
+
+> [!div class="mx-tableFixed"]
+> | Template | Description |
+> | ----- | ----- |
+
+""");
+        foreach (var link in matchingLinks)
+        {
+            var templateUrl = $"https://github.com/Azure/azure-quickstart-templates/tree/master/{link.Path}";
+            var rawTemplateUrl = $"https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/{link.Path}/azuredeploy.json";
+            var deployUrl = $"https://portal.azure.com/#create/Microsoft.Template/uri/{Uri.EscapeDataString(rawTemplateUrl)}";
+            var description = MarkdownUtils.ConvertDocsLinks(link.Description);
+
+            sb.Append($"""
+> | [{link.Title}]({templateUrl})<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)]({deployUrl}) | {MarkdownUtils.Escape(description)} |
+
+""");
+        }
+
+        sb.AppendLine("");
+
+        return sb.ToString();
+    }
+
+    private static string? GetAvmSection(SamplesFile samples, AvmLinkType linkType, ResourceMetadata resource)
+    {
+        var matchingLinks = samples.AvmLinks
+            .Where(x => StringComparer.OrdinalIgnoreCase.Equals(x.ResourceType, resource.ResourceType))
+            .Where(x => x.Type == linkType)
+            .OrderBy(x => x.Title).ToArray();
+
+        if (!matchingLinks.Any())
+        {
+            return null;
+        }
+
+        var sb = new StringBuilder();
+        sb.Append($"""
+### Azure Verified Modules
+
+The following [Azure Verified Modules](https://aka.ms/avm) can be used to deploy this resource type.
+
+> [!div class="mx-tableFixed"]
+> | Module | Description |
+> | ----- | ----- |
+
+""");
+        foreach (var link in matchingLinks)
+        {
+            var description = MarkdownUtils.ConvertDocsLinks(link.Description);
+
+            sb.Append($"""
+> | [{link.Title}]({link.RepoUrl}) | {MarkdownUtils.Escape(description)} |
+
+""");
+        }
+
+        sb.AppendLine("");
+
+        return sb.ToString();
+    }
+
     private static string GetBicepZone(ConfigLoader configLoader, RemarksLoader remarksLoader, ResourceMetadata resource, ImmutableArray<NamedType> namedTypes, RemarksFile remarks, int anchorIndex)
     {
         var sb = new StringBuilder();
@@ -213,7 +331,6 @@ To create a {resource.ResourceType} resource, add the following Bicep to your te
 """);
 
         sb.Append(GetDeploymentRemarks(resource, remarks, DeploymentType.Bicep));
-        sb.Append(GetBicepSamples(remarksLoader, resource, remarks));
 
         foreach (var (discObjectType, discSamples) in samples.DiscrimatedSamples)
         {
@@ -239,49 +356,46 @@ For **{discSample.DiscriminatorValue}**, use:
             }
         }
 
-        sb.Append($"""
-## Property values
+        sb.Append(GenerateOptionalSection("Property Values", [
+            GetPropertyValues(resource, DeploymentType.Bicep, namedTypes, remarks, anchorIndex),
+        ]));
 
-{GetPropertyValues(resource, DeploymentType.Bicep, namedTypes, remarks, anchorIndex)}
-
-""");
-
-        var quickstartLinks = configLoader.GetSamples().QuickstartLinks;
-        var matchingLinks = quickstartLinks
-            .Where(x => x.ResourceTypes.Contains(resource.ResourceType, StringComparer.OrdinalIgnoreCase))
-            .Where(x => x.HasBicep)
-            .OrderBy(x => x.Title).ToArray();
-
-        if (matchingLinks.Any())
-        {
-
-            sb.Append($"""
-## Quickstart samples
-
-The following quickstart samples deploy this resource type.
-
-> [!div class="mx-tableFixed"]
-> | Bicep File | Description |
-> | ----- | ----- |
-
-""");
-            foreach (var link in matchingLinks)
-            {
-                var bicepUrl = $"https://github.com/Azure/azure-quickstart-templates/tree/master/{link.Path}/main.bicep";
-                var description = MarkdownUtils.ConvertDocsLinks(link.Description);
-
-                sb.Append($"""
-> | [{link.Title}]({bicepUrl}) | {MarkdownUtils.Escape(description)} |
-
-""");
-            }
-        }
+        sb.Append(GenerateOptionalSection("Usage Examples", [
+            GetBicepSamplesSection(remarksLoader, resource, remarks),
+            GetAvmSection(configLoader.GetSamples(), AvmLinkType.Bicep, resource),
+            GetBicepQuickstartsSection(configLoader.GetSamples(), resource),
+        ]));
 
         sb.Append($"""
 
 ::: zone-end
 
 """);
+
+        return sb.ToString();
+    }
+
+    private static string GenerateOptionalSection(string heading, string?[] sections)
+    {
+        var sb = new StringBuilder();
+
+        if (!sections.Any(x => x is {}))
+        {
+            return "";
+        }
+
+        sb.Append($"""
+## {heading}
+
+""");
+
+        foreach (var section in sections)
+        {
+            if (section is {})
+            {
+                sb.Append(section);
+            }
+        }
 
         return sb.ToString();
     }
@@ -371,44 +485,13 @@ For **{discSample.DiscriminatorValue}**, use:
             }
         }
 
-        sb.Append($"""
-## Property values
+        sb.Append(GenerateOptionalSection("Property Values", [
+            GetPropertyValues(resource, DeploymentType.Json, namedTypes, remarks, anchorIndex),
+        ]));
 
-{GetPropertyValues(resource, DeploymentType.Json, namedTypes, remarks, anchorIndex)}
-
-""");
-
-        var quickstartLinks = configLoader.GetSamples().QuickstartLinks;
-        var matchingLinks = quickstartLinks
-            .Where(x => x.ResourceTypes.Contains(resource.ResourceType, StringComparer.OrdinalIgnoreCase))
-            .OrderBy(x => x.Title).ToArray();
-
-        if (matchingLinks.Any())
-        {
-
-            sb.Append($"""
-## Quickstart templates
-
-The following quickstart templates deploy this resource type.
-
-> [!div class="mx-tableFixed"]
-> | Template | Description |
-> | ----- | ----- |
-
-""");
-            foreach (var link in matchingLinks)
-            {
-                var templateUrl = $"https://github.com/Azure/azure-quickstart-templates/tree/master/{link.Path}";
-                var rawTemplateUrl = $"https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/{link.Path}/azuredeploy.json";
-                var deployUrl = $"https://portal.azure.com/#create/Microsoft.Template/uri/{Uri.EscapeDataString(rawTemplateUrl)}";
-                var description = MarkdownUtils.ConvertDocsLinks(link.Description);
-
-                sb.Append($"""
-> | [{link.Title}]({templateUrl})<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)]({deployUrl}) | {MarkdownUtils.Escape(description)} |
-
-""");
-            }
-        }
+        sb.Append(GenerateOptionalSection("Usage Examples", [
+            GetJsonQuickstartsSection(configLoader.GetSamples(), resource),
+        ]));
 
         sb.Append($"""
 
@@ -419,7 +502,7 @@ The following quickstart templates deploy this resource type.
         return sb.ToString();
     }
 
-    private static string GetTerraformZone(ResourceMetadata resource, ImmutableArray<NamedType> namedTypes, RemarksFile remarks, int anchorIndex)
+    private static string GetTerraformZone(ConfigLoader configLoader, ResourceMetadata resource, ImmutableArray<NamedType> namedTypes, RemarksFile remarks, int anchorIndex)
     {
         var sb = new StringBuilder();
         sb.Append($"""
@@ -503,10 +586,16 @@ For **{discSample.DiscriminatorValue}**, use:
             }
         }
 
-        sb.Append($"""
-## Property values
+        sb.Append(GenerateOptionalSection("Property Values", [
+            GetPropertyValues(resource, DeploymentType.Terraform, namedTypes, remarks, anchorIndex),
+        ]));
 
-{GetPropertyValues(resource, DeploymentType.Terraform, namedTypes, remarks, anchorIndex)}
+        sb.Append(GenerateOptionalSection("Usage Examples", [
+            GetAvmSection(configLoader.GetSamples(), AvmLinkType.Terraform, resource),
+        ]));
+
+        sb.Append($"""
+
 ::: zone-end
 
 """);
@@ -514,18 +603,18 @@ For **{discSample.DiscriminatorValue}**, use:
         return sb.ToString();
     }
 
-    private static string GetBicepSamples(RemarksLoader remarksLoader, ResourceMetadata resource, RemarksFile remarks)
+    private static string? GetBicepSamplesSection(RemarksLoader remarksLoader, ResourceMetadata resource, RemarksFile remarks)
     {
         var bicepSamples = remarks.GetBicepSamples(resource).ToArray();
 
         if (!bicepSamples.Any())
         {
-            return "";
+            return null;
         }
 
         var sb = new StringBuilder();
         sb.Append($"""
-## Examples
+### Bicep Samples
 
 
 """);
@@ -909,7 +998,7 @@ For **{discSample.DiscriminatorValue}**, use:
 {GetResourceRemarks(resource, remarks)}
 {GetBicepZone(configLoader, remarksLoader, resource, namedTypes, remarks, 0)}
 {GetArmTemplateZone(configLoader, resource, namedTypes, remarks, 1)}
-{GetTerraformZone(resource, namedTypes, remarks, 2)}
+{GetTerraformZone(configLoader, resource, namedTypes, remarks, 2)}
 """;
     }
 }

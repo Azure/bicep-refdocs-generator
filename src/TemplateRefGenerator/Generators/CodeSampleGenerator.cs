@@ -167,7 +167,7 @@ public class CodeSampleGenerator
                 sb.Append(indent + "}");
                 break;
             default:
-                sb.Append($"any({type.GetType()})");
+                sb.Append($"any(...)");
                 break;
         }
 

@@ -19,7 +19,20 @@ public class ConfigLoader
         ImmutableArray<string> ExcludedProviders);
 
     public record SamplesFile(
+        ImmutableArray<AvmLink> AvmLinks,
         ImmutableArray<QuickstartLink> QuickstartLinks);
+
+    public enum AvmLinkType {
+        Bicep,
+        Terraform,
+    }
+
+    public record AvmLink(
+        AvmLinkType Type,
+        string Title,
+        string Description,
+        string ResourceType,
+        string RepoUrl);
 
     public record QuickstartLink(
         string Title,
