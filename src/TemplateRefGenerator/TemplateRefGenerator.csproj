@@ -13,6 +13,6 @@
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.9.1" />
     <PackageReference Include="Azure.Bicep.Types" Version="0.5.110" />
-    <PackageReference Include="System.IO.Abstractions" Version="21.1.7" />
+    <PackageReference Include="System.IO.Abstractions" Version="21.2.1" />
   </ItemGroup>
 </Project>
