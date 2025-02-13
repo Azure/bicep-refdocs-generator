@@ -43,7 +43,7 @@ function GetQuickstartLinks {
         $links += [ordered]@{
             Title = $displayName;
             Description = $description;
-            Path = [System.IO.Path]::GetRelativePath($QuickStartsRepoPath, "$templatePath/..").Replace("\\", "/")
+            Path = [System.IO.Path]::GetRelativePath($QuickStartsRepoPath, "$templatePath/..").Replace("\", "/")
             ResourceTypes = @($resourceTypes);
             HasBicep = $hasBicep;
         }
