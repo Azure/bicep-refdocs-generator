@@ -765,7 +765,7 @@ For **{discSample.DiscriminatorValue}**, use:
         }
         if (stringType.MaxLength is not null)
         {
-            constraints.Add($"Max length = {stringType.MinLength}");
+            constraints.Add($"Max length = {stringType.MaxLength}");
         }
         if (stringType.Sensitive is true)
         {
