@@ -349,21 +349,6 @@
       "HasBicep": false
     },
     {
-      "Title": "CloudLens with Suricata IDS example",
-      "Description": "This template shows how to setup network visibility in the public cloud using the CloudLens agent to tap traffic on one vm and forward it to the IDS, in this case Suricata.",
-      "Path": "application-workloads/cloudlens/cloudlens-suricata-ubuntu",
-      "ResourceTypes": [
-        "Microsoft.Compute/virtualMachines",
-        "Microsoft.Compute/virtualMachines/extensions",
-        "Microsoft.Network/networkInterfaces",
-        "Microsoft.Network/networkSecurityGroups",
-        "Microsoft.Network/publicIPAddresses",
-        "Microsoft.Network/virtualNetworks",
-        "Microsoft.Storage/storageAccounts"
-      ],
-      "HasBicep": false
-    },
-    {
       "Title": "Multi-client VNS3 network appliance",
       "Description": "VNS3 is a software only virtual appliance that provides the combined features and functions of a Security Appliance, Application Delivery Controller and Unified Threat Management device at the cloud application edge. Key benefits, On top of cloud networking, Always on end to end encryption, Federate data centres, cloud regions, cloud providers, and/or containers, creating one unified address space, Attestable control over encryption keys, Meshed network manageable at scale, Reliable HA in the Cloud, Isolate sensitive applications (fast low cost Network Segmentation), Segmentation within applications, Analysis of all data in motion in the cloud. Key network functions; virtual router, switch, firewall, vpn concentrator, multicast distributor, with plugins for WAF, NIDS, Caching, Proxy Load Balancers and other Layer 4 thru 7 network functions, VNS3 doesn't require new knowledge or training to implement, so you can integrate with existing network equipment.",
       "Path": "application-workloads/cohesive/cohesive-vns3-free-multiclient-overlay-linux",
@@ -3324,7 +3309,7 @@
         "Microsoft.Storage/storageAccounts/fileServices",
         "Microsoft.Storage/storageAccounts/fileServices/shares"
       ],
-      "HasBicep": false
+      "HasBicep": true
     },
     {
       "Title": "Azure Cloud Shell - VNet",
@@ -3560,6 +3545,16 @@
       "Path": "demos/identitygovernance-entitlementmanagement-extensibility-sample-logicapp",
       "ResourceTypes": [
         "Microsoft.Logic/workflows"
+      ],
+      "HasBicep": false
+    },
+    {
+      "Title": "Deploy a sample logic app, to use as Entitlement Management custom extensions",
+      "Description": "This template creates a simple logic app with all the authorization policy settings, service now connetion to create tickets and schema to http trigger that is needed by Entitlement Management custom extension API.",
+      "Path": "demos/identitygovernance-entitlementmanagement-extensibility-servicenow-sample-logicapp",
+      "ResourceTypes": [
+        "Microsoft.Logic/workflows",
+        "Microsoft.Web/connections"
       ],
       "HasBicep": false
     },
@@ -5292,6 +5287,75 @@
       "HasBicep": false
     },
     {
+      "Title": "Basic Agent Setup Identity",
+      "Description": "This set of templates demonstrates how to set up Azure AI Agent Service with the basic setup using managed identity authetication for the AI Service/AOAI connection. Agents use multi-tenant search and storage resources fully managed by Microsoft. You won’t have visibility or control over these underlying Azure resources.",
+      "Path": "quickstarts/microsoft.azure-ai-agent-service/basic-agent-identity",
+      "ResourceTypes": [
+        "Microsoft.Authorization/roleAssignments",
+        "Microsoft.CognitiveServices/accounts",
+        "Microsoft.CognitiveServices/accounts/deployments",
+        "Microsoft.KeyVault/vaults",
+        "Microsoft.MachineLearningServices/workspaces",
+        "Microsoft.MachineLearningServices/workspaces/connections",
+        "Microsoft.Storage/storageAccounts"
+      ],
+      "HasBicep": true
+    },
+    {
+      "Title": "Basic Agent Setup API Keys",
+      "Description": "This set of templates demonstrates how to set up Azure AI Agent Service with the basic setup using API keys authetication for the AI Service/AOAI connection. Agents use multi-tenant search and storage resources fully managed by Microsoft. You won’t have visibility or control over these underlying Azure resources.",
+      "Path": "quickstarts/microsoft.azure-ai-agent-service/basic-agent-keys",
+      "ResourceTypes": [
+        "Microsoft.CognitiveServices/accounts",
+        "Microsoft.CognitiveServices/accounts/deployments",
+        "Microsoft.MachineLearningServices/workspaces",
+        "Microsoft.MachineLearningServices/workspaces/connections",
+        "Microsoft.Storage/storageAccounts"
+      ],
+      "HasBicep": true
+    },
+    {
+      "Title": "Network Secured Agent with User Managed Identity",
+      "Description": "This set of templates demonstrates how to set up Azure AI Agent Service with virtual network isolation using User Managed Identity authetication for the AI Service/AOAI connection and private network links to connect the agent to your secure data.",
+      "Path": "quickstarts/microsoft.azure-ai-agent-service/network-secured-agent",
+      "ResourceTypes": [
+        "Microsoft.Authorization/roleAssignments",
+        "Microsoft.CognitiveServices/accounts",
+        "Microsoft.CognitiveServices/accounts/deployments",
+        "Microsoft.KeyVault/vaults",
+        "Microsoft.MachineLearningServices/workspaces",
+        "Microsoft.MachineLearningServices/workspaces/capabilityHosts",
+        "Microsoft.MachineLearningServices/workspaces/connections",
+        "Microsoft.ManagedIdentity/userAssignedIdentities",
+        "Microsoft.Network/privateDnsZones",
+        "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+        "Microsoft.Network/privateEndpoints",
+        "Microsoft.Network/privateEndpoints/privateDnsZoneGroups",
+        "Microsoft.Network/virtualNetworks",
+        "Microsoft.Search/searchServices",
+        "Microsoft.Storage/storageAccounts"
+      ],
+      "HasBicep": true
+    },
+    {
+      "Title": "Standard Agent Setup",
+      "Description": "This set of templates demonstrates how to set up Azure AI Agent Service with the standard setup, meaning with managed identity authentication for project/hub connections and public internet access enabled. Agents use customer-owned, single-tenant search and storage resources. With this setup, you have full control and visibility over these resources, but you will incur costs based on your usage.",
+      "Path": "quickstarts/microsoft.azure-ai-agent-service/standard-agent",
+      "ResourceTypes": [
+        "Microsoft.Authorization/roleAssignments",
+        "Microsoft.CognitiveServices/accounts",
+        "Microsoft.CognitiveServices/accounts/deployments",
+        "Microsoft.KeyVault/vaults",
+        "Microsoft.MachineLearningServices/workspaces",
+        "Microsoft.MachineLearningServices/workspaces/capabilityHosts",
+        "Microsoft.MachineLearningServices/workspaces/connections",
+        "Microsoft.Resources/deploymentScripts",
+        "Microsoft.Search/searchServices",
+        "Microsoft.Storage/storageAccounts"
+      ],
+      "HasBicep": true
+    },
+    {
       "Title": "Create alert rule for azure business continuity items",
       "Description": "This templates creates an alert rule and user assigned MSI. It also assigns the MSI reader access to the subscription so that the alert rule has access to query the required protected items and latest recovery point details.",
       "Path": "quickstarts/microsoft.azurebusinesscontinuity/business-continuity-latest-recovery-point-age-alerts",
@@ -5314,7 +5378,7 @@
     {
       "Title": "Create a Kubernetes cluster on Azure Stack HCI",
       "Description": "This template creates a Kubernetes cluster on Azure Stack HCI version 23H2+",
-      "Path": "quickstarts/microsoft.azurestackhci/aks-on-ashci",
+      "Path": "quickstarts/microsoft.azurestackhci/aksarc",
       "ResourceTypes": [
         "Microsoft.HybridContainerService/provisionedClusterInstances",
         "Microsoft.Kubernetes/connectedClusters"
@@ -5340,30 +5404,21 @@
       "Title": "creates an Azure Stack HCI 23H2 cluster in Switchless-Dual-link Networking mode",
       "Description": "This template creates an Azure Stack HCI 23H2 cluster using an ARM template.",
       "Path": "quickstarts/microsoft.azurestackhci/create-cluster-3Nodes-Switchless-DualLink",
-      "ResourceTypes": [
-        "Microsoft.Authorization/roleAssignments",
-        "Microsoft.AzureStackHCI/clusters",
-        "microsoft.azurestackhci/clusters/deploymentSettings",
-        "Microsoft.KeyVault/vaults",
-        "Microsoft.KeyVault/vaults/providers/diagnosticsettings",
-        "Microsoft.KeyVault/vaults/secrets",
-        "Microsoft.Storage/storageAccounts"
-      ],
+      "ResourceTypes": [],
       "HasBicep": false
     },
     {
       "Title": "creates an Azure Stack HCI 23H2 cluster in Switchless-SingleLink networking mode",
       "Description": "This template creates an Azure Stack HCI 23H2 cluster using an ARM template.",
       "Path": "quickstarts/microsoft.azurestackhci/create-cluster-3Nodes-Switchless-SingleLink",
-      "ResourceTypes": [
-        "Microsoft.Authorization/roleAssignments",
-        "Microsoft.AzureStackHCI/clusters",
-        "microsoft.azurestackhci/clusters/deploymentSettings",
-        "Microsoft.KeyVault/vaults",
-        "Microsoft.KeyVault/vaults/providers/diagnosticsettings",
-        "Microsoft.KeyVault/vaults/secrets",
-        "Microsoft.Storage/storageAccounts"
-      ],
+      "ResourceTypes": [],
+      "HasBicep": false
+    },
+    {
+      "Title": "creates a four nodes Azure Local instance in Switchless-Dual-link Networking mode",
+      "Description": "This template creates a four nodes Azure Local instance using an ARM template.",
+      "Path": "quickstarts/microsoft.azurestackhci/create-cluster-4Nodes-Switchless-DualLink",
+      "ResourceTypes": [],
       "HasBicep": false
     },
     {
@@ -5377,15 +5432,7 @@
       "Title": "creates an Azure Stack HCI 23H2 cluster",
       "Description": "This template creates an Azure Stack HCI 23H2 cluster using an ARM template.",
       "Path": "quickstarts/microsoft.azurestackhci/create-cluster",
-      "ResourceTypes": [
-        "Microsoft.Authorization/roleAssignments",
-        "Microsoft.AzureStackHCI/clusters",
-        "microsoft.azurestackhci/clusters/deploymentSettings",
-        "Microsoft.KeyVault/vaults",
-        "Microsoft.KeyVault/vaults/providers/diagnosticsettings",
-        "Microsoft.KeyVault/vaults/secrets",
-        "Microsoft.Storage/storageAccounts"
-      ],
+      "ResourceTypes": [],
       "HasBicep": false
     },
     {
@@ -7806,7 +7853,7 @@
     },
     {
       "Title": "FinOps hub",
-      "Description": "This template creates a new FinOps hub instance, including Data Lake storage and a Data Factory.",
+      "Description": "This template creates a new FinOps hub instance, including Data Explorer, Data Lake storage, and Data Factory.",
       "Path": "quickstarts/microsoft.costmanagement/finops-hub",
       "ResourceTypes": [
         "Microsoft.Authorization/roleAssignments",
@@ -7814,7 +7861,17 @@
         "Microsoft.KeyVault/vaults",
         "Microsoft.KeyVault/vaults/accessPolicies",
         "Microsoft.KeyVault/vaults/secrets",
+        "Microsoft.Kusto/clusters",
+        "Microsoft.Kusto/clusters/databases",
+        "Microsoft.Kusto/clusters/databases/scripts",
+        "Microsoft.Kusto/clusters/principalAssignments",
         "Microsoft.ManagedIdentity/userAssignedIdentities",
+        "Microsoft.Network/networkSecurityGroups",
+        "Microsoft.Network/privateDnsZones",
+        "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+        "Microsoft.Network/privateEndpoints",
+        "Microsoft.Network/privateEndpoints/privateDnsZoneGroups",
+        "Microsoft.Network/virtualNetworks",
         "Microsoft.Resources/deploymentScripts",
         "Microsoft.Storage/storageAccounts",
         "Microsoft.Storage/storageAccounts/blobServices",
@@ -8547,6 +8604,28 @@
       "HasBicep": true
     },
     {
+      "Title": "Create AVD with FSLogix and AD DS Join",
+      "Description": "This template allows you to create Azure Virtual Desktop resources such as host pool, application group, workspace, FSLogix storage account, file share, recovery service vault for file share backup a test session host, its extensions with Microsoft Entra ID join pr Active directory domain join.",
+      "Path": "quickstarts/microsoft.desktopvirtualization/azure-virtual-desktop-with-fslogix",
+      "ResourceTypes": [
+        "Microsoft.Authorization/roleAssignments",
+        "Microsoft.Network/privateDnsZones",
+        "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+        "Microsoft.Network/privateEndpoints",
+        "Microsoft.Network/privateEndpoints/privateDnsZoneGroups",
+        "Microsoft.Network/virtualNetworks",
+        "Microsoft.Network/virtualNetworks/subnets",
+        "Microsoft.RecoveryServices/vaults",
+        "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers",
+        "Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems",
+        "Microsoft.RecoveryServices/vaults/backupPolicies",
+        "Microsoft.Storage/storageAccounts",
+        "Microsoft.Storage/storageAccounts/fileServices",
+        "Microsoft.Storage/storageAccounts/fileServices/shares"
+      ],
+      "HasBicep": true
+    },
+    {
       "Title": "Creates AVD with Microsoft Entra ID Join",
       "Description": "This template allows you to create Azure Virtual Desktop resources such as host pool, application group, workspace, a test session host and its extensions with Microsoft Entra ID join",
       "Path": "quickstarts/microsoft.desktopvirtualization/azure-virtual-desktop",
@@ -8575,6 +8654,13 @@
         "Microsoft.DevCenter/projects/environmentTypes",
         "Microsoft.Resources/resourceGroups"
       ],
+      "HasBicep": true
+    },
+    {
+      "Title": "Ready-To-Code Dev Box Images",
+      "Description": "This template build demonstrates how to build Ready-To-Code Dev Box images using Azure Image Builder.",
+      "Path": "quickstarts/microsoft.devcenter/devbox-ready-to-code-image",
+      "ResourceTypes": [],
       "HasBicep": true
     },
     {
@@ -9530,6 +9616,15 @@
         "Microsoft.HealthcareApis/workspaces/fhirservices",
         "Microsoft.HealthcareApis/workspaces/iotconnectors",
         "Microsoft.HealthcareApis/workspaces/iotconnectors/fhirdestinations"
+      ],
+      "HasBicep": true
+    },
+    {
+      "Title": "Create Azure Health Data Services de-identification service",
+      "Description": "This template creates an Azure Health Data Services de-identification service with optional system-assigned managed identity.",
+      "Path": "quickstarts/microsoft.healthdataaiservices/deidentification-service-create",
+      "ResourceTypes": [
+        "Microsoft.HealthDataAIServices/deidServices"
       ],
       "HasBicep": true
     },
@@ -10961,10 +11056,12 @@
       "Path": "quickstarts/microsoft.network/application-gateway-url-path-based-routing",
       "ResourceTypes": [
         "Microsoft.Network/applicationGateways",
+        "Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies",
         "Microsoft.Network/publicIPAddresses",
-        "Microsoft.Network/virtualNetworks"
+        "Microsoft.Network/virtualNetworks",
+        "Microsoft.Network/virtualNetworks/subnets"
       ],
-      "HasBicep": false
+      "HasBicep": true
     },
     {
       "Title": "Create an Application Gateway v2",
@@ -11601,9 +11698,10 @@
       "ResourceTypes": [
         "Microsoft.Network/loadBalancers",
         "Microsoft.Network/networkInterfaces",
-        "Microsoft.Network/virtualNetworks"
+        "Microsoft.Network/virtualNetworks",
+        "Microsoft.Network/virtualNetworks/subnets"
       ],
-      "HasBicep": false
+      "HasBicep": true
     },
     {
       "Title": "Create a standard internal load balancer",
@@ -12428,6 +12526,29 @@
       "HasBicep": true
     },
     {
+      "Title": "Create Azure VM Replication and Disaster Recovery",
+      "Description": "This template allows you to create Azure Virtual machine site replication disaster recovery.",
+      "Path": "quickstarts/microsoft.recoveryservices/recovery-services-vm-replication-and-disaster-recovery",
+      "ResourceTypes": [
+        "Microsoft.Authorization/roleAssignments",
+        "Microsoft.Network/privateDnsZones",
+        "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+        "Microsoft.Network/privateEndpoints",
+        "Microsoft.Network/privateEndpoints/privateDnsZoneGroups",
+        "Microsoft.Network/virtualNetworks",
+        "Microsoft.Network/virtualNetworks/subnets",
+        "Microsoft.RecoveryServices/vaults",
+        "Microsoft.RecoveryServices/vaults/replicationFabrics",
+        "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationNetworks/replicationNetworkMappings",
+        "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers",
+        "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectedItems",
+        "Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionContainerMappings",
+        "Microsoft.RecoveryServices/vaults/replicationPolicies",
+        "Microsoft.Storage/storageAccounts"
+      ],
+      "HasBicep": true
+    },
+    {
       "Title": "Azure Backup for Workload in Azure Virtual Machines",
       "Description": "This template creates a Recovery Services Vault and a Workload specific Backup Policy. Registers VM with Backup service and Configures Protection",
       "Path": "quickstarts/microsoft.recoveryservices/recovery-services-vm-workload-backup",
@@ -13124,6 +13245,15 @@
         "Microsoft.Network/networkSecurityGroups",
         "Microsoft.Network/publicIPAddresses",
         "Microsoft.SqlVirtualMachine/sqlVirtualMachines"
+      ],
+      "HasBicep": true
+    },
+    {
+      "Title": "Create a storage task",
+      "Description": "This sample shows how to define the conditions of a storage task.",
+      "Path": "quickstarts/microsoft.storage.actions/storage-task",
+      "ResourceTypes": [
+        "Microsoft.StorageActions/storageTasks"
       ],
       "HasBicep": true
     },
@@ -14468,6 +14598,2171 @@
         "Microsoft.Authorization/roleAssignments"
       ],
       "HasBicep": true
+    }
+  ],
+  "AvmLinks": [
+    {
+      "Type": "Bicep",
+      "Title": "Azure Active Directory Domain Service",
+      "Description": "AVM Resource Module for Azure Active Directory Domain Service",
+      "ResourceType": "Microsoft.AAD/domainServices",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/aad/domain-service"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Action Rules",
+      "Description": "AVM Resource Module for Action Rules",
+      "ResourceType": "Microsoft.AlertsManagement/actionRules",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/alerts-management/action-rule"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Analysis Services Server",
+      "Description": "AVM Resource Module for Analysis Services Server",
+      "ResourceType": "Microsoft.AnalysisServices/servers",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/analysis-services/server"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "API Management Service",
+      "Description": "AVM Resource Module for API Management Service",
+      "ResourceType": "Microsoft.ApiManagement/service",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/api-management/service"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Container App",
+      "Description": "AVM Resource Module for Container App",
+      "ResourceType": "Microsoft.App/containerApps",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/app/container-app"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "App Job",
+      "Description": "AVM Resource Module for App Job",
+      "ResourceType": "Microsoft.App/Jobs",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/app/job"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "App Managed Environment",
+      "Description": "AVM Resource Module for App Managed Environment",
+      "ResourceType": "Microsoft.App/managedEnvironments",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/app/managed-environment"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "App Session Pool",
+      "Description": "AVM Resource Module for App Session Pool",
+      "ResourceType": "Microsoft.App/sessionPools",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/app/session-pool"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "App Configuration Store",
+      "Description": "AVM Resource Module for App Configuration Store",
+      "ResourceType": "Microsoft.AppConfiguration/configurationStores",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/app-configuration/configuration-store"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Automation Account",
+      "Description": "AVM Resource Module for Automation Account",
+      "ResourceType": "Microsoft.Automation/automationAccounts",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/automation/automation-account"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "AVS Private Cloud",
+      "Description": "AVM Resource Module for AVS Private Cloud",
+      "ResourceType": "Microsoft.AVS/privateClouds",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/avs/private-cloud"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Stack HCI Cluster",
+      "Description": "AVM Resource Module for Azure Stack HCI Cluster",
+      "ResourceType": "Microsoft.AzureStackHCI/clusters",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/azure-stack-hci/cluster"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Stack HCI Logical Network",
+      "Description": "AVM Resource Module for Azure Stack HCI Logical Network",
+      "ResourceType": "Microsoft.AzureStackHCI/logicalNetworks",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/azure-stack-hci/logical-network"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Stack HCI Network Interface",
+      "Description": "AVM Resource Module for Azure Stack HCI Network Interface",
+      "ResourceType": "Microsoft.AzureStackHCI/networkInterfaces",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/azure-stack-hci/network-interface"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Stack HCI Hard Disk",
+      "Description": "AVM Resource Module for Azure Stack HCI Hard Disk",
+      "ResourceType": "Microsoft.AzureStackHCI/virtualHardDisks",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/azure-stack-hci/virtual-hard-disk"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Stack HCI Virtual Machine Instance",
+      "Description": "AVM Resource Module for Azure Stack HCI Virtual Machine Instance",
+      "ResourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/azure-stack-hci/virtual-machine-instance"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Batch Account",
+      "Description": "AVM Resource Module for Batch Account",
+      "ResourceType": "Microsoft.Batch/batchAccounts",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/batch/batch-account"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Redis Cache",
+      "Description": "AVM Resource Module for Redis Cache",
+      "ResourceType": "Microsoft.Cache/Redis",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/cache/redis"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Redis Enterprise Cache",
+      "Description": "AVM Resource Module for Redis Enterprise Cache",
+      "ResourceType": "Microsoft.Cache/redisEnterprise",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/cache/redis-enterprise"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "CDN Profile",
+      "Description": "AVM Resource Module for CDN Profile",
+      "ResourceType": "Microsoft.Cdn/profiles",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/cdn/profile"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Chaos Experiment",
+      "Description": "AVM Resource Module for Chaos Experiment",
+      "ResourceType": "Microsoft.Chaos/experiments",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/chaos/experiment"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure AI Services (Cognitive Services)",
+      "Description": "AVM Resource Module for Azure AI Services (Cognitive Services)",
+      "ResourceType": "Microsoft.CognitiveServices/accounts",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/cognitive-services/account"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Communication Service",
+      "Description": "AVM Resource Module for Communication Service",
+      "ResourceType": "Microsoft.Communication/communicationServices",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/communication/communication-service"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Email Communication Service",
+      "Description": "AVM Resource Module for Email Communication Service",
+      "ResourceType": "Microsoft.Communication/emailServices",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/communication/email-service"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Availability Set",
+      "Description": "AVM Resource Module for Availability Set",
+      "ResourceType": "Microsoft.Compute/availabilitySets",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/compute/availability-set"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Compute Disk",
+      "Description": "AVM Resource Module for Compute Disk",
+      "ResourceType": "Microsoft.Compute/disks",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/compute/disk"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Disk Encryption Set",
+      "Description": "AVM Resource Module for Disk Encryption Set",
+      "ResourceType": "Microsoft.Compute/diskEncryptionSets",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/compute/disk-encryption-set"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Compute Gallery",
+      "Description": "AVM Resource Module for Azure Compute Gallery",
+      "ResourceType": "Microsoft.Compute/galleries",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/compute/gallery"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Image",
+      "Description": "AVM Resource Module for Image",
+      "ResourceType": "Microsoft.Compute/images",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/compute/image"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Proximity Placement Group",
+      "Description": "AVM Resource Module for Proximity Placement Group",
+      "ResourceType": "Microsoft.Compute/proximityPlacementGroups",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/compute/proximity-placement-group"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Public SSH Key",
+      "Description": "AVM Resource Module for Public SSH Key",
+      "ResourceType": "Microsoft.Compute/sshPublicKeys",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/compute/ssh-public-key"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Virtual Machine",
+      "Description": "AVM Resource Module for Virtual Machine",
+      "ResourceType": "Microsoft.Compute/virtualMachines",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/compute/virtual-machine"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Virtual Machine Scale Set",
+      "Description": "AVM Resource Module for Virtual Machine Scale Set",
+      "ResourceType": "Microsoft.Compute/virtualMachineScaleSets",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/compute/virtual-machine-scale-set"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Consumption Budget",
+      "Description": "AVM Resource Module for Consumption Budget",
+      "ResourceType": "Microsoft.Consumption/budgets",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/consumption/budget"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Container Instance",
+      "Description": "AVM Resource Module for Container Instance",
+      "ResourceType": "Microsoft.ContainerInstance/containerGroups",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/container-instance/container-group"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Container Registry (ACR)",
+      "Description": "AVM Resource Module for Azure Container Registry (ACR)",
+      "ResourceType": "Microsoft.ContainerRegistry/registries",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/container-registry/registry"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Kubernetes Service (AKS) Managed Cluster",
+      "Description": "AVM Resource Module for Azure Kubernetes Service (AKS) Managed Cluster",
+      "ResourceType": "Microsoft.ContainerService/managedClusters",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/container-service/managed-cluster"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Managed Grafana",
+      "Description": "AVM Resource Module for Azure Managed Grafana",
+      "ResourceType": "Microsoft.Dashboard/grafana",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/dashboard/grafana"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Databricks Access Connector",
+      "Description": "AVM Resource Module for Azure Databricks Access Connector",
+      "ResourceType": "Microsoft.Databricks/accessConnectors",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/databricks/access-connector"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Databricks Workspace",
+      "Description": "AVM Resource Module for Azure Databricks Workspace",
+      "ResourceType": "Microsoft.Databricks/workspaces",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/databricks/workspace"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Data Factory",
+      "Description": "AVM Resource Module for Data Factory",
+      "ResourceType": "Microsoft.DataFactory/factories",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/data-factory/factory"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Data Protection Backup Vault",
+      "Description": "AVM Resource Module for Data Protection Backup Vault",
+      "ResourceType": "Microsoft.DataProtection/backupVaults",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/data-protection/backup-vault"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "DB for MySQL Flexible Server",
+      "Description": "AVM Resource Module for DB for MySQL Flexible Server",
+      "ResourceType": "Microsoft.DBforMySQL/flexibleServers",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/db-for-my-sql/flexible-server"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "DB for Postgre SQL Flexible Server",
+      "Description": "AVM Resource Module for DB for Postgre SQL Flexible Server",
+      "ResourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/db-for-postgre-sql/flexible-server"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Virtual Desktop (AVD) Application Group",
+      "Description": "AVM Resource Module for Azure Virtual Desktop (AVD) Application Group",
+      "ResourceType": "Microsoft.DesktopVirtualization/applicationGroups",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/desktop-virtualization/application-group"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Virtual Desktop (AVD) Host Pool",
+      "Description": "AVM Resource Module for Azure Virtual Desktop (AVD) Host Pool",
+      "ResourceType": "Microsoft.DesktopVirtualization/hostPools",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/desktop-virtualization/host-pool"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Virtual Desktop (AVD) Scaling Plan",
+      "Description": "AVM Resource Module for Azure Virtual Desktop (AVD) Scaling Plan",
+      "ResourceType": "Microsoft.DesktopVirtualization/scalingPlans",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/desktop-virtualization/scaling-plan"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Virtual Desktop (AVD) Workspace",
+      "Description": "AVM Resource Module for Azure Virtual Desktop (AVD) Workspace",
+      "ResourceType": "Microsoft.DesktopVirtualization/workspaces",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/desktop-virtualization/workspace"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Dev Center",
+      "Description": "AVM Resource Module for Dev Center",
+      "ResourceType": "Microsoft.DevCenter/devcenters",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/dev-center/devcenter"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "DevOps Infrastructure Pool",
+      "Description": "AVM Resource Module for DevOps Infrastructure Pool",
+      "ResourceType": "Microsoft.DevOpsInfrastructure/pools",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/dev-ops-infrastructure/pool"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "DevTest Lab",
+      "Description": "AVM Resource Module for DevTest Lab",
+      "ResourceType": "Microsoft.DevTestLab/labs",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/dev-test-lab/lab"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Digital Twins Instance",
+      "Description": "AVM Resource Module for Digital Twins Instance",
+      "ResourceType": "Microsoft.DigitalTwins/digitalTwinsInstances",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/digital-twins/digital-twins-instance"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "CosmosDB Database Account",
+      "Description": "AVM Resource Module for CosmosDB Database Account",
+      "ResourceType": "Microsoft.DocumentDB/databaseAccount",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/document-db/database-account"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Cosmos DB for MongoDB (vCore)",
+      "Description": "AVM Resource Module for Cosmos DB for MongoDB (vCore)",
+      "ResourceType": "Microsoft.DocumentDB/mongoClusters",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/document-db/mongo-cluster"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Elastic SAN",
+      "Description": "AVM Resource Module for Elastic SAN",
+      "ResourceType": "Microsoft.ElasticSan/elasticSans",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/elastic-san/elastic-san"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Event Grid Domain",
+      "Description": "AVM Resource Module for Event Grid Domain",
+      "ResourceType": "Microsoft.EventGrid/domains",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/event-grid/domain"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Event Grid Namespace",
+      "Description": "AVM Resource Module for Event Grid Namespace",
+      "ResourceType": "Microsoft.EventGrid/namespaces",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/event-grid/namespace"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Event Grid System Topic",
+      "Description": "AVM Resource Module for Event Grid System Topic",
+      "ResourceType": "Microsoft.EventGrid/systemTopics",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/event-grid/system-topic"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Event Grid Topic",
+      "Description": "AVM Resource Module for Event Grid Topic",
+      "ResourceType": "Microsoft.EventGrid/topics",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/event-grid/topic"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Event Hub Namespace",
+      "Description": "AVM Resource Module for Event Hub Namespace",
+      "ResourceType": "Microsoft.EventHub/namespaces",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/event-hub/namespace"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Fabric",
+      "Description": "AVM Resource Module for Fabric",
+      "ResourceType": "Microsoft.Fabric/capacities",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/fabric/capacity"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Health Bot",
+      "Description": "AVM Resource Module for Azure Health Bot",
+      "ResourceType": "Microsoft.HealthBot/healthBots",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/health-bot/health-bot"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Healthcare API Workspace",
+      "Description": "AVM Resource Module for Healthcare API Workspace",
+      "ResourceType": "Microsoft.HealthcareApis/workspaces",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/healthcare-apis/workspace"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Hybrid Compute Gateway",
+      "Description": "AVM Resource Module for Hybrid Compute Gateway",
+      "ResourceType": "Microsoft.HybridCompute/gateways",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/hybrid-compute/gateway"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Hybrid Compute License",
+      "Description": "AVM Resource Module for Hybrid Compute License",
+      "ResourceType": "Microsoft.HybridCompute/licenses",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/hybrid-compute/license"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Hybrid Compute Machine",
+      "Description": "AVM Resource Module for Hybrid Compute Machine",
+      "ResourceType": "Microsoft.HybridCompute/machines",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/hybrid-compute/machine"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Hybrid Compute Private Link Scope",
+      "Description": "AVM Resource Module for Hybrid Compute Private Link Scope",
+      "ResourceType": "Microsoft.HybridCompute/privateLinkScopes",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/hybrid-compute/private-link-scope"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Hybrid Compute Setting",
+      "Description": "AVM Resource Module for Hybrid Compute Setting",
+      "ResourceType": "Microsoft.HybridCompute/settings",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/hybrid-compute/setting"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Hybrid Container Service - Provisioned Cluster Instance",
+      "Description": "AVM Resource Module for Hybrid Container Service - Provisioned Cluster Instance",
+      "ResourceType": "Microsoft.HybridContainerService/provisionedClusterInstances",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/hybrid-container-service/provisioned-cluster-instance"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Action Group",
+      "Description": "AVM Resource Module for Action Group",
+      "ResourceType": "Microsoft.Insights/actionGroups",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/insights/action-group"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Activity Log Alert",
+      "Description": "AVM Resource Module for Activity Log Alert",
+      "ResourceType": "Microsoft.Insights/activityLogAlerts",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/insights/activity-log-alert"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Insights - Auto Scale Setting",
+      "Description": "AVM Resource Module for Insights - Auto Scale Setting",
+      "ResourceType": "Microsoft.Insights/autoscalesettings",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/insights/autoscale-setting"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Application Insight",
+      "Description": "AVM Resource Module for Application Insight",
+      "ResourceType": "Microsoft.Insights/components",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/insights/component"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Data Collection Endpoint",
+      "Description": "AVM Resource Module for Data Collection Endpoint",
+      "ResourceType": "Microsoft.Insights/dataCollectionEndpoints",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/insights/data-collection-endpoint"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Data Collection Rule",
+      "Description": "AVM Resource Module for Data Collection Rule",
+      "ResourceType": "Microsoft.Insights/dataCollectionRules",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/insights/data-collection-rule"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Diagnostic Setting",
+      "Description": "AVM Resource Module for Diagnostic Setting",
+      "ResourceType": "Microsoft.Insights/diagnosticSettings",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/insights/diagnostic-setting"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Metric Alert",
+      "Description": "AVM Resource Module for Metric Alert",
+      "ResourceType": "Microsoft.Insights/metricAlerts",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/insights/metric-alert"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Monitor Private Link Scope",
+      "Description": "AVM Resource Module for Azure Monitor Private Link Scope",
+      "ResourceType": "Microsoft.Insights/privateLinkScopes",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/insights/private-link-scope"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Scheduled Query Rule",
+      "Description": "AVM Resource Module for Scheduled Query Rule",
+      "ResourceType": "Microsoft.Insights/scheduledQueryRules",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/insights/scheduled-query-rule"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Web Test",
+      "Description": "AVM Resource Module for Web Test",
+      "ResourceType": "Microsoft.Insights/webtests",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/insights/webtest"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Key Vault",
+      "Description": "AVM Resource Module for Key Vault",
+      "ResourceType": "Microsoft.KeyVault/vaults",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/key-vault/vault"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Kubernetes Connected Cluster",
+      "Description": "AVM Resource Module for Kubernetes Connected Cluster",
+      "ResourceType": "Microsoft.Kubernetes/connectedClusters",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/kubernetes/connected-clusters"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Kubernetes Configuration Extension",
+      "Description": "AVM Resource Module for Kubernetes Configuration Extension",
+      "ResourceType": "Microsoft.KubernetesConfiguration/extensions",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/kubernetes-configuration/extension"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Kubernetes Configuration Flux Configuration",
+      "Description": "AVM Resource Module for Kubernetes Configuration Flux Configuration",
+      "ResourceType": "Microsoft.KubernetesConfiguration/fluxConfigurations",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/kubernetes-configuration/flux-configuration"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Data Explorer (Kusto) cluster",
+      "Description": "AVM Resource Module for Azure Data Explorer (Kusto) cluster",
+      "ResourceType": "Microsoft.Kusto/clusters",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/kusto/cluster"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Load Testing Service",
+      "Description": "AVM Resource Module for Load Testing Service",
+      "ResourceType": "Microsoft.LoadTestService/loadTests",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/load-test-service/load-test"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Logic Apps (Workflow)",
+      "Description": "AVM Resource Module for Logic Apps (Workflow)",
+      "ResourceType": "Microsoft.Logic/workflows",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/logic/workflow"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Machine Learning Services Registry",
+      "Description": "AVM Resource Module for Machine Learning Services Registry",
+      "ResourceType": "Microsoft.MachineLearningServices/registries",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/machine-learning-services/registry"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Machine Learning Services Workspace",
+      "Description": "AVM Resource Module for Machine Learning Services Workspace",
+      "ResourceType": "Microsoft.MachineLearningServices/workspaces",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/machine-learning-services/workspace"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Maintenance Configuration Assignment",
+      "Description": "AVM Resource Module for Maintenance Configuration Assignment",
+      "ResourceType": "Microsoft.Maintenance/configurationAssignments",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/maintenance/configuration-assignment"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Maintenance Configuration",
+      "Description": "AVM Resource Module for Maintenance Configuration",
+      "ResourceType": "Microsoft.Maintenance/maintenanceConfigurations",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/maintenance/maintenance-configuration"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "User Assigned Identity",
+      "Description": "AVM Resource Module for User Assigned Identity",
+      "ResourceType": "Microsoft.ManagedIdentity/userAssignedIdentities",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/managed-identity/user-assigned-identity"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Registration Definition (Lighthouse)",
+      "Description": "AVM Resource Module for Registration Definition (Lighthouse)",
+      "ResourceType": "Microsoft.ManagedServices/registrationDefinitions",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/managed-services/registration-definition"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Management Group",
+      "Description": "AVM Resource Module for Management Group",
+      "ResourceType": "Microsoft.Management/managementGroups",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/management/management-group"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure NetApp File",
+      "Description": "AVM Resource Module for Azure NetApp File",
+      "ResourceType": "Microsoft.NetApp/netAppAccounts",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/net-app/net-app-account"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Application Gateway",
+      "Description": "AVM Resource Module for Application Gateway",
+      "ResourceType": "Microsoft.Network/applicationGateways",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/application-gateway"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Application Gateway Web Application Firewall (WAF) Policy",
+      "Description": "AVM Resource Module for Application Gateway Web Application Firewall (WAF) Policy",
+      "ResourceType": "Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/application-gateway-web-application-firewall-policy"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Application Security Group (ASG)",
+      "Description": "AVM Resource Module for Application Security Group (ASG)",
+      "ResourceType": "Microsoft.Network/applicationSecurityGroups",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/application-security-group"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Firewall",
+      "Description": "AVM Resource Module for Azure Firewall",
+      "ResourceType": "Microsoft.Network/azureFirewalls",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/azure-firewall"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Bastion Host",
+      "Description": "AVM Resource Module for Bastion Host",
+      "ResourceType": "Microsoft.Network/bastionHosts",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/bastion-host"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Virtual Network Gateway Connection",
+      "Description": "AVM Resource Module for Virtual Network Gateway Connection",
+      "ResourceType": "Microsoft.Network/connections",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/connection"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "DDoS Protection Plan",
+      "Description": "AVM Resource Module for DDoS Protection Plan",
+      "ResourceType": "Microsoft.Network/ddosProtectionPlans",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/ddos-protection-plan"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "DNS Forwarding Ruleset",
+      "Description": "AVM Resource Module for DNS Forwarding Ruleset",
+      "ResourceType": "Microsoft.Network/dnsForwardingRulesets",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/dns-forwarding-ruleset"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "DNS Resolver",
+      "Description": "AVM Resource Module for DNS Resolver",
+      "ResourceType": "Microsoft.Network/dnsResolvers",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/dns-resolver"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Public DNS Zone",
+      "Description": "AVM Resource Module for Public DNS Zone",
+      "ResourceType": "Microsoft.Network/dnsZones",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/dns-zone"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "ExpressRoute Circuit",
+      "Description": "AVM Resource Module for ExpressRoute Circuit",
+      "ResourceType": "Microsoft.Network/expressRouteCircuits",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/express-route-circuit"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Express Route Gateway",
+      "Description": "AVM Resource Module for Express Route Gateway",
+      "ResourceType": "Microsoft.Network/expressRouteGateways",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/express-route-gateway"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "ExpressRoute Port",
+      "Description": "AVM Resource Module for ExpressRoute Port",
+      "ResourceType": "Microsoft.Network/expressRoutePorts",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/express-route-port"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Firewall Policy",
+      "Description": "AVM Resource Module for Firewall Policy",
+      "ResourceType": "Microsoft.Network/firewallPolicies",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/firewall-policy"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Front Door",
+      "Description": "AVM Resource Module for Azure Front Door",
+      "ResourceType": "Microsoft.Network/frontDoors",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/front-door"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Front Door Web Application Firewall (WAF) Policy",
+      "Description": "AVM Resource Module for Front Door Web Application Firewall (WAF) Policy",
+      "ResourceType": "Microsoft.Network/frontDoorWebApplicationFirewallPolicies",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/front-door-web-application-firewall-policy"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "IP Group",
+      "Description": "AVM Resource Module for IP Group",
+      "ResourceType": "Microsoft.Network/ipGroups",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/ip-group"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Load Balancer",
+      "Description": "AVM Resource Module for Load Balancer",
+      "ResourceType": "Microsoft.Network/loadBalancers",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/load-balancer"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Local Network Gateway",
+      "Description": "AVM Resource Module for Local Network Gateway",
+      "ResourceType": "Microsoft.Network/localNetworkGateways",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/local-network-gateway"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "NAT Gateway",
+      "Description": "AVM Resource Module for NAT Gateway",
+      "ResourceType": "Microsoft.Network/natGateways",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/nat-gateway"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Network Interface",
+      "Description": "AVM Resource Module for Network Interface",
+      "ResourceType": "Microsoft.Network/networkInterfaces",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/network-interface"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Network Manager",
+      "Description": "AVM Resource Module for Network Manager",
+      "ResourceType": "Microsoft.Network/networkManagers",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/network-manager"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Network Security Group",
+      "Description": "AVM Resource Module for Network Security Group",
+      "ResourceType": "Microsoft.Network/networkSecurityGroups",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/network-security-group"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Network Security Perimeter",
+      "Description": "AVM Resource Module for Network Security Perimeter",
+      "ResourceType": "Microsoft.Network/networkSecurityPerimeters",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/network-security-perimeter"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Network Watcher",
+      "Description": "AVM Resource Module for Network Watcher",
+      "ResourceType": "Microsoft.Network/networkWatchers",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/network-watcher"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "P2S VPN Gateway",
+      "Description": "AVM Resource Module for P2S VPN Gateway",
+      "ResourceType": "Microsoft.Network/p2svpnGateways",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/p2s-vpn-gateway"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Private DNS Zone",
+      "Description": "AVM Resource Module for Private DNS Zone",
+      "ResourceType": "Microsoft.Network/privateDnsZones",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/private-dns-zone"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Private Endpoint",
+      "Description": "AVM Resource Module for Private Endpoint",
+      "ResourceType": "Microsoft.Network/privateEndpoints",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/private-endpoint"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Private Link Service",
+      "Description": "AVM Resource Module for Private Link Service",
+      "ResourceType": "Microsoft.Network/privateLinkServices",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/private-link-service"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Public IP Address",
+      "Description": "AVM Resource Module for Public IP Address",
+      "ResourceType": "Microsoft.Network/publicIPAddresses",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/public-ip-address"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Public IP Prefix",
+      "Description": "AVM Resource Module for Public IP Prefix",
+      "ResourceType": "Microsoft.Network/publicIPPrefixes",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/public-ip-prefix"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Route Table",
+      "Description": "AVM Resource Module for Route Table",
+      "ResourceType": "Microsoft.Network/routeTables",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/route-table"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Service Endpoint Policy",
+      "Description": "AVM Resource Module for Service Endpoint Policy",
+      "ResourceType": "Microsoft.Network/serviceEndpointPolicies",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/service-endpoint-policy"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Traffic Manager Profile",
+      "Description": "AVM Resource Module for Traffic Manager Profile",
+      "ResourceType": "Microsoft.Network/trafficmanagerprofiles",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/trafficmanagerprofile"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Virtual Hub",
+      "Description": "AVM Resource Module for Virtual Hub",
+      "ResourceType": "Microsoft.Network/virtualHubs",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/virtual-hub"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Virtual Network",
+      "Description": "AVM Resource Module for Virtual Network",
+      "ResourceType": "Microsoft.Network/virtualNetworks",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/virtual-network"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Subnet",
+      "Description": "AVM Child Module for Subnet",
+      "ResourceType": "Microsoft.Network/virtualNetworks/subnets",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/virtual-network/subnet"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Virtual Network Gateway",
+      "Description": "AVM Resource Module for Virtual Network Gateway",
+      "ResourceType": "Microsoft.Network/virtualNetworkGateways",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/virtual-network-gateway"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Virtual WAN",
+      "Description": "AVM Resource Module for Virtual WAN",
+      "ResourceType": "Microsoft.Network/virtualWans",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/virtual-wan"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "VPN Gateway",
+      "Description": "AVM Resource Module for VPN Gateway",
+      "ResourceType": "Microsoft.Network/vpnGateways",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/vpn-gateway"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "VPN Server Configuration",
+      "Description": "AVM Resource Module for VPN Server Configuration",
+      "ResourceType": "Microsoft.Network/vpnServerConfigurations",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/vpn-server-configuration"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "VPN Site",
+      "Description": "AVM Resource Module for VPN Site",
+      "ResourceType": "Microsoft.Network/vpnSites",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/vpn-site"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Log Analytics Workspace",
+      "Description": "AVM Resource Module for Log Analytics Workspace",
+      "ResourceType": "Microsoft.OperationalInsights/workspaces",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/operational-insights/workspace"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Operations Management Solution",
+      "Description": "AVM Resource Module for Operations Management Solution",
+      "ResourceType": "Microsoft.OperationsManagement/solutions",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/operations-management/solution"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Portal Dashboard",
+      "Description": "AVM Resource Module for Portal Dashboard",
+      "ResourceType": "Microsoft.Portal/dashboards",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/portal/dashboard"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Power BI Dedicated Capacity",
+      "Description": "AVM Resource Module for Power BI Dedicated Capacity",
+      "ResourceType": "Microsoft.PowerBIDedicated/capacities",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/power-bi-dedicated/capacity"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Purview Account",
+      "Description": "AVM Resource Module for Purview Account",
+      "ResourceType": "Microsoft.Purview/accounts",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/purview/account"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Recovery Services Vault",
+      "Description": "AVM Resource Module for Recovery Services Vault",
+      "ResourceType": "Microsoft.RecoveryServices/vaults",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/recovery-services/vault"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Relay Namespace",
+      "Description": "AVM Resource Module for Relay Namespace",
+      "ResourceType": "Microsoft.Relay/namespaces",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/relay/namespace"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Resource Graph Query",
+      "Description": "AVM Resource Module for Resource Graph Query",
+      "ResourceType": "Microsoft.ResourceGraph/queries",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/resource-graph/query"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Deployment Script",
+      "Description": "AVM Resource Module for Deployment Script",
+      "ResourceType": "Microsoft.Resources/deploymentScripts",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/resources/deployment-script"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Resource Group",
+      "Description": "AVM Resource Module for Resource Group",
+      "ResourceType": "Microsoft.Resources/resourceGroups",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/resources/resource-group"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "SCOM MI",
+      "Description": "AVM Resource Module for SCOM MI",
+      "ResourceType": "Microsoft.Scom/managedInstances",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/scom/managed-instance"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Search Service",
+      "Description": "AVM Resource Module for Search Service",
+      "ResourceType": "Microsoft.Search/searchServices",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/search/search-service"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Service Bus Namespace",
+      "Description": "AVM Resource Module for Service Bus Namespace",
+      "ResourceType": "Microsoft.ServiceBus/namespaces",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/service-bus/namespace"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Service Fabric Cluster",
+      "Description": "AVM Resource Module for Service Fabric Cluster",
+      "ResourceType": "Microsoft.ServiceFabric/clusters",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/service-fabric/cluster"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Application Gateway for Containers (Traffic Controller)",
+      "Description": "AVM Resource Module for Application Gateway for Containers (Traffic Controller)",
+      "ResourceType": "Microsoft.ServiceNetworking/trafficControllers",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/service-networking/traffic-controller"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "SignalR Service SignalR",
+      "Description": "AVM Resource Module for SignalR Service SignalR",
+      "ResourceType": "Microsoft.SignalRService/signalR",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/signal-r-service/signal-r"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "SignalR Web PubSub Service",
+      "Description": "AVM Resource Module for SignalR Web PubSub Service",
+      "ResourceType": "Microsoft.SignalRService/webPubSub",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/signal-r-service/web-pub-sub"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "SQL Instance Pool",
+      "Description": "AVM Resource Module for SQL Instance Pool",
+      "ResourceType": "Microsoft.Sql/instancePools",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/sql/instance-pool"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "SQL Managed Instance",
+      "Description": "AVM Resource Module for SQL Managed Instance",
+      "ResourceType": "Microsoft.Sql/managedInstances",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/sql/managed-instance"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure SQL Server",
+      "Description": "AVM Resource Module for Azure SQL Server",
+      "ResourceType": "Microsoft.Sql/servers",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/sql/server"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "SQL Virtual Machine",
+      "Description": "AVM Resource Module for SQL Virtual Machine",
+      "ResourceType": "Microsoft.SqlVirtualMachine/sqlVirtualMachines",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/sql-virtual-machine/sql-virtual-machine"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Storage Account",
+      "Description": "AVM Resource Module for Storage Account",
+      "ResourceType": "Microsoft.Storage/storageAccounts",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/storage/storage-account"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Synapse Analytics",
+      "Description": "AVM Resource Module for Azure Synapse Analytics",
+      "ResourceType": "Microsoft.Synapse/privateLinkHubs",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/synapse/private-link-hub"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Synapse Workspace",
+      "Description": "AVM Resource Module for Synapse Workspace",
+      "ResourceType": "Microsoft.Synapse/workspaces",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/synapse/workspace"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Virtual Machine Image Template",
+      "Description": "AVM Resource Module for Virtual Machine Image Template",
+      "ResourceType": "Microsoft.VirtualMachineImages/imageTemplates",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/virtual-machine-images/image-template"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "API Connection",
+      "Description": "AVM Resource Module for API Connection",
+      "ResourceType": "Microsoft.Web/connection",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/web/connection"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "App Service Environment",
+      "Description": "AVM Resource Module for App Service Environment",
+      "ResourceType": "Microsoft.Web/hostingEnvironments",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/web/hosting-environment"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "App Service Plan",
+      "Description": "AVM Resource Module for App Service Plan",
+      "ResourceType": "Microsoft.Web/serverfarms",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/web/serverfarm"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Web/Function App",
+      "Description": "AVM Resource Module for Web/Function App",
+      "ResourceType": "Microsoft.Web/sites",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/web/site"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Static Web App",
+      "Description": "AVM Resource Module for Static Web App",
+      "ResourceType": "Microsoft.Web/staticSites",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/web/static-site"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure Active Directory Domain Service",
+      "Description": "AVM Resource Module for Azure Active Directory Domain Service",
+      "ResourceType": "Microsoft.AAD/domainServices",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-aad-domainservice"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Action Rules",
+      "Description": "AVM Resource Module for Action Rules",
+      "ResourceType": "Microsoft.AlertsManagement/actionRules",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-alertsmanagement-actionrule"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Analysis Services Server",
+      "Description": "AVM Resource Module for Analysis Services Server",
+      "ResourceType": "Microsoft.AnalysisServices/servers",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-analysisservices-server"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "API Management Service",
+      "Description": "AVM Resource Module for API Management Service",
+      "ResourceType": "Microsoft.ApiManagement/service",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-apimanagement-service"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "App Configuration Store",
+      "Description": "AVM Resource Module for App Configuration Store",
+      "ResourceType": "Microsoft.AppConfiguration/configurationStores",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-appconfiguration-configurationstore"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Container App",
+      "Description": "AVM Resource Module for Container App",
+      "ResourceType": "Microsoft.App/containerApps",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-app-containerapp"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "App Job",
+      "Description": "AVM Resource Module for App Job",
+      "ResourceType": "Microsoft.App/Jobs",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-app-job"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "App Managed Environment",
+      "Description": "AVM Resource Module for App Managed Environment",
+      "ResourceType": "Microsoft.App/managedEnvironments",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-app-managedenvironment"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Role Assignment",
+      "Description": "AVM Resource Module for Role Assignment",
+      "ResourceType": "Microsoft.Authorization/roleAssignments",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-authorization-roleassignment"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Automation Account",
+      "Description": "AVM Resource Module for Automation Account",
+      "ResourceType": "Microsoft.Automation/automationAccounts",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-automation-automationaccount"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "AVS Private Cloud",
+      "Description": "AVM Resource Module for AVS Private Cloud",
+      "ResourceType": "Microsoft.AVS/privateClouds",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-avs-privatecloud"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure Stack HCI Cluster",
+      "Description": "AVM Resource Module for Azure Stack HCI Cluster",
+      "ResourceType": "Microsoft.AzureStackHCI/clusters",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-azurestackhci-cluster"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "AzureStackHCI logical network",
+      "Description": "AVM Resource Module for AzureStackHCI logical network",
+      "ResourceType": "Microsoft.AzureStackHCI/logicalNetworks",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-azurestackhci-logicalnetwork"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Stack HCI Virtual Machine Instance",
+      "Description": "AVM Resource Module for Stack HCI Virtual Machine Instance",
+      "ResourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-azurestackhci-virtualmachineinstance"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Batch Account",
+      "Description": "AVM Resource Module for Batch Account",
+      "ResourceType": "Microsoft.Batch/batchAccounts",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-batch-batchaccount"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Bot Service",
+      "Description": "AVM Resource Module for Bot Service",
+      "ResourceType": "Microsoft.BotService/botServices",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-botservice-botservice"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Redis Cache",
+      "Description": "AVM Resource Module for Redis Cache",
+      "ResourceType": "Microsoft.Cache/Redis",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-cache-redis"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "CDN Profile",
+      "Description": "AVM Resource Module for CDN Profile",
+      "ResourceType": "Microsoft.Cdn/profiles",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-cdn-profile"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Cognitive Service",
+      "Description": "AVM Resource Module for Cognitive Services account ( Open AI)",
+      "ResourceType": "Microsoft.CognitiveServices/accounts",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-cognitiveservices-account"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Email Communication Service",
+      "Description": "AVM Resource Module for Email Communication Service",
+      "ResourceType": "Microsoft.Communication/emailServices",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-communication-emailservice"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Compute Disk",
+      "Description": "AVM Resource Module for Compute Disk",
+      "ResourceType": "Microsoft.Compute/disks",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-compute-disk"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Disk Encryption Set",
+      "Description": "AVM Resource Module for Disk Encryption Set",
+      "ResourceType": "Microsoft.Compute/diskEncryptionSets",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-compute-diskencryptionset"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure Compute Gallery",
+      "Description": "AVM Resource Module for Azure Compute Gallery",
+      "ResourceType": "Microsoft.Compute/galleries",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-compute-gallery"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Host Groups",
+      "Description": "AVM Resource Module for Host Groups",
+      "ResourceType": "Microsoft.Compute/hostGroups",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-compute-hostgroup"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Image",
+      "Description": "AVM Resource Module for Image",
+      "ResourceType": "Microsoft.Compute/images",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-compute-image"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Proximity Placement Group",
+      "Description": "AVM Resource Module for Proximity Placement Group",
+      "ResourceType": "Microsoft.Compute/proximityPlacementGroups",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-compute-proximityplacementgroup"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Public SSH Key",
+      "Description": "AVM Resource Module for Public SSH Key",
+      "ResourceType": "Microsoft.Compute/sshPublicKeys",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-compute-sshpublickey"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Virtual Machine",
+      "Description": "AVM Resource Module for Virtual Machine",
+      "ResourceType": "Microsoft.Compute/virtualMachines",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-compute-virtualmachine"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Virtual Machine Scale Set",
+      "Description": "AVM Resource Module for Virtual Machine Scale Set",
+      "ResourceType": "Microsoft.Compute/virtualMachineScaleSets",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-compute-virtualmachinescaleset"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Consumption Budget",
+      "Description": "AVM Resource Module for Consumption Budget",
+      "ResourceType": "Microsoft.Consumption/budgets",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-consumption-budget"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Container Instance",
+      "Description": "AVM Resource Module for Container Instance",
+      "ResourceType": "Microsoft.ContainerInstance/containerGroups",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-containerinstance-containergroup"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure Container Registry (ACR)",
+      "Description": "AVM Resource Module for Azure Container Registry (ACR)",
+      "ResourceType": "Microsoft.ContainerRegistry/registries",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-containerregistry-registry"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "AKS managed clusters",
+      "Description": "AVM Resource Module for AKS managed clusters",
+      "ResourceType": "Microsoft.ContainerService/managedClusters",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-containerservice-managedcluster"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure Managed Grafana",
+      "Description": "AVM Resource Module for Azure Managed Grafana",
+      "ResourceType": "Microsoft.Dashboard/grafana",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-dashboard-grafana"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure Databricks Access Connector",
+      "Description": "AVM Resource Module for Azure Databricks Access Connector",
+      "ResourceType": "Microsoft.Databricks/accessConnectors",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-databricks-accessconnector"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure Databricks Workspace",
+      "Description": "AVM Resource Module for Azure Databricks Workspace",
+      "ResourceType": "Microsoft.Databricks/workspaces",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-databricks-workspace"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Data Factory",
+      "Description": "AVM Resource Module for Data Factory",
+      "ResourceType": "Microsoft.DataFactory/factories",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-datafactory-factory"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Data Protection Backup Vault",
+      "Description": "AVM Resource Module for Data Protection Backup Vault",
+      "ResourceType": "Microsoft.DataProtection/backupVaults",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-dataprotection-backupvault"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "DB for MySQL Flexible Server",
+      "Description": "AVM Resource Module for DB for MySQL Flexible Server",
+      "ResourceType": "Microsoft.DBforMySQL/flexibleServers",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-dbformysql-flexibleserver"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "DB for Postgre SQL Flexible Server",
+      "Description": "AVM Resource Module for DB for Postgre SQL Flexible Server",
+      "ResourceType": "Microsoft.DBforPostgreSQL/flexibleServers",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-dbforpostgresql-flexibleserver"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure Virtual Desktop (AVD) Application Group",
+      "Description": "AVM Resource Module for Azure Virtual Desktop (AVD) Application Group",
+      "ResourceType": "Microsoft.DesktopVirtualization/applicationGroups",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-desktopvirtualization-applicationgroup"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure Virtual Desktop (AVD) Host Pool",
+      "Description": "AVM Resource Module for Azure Virtual Desktop (AVD) Host Pool",
+      "ResourceType": "Microsoft.DesktopVirtualization/hostPools",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-desktopvirtualization-hostpool"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure Virtual Desktop (AVD) Scaling Plan",
+      "Description": "AVM Resource Module for Azure Virtual Desktop (AVD) Scaling Plan",
+      "ResourceType": "Microsoft.DesktopVirtualization/scalingPlans",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-desktopvirtualization-scalingplan"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure Virtual Desktop (AVD) Workspace",
+      "Description": "AVM Resource Module for Azure Virtual Desktop (AVD) Workspace",
+      "ResourceType": "Microsoft.DesktopVirtualization/workspaces",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-desktopvirtualization-workspace"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Dev Center",
+      "Description": "AVM Resource Module for Dev Center",
+      "ResourceType": "Microsoft.DevCenter/devcenters",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-devcenter-devcenter"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "DevOps Pools",
+      "Description": "AVM Resource Module for DevOps Pools",
+      "ResourceType": "Microsoft.DevOpsInfrastructure/Pools",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-devopsinfrastructure-pool"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "DevTest Lab",
+      "Description": "AVM Resource Module for DevTest Lab",
+      "ResourceType": "Microsoft.DevTestLab/labs",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-devtestlab-lab"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Digital Twins Instance",
+      "Description": "AVM Resource Module for Digital Twins Instance",
+      "ResourceType": "Microsoft.DigitalTwins/digitalTwinsInstances",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-digitaltwins-digitaltwinsinstance"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "CosmosDB Database Account",
+      "Description": "AVM Resource Module for CosmosDB Database Account",
+      "ResourceType": "Microsoft.DocumentDB/databaseAccount",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-documentdb-databaseaccount"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure Arc Site manager",
+      "Description": "AVM Resource Module for Azure Arc Site manager",
+      "ResourceType": "Microsoft.Edge/sites",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-edge-site"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Event Grid Domain",
+      "Description": "AVM Resource Module for Event Grid Domain",
+      "ResourceType": "Microsoft.EventGrid/domains",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-eventgrid-domain"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Event Grid Namespace",
+      "Description": "AVM Resource Module for Event Grid Namespace",
+      "ResourceType": "Microsoft.EventGrid/namespaces",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-eventgrid-namespace"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Event Grid System Topic",
+      "Description": "AVM Resource Module for Event Grid System Topic",
+      "ResourceType": "Microsoft.EventGrid/systemTopics",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-eventgrid-systemtopic"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Event Grid Topic",
+      "Description": "AVM Resource Module for Event Grid Topic",
+      "ResourceType": "Microsoft.EventGrid/topics",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-eventgrid-topic"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Event Hub Namespace",
+      "Description": "AVM Resource Module for Event Hub Namespace",
+      "ResourceType": "Microsoft.EventHub/namespaces",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-eventhub-namespace"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure Health Bot",
+      "Description": "AVM Resource Module for Azure Health Bot",
+      "ResourceType": "Microsoft.HealthBot/healthBots",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-healthbot-healthbot"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Hybrid Compute Machine",
+      "Description": "AVM Resource Module for Hybrid Compute Machine",
+      "ResourceType": "Microsoft.HybridCompute/machines",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-hybridcompute-machine"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "AKS Arc",
+      "Description": "AVM Resource Module for AKS Arc",
+      "ResourceType": "Microsoft.HybridContainerService/provisionedClusterInstances",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-hybridcontainerservice-provisionedclusterinstance"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Action Group",
+      "Description": "AVM Resource Module for Action Group",
+      "ResourceType": "Microsoft.Insights/actionGroups",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-insights-actiongroup"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Activity log alerts",
+      "Description": "AVM Resource Module for Activity log alerts",
+      "ResourceType": "Microsoft.Insights/activityLogAlerts",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-insights-activitylogalert"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Alert Rules",
+      "Description": "AVM Resource Module for Alert Rules",
+      "ResourceType": "Microsoft.Insights/alertrules",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-insights-alertrule"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Auto scale settings",
+      "Description": "AVM Resource Module for Auto scale settings",
+      "ResourceType": "Microsoft.Insights/autoscalesettings",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-insights-autoscalesetting"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Application Insight",
+      "Description": "AVM Resource Module for Application Insight",
+      "ResourceType": "Microsoft.Insights/components",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-insights-component"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Data Collection Endpoint",
+      "Description": "AVM Resource Module for Data Collection Endpoint",
+      "ResourceType": "Microsoft.Insights/dataCollectionEndpoints",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-insights-datacollectionendpoint"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Data Collection Rule",
+      "Description": "AVM Resource Module for Data Collection Rule",
+      "ResourceType": "Microsoft.Insights/dataCollectionRules",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-insights-datacollectionrule"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Log profile",
+      "Description": "AVM Resource Module for Log profile",
+      "ResourceType": "Microsoft.Insights/logProfiles",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-insights-logprofile"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Metric Alert",
+      "Description": "AVM Resource Module for Metric Alert",
+      "ResourceType": "Microsoft.Insights/metricAlerts",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-insights-metricalert"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure Monitor Private Link Scope",
+      "Description": "AVM Resource Module for Azure Monitor Private Link Scope",
+      "ResourceType": "Microsoft.Insights/privateLinkScopes",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-insights-privatelinkscope"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Scheduled Query Rule",
+      "Description": "AVM Resource Module for Scheduled Query Rule",
+      "ResourceType": "Microsoft.Insights/scheduledQueryRules",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-insights-scheduledqueryrule"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Key Vault",
+      "Description": "AVM Resource Module for Key Vault",
+      "ResourceType": "Microsoft.KeyVault/vaults",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-keyvault-vault"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Kusto Clusters",
+      "Description": "AVM Resource Module for Kusto Clusters",
+      "ResourceType": "Microsoft.Kusto/clusters",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-kusto-cluster"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Load Testing Service",
+      "Description": "AVM Resource Module for Load Testing Service",
+      "ResourceType": "Microsoft.LoadTestService/loadTests",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-loadtestservice-loadtest"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Logic Apps (Workflow)",
+      "Description": "AVM Resource Module for Logic Apps (Workflow)",
+      "ResourceType": "Microsoft.Logic/workflows",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-logic-workflow"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Machine Learning Services Workspace",
+      "Description": "AVM Resource Module for Machine Learning Services Workspace",
+      "ResourceType": "Microsoft.MachineLearningServices/workspaces",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-machinelearningservices-workspace"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Maintenance Configuration",
+      "Description": "AVM Resource Module for Maintenance Configuration",
+      "ResourceType": "Microsoft.Maintenance/maintenanceConfigurations",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-maintenance-maintenanceconfiguration"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "User Assigned Identity",
+      "Description": "AVM Resource Module for User Assigned Identity",
+      "ResourceType": "Microsoft.ManagedIdentity/userAssignedIdentities",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-managedidentity-userassignedidentity"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Registration Definition (Lighthouse)",
+      "Description": "AVM Resource Module for Registration Definition (Lighthouse)",
+      "ResourceType": "Microsoft.ManagedServices/registrationDefinitions",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-managedservices-registrationdefinition"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Management Group",
+      "Description": "AVM Resource Module for Management Group",
+      "ResourceType": "Microsoft.Management/managementGroups",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-management-managementgroup"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure NetApp File",
+      "Description": "AVM Resource Module for Azure NetApp File",
+      "ResourceType": "Microsoft.NetApp/netAppAccounts",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-netapp-netappaccount"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Application Gateway",
+      "Description": "AVM Resource Module for Application Gateway",
+      "ResourceType": "Microsoft.Network/applicationGateways",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-applicationgateway"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Application Gateway Web Application Firewall (WAF) Policy",
+      "Description": "AVM Resource Module for Application Gateway Web Application Firewall (WAF) Policy",
+      "ResourceType": "Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-applicationgatewaywebapplicationfirewallpolicy"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Application Security Group (ASG)",
+      "Description": "AVM Resource Module for Application Security Group (ASG)",
+      "ResourceType": "Microsoft.Network/applicationSecurityGroups",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-applicationsecuritygroup"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure Firewall",
+      "Description": "AVM Resource Module for Azure Firewall",
+      "ResourceType": "Microsoft.Network/azureFirewalls",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-azurefirewall"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Bastion Host",
+      "Description": "AVM Resource Module for Bastion Host",
+      "ResourceType": "Microsoft.Network/bastionHosts",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-bastionhost"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Virtual Network Gateway Connection",
+      "Description": "AVM Resource Module for Virtual Network Gateway Connection",
+      "ResourceType": "Microsoft.Network/connections",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-connection"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "DDoS Protection",
+      "Description": "AVM Resource Module for DDoS Protection",
+      "ResourceType": "Microsoft.Network/ddosProtectionPlans",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-ddosprotectionplan"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "DNS Forwarding Ruleset",
+      "Description": "AVM Resource Module for DNS Forwarding Ruleset",
+      "ResourceType": "Microsoft.Network/dnsForwardingRulesets",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-dnsforwardingruleset"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "DNS Resolver",
+      "Description": "AVM Resource Module for DNS Resolver",
+      "ResourceType": "Microsoft.Network/dnsResolvers",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-dnsresolver"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Public DNS Zone",
+      "Description": "AVM Resource Module for Public DNS Zone",
+      "ResourceType": "Microsoft.Network/dnsZones",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-dnszone"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "ExpressRoute Circuit",
+      "Description": "AVM Resource Module for ExpressRoute Circuit",
+      "ResourceType": "Microsoft.Network/expressRouteCircuits",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-expressroutecircuit"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure Firewall Policy",
+      "Description": "AVM Resource Module for Azure Firewall Policy",
+      "ResourceType": "Microsoft.Network/firewallPolicies",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-firewallpolicy"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure Front Door",
+      "Description": "AVM Resource Module for Azure Front Door",
+      "ResourceType": "Microsoft.Network/frontDoors",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-frontdoor"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Front Door Web Application Firewall (WAF) Policy",
+      "Description": "AVM Resource Module for Front Door Web Application Firewall (WAF) Policy",
+      "ResourceType": "Microsoft.Network/frontDoorWebApplicationFirewallPolicies",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-frontdoorwebapplicationfirewallpolicy"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "IP Group",
+      "Description": "AVM Resource Module for IP Group",
+      "ResourceType": "Microsoft.Network/ipGroups",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-ipgroup"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Loadbalancer",
+      "Description": "AVM Resource Module for Loadbalancer",
+      "ResourceType": "Microsoft.Network/loadBalancers",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-loadbalancer"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Local Network Gateway",
+      "Description": "AVM Resource Module for Local Network Gateway",
+      "ResourceType": "Microsoft.Network/localNetworkGateways",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-localnetworkgateway"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "NAT Gateway",
+      "Description": "AVM Resource Module for NAT Gateway",
+      "ResourceType": "Microsoft.Network/natGateways",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-natgateway"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Network Interface",
+      "Description": "AVM Resource Module for Network Interface",
+      "ResourceType": "Microsoft.Network/networkInterfaces",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-networkinterface"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure Virtual Network Manager",
+      "Description": "AVM Resource Module for Azure Virtual Network Manager",
+      "ResourceType": "Microsoft.Network/networkManagers",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-networkmanager"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Network Security Group",
+      "Description": "AVM Resource Module for Network Security Group",
+      "ResourceType": "Microsoft.Network/networkSecurityGroups",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-networksecuritygroup"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure Network Watcher",
+      "Description": "AVM Resource Module for Azure Network Watcher",
+      "ResourceType": "Microsoft.Network/networkWatchers",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-networkwatcher"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Private DNS Zone",
+      "Description": "AVM Resource Module for Private DNS Zone",
+      "ResourceType": "Microsoft.Network/privateDnsZones",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-privatednszone"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Private Endpoint",
+      "Description": "AVM Resource Module for Private Endpoint",
+      "ResourceType": "Microsoft.Network/privateEndpoints",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-privateendpoint"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Private Link Service",
+      "Description": "AVM Resource Module for Private Link Service",
+      "ResourceType": "Microsoft.Network/privateLinkServices",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-privatelinkservice"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Public IP Address",
+      "Description": "AVM Resource Module for Public IP Address",
+      "ResourceType": "Microsoft.Network/publicIPAddresses",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-publicipaddress"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Public IP Prefix",
+      "Description": "AVM Resource Module for Public IP Prefix",
+      "ResourceType": "Microsoft.Network/publicIPPrefixes",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-publicipprefix"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Route Table",
+      "Description": "AVM Resource Module for Route Table",
+      "ResourceType": "Microsoft.Network/routeTables",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-routetable"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Service Endpoint Policy",
+      "Description": "AVM Resource Module for Service Endpoint Policy",
+      "ResourceType": "Microsoft.Network/serviceEndpointPolicies",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-serviceendpointpolicy"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Traffic Manager Profile",
+      "Description": "AVM Resource Module for Traffic Manager Profile",
+      "ResourceType": "Microsoft.Network/trafficmanagerprofiles",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-trafficmanagerprofile"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Virtual Network",
+      "Description": "AVM Resource Module for Virtual Network",
+      "ResourceType": "Microsoft.Network/virtualNetworks",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-virtualnetwork"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Virtual Network Gateway",
+      "Description": "AVM Resource Module for Virtual Network Gateway",
+      "ResourceType": "Microsoft.Network/virtualNetworkGateways",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-virtualnetworkgateway"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Route Server",
+      "Description": "AVM Resource Module for Route Server",
+      "ResourceType": "Microsoft.Network/virtualRouters",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-virtualrouter"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Log Analytics workspace",
+      "Description": "AVM Resource Module for Log Analytics workspace",
+      "ResourceType": "Microsoft.OperationalInsights/workspaces",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-operationalinsights-workspace"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Operations Management Solution",
+      "Description": "AVM Resource Module for Operations Management Solution",
+      "ResourceType": "Microsoft.OperationsManagement/solutions",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-operationsmanagement-solution"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Oracle Exadata Infrastructure",
+      "Description": "AVM Resource Module for Oracle Exadata Infrastructure",
+      "ResourceType": "Oracle.Database/cloudExadataInfrastructures",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-oracledatabase-cloudexadatainfrastructure"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Oracle VM cluster",
+      "Description": "AVM Resource Module for Oracle VM cluster",
+      "ResourceType": "Oracle.Database/cloudvmclusters",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-oracledatabase-cloudvmcluster"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure Portal Dashboard",
+      "Description": "AVM Resource Module for Azure Portal Dashboard",
+      "ResourceType": "Microsoft.Portal/dashboards",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-portal-dashboard"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Power BI Dedicated Capacity",
+      "Description": "AVM Resource Module for Power BI Dedicated Capacity",
+      "ResourceType": "Microsoft.PowerBIDedicated/capacities",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-powerbidedicated-capacity"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Purview Account",
+      "Description": "AVM Resource Module for Purview Account",
+      "ResourceType": "Microsoft.Purview/accounts",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-purview-account"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Recovery Services Vault",
+      "Description": "AVM Resource Module for Recovery Services Vault",
+      "ResourceType": "Microsoft.RecoveryServices/vaults",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-recoveryservices-vault"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "OpenShift Cluster",
+      "Description": "AVM Resource Module for OpenShift Cluster",
+      "ResourceType": "Microsoft.RedHatOpenShift/openShiftClusters",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-redhatopenShift-openshiftcluster"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Relay Namespace",
+      "Description": "AVM Resource Module for Relay Namespace",
+      "ResourceType": "Microsoft.Relay/namespaces",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-relay-namespace"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Resource Graph Query",
+      "Description": "AVM Resource Module for Resource Graph Query",
+      "ResourceType": "Microsoft.ResourceGraph/queries",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-resourcegraph-query"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Resource Group",
+      "Description": "AVM Resource Module for Resource Group",
+      "ResourceType": "Microsoft.Resources/resourceGroups",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-resources-resourcegroup"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Search Service",
+      "Description": "AVM Resource Module for Search Service",
+      "ResourceType": "Microsoft.Search/searchServices",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-search-searchservice"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Microsoft Defender for Cloud Subscription Pricing",
+      "Description": "AVM Resource Module for Microsoft Defender for Cloud Subscription Pricing",
+      "ResourceType": "Microsoft.Security/pricings",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-security-pricing"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Service Bus Namespace",
+      "Description": "AVM Resource Module for Service Bus Namespace",
+      "ResourceType": "Microsoft.ServiceBus/namespaces",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-servicebus-namespace"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Service Fabric Cluster",
+      "Description": "AVM Resource Module for Service Fabric Cluster",
+      "ResourceType": "Microsoft.ServiceFabric/clusters",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-servicefabric-cluster"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Application Gateway for Containers (Traffic Controller)",
+      "Description": "AVM Resource Module for Application Gateway for Containers (Traffic Controller)",
+      "ResourceType": "Microsoft.ServiceNetworking/trafficControllers",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-servicenetworking-trafficcontroller"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "SignalR Service SignalR",
+      "Description": "AVM Resource Module for SignalR Service SignalR",
+      "ResourceType": "Microsoft.SignalRService/signalR",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-signalrservice-signalr"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Instance Pools",
+      "Description": "AVM Resource Module for Instance Pools",
+      "ResourceType": "Microsoft.Sql/InstancePools",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-sql-instancepool"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "SQL Managed Instance",
+      "Description": "AVM Resource Module for SQL Managed Instance",
+      "ResourceType": "Microsoft.Sql/managedInstances",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-sql-managedinstance"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Azure SQL Server",
+      "Description": "AVM Resource Module for Azure SQL Server",
+      "ResourceType": "Microsoft.Sql/servers",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-sql-server"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Sql Virtual Machine",
+      "Description": "AVM Resource Module for Sql Virtual Machine",
+      "ResourceType": "Microsoft.SqlVirtualMachine/sqlVirtualMachines",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-sqlvirtualmachine-sqlvirtualmachine"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Storage Account",
+      "Description": "AVM Resource Module for Storage Account",
+      "ResourceType": "Microsoft.Storage/storageAccounts",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-storage-storageaccount"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Synapse Workspace",
+      "Description": "AVM Resource Module for Synapse Workspace",
+      "ResourceType": "Microsoft.Synapse/workspaces",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-synapse-workspace"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Virtual Machine Image Template",
+      "Description": "AVM Resource Module for Virtual Machine Image Template",
+      "ResourceType": "Microsoft.VirtualMachineImages/imageTemplates",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-virtualmachineimages-imagetemplate"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "API Connection",
+      "Description": "AVM Resource Module for API Connection",
+      "ResourceType": "Microsoft.Web/connection",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-web-connection"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "App Service Environment",
+      "Description": "AVM Resource Module for App Service Environment",
+      "ResourceType": "Microsoft.Web/hostingEnvironments",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-web-hostingenvironment"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "App Service Plan",
+      "Description": "AVM Resource Module for App Service Plan",
+      "ResourceType": "Microsoft.Web/serverfarms",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-web-serverfarm"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Web/Function App",
+      "Description": "AVM Resource Module for Web/Function App",
+      "ResourceType": "Microsoft.Web/sites",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-web-site"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Static Web App",
+      "Description": "AVM Resource Module for Static Web App",
+      "ResourceType": "Microsoft.Web/staticSites",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-web-staticsite"
     }
   ]
 }

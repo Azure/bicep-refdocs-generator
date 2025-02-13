@@ -112,8 +112,7 @@ resource symbolicname 'Microsoft.KeyVault/vaults@2023-07-01' = {
   }
 }
 ```
-## Property values
-
+## Property Values
 ### AccessPolicyEntry
 
 | Name | Description | Value |
@@ -195,10 +194,19 @@ resource symbolicname 'Microsoft.KeyVault/vaults@2023-07-01' = {
 | id | Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'. | string (required) |
 | ignoreMissingVnetServiceEndpoint | Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured. | bool |
 
+## Usage Examples
+### Azure Verified Modules
 
-## Quickstart samples
+The following [Azure Verified Modules](https://aka.ms/avm) can be used to deploy this resource type.
 
-The following quickstart samples deploy this resource type.
+> [!div class="mx-tableFixed"]
+> | Module | Description |
+> | ----- | ----- |
+> | [Key Vault](https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/key-vault/vault) | AVM Resource Module for Key Vault |
+
+### Azure Quickstart Samples
+
+The following [Azure Quickstart templates](https://aka.ms/azqst) contain Bicep samples for deploying this resource type.
 
 > [!div class="mx-tableFixed"]
 > | Bicep File | Description |
@@ -216,6 +224,7 @@ The following quickstart samples deploy this resource type.
 > | [Azure Machine Learning end-to-end secure setup](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.machinelearningservices/machine-learning-end-to-end-secure/main.bicep) | This set of Bicep templates demonstrates how to set up Azure Machine Learning end-to-end in a secure set up. This reference implementation includes the Workspace, a compute cluster, compute instance and attached private AKS cluster. |
 > | [Azure Machine Learning end-to-end secure setup (legacy)](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.machinelearningservices/machine-learning-end-to-end-secure-v1-legacy-mode/main.bicep) | This set of Bicep templates demonstrates how to set up Azure Machine Learning end-to-end in a secure set up. This reference implementation includes the Workspace, a compute cluster, compute instance and attached private AKS cluster. |
 > | [Azure Storage Account Encryption with customer-managed key](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.storage/storage-blob-encryption-with-cmk/main.bicep) | This template deploys a Storage Account with a customer-managed key for encryption that's generated and placed inside a Key Vault. |
+> | [Basic Agent Setup Identity](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.azure-ai-agent-service/basic-agent-identity/main.bicep) | This set of templates demonstrates how to set up Azure AI Agent Service with the basic setup using managed identity authetication for the AI Service/AOAI connection. Agents use multi-tenant search and storage resources fully managed by Microsoft. You won’t have visibility or control over these underlying Azure resources. |
 > | [Create a Key Vault and a list of secrets](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.keyvault/key-vault-secret-create/main.bicep) | This template creates a Key Vault and a list of secrets within the key vault as passed along with the parameters |
 > | [Create an AKS compute target with a Private IP address](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.machinelearningservices/machine-learning-private-ip/main.bicep) | This template creates an AKS compute target in given Azure Machine Learning service workspace with a private IP address. |
 > | [Create an API Management service with SSL from KeyVault](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.apimanagement/api-management-key-vault-create/main.bicep) | This template deploys an API Management service configured with User Assigned Identity. It uses this identity to fetch SSL certificate from KeyVault and keeps it updated by checking every 4 hours. |
@@ -233,8 +242,11 @@ The following quickstart samples deploy this resource type.
 > | [Creates a Dapr pub-sub servicebus app using Container Apps](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.app/container-app-dapr-pubsub-servicebus/main.bicep) | Create a Dapr pub-sub servicebus app using Container Apps. |
 > | [Deploy Secure Azure AI Studio with a managed virtual network](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.machinelearningservices/aistudio-networking-aoao/main.bicep) | This template creates a secure Azure AI Studio environment with robust network and identity security restrictions. |
 > | [Deploy the Sports Analytics on Azure Architecture](https://github.com/Azure/azure-quickstart-templates/tree/master/demos/sports-analytics-architecture/main.bicep) | Creates an Azure storage account with ADLS Gen 2 enabled, an Azure Data Factory instance with linked services for the storage account (an the Azure SQL Database if deployed), and an Azure Databricks instance. The AAD identity for the user deploying the template and the managed identity for the ADF instance will be granted the Storage Blob Data Contributor role on the storage account. There are also options to deploy an Azure Key Vault instance, an Azure SQL Database, and an Azure Event Hub (for streaming use cases). When an Azure Key Vault is deployed, the data factory managed identity and the AAD identity for the user deploying the template will be granted the Key Vault Secrets User role. |
-> | [FinOps hub](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.costmanagement/finops-hub/main.bicep) | This template creates a new FinOps hub instance, including Data Lake storage and a Data Factory. |
+> | [FinOps hub](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.costmanagement/finops-hub/main.bicep) | This template creates a new FinOps hub instance, including Data Explorer, Data Lake storage, and Data Factory. |
+> | [Network Secured Agent with User Managed Identity](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.azure-ai-agent-service/network-secured-agent/main.bicep) | This set of templates demonstrates how to set up Azure AI Agent Service with virtual network isolation using User Managed Identity authetication for the AI Service/AOAI connection and private network links to connect the agent to your secure data. |
+> | [Standard Agent Setup](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.azure-ai-agent-service/standard-agent/main.bicep) | This set of templates demonstrates how to set up Azure AI Agent Service with the standard setup, meaning with managed identity authentication for project/hub connections and public internet access enabled. Agents use customer-owned, single-tenant search and storage resources. With this setup, you have full control and visibility over these resources, but you will incur costs based on your usage. |
 > | [Testing environment for Azure Firewall Premium](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.network/azurefirewall-premium/main.bicep) | This template creates an Azure Firewall Premium and Firewall Policy with premium features such as Intrusion Inspection Detection (IDPS), TLS inspection and Web Category filtering |
+
 
 ::: zone-end
 
@@ -309,8 +321,7 @@ To create a Microsoft.KeyVault/vaults resource, add the following JSON to your t
   }
 }
 ```
-## Property values
-
+## Property Values
 ### AccessPolicyEntry
 
 | Name | Description | Value |
@@ -394,10 +405,10 @@ To create a Microsoft.KeyVault/vaults resource, add the following JSON to your t
 | id | Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'. | string (required) |
 | ignoreMissingVnetServiceEndpoint | Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured. | bool |
 
+## Usage Examples
+### Azure Quickstart Templates
 
-## Quickstart templates
-
-The following quickstart templates deploy this resource type.
+The following [Azure Quickstart templates](https://aka.ms/azqst) deploy this resource type.
 
 > [!div class="mx-tableFixed"]
 > | Template | Description |
@@ -417,6 +428,7 @@ The following quickstart templates deploy this resource type.
 > | [Azure Machine Learning end-to-end secure setup (legacy)](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.machinelearningservices/machine-learning-end-to-end-secure-v1-legacy-mode)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.machinelearningservices%2Fmachine-learning-end-to-end-secure-v1-legacy-mode%2Fazuredeploy.json) | This set of Bicep templates demonstrates how to set up Azure Machine Learning end-to-end in a secure set up. This reference implementation includes the Workspace, a compute cluster, compute instance and attached private AKS cluster. |
 > | [Azure Machine Learning Workspace](https://github.com/Azure/azure-quickstart-templates/tree/master/modules/machine-learning-workspace/0.9)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fmodules%2Fmachine-learning-workspace%2F0.9%2Fazuredeploy.json) | This template creates a new Azure Machine Learning Workspace, along with an encrypted Storage Account, KeyVault and Applications Insights Logging |
 > | [Azure Storage Account Encryption with customer-managed key](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.storage/storage-blob-encryption-with-cmk)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.storage%2Fstorage-blob-encryption-with-cmk%2Fazuredeploy.json) | This template deploys a Storage Account with a customer-managed key for encryption that's generated and placed inside a Key Vault. |
+> | [Basic Agent Setup Identity](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.azure-ai-agent-service/basic-agent-identity)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.azure-ai-agent-service%2Fbasic-agent-identity%2Fazuredeploy.json) | This set of templates demonstrates how to set up Azure AI Agent Service with the basic setup using managed identity authetication for the AI Service/AOAI connection. Agents use multi-tenant search and storage resources fully managed by Microsoft. You won’t have visibility or control over these underlying Azure resources. |
 > | [Connect to a Key Vault via private endpoint](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.keyvault/key-vault-private-endpoint)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.keyvault%2Fkey-vault-private-endpoint%2Fazuredeploy.json) | This sample shows how to use configure a virtual network and private DNS zone to access Key Vault via private endpoint. |
 > | [Create a Key Vault and a list of secrets](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.keyvault/key-vault-secret-create)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.keyvault%2Fkey-vault-secret-create%2Fazuredeploy.json) | This template creates a Key Vault and a list of secrets within the key vault as passed along with the parameters |
 > | [Create a KeyVault](https://github.com/Azure/azure-quickstart-templates/tree/master/modules/Microsoft.KeyVault/vaults/1.0)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fmodules%2FMicrosoft.KeyVault%2Fvaults%2F1.0%2Fazuredeploy.json) | This module creates a KeyVault resource with apiVersion 2019-09-01. |
@@ -441,16 +453,16 @@ The following quickstart templates deploy this resource type.
 > | [Creates a Cross-tenant Private Endpoint resource](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.network/private-endpoint)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.network%2Fprivate-endpoint%2Fazuredeploy.json) | This template allows you to create Priavate Endpoint resource within the same or cross-tenant environment and add dns zone configuration. |
 > | [Creates a Dapr pub-sub servicebus app using Container Apps](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.app/container-app-dapr-pubsub-servicebus)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.app%2Fcontainer-app-dapr-pubsub-servicebus%2Fazuredeploy.json) | Create a Dapr pub-sub servicebus app using Container Apps. |
 > | [creates an Azure Stack HCI 23H2 cluster](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.azurestackhci/create-cluster-2-node-switched-custom-storageip)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.azurestackhci%2Fcreate-cluster-2-node-switched-custom-storageip%2Fazuredeploy.json) | This template creates an Azure Stack HCI 23H2 cluster using an ARM template, using custom storage IP |
-> | [creates an Azure Stack HCI 23H2 cluster](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.azurestackhci/create-cluster)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.azurestackhci%2Fcreate-cluster%2Fazuredeploy.json) | This template creates an Azure Stack HCI 23H2 cluster using an ARM template. |
-> | [creates an Azure Stack HCI 23H2 cluster in Switchless-Dual-link Networking mode](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.azurestackhci/create-cluster-3Nodes-Switchless-DualLink)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.azurestackhci%2Fcreate-cluster-3Nodes-Switchless-DualLink%2Fazuredeploy.json) | This template creates an Azure Stack HCI 23H2 cluster using an ARM template. |
-> | [creates an Azure Stack HCI 23H2 cluster in Switchless-SingleLink networking mode](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.azurestackhci/create-cluster-3Nodes-Switchless-SingleLink)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.azurestackhci%2Fcreate-cluster-3Nodes-Switchless-SingleLink%2Fazuredeploy.json) | This template creates an Azure Stack HCI 23H2 cluster using an ARM template. |
 > | [Deploy Secure Azure AI Studio with a managed virtual network](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.machinelearningservices/aistudio-networking-aoao)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.machinelearningservices%2Faistudio-networking-aoao%2Fazuredeploy.json) | This template creates a secure Azure AI Studio environment with robust network and identity security restrictions. |
 > | [Deploy the Sports Analytics on Azure Architecture](https://github.com/Azure/azure-quickstart-templates/tree/master/demos/sports-analytics-architecture)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fdemos%2Fsports-analytics-architecture%2Fazuredeploy.json) | Creates an Azure storage account with ADLS Gen 2 enabled, an Azure Data Factory instance with linked services for the storage account (an the Azure SQL Database if deployed), and an Azure Databricks instance. The AAD identity for the user deploying the template and the managed identity for the ADF instance will be granted the Storage Blob Data Contributor role on the storage account. There are also options to deploy an Azure Key Vault instance, an Azure SQL Database, and an Azure Event Hub (for streaming use cases). When an Azure Key Vault is deployed, the data factory managed identity and the AAD identity for the user deploying the template will be granted the Key Vault Secrets User role. |
 > | [Enable encryption on a running Windows VM](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.compute/encrypt-running-windows-vm)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.compute%2Fencrypt-running-windows-vm%2Fazuredeploy.json) | This template enables encryption on a running windows vm. |
-> | [FinOps hub](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.costmanagement/finops-hub)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.costmanagement%2Ffinops-hub%2Fazuredeploy.json) | This template creates a new FinOps hub instance, including Data Lake storage and a Data Factory. |
+> | [FinOps hub](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.costmanagement/finops-hub)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.costmanagement%2Ffinops-hub%2Fazuredeploy.json) | This template creates a new FinOps hub instance, including Data Explorer, Data Lake storage, and Data Factory. |
+> | [Network Secured Agent with User Managed Identity](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.azure-ai-agent-service/network-secured-agent)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.azure-ai-agent-service%2Fnetwork-secured-agent%2Fazuredeploy.json) | This set of templates demonstrates how to set up Azure AI Agent Service with virtual network isolation using User Managed Identity authetication for the AI Service/AOAI connection and private network links to connect the agent to your secure data. |
+> | [Standard Agent Setup](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.azure-ai-agent-service/standard-agent)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.azure-ai-agent-service%2Fstandard-agent%2Fazuredeploy.json) | This set of templates demonstrates how to set up Azure AI Agent Service with the standard setup, meaning with managed identity authentication for project/hub connections and public internet access enabled. Agents use customer-owned, single-tenant search and storage resources. With this setup, you have full control and visibility over these resources, but you will incur costs based on your usage. |
 > | [Testing environment for Azure Firewall Premium](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.network/azurefirewall-premium)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.network%2Fazurefirewall-premium%2Fazuredeploy.json) | This template creates an Azure Firewall Premium and Firewall Policy with premium features such as Intrusion Inspection Detection (IDPS), TLS inspection and Web Category filtering |
 > | [This template encrypts a running Windows VMSS](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.compute/encrypt-running-vmss-windows)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.compute%2Fencrypt-running-vmss-windows%2Fazuredeploy.json) | This template enables encryption on a running Windows VM Scale Set |
 > | [upgrades an Azure Stack HCI 22H2 cluster to 23H2 cluster](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.azurestackhci/upgrade-cluster)<br><br>[![Deploy to Azure](~/media/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.azurestackhci%2Fupgrade-cluster%2Fazuredeploy.json) | This template upgrades an Azure Stack HCI 22H2 cluster to 23H2 cluster using an ARM template. |
+
 
 ::: zone-end
 
@@ -534,8 +546,7 @@ resource "azapi_resource" "symbolicname" {
   })
 }
 ```
-## Property values
-
+## Property Values
 ### AccessPolicyEntry
 
 | Name | Description | Value |
@@ -617,6 +628,16 @@ resource "azapi_resource" "symbolicname" {
 | ---- | ----------- | ------------ |
 | id | Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'. | string (required) |
 | ignoreMissingVnetServiceEndpoint | Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured. | bool |
+
+## Usage Examples
+### Azure Verified Modules
+
+The following [Azure Verified Modules](https://aka.ms/avm) can be used to deploy this resource type.
+
+> [!div class="mx-tableFixed"]
+> | Module | Description |
+> | ----- | ----- |
+> | [Key Vault](https://github.com/Azure/terraform-azurerm-avm-res-keyvault-vault) | AVM Resource Module for Key Vault |
 
 
 ::: zone-end

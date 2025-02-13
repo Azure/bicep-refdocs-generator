@@ -5,6 +5,12 @@
     "$schema": {
       "type": "string"
     },
+    "AvmLinks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/AvmLink"
+      }
+    },
     "QuickstartLinks": {
       "type": "array",
       "items": {
@@ -13,10 +19,42 @@
     }
   },
   "required": [
+    "AvmLinks",
     "QuickstartLinks"
   ],
   "additionalProperties": false,
   "definitions": {
+    "AvmLink": {
+      "properties": {
+        "Type": {
+          "type": "string",
+          "enum": [
+            "Bicep",
+            "Terraform"
+          ]
+        },
+        "Title": {
+          "type": "string"
+        },
+        "Description": {
+          "type": "string"
+        },
+        "ResourceType": {
+          "type": "string"
+        },
+        "RepoUrl": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Type",
+        "Title",
+        "Description",
+        "ResourceType",
+        "RepoUrl"
+      ],
+      "additionalProperties": false
+    },
     "QuickstartLink": {
       "properties": {
         "Title": {
