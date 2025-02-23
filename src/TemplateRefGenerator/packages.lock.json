@@ -41,12 +41,12 @@
       },
       "System.IO.Abstractions": {
         "type": "Direct",
-        "requested": "[21.1.7, )",
-        "resolved": "21.1.7",
-        "contentHash": "Zr81yQIKGi4D8DomTChuv0NlJwiZhyNGaPactEMYsqybQAoa1peV+ywyMUDT6RiRhRGNMhpTopz7W9E1HTmTow==",
+        "requested": "[22.0.10, )",
+        "resolved": "22.0.10",
+        "contentHash": "iNx4Fku+58nHlTY85DQWwk9LqhVePcYgEcJSmmVCue2W9wKzuowQtTGwud32qEzFcMFPWS8wozgm02Maec5kHQ==",
         "dependencies": {
-          "TestableIO.System.IO.Abstractions": "21.1.7",
-          "TestableIO.System.IO.Abstractions.Wrappers": "21.1.7"
+          "TestableIO.System.IO.Abstractions": "22.0.10",
+          "TestableIO.System.IO.Abstractions.Wrappers": "22.0.10"
         }
       },
       "Microsoft.Build.Tasks.Git": {
@@ -66,16 +66,24 @@
       },
       "TestableIO.System.IO.Abstractions": {
         "type": "Transitive",
-        "resolved": "21.1.7",
-        "contentHash": "qsaIAF06PJiFUp1jH2y5NP3IcJILUYtcdGgx25p3D9G4QrFz4Cs3frGp8njX+zQWeb/tHBS+CTMHZtU7Nqa1lg=="
+        "resolved": "22.0.10",
+        "contentHash": "AWLxFkvhHgovwzgUP7I0haKPv+m8wxwr8l9TntTjmkHlJXndWY9aWdU4Yz3D8vyWdBQ5gi5tVRlzA+Xh4Lz2Ag==",
+        "dependencies": {
+          "Testably.Abstractions.FileSystem.Interface": "9.0.0"
+        }
       },
       "TestableIO.System.IO.Abstractions.Wrappers": {
         "type": "Transitive",
-        "resolved": "21.1.7",
-        "contentHash": "UcQ+kdN0Ibqbhp6uAMAbc06ri7FeQskQFJX+xZD6siVI5Dg7GaeY4dQYqSfbDA5ZPITtXX9Si4E8XhE6Hhufhg==",
+        "resolved": "22.0.10",
+        "contentHash": "fWj4ZZ3e89vu8JT3ddpIjZHQVOGLbm8vT7O0QjmGEL/pDdlas+n+ArPCdkA+zChP6bugWanJAJ0vIUN3cGiMVw==",
         "dependencies": {
-          "TestableIO.System.IO.Abstractions": "21.1.7"
+          "Testably.Abstractions.FileSystem.Interface": "9.0.0"
         }
+      },
+      "Testably.Abstractions.FileSystem.Interface": {
+        "type": "Transitive",
+        "resolved": "9.0.0",
+        "contentHash": "uksk86YlnzAdyfVNu3wICU0X5iXVe9LF7Q3UkngNliHWEvM5gvAlOUr+jmd9JwmbJWISH5+i1vyXE02lEVz7WQ=="
       }
     }
   }
