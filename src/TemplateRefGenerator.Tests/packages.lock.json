@@ -218,11 +218,11 @@
       },
       "System.IO.Abstractions": {
         "type": "Transitive",
-        "resolved": "22.0.10",
-        "contentHash": "iNx4Fku+58nHlTY85DQWwk9LqhVePcYgEcJSmmVCue2W9wKzuowQtTGwud32qEzFcMFPWS8wozgm02Maec5kHQ==",
+        "resolved": "22.0.11",
+        "contentHash": "puMhRgC2Nw0UbkVXiGsRZMfQBon0qweJ/KxkDmdAa0UrAh3t3J/y96J7e8RLRJ5aqFpt6go5BTyGCdE46fFDxA==",
         "dependencies": {
-          "TestableIO.System.IO.Abstractions": "22.0.10",
-          "TestableIO.System.IO.Abstractions.Wrappers": "22.0.10"
+          "TestableIO.System.IO.Abstractions": "22.0.11",
+          "TestableIO.System.IO.Abstractions.Wrappers": "22.0.11"
         }
       },
       "System.Reflection.Metadata": {
@@ -264,16 +264,16 @@
       },
       "TestableIO.System.IO.Abstractions": {
         "type": "Transitive",
-        "resolved": "22.0.10",
-        "contentHash": "AWLxFkvhHgovwzgUP7I0haKPv+m8wxwr8l9TntTjmkHlJXndWY9aWdU4Yz3D8vyWdBQ5gi5tVRlzA+Xh4Lz2Ag==",
+        "resolved": "22.0.11",
+        "contentHash": "U/Oo6IX9HPvz4+5O4ftGN9kL26s83pNKyoDB7T1LMM5zsMSJr0qH1QAKstHIu0NQcmJkrTcsr5mcZ0Uw/3KmKQ==",
         "dependencies": {
           "Testably.Abstractions.FileSystem.Interface": "9.0.0"
         }
       },
       "TestableIO.System.IO.Abstractions.Wrappers": {
         "type": "Transitive",
-        "resolved": "22.0.10",
-        "contentHash": "fWj4ZZ3e89vu8JT3ddpIjZHQVOGLbm8vT7O0QjmGEL/pDdlas+n+ArPCdkA+zChP6bugWanJAJ0vIUN3cGiMVw==",
+        "resolved": "22.0.11",
+        "contentHash": "HsaKBbeY1qRmaALkNt3qWfF3QpXCm+Q3KB8f34hQ1vXax3gmtZo2s56xRZPcFiW08N77LrX9GvAYZdV6rVQYEw==",
         "dependencies": {
           "Testably.Abstractions.FileSystem.Interface": "9.0.0"
         }
@@ -288,7 +288,7 @@
         "dependencies": {
           "Azure.Bicep.Types": "[0.5.110, )",
           "CommandLineParser": "[2.9.1, )",
-          "System.IO.Abstractions": "[22.0.10, )"
+          "System.IO.Abstractions": "[22.0.11, )"
         }
       },
       "testhelpers": {
