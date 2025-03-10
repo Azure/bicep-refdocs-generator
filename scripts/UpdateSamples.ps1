@@ -59,9 +59,18 @@ function GetAvmLinks {
     $bicepModules = ConvertFrom-Csv (Invoke-WebRequest -Uri $bicepLinks).Content
     $tfModules = ConvertFrom-Csv (Invoke-WebRequest -Uri $tfLinks).Content
 
+    $availableStatuses = @(
+        "Available :green_circle:",
+        "Orphaned :eyes:"
+    )
+
     $links = @()
     foreach ($bicepModule in $bicepModules) {
         Write-Host "Processing $($bicepModule.RepoURL)"
+
+        if ($bicepModule.ModuleStatus -notin $availableStatuses) {
+            continue
+        }
 
         $links += [ordered]@{
             Type = "Bicep";
@@ -73,6 +82,10 @@ function GetAvmLinks {
     }
     foreach ($tfModule in $tfModules) {
         Write-Host "Processing $($tfModule.RepoURL)"
+
+        if ($tfModule.ModuleStatus -notin $availableStatuses) {
+            continue
+        }
 
         $links += [ordered]@{
             Type = "Terraform";
