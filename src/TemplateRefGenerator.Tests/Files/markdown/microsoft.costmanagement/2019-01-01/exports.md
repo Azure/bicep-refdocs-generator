@@ -487,7 +487,7 @@ resource "azapi_resource" "symbolicname" {
   type = "Microsoft.CostManagement/exports@2019-01-01"
   name = "string"
   parent_id = "string"
-  body = jsonencode({
+  body = {
     properties = {
       definition = {
         dataset = {
@@ -563,7 +563,7 @@ resource "azapi_resource" "symbolicname" {
         status = "string"
       }
     }
-  })
+  }
 }
 ```
 ## Property Values

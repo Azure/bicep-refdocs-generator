@@ -488,7 +488,7 @@ resource "azapi_resource" "symbolicname" {
   tags = {
     {customized property} = "string"
   }
-  body = jsonencode({
+  body = {
     properties = {
       accessPolicies = [
         {
@@ -543,7 +543,7 @@ resource "azapi_resource" "symbolicname" {
       tenantId = "string"
       vaultUri = "string"
     }
-  })
+  }
 }
 ```
 ## Property Values

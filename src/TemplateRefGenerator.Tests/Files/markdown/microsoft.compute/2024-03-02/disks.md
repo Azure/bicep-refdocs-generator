@@ -630,16 +630,10 @@ resource "azapi_resource" "symbolicname" {
   type = "Microsoft.Compute/disks@2024-03-02"
   name = "string"
   location = "string"
-  sku = {
-    name = "string"
-  }
   tags = {
     {customized property} = "string"
   }
-  zones = [
-    "string"
-  ]
-  body = jsonencode({
+  body = {
     extendedLocation = {
       name = "string"
       type = "string"
@@ -726,7 +720,13 @@ resource "azapi_resource" "symbolicname" {
       supportsHibernation = bool
       tier = "string"
     }
-  })
+    sku = {
+      name = "string"
+    }
+    zones = [
+      "string"
+    ]
+  }
 }
 ```
 ## Property Values
