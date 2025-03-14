@@ -209,14 +209,14 @@ resource "azapi_resource" "symbolicname" {
   type = "Microsoft.Resources/resourceGroups@2024-07-01"
   name = "string"
   location = "string"
-  managedBy = "string"
   tags = {
     {customized property} = "string"
   }
-  body = jsonencode({
+  body = {
+    managedBy = "string"
     properties = {
     }
-  })
+  }
 }
 ```
 ## Property Values

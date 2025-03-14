@@ -320,7 +320,7 @@ public class CodeSampleGenerator
         return new(mainSample, discriminatedSamples.ToImmutableDictionary());
     }
 
-    private static readonly HashSet<string> TerraformBodyProperties = new(StringComparer.OrdinalIgnoreCase) { "properties", "extendedLocation" };
+    private static readonly HashSet<string> TerraformRootProperties = new(StringComparer.OrdinalIgnoreCase) { "location", "name", "tags", "identity"};
     private static void GenerateTerraform(MarkdownGenerator.ResourceMetadata resource, StringBuilder sb, int indentLevel, TypeBase type, string? path, HashSet<TypeBase> visited)
     {
         if (visited.Contains(type))
@@ -371,7 +371,7 @@ public class CodeSampleGenerator
                     }
                 }
 
-                var bodyProps = props.Where(x => path == "" && TerraformBodyProperties.Contains(x.Key)).ToList();
+                var bodyProps = props.Where(x => path == "" && !TerraformRootProperties.Contains(x.Key)).ToList();
                 foreach (var (name, prop) in props.Except(bodyProps))
                 {
                     AddProperty(name, () => GenerateTerraform(resource, sb, indentLevel + 1, prop.Type.Type, $"{path}.{name}", visited));
@@ -379,12 +379,12 @@ public class CodeSampleGenerator
                 if (bodyProps.Any())
                 {
                     AddProperty("body", () => {
-                        sb.AppendLine($"jsonencode({{");
+                        sb.AppendLine("{");
                         foreach (var (name, prop) in bodyProps)
                         {
                             AddProperty($"  {name}", () => GenerateTerraform(resource, sb, indentLevel + 2, prop.Type.Type, $"{path}.{name}", visited));
                         }
-                        sb.Append($"{propIndent}}})");
+                        sb.Append($"{propIndent}}}");
                     });
                 }
 

@@ -878,12 +878,12 @@ resource "azapi_resource" "symbolicname" {
       }
     }
   }
-  kind = "string"
   location = "string"
   tags = {
     {customized property} = "string"
   }
-  body = jsonencode({
+  body = {
+    kind = "string"
     properties = {
       analyticalStorageConfiguration = {
         schemaType = "string"
@@ -987,7 +987,7 @@ resource "azapi_resource" "symbolicname" {
         }
       ]
     }
-  })
+  }
 }
 ```
 ### BackupPolicy objects
