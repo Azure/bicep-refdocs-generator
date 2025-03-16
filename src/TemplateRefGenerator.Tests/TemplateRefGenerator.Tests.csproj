@@ -14,7 +14,7 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="3.7.3" />
     <PackageReference Include="MSTest.TestFramework" Version="3.7.3" />
-    <PackageReference Include="Azure.Bicep.Types.Az" Version="0.2.727" />
+    <PackageReference Include="Azure.Bicep.Types.Az" Version="0.2.756" />
   </ItemGroup>
 
   <ItemGroup>
