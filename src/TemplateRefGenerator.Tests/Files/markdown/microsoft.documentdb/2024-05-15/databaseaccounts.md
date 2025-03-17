@@ -418,6 +418,15 @@ For **Periodic**, use:
 | ignoreMissingVNetServiceEndpoint | Create firewall rule before the virtual network has vnet service endpoint enabled. | bool |
 
 ## Usage Examples
+### Azure Verified Modules
+
+The following [Azure Verified Modules](https://aka.ms/avm) can be used to deploy this resource type.
+
+> [!div class="mx-tableFixed"]
+> | Module | Description |
+> | ----- | ----- |
+> | [CosmosDB Database Account](https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/document-db/database-account) | AVM Resource Module for CosmosDB Database Account |
+
 ### Azure Quickstart Samples
 
 The following [Azure Quickstart templates](https://aka.ms/azqst) contain Bicep samples for deploying this resource type.
