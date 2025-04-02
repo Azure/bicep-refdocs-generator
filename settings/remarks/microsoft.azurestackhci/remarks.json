@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schemas/remarks.schema.json",
+  "ResourceRemarks": [
+    {
+      "ResourceTypes": [
+        "microsoft.azurestackhci/virtualmachines"
+      ],
+      "Description": "This resource type has migrated to the **Microsoft.HybridCompute** namespace. For the new resource type, see [Microsoft.HybridCompute machines](../../../Microsoft.HybridCompute/machines.md)."
+    }
+  ]
+}
