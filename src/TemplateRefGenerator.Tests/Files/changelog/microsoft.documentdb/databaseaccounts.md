@@ -29,7 +29,7 @@ Updated:
 
 Removed:
 
-* [DiagnosticLogSettings](~/microsoft.documentdb/2024-11-15/databaseaccounts.md#diagnosticlogsettings)
+* DiagnosticLogSettings
 
 Updated:
 
@@ -71,7 +71,7 @@ Updated:
 
 Removed:
 
-* [DiagnosticLogSettings](~/microsoft.documentdb/2024-05-15/databaseaccounts.md#diagnosticlogsettings)
+* DiagnosticLogSettings
 
 Updated:
 
@@ -115,7 +115,7 @@ Updated:
 
 Removed:
 
-* [DiagnosticLogSettings](~/microsoft.documentdb/2023-11-15/databaseaccounts.md#diagnosticlogsettings)
+* DiagnosticLogSettings
 
 Updated:
 
@@ -145,7 +145,7 @@ Updated:
 
 Removed:
 
-* [DiagnosticLogSettings](~/microsoft.documentdb/2023-09-15/databaseaccounts.md#diagnosticlogsettings)
+* DiagnosticLogSettings
 
 Updated:
 
@@ -188,8 +188,8 @@ Updated:
 
 Removed:
 
-* [ContinuousModeProperties](~/microsoft.documentdb/2023-03-15/databaseaccounts.md#continuousmodeproperties)
-* [DiagnosticLogSettings](~/microsoft.documentdb/2023-03-15/databaseaccounts.md#diagnosticlogsettings)
+* ContinuousModeProperties
+* DiagnosticLogSettings
 
 Updated:
 
@@ -224,8 +224,8 @@ Updated:
 
 Removed:
 
-* [ContinuousModeProperties](~/microsoft.documentdb/2022-11-15/databaseaccounts.md#continuousmodeproperties)
-* [DiagnosticLogSettings](~/microsoft.documentdb/2022-11-15/databaseaccounts.md#diagnosticlogsettings)
+* ContinuousModeProperties
+* DiagnosticLogSettings
 
 Updated:
 
@@ -260,9 +260,9 @@ Updated:
 
 Removed:
 
-* [ContinuousModeProperties](~/microsoft.documentdb/2022-08-15/databaseaccounts.md#continuousmodeproperties)
-* [DiagnosticLogSettings](~/microsoft.documentdb/2022-08-15/databaseaccounts.md#diagnosticlogsettings)
-* [GremlinDatabaseRestoreResource](~/microsoft.documentdb/2022-08-15/databaseaccounts.md#gremlindatabaserestoreresource)
+* ContinuousModeProperties
+* DiagnosticLogSettings
+* GremlinDatabaseRestoreResource
 
 Updated:
 
@@ -296,11 +296,11 @@ Updated:
 
 Removed:
 
-* [AccountKeyMetadata](~/microsoft.documentdb/2022-05-15/databaseaccounts.md#accountkeymetadata)
-* [ContinuousModeProperties](~/microsoft.documentdb/2022-05-15/databaseaccounts.md#continuousmodeproperties)
-* [DatabaseAccountKeysMetadata](~/microsoft.documentdb/2022-05-15/databaseaccounts.md#databaseaccountkeysmetadata)
-* [DiagnosticLogSettings](~/microsoft.documentdb/2022-05-15/databaseaccounts.md#diagnosticlogsettings)
-* [GremlinDatabaseRestoreResource](~/microsoft.documentdb/2022-05-15/databaseaccounts.md#gremlindatabaserestoreresource)
+* AccountKeyMetadata
+* ContinuousModeProperties
+* DatabaseAccountKeysMetadata
+* DiagnosticLogSettings
+* GremlinDatabaseRestoreResource
 
 Updated:
 
@@ -354,7 +354,7 @@ Updated:
 
 Removed:
 
-* [DiagnosticLogSettings](~/microsoft.documentdb/2021-10-15/databaseaccounts.md#diagnosticlogsettings)
+* DiagnosticLogSettings
 
 Updated:
 
@@ -417,10 +417,10 @@ Updated:
 
 Removed:
 
-* [DatabaseRestoreResource](~/microsoft.documentdb/2021-04-15/databaseaccounts.md#databaserestoreresource)
-* [DefaultRequestDatabaseAccountCreateUpdateProperties](~/microsoft.documentdb/2021-04-15/databaseaccounts.md#defaultrequestdatabaseaccountcreateupdateproperties)
-* [RestoreParameters](~/microsoft.documentdb/2021-04-15/databaseaccounts.md#restoreparameters)
-* [RestoreReqeustDatabaseAccountCreateUpdateProperties](~/microsoft.documentdb/2021-04-15/databaseaccounts.md#restorereqeustdatabaseaccountcreateupdateproperties)
+* DatabaseRestoreResource
+* DefaultRequestDatabaseAccountCreateUpdateProperties
+* RestoreParameters
+* RestoreReqeustDatabaseAccountCreateUpdateProperties
 
 Updated:
 
@@ -449,10 +449,10 @@ Updated:
 
 Removed:
 
-* [DatabaseRestoreResource](~/microsoft.documentdb/2021-03-15/databaseaccounts.md#databaserestoreresource)
-* [DefaultRequestDatabaseAccountCreateUpdateProperties](~/microsoft.documentdb/2021-03-15/databaseaccounts.md#defaultrequestdatabaseaccountcreateupdateproperties)
-* [RestoreParameters](~/microsoft.documentdb/2021-03-15/databaseaccounts.md#restoreparameters)
-* [RestoreReqeustDatabaseAccountCreateUpdateProperties](~/microsoft.documentdb/2021-03-15/databaseaccounts.md#restorereqeustdatabaseaccountcreateupdateproperties)
+* DatabaseRestoreResource
+* DefaultRequestDatabaseAccountCreateUpdateProperties
+* RestoreParameters
+* RestoreReqeustDatabaseAccountCreateUpdateProperties
 
 Updated:
 
@@ -496,13 +496,13 @@ Updated:
 
 Removed:
 
-* [Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties](~/microsoft.documentdb/2020-09-01/databaseaccounts.md#components1jq1t4ischemasmanagedserviceidentitypropertiesuserassignedidentitiesadditionalproperties)
-* [DatabaseRestoreResource](~/microsoft.documentdb/2020-09-01/databaseaccounts.md#databaserestoreresource)
-* [DefaultRequestDatabaseAccountCreateUpdateProperties](~/microsoft.documentdb/2020-09-01/databaseaccounts.md#defaultrequestdatabaseaccountcreateupdateproperties)
-* [ManagedServiceIdentity](~/microsoft.documentdb/2020-09-01/databaseaccounts.md#managedserviceidentity)
-* [ManagedServiceIdentityUserAssignedIdentities](~/microsoft.documentdb/2020-09-01/databaseaccounts.md#managedserviceidentityuserassignedidentities)
-* [RestoreParameters](~/microsoft.documentdb/2020-09-01/databaseaccounts.md#restoreparameters)
-* [RestoreReqeustDatabaseAccountCreateUpdateProperties](~/microsoft.documentdb/2020-09-01/databaseaccounts.md#restorereqeustdatabaseaccountcreateupdateproperties)
+* Components1Jq1T4ISchemasManagedserviceidentityPropertiesUserassignedidentitiesAdditionalproperties
+* DatabaseRestoreResource
+* DefaultRequestDatabaseAccountCreateUpdateProperties
+* ManagedServiceIdentity
+* ManagedServiceIdentityUserAssignedIdentities
+* RestoreParameters
+* RestoreReqeustDatabaseAccountCreateUpdateProperties
 
 Updated:
 
@@ -576,7 +576,7 @@ Added:
 
 Removed:
 
-* [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountProperties](~/microsoft.documentdb/2019-08-01/databaseaccounts.md#databaseaccountcreateupdatepropertiesordatabaseaccountproperties)
+* DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountProperties
 
 
 ## 2016-03-31

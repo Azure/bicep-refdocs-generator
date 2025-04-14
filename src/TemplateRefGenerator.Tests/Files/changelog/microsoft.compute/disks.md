@@ -164,10 +164,10 @@ Added:
 
 Removed:
 
-* [EncryptionSettings](~/microsoft.compute/2018-09-30/disks.md#encryptionsettings)
-* [KeyVaultAndKeyReference](~/microsoft.compute/2018-09-30/disks.md#keyvaultandkeyreference)
-* [KeyVaultAndSecretReference](~/microsoft.compute/2018-09-30/disks.md#keyvaultandsecretreference)
-* [SourceVault](~/microsoft.compute/2018-09-30/disks.md#sourcevault)
+* EncryptionSettings
+* KeyVaultAndKeyReference
+* KeyVaultAndSecretReference
+* SourceVault
 
 Updated:
 
