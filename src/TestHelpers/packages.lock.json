@@ -61,23 +61,16 @@
           "Microsoft.SourceLink.Common": "8.0.0"
         }
       },
-      "MSTest.TestAdapter": {
+      "MSTest": {
         "type": "Direct",
         "requested": "[3.7.3, )",
         "resolved": "3.7.3",
-        "contentHash": "Ro3TnkC+TfovOTFd93DnzDF/ickJkkAYVmnzrjvY3FUduRcTJLIOJee9kiP1o3q1aPqmJSK6CobdvyWXubajWw==",
+        "contentHash": "0N2MnLPjoOjp5rhHpjY7VNB3b5Au/88Grg3OzHUtWKnW1XdYr8Y4YgwlSVOexj4IemW/LkzwUXCICD+loeMqaA==",
         "dependencies": {
-          "Microsoft.Testing.Extensions.VSTestBridge": "1.5.3",
-          "Microsoft.Testing.Platform.MSBuild": "1.5.3"
-        }
-      },
-      "MSTest.TestFramework": {
-        "type": "Direct",
-        "requested": "[3.7.3, )",
-        "resolved": "3.7.3",
-        "contentHash": "Eg4F4zOsAFKlSiLI3tOJfg6BGXeppLhgdupAfVlnpZBXa3rNqxINIeZDJ5/KpoW5BRZyUSZW76Q8yNNk0GqCEQ==",
-        "dependencies": {
-          "MSTest.Analyzers": "3.7.3"
+          "MSTest.Analyzers": "[3.7.3]",
+          "MSTest.TestAdapter": "[3.7.3]",
+          "MSTest.TestFramework": "[3.7.3]",
+          "Microsoft.NET.Test.Sdk": "17.12.0"
         }
       },
       "Nerdbank.GitVersioning": {
@@ -185,6 +178,23 @@
         "type": "Transitive",
         "resolved": "3.7.3",
         "contentHash": "5KcyyxIP0UBRKBs135+S3JQJALc1PmZMzhpR86JIXQ2Dnd/lDiOGNDD8R23X015mWi1K95KQWsGWw+3e7DUrgg=="
+      },
+      "MSTest.TestAdapter": {
+        "type": "Transitive",
+        "resolved": "3.7.3",
+        "contentHash": "Ro3TnkC+TfovOTFd93DnzDF/ickJkkAYVmnzrjvY3FUduRcTJLIOJee9kiP1o3q1aPqmJSK6CobdvyWXubajWw==",
+        "dependencies": {
+          "Microsoft.Testing.Extensions.VSTestBridge": "1.5.3",
+          "Microsoft.Testing.Platform.MSBuild": "1.5.3"
+        }
+      },
+      "MSTest.TestFramework": {
+        "type": "Transitive",
+        "resolved": "3.7.3",
+        "contentHash": "Eg4F4zOsAFKlSiLI3tOJfg6BGXeppLhgdupAfVlnpZBXa3rNqxINIeZDJ5/KpoW5BRZyUSZW76Q8yNNk0GqCEQ==",
+        "dependencies": {
+          "MSTest.Analyzers": "3.7.3"
+        }
       },
       "Newtonsoft.Json": {
         "type": "Transitive",

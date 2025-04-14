@@ -201,8 +201,9 @@ Removed:
 
             foreach (var entry in removed.OrderBy(x => x.Name, StringComparer.OrdinalIgnoreCase))
             {
+                // Don't use an anchor link - there's nothing to link to for a "removed" property!
                 sb.Append($"""
-* {GetTypeLink(resourceTypeChange.ResourceType, versionedChange.Version, entry.Name)}
+* {entry.Name}
 
 """);
             }

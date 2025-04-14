@@ -2,6 +2,10 @@
   <PropertyGroup>
     <Nullable>Enable</Nullable>
     <TargetFramework>net8.0</TargetFramework>
+    <EnableMSTestRunner>true</EnableMSTestRunner>
+    <!-- More info about dotnet test integration https://learn.microsoft.com/dotnet/core/testing/unit-testing-platform-integration-dotnet-test -->
+    <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
+    <TestingPlatformShowTestsFailure>true</TestingPlatformShowTestsFailure>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,8 +16,7 @@
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="7.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
-    <PackageReference Include="MSTest.TestAdapter" Version="3.7.3" />
-    <PackageReference Include="MSTest.TestFramework" Version="3.7.3" />
+    <PackageReference Include="MSTest" Version="3.8.2" />
     <PackageReference Include="Azure.Bicep.Types.Az" Version="0.2.727" />
   </ItemGroup>
 
