@@ -369,6 +369,18 @@ public class CodeSampleGenerator
                     {
                         AddProperty("parent_id", () => sb.Append($"\"string\""));
                     }
+
+                    if (props.FirstOrDefault(x => x.Key == "identity") is {} identityProp && identityProp.Key != null)
+                    {
+                        props.Remove(identityProp);
+                        sb.AppendLine($"{propIndent}identity {{");
+                        var nestedPropIndent = GetIndent(indentLevel + 2);
+                        sb.AppendLine($"{nestedPropIndent}type = \"string\"");
+                        sb.AppendLine($"{nestedPropIndent}identity_ids = [");
+                        sb.AppendLine($"{nestedPropIndent}{GetIndent(1)}\"string\"");
+                        sb.AppendLine($"{nestedPropIndent}]");
+                        sb.AppendLine($"{propIndent}}}");
+                    }
                 }
 
                 var bodyProps = props.Where(x => path == "" && !TerraformRootProperties.Contains(x.Key)).ToList();
