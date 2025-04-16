@@ -882,7 +882,7 @@ resource "azapi_resource" "symbolicname" {
   name = "string"
   identity {
     type = "string"
-    identity_ids = = [
+    identity_ids = [
       "string"
     ]
   }
