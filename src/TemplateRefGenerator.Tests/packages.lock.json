@@ -86,10 +86,10 @@
       },
       "JsonDiffPatch.Net": {
         "type": "Transitive",
-        "resolved": "2.3.0",
-        "contentHash": "a+I1WNXSwkelsgUfMk3LVRY3FzQDV8nCpRMcml2whQDimbnOG+mxRCt6kCzMRFwshg9ir4shm0yvYDL7E89ayg==",
+        "resolved": "2.4.0",
+        "contentHash": "G7aBpHomgAKockKB6478QoTU7J93Qe/8xUCDl7WK7OfkKH58hX5QHLFhQ2noxkvHOlIOl4BLP9GhV0wH60zkXQ==",
         "dependencies": {
-          "Newtonsoft.Json": "11.0.1"
+          "Newtonsoft.Json": "13.0.2"
         }
       },
       "Microsoft.ApplicationInsights": {
@@ -377,7 +377,7 @@
           "Azure.Bicep.Types.Az": "[0.2.727, )",
           "DiffPlex": "[1.7.2, )",
           "FluentAssertions": "[7.0.0, )",
-          "JsonDiffPatch.Net": "[2.3.0, )",
+          "JsonDiffPatch.Net": "[2.4.0, )",
           "MSTest": "[3.7.3, )",
           "Microsoft.NET.Test.Sdk": "[17.13.0, )"
         }
