@@ -28,11 +28,11 @@
       },
       "JsonDiffPatch.Net": {
         "type": "Direct",
-        "requested": "[2.3.0, )",
-        "resolved": "2.3.0",
-        "contentHash": "a+I1WNXSwkelsgUfMk3LVRY3FzQDV8nCpRMcml2whQDimbnOG+mxRCt6kCzMRFwshg9ir4shm0yvYDL7E89ayg==",
+        "requested": "[2.4.0, )",
+        "resolved": "2.4.0",
+        "contentHash": "G7aBpHomgAKockKB6478QoTU7J93Qe/8xUCDl7WK7OfkKH58hX5QHLFhQ2noxkvHOlIOl4BLP9GhV0wH60zkXQ==",
         "dependencies": {
-          "Newtonsoft.Json": "11.0.1"
+          "Newtonsoft.Json": "13.0.2"
         }
       },
       "Microsoft.CodeAnalysis.BannedApiAnalyzers": {
@@ -198,8 +198,8 @@
       },
       "Newtonsoft.Json": {
         "type": "Transitive",
-        "resolved": "13.0.1",
-        "contentHash": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A=="
+        "resolved": "13.0.2",
+        "contentHash": "R2pZ3B0UjeyHShm9vG+Tu0EBb2lC8b0dFzV9gVn50ofHXh9Smjk6kTn7A/FdAsC8B5cKib1OnGYOXxRBz5XQDg=="
       },
       "System.Configuration.ConfigurationManager": {
         "type": "Transitive",
