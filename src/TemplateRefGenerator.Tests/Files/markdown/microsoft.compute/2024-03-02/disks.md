@@ -629,6 +629,7 @@ To create a Microsoft.Compute/disks resource, add the following Terraform to you
 resource "azapi_resource" "symbolicname" {
   type = "Microsoft.Compute/disks@2024-03-02"
   name = "string"
+  parent_id = "string"
   location = "string"
   tags = {
     {customized property} = "string"

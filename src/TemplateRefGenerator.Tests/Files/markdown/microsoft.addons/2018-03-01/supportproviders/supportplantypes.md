@@ -96,6 +96,7 @@ To create a Microsoft.Addons/supportProviders/supportPlanTypes resource, add the
 resource "azapi_resource" "symbolicname" {
   type = "Microsoft.Addons/supportProviders/supportPlanTypes@2018-03-01"
   name = "string"
+  parent_id = "string"
 }
 ```
 ## Property Values

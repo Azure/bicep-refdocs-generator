@@ -880,6 +880,7 @@ To create a Microsoft.DocumentDB/databaseAccounts resource, add the following Te
 resource "azapi_resource" "symbolicname" {
   type = "Microsoft.DocumentDB/databaseAccounts@2024-05-15"
   name = "string"
+  parent_id = "string"
   identity {
     type = "string"
     identity_ids = [

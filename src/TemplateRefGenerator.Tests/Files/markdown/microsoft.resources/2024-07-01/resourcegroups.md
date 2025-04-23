@@ -208,6 +208,7 @@ To create a Microsoft.Resources/resourceGroups resource, add the following Terra
 resource "azapi_resource" "symbolicname" {
   type = "Microsoft.Resources/resourceGroups@2024-07-01"
   name = "string"
+  parent_id = "string"
   location = "string"
   tags = {
     {customized property} = "string"
