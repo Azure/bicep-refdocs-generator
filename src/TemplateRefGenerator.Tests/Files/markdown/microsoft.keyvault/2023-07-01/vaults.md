@@ -484,6 +484,7 @@ To create a Microsoft.KeyVault/vaults resource, add the following Terraform to y
 resource "azapi_resource" "symbolicname" {
   type = "Microsoft.KeyVault/vaults@2023-07-01"
   name = "string"
+  parent_id = "string"
   location = "string"
   tags = {
     {customized property} = "string"

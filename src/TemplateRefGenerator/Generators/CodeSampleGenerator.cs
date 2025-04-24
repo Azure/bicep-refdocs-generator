@@ -364,10 +364,18 @@ public class CodeSampleGenerator
                     AddProperty("type", () => sb.Append($"\"{resource.ResourceType}@{resource.ApiVersion}\""));
                     AddProperty("name", () => sb.Append($"\"string\""));
 
-                    if (resource.Type.ScopeType == ScopeType.Unknown ||
-                        resource.Type.ScopeType.HasFlag(ScopeType.Extension))
+                    AddProperty("parent_id", () => sb.Append($"\"string\""));
+
+                    if (props.FirstOrDefault(x => x.Key == "identity") is {} identityProp && identityProp.Key != null)
                     {
-                        AddProperty("parent_id", () => sb.Append($"\"string\""));
+                        props.Remove(identityProp);
+                        sb.AppendLine($"{propIndent}identity {{");
+                        var nestedPropIndent = GetIndent(indentLevel + 2);
+                        sb.AppendLine($"{nestedPropIndent}type = \"string\"");
+                        sb.AppendLine($"{nestedPropIndent}identity_ids = [");
+                        sb.AppendLine($"{nestedPropIndent}{GetIndent(1)}\"string\"");
+                        sb.AppendLine($"{nestedPropIndent}]");
+                        sb.AppendLine($"{propIndent}}}");
                     }
                 }
 
