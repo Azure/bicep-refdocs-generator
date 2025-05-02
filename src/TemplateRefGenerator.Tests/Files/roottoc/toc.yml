@@ -82,6 +82,8 @@
     href: ./microsoft.azurestack/change-log/toc.yml
   - name: Azure Stack HCI
     href: ./microsoft.azurestackhci/change-log/toc.yml
+  - name: Azure Storage Actions
+    href: ./microsoft.storageactions/change-log/toc.yml
   - name: Azure VMware Solution
     href: ./microsoft.avs/change-log/toc.yml
   - name: Baremetal Infrastructure
@@ -192,6 +194,8 @@
     href: ./microsoft.domainregistration/change-log/toc.yml
   - name: Durable Task
     href: ./microsoft.durabletask/change-log/toc.yml
+  - name: Dynamics 365 Fraud Protection
+    href: ./microsoft.dynamics365fraudprotection/change-log/toc.yml
   - name: Dynatrace
     href: ./dynatrace.observability/change-log/toc.yml
   - name: Easm
@@ -324,6 +328,8 @@
     href: ./microsoft.marketplaceordering/change-log/toc.yml
   - name: Media
     href: ./microsoft.media/change-log/toc.yml
+  - name: Microsoft 365 Security and Compliance
+    href: ./microsoft.m365securityandcompliance/change-log/toc.yml
   - name: Microsoft.AzureBridge.Admin
     href: ./microsoft.azurebridge.admin/change-log/toc.yml
   - name: Microsoft.Backup.Admin
@@ -334,24 +340,16 @@
     href: ./microsoft.containerregistry.admin/change-log/toc.yml
   - name: Microsoft.Deployment.Admin
     href: ./microsoft.deployment.admin/change-log/toc.yml
-  - name: Microsoft.Dynamics365FraudProtection
-    href: ./microsoft.dynamics365fraudprotection/change-log/toc.yml
   - name: Microsoft.Fabric.Admin
     href: ./microsoft.fabric.admin/change-log/toc.yml
   - name: microsoft.gallery.admin
     href: ./microsoft.gallery.admin/change-log/toc.yml
   - name: Microsoft.InfrastructureInsights.Admin
     href: ./microsoft.infrastructureinsights.admin/change-log/toc.yml
-  - name: Microsoft.M365SecurityAndCompliance
-    href: ./microsoft.m365securityandcompliance/change-log/toc.yml
-  - name: Microsoft.Monitor
-    href: ./microsoft.monitor/change-log/toc.yml
   - name: Microsoft.Network.Admin
     href: ./microsoft.network.admin/change-log/toc.yml
   - name: Microsoft.Storage.Admin
     href: ./microsoft.storage.admin/change-log/toc.yml
-  - name: Microsoft.StorageActions
-    href: ./microsoft.storageactions/change-log/toc.yml
   - name: Microsoft.Subscriptions.Admin
     href: ./microsoft.subscriptions.admin/change-log/toc.yml
   - name: Microsoft.Update.Admin
@@ -360,6 +358,8 @@
     href: ./microsoft.migrate/change-log/toc.yml
   - name: Mixed Reality
     href: ./microsoft.mixedreality/change-log/toc.yml
+  - name: Monitor
+    href: ./microsoft.monitor/change-log/toc.yml
   - name: MySQL
     href: ./microsoft.dbformysql/change-log/toc.yml
   - name: Neon Postgres
@@ -609,6 +609,8 @@
     href: ./microsoft.azurestack/toc.yml
   - name: Azure Stack HCI
     href: ./microsoft.azurestackhci/toc.yml
+  - name: Azure Storage Actions
+    href: ./microsoft.storageactions/toc.yml
   - name: Azure VMware Solution
     href: ./microsoft.avs/toc.yml
   - name: Baremetal Infrastructure
@@ -719,6 +721,8 @@
     href: ./microsoft.domainregistration/toc.yml
   - name: Durable Task
     href: ./microsoft.durabletask/toc.yml
+  - name: Dynamics 365 Fraud Protection
+    href: ./microsoft.dynamics365fraudprotection/toc.yml
   - name: Dynatrace
     href: ./dynatrace.observability/toc.yml
   - name: Easm
@@ -851,6 +855,8 @@
     href: ./microsoft.marketplaceordering/toc.yml
   - name: Media
     href: ./microsoft.media/toc.yml
+  - name: Microsoft 365 Security and Compliance
+    href: ./microsoft.m365securityandcompliance/toc.yml
   - name: Microsoft.AzureBridge.Admin
     href: ./microsoft.azurebridge.admin/toc.yml
   - name: Microsoft.Backup.Admin
@@ -861,24 +867,16 @@
     href: ./microsoft.containerregistry.admin/toc.yml
   - name: Microsoft.Deployment.Admin
     href: ./microsoft.deployment.admin/toc.yml
-  - name: Microsoft.Dynamics365FraudProtection
-    href: ./microsoft.dynamics365fraudprotection/toc.yml
   - name: Microsoft.Fabric.Admin
     href: ./microsoft.fabric.admin/toc.yml
   - name: microsoft.gallery.admin
     href: ./microsoft.gallery.admin/toc.yml
   - name: Microsoft.InfrastructureInsights.Admin
     href: ./microsoft.infrastructureinsights.admin/toc.yml
-  - name: Microsoft.M365SecurityAndCompliance
-    href: ./microsoft.m365securityandcompliance/toc.yml
-  - name: Microsoft.Monitor
-    href: ./microsoft.monitor/toc.yml
   - name: Microsoft.Network.Admin
     href: ./microsoft.network.admin/toc.yml
   - name: Microsoft.Storage.Admin
     href: ./microsoft.storage.admin/toc.yml
-  - name: Microsoft.StorageActions
-    href: ./microsoft.storageactions/toc.yml
   - name: Microsoft.Subscriptions.Admin
     href: ./microsoft.subscriptions.admin/toc.yml
   - name: Microsoft.Update.Admin
@@ -887,6 +885,8 @@
     href: ./microsoft.migrate/toc.yml
   - name: Mixed Reality
     href: ./microsoft.mixedreality/toc.yml
+  - name: Monitor
+    href: ./microsoft.monitor/toc.yml
   - name: MySQL
     href: ./microsoft.dbformysql/toc.yml
   - name: Neon Postgres
