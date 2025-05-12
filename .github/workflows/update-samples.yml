@@ -20,6 +20,7 @@ jobs:
           fetch-depth: 0 # avoid shallow clone so nbgv can do its work.
 
       - name: Update Samples
+        shell: pwsh
         run: ./scripts/UpdateSamples.ps1
       
       - name: Create Pull Request
