@@ -22,6 +22,9 @@ jobs:
       - name: Update Samples
         shell: pwsh
         run: ./scripts/UpdateSamples.ps1
+
+      - name: Update Baselines
+        run: ./scripts/update_baselines.sh
       
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
