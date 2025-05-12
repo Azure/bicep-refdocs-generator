@@ -58,7 +58,7 @@
     },
     {
       "Title": "Create new Active Directory forest with optional subdomain",
-      "Description": "This template creates a new Active Directory forest, with an optional subdomain. You can choose to have either one or two DCs per domain. The network configuration is highly configurable, making it suitable to fit into an existing environment. The VMs use managed disks and have no dependency on storage accounts. As an operating system you can choose between Windows Server 2016 and Windows Server 2019. This template illustrates the use of nested templates, Powershell DSC, and other advanced concepts.",
+      "Description": "This template creates a new Active Directory forest, with an optional subdomain. You can choose to have either one or two DCs per domain. The network configuration is highly configurable, making it suitable to fit into an existing environment. The VMs use managed disks and have no dependency on storage accounts. As an operating system you can choose between Windows Server 2016 and Windows Server 2019. This template illustrates the use of nested templates, PowerShell DSC, and other advanced concepts.",
       "Path": "application-workloads/active-directory/create-ad-forest-with-subdomain",
       "ResourceTypes": [
         "Microsoft.Compute/availabilitySets",
@@ -283,8 +283,8 @@
       "HasBicep": false
     },
     {
-      "Title": "Chef with JSON parameters on Ubuntu/Centos",
-      "Description": "Deploy an Ubuntu/Centos VM With Chef with JSON parameters",
+      "Title": "Chef with JSON parameters on Ubuntu/CentOS",
+      "Description": "Deploy an Ubuntu/CentOS VM With Chef with JSON parameters",
       "Path": "application-workloads/chef/chef-json-parameters-linux-vm",
       "ResourceTypes": [
         "Microsoft.Compute/virtualMachines",
@@ -439,17 +439,6 @@
       "HasBicep": false
     },
     {
-      "Title": "Deploy Darktrace vSensors",
-      "Description": "This template allows you to deploy one or more stand-alone Darktrace vSensors",
-      "Path": "application-workloads/darktrace-vsensor-standalone",
-      "ResourceTypes": [
-        "Microsoft.Compute/virtualMachines",
-        "Microsoft.Network/networkInterfaces",
-        "Microsoft.Network/networkSecurityGroups"
-      ],
-      "HasBicep": true
-    },
-    {
       "Title": "Deploy Darktrace Autoscaling vSensors",
       "Description": "This template allows you to deploy an automatically autoscaling deployment of Darktrace vSensors",
       "Path": "application-workloads/darktrace/darktrace-vsensor-autoscaling",
@@ -475,6 +464,17 @@
         "Microsoft.Storage/storageAccounts"
       ],
       "HasBicep": false
+    },
+    {
+      "Title": "Deploy Darktrace vSensors",
+      "Description": "This template allows you to deploy one or more stand-alone Darktrace vSensors",
+      "Path": "application-workloads/darktrace/darktrace-vsensor-standalone",
+      "ResourceTypes": [
+        "Microsoft.Compute/virtualMachines",
+        "Microsoft.Network/networkInterfaces",
+        "Microsoft.Network/networkSecurityGroups"
+      ],
+      "HasBicep": true
     },
     {
       "Title": "Deploy a Ubuntu Linux DataScience VM 18.04",
@@ -2149,27 +2149,6 @@
       "HasBicep": false
     },
     {
-      "Title": "SharePoint Subscription / 2019 / 2016 fully configured",
-      "Description": "Create a DC, a SQL Server 2022, and from 1 to 5 server(s) hosting a SharePoint Subscription / 2019 / 2016 farm with an extensive configuration, including trusted authentication, user profiles with personal sites, an OAuth trust (using a certificate), a dedicated IIS site for hosting high-trust add-ins, etc... The latest version of key softwares (including Fiddler, vscode, np++, 7zip, ULS Viewer) is installed. SharePoint machines have additional fine-tuning to make them immediately usable (remote administration tools, custom policies for Edge and Chrome, shortcuts, etc...).",
-      "Path": "application-workloads/sharepoint/sharepoint-adfs",
-      "ResourceTypes": [
-        "Microsoft.Compute/virtualMachines",
-        "Microsoft.Compute/virtualMachines/extensions",
-        "Microsoft.Compute/virtualMachines/runCommands",
-        "Microsoft.DevTestLab/schedules",
-        "Microsoft.Network/azureFirewalls",
-        "Microsoft.Network/bastionHosts",
-        "Microsoft.Network/firewallPolicies",
-        "Microsoft.Network/firewallPolicies/ruleCollectionGroups",
-        "Microsoft.Network/networkInterfaces",
-        "Microsoft.Network/networkSecurityGroups",
-        "Microsoft.Network/publicIPAddresses",
-        "Microsoft.Network/virtualNetworks",
-        "Microsoft.Network/virtualNetworks/subnets"
-      ],
-      "HasBicep": true
-    },
-    {
       "Title": "Deploy Shibboleth Identity Provider cluster on Ubuntu",
       "Description": "This template deploys Shibboleth Identity Provider on Ubuntu in a clustered configuration. After the deployment is successful, you can go to https://your-domain:8443/idp/profile/Status (note port number) to check success.",
       "Path": "application-workloads/shibboleth/shibboleth-cluster-ubuntu",
@@ -2503,7 +2482,7 @@
     },
     {
       "Title": "Dev Environment for AZ-400 Labs",
-      "Description": "VM with VS2017 Community, Docker-desktop, Git and VSCode for AZ-400 (Azure DevOps) Labs",
+      "Description": "VM with VS2017 Community, Docker-desktop, Git and VS Code for AZ-400 (Azure DevOps) Labs",
       "Path": "application-workloads/visualstudio/az-400-dev-env",
       "ResourceTypes": [
         "Microsoft.Compute/virtualMachines",
@@ -2545,7 +2524,7 @@
       "HasBicep": false
     },
     {
-      "Title": "Ubuntu Mate Desktop VM with VSCode",
+      "Title": "Ubuntu Mate Desktop VM with VS Code",
       "Description": "This template allows you to deploy a simple Linux VM using a few different options for the Ubuntu version, using the latest patched version. This will deploy a A1 size VM in the resource group location and return the FQDN of the VM.",
       "Path": "application-workloads/visualstudio/ubuntu-mate-desktop-vscode",
       "ResourceTypes": [
@@ -4311,7 +4290,7 @@
       "HasBicep": false
     },
     {
-      "Title": "Linux VM with Gnome Desktop RDP VSCode and Azure CLI",
+      "Title": "Linux VM with Gnome Desktop RDP VS Code and Azure CLI",
       "Description": "This template deploys an Ubuntu Server VM, then uses the Linux CustomScript extension to install the Ubuntu Gnome Desktop and Remote Desktop support (via xrdp). The final provisioned Ubuntu VM support remote connections over RDP.",
       "Path": "demos/ubuntu-desktop-gnome-rdp",
       "ResourceTypes": [
@@ -5332,6 +5311,7 @@
         "Microsoft.Network/privateEndpoints",
         "Microsoft.Network/privateEndpoints/privateDnsZoneGroups",
         "Microsoft.Network/virtualNetworks",
+        "Microsoft.Resources/deploymentScripts",
         "Microsoft.Search/searchServices",
         "Microsoft.Storage/storageAccounts"
       ],
@@ -5388,6 +5368,21 @@
     {
       "Title": "creates an Azure Stack HCI 23H2 cluster",
       "Description": "This template creates an Azure Stack HCI 23H2 cluster using an ARM template, using custom storage IP",
+      "Path": "quickstarts/microsoft.azurestackhci/create-cluster-2-node-switched-custom-storageip-2411.3",
+      "ResourceTypes": [
+        "Microsoft.Authorization/roleAssignments",
+        "Microsoft.AzureStackHCI/clusters",
+        "microsoft.azurestackhci/clusters/deploymentSettings",
+        "Microsoft.KeyVault/vaults",
+        "Microsoft.KeyVault/vaults/providers/diagnosticsettings",
+        "Microsoft.KeyVault/vaults/secrets",
+        "Microsoft.Storage/storageAccounts"
+      ],
+      "HasBicep": false
+    },
+    {
+      "Title": "creates an Azure Stack HCI 23H2 cluster",
+      "Description": "This template creates an Azure Stack HCI 23H2 cluster using an ARM template, using custom storage IP",
       "Path": "quickstarts/microsoft.azurestackhci/create-cluster-2-node-switched-custom-storageip",
       "ResourceTypes": [
         "Microsoft.Authorization/roleAssignments",
@@ -5401,9 +5396,30 @@
       "HasBicep": false
     },
     {
+      "Title": "creates an Azure Stack HCI 23H2 cluster",
+      "Description": "This template creates an Azure Stack HCI 23H2 cluster using an ARM template.",
+      "Path": "quickstarts/microsoft.azurestackhci/create-cluster-2411.3",
+      "ResourceTypes": [],
+      "HasBicep": false
+    },
+    {
+      "Title": "creates an Azure Stack HCI 23H2 cluster in Switchless-Dual-link Networking mode",
+      "Description": "This template creates an Azure Stack HCI 23H2 cluster using an ARM template.",
+      "Path": "quickstarts/microsoft.azurestackhci/create-cluster-3Nodes-Switchless-DualLink-2411.3",
+      "ResourceTypes": [],
+      "HasBicep": false
+    },
+    {
       "Title": "creates an Azure Stack HCI 23H2 cluster in Switchless-Dual-link Networking mode",
       "Description": "This template creates an Azure Stack HCI 23H2 cluster using an ARM template.",
       "Path": "quickstarts/microsoft.azurestackhci/create-cluster-3Nodes-Switchless-DualLink",
+      "ResourceTypes": [],
+      "HasBicep": false
+    },
+    {
+      "Title": "creates an Azure Stack HCI 23H2 cluster in Switchless-SingleLink networking mode",
+      "Description": "This template creates an Azure Stack HCI 23H2 cluster using an ARM template.",
+      "Path": "quickstarts/microsoft.azurestackhci/create-cluster-3Nodes-Switchless-SingleLink-2411.3",
       "ResourceTypes": [],
       "HasBicep": false
     },
@@ -5418,6 +5434,28 @@
       "Title": "creates a four nodes Azure Local instance in Switchless-Dual-link Networking mode",
       "Description": "This template creates a four nodes Azure Local instance using an ARM template.",
       "Path": "quickstarts/microsoft.azurestackhci/create-cluster-4Nodes-Switchless-DualLink",
+      "ResourceTypes": [],
+      "HasBicep": false
+    },
+    {
+      "Title": "creates an Azure Stack HCI 23H2 cluster",
+      "Description": "This template creates an Azure Stack HCI 23H2 cluster using an ARM template.",
+      "Path": "quickstarts/microsoft.azurestackhci/create-cluster-for-fairfax",
+      "ResourceTypes": [
+        "Microsoft.Authorization/roleAssignments",
+        "Microsoft.AzureStackHCI/clusters",
+        "microsoft.azurestackhci/clusters/deploymentSettings",
+        "Microsoft.KeyVault/vaults",
+        "Microsoft.KeyVault/vaults/providers/diagnosticsettings",
+        "Microsoft.KeyVault/vaults/secrets",
+        "Microsoft.Storage/storageAccounts"
+      ],
+      "HasBicep": false
+    },
+    {
+      "Title": "creates an Azure Stack HCI 24H2 cluster with RAC enabled ",
+      "Description": "This template creates an Azure Stack HCI 24H2 cluster with RAC enabled using an ARM template.",
+      "Path": "quickstarts/microsoft.azurestackhci/create-cluster-rac-enabled",
       "ResourceTypes": [],
       "HasBicep": false
     },
@@ -6134,10 +6172,9 @@
         "Microsoft.Network/loadBalancers",
         "Microsoft.Network/networkInterfaces",
         "Microsoft.Network/publicIPAddresses",
-        "Microsoft.Network/virtualNetworks",
-        "Microsoft.Storage/storageAccounts"
+        "Microsoft.Network/virtualNetworks"
       ],
-      "HasBicep": false
+      "HasBicep": true
     },
     {
       "Title": "2 VMs in a Load Balancer and configure NAT rules on the LB",
@@ -6940,20 +6977,6 @@
       "HasBicep": false
     },
     {
-      "Title": "Deploy a simple Ubuntu Linux VM 20.04-LTS",
-      "Description": "This template deploys an Ubuntu Server with a few options for the VM. You can provide the VM Name, OS Version, VM size, and admin username and password. As default the VM size is Standard_D2s_v3 and OS version is 20.04-LTS.",
-      "Path": "quickstarts/microsoft.compute/vm-simple-linux",
-      "ResourceTypes": [
-        "Microsoft.Compute/virtualMachines",
-        "Microsoft.Compute/virtualMachines/extensions",
-        "Microsoft.Network/networkInterfaces",
-        "Microsoft.Network/networkSecurityGroups",
-        "Microsoft.Network/publicIPAddresses",
-        "Microsoft.Network/virtualNetworks"
-      ],
-      "HasBicep": true
-    },
-    {
       "Title": "Red Hat Enterprise Linux VM (RHEL 7.8 unmanaged)",
       "Description": "This template will deploy a Red Hat Enterprise Linux VM (RHEL 7.8), using the Pay-As-You-Go RHEL VM image for the selected version on Standard A1_v2 VM in the location of your chosen resource group with an additional 100 GiB data disk attached to the VM. Additional charges apply to this image - consult Azure VM Pricing page for details.",
       "Path": "quickstarts/microsoft.compute/vm-simple-rhel-unmanaged",
@@ -7523,7 +7546,7 @@
       "Path": "quickstarts/microsoft.compute/vmss-ubuntu-autoscale",
       "ResourceTypes": [
         "Microsoft.Compute/virtualMachineScaleSets",
-        "Microsoft.Insights/autoscaleSettings",
+        "Microsoft.Insights/autoscalesettings",
         "Microsoft.Network/loadBalancers",
         "Microsoft.Network/publicIPAddresses",
         "Microsoft.Network/virtualNetworks"
@@ -8439,7 +8462,7 @@
       "HasBicep": true
     },
     {
-      "Title": "Create MySqlFlex server & enable protection via Backup Vault",
+      "Title": "Create MySQL Flexible Server & enable protection via Backup Vault",
       "Description": "Template that creates a MySQL Flexible Server and enables protection via Backup Vault",
       "Path": "quickstarts/microsoft.dataprotection/backup-create-mysqlflex-enable-protection",
       "ResourceTypes": [
@@ -8653,6 +8676,19 @@
         "Microsoft.DevCenter/projects",
         "Microsoft.DevCenter/projects/environmentTypes",
         "Microsoft.Resources/resourceGroups"
+      ],
+      "HasBicep": true
+    },
+    {
+      "Title": "Deploy Dev Box Service",
+      "Description": "This template provides a way to configure all resouces required to create a Dev Box.",
+      "Path": "quickstarts/microsoft.devcenter/devbox-quick-start",
+      "ResourceTypes": [
+        "Microsoft.Authorization/roleAssignments",
+        "Microsoft.DevCenter/devcenters",
+        "Microsoft.DevCenter/devcenters/devboxdefinitions",
+        "Microsoft.DevCenter/projects",
+        "Microsoft.DevCenter/projects/pools"
       ],
       "HasBicep": true
     },
@@ -10101,9 +10137,9 @@
       "HasBicep": false
     },
     {
-      "Title": "Azure AI Studio basic setup",
-      "Description": "This set of templates demonstrates how to set up Azure AI Studio with the basic setup, meaning with public internet access enabled, Microsoft-managed keys for encryption and Microsoft-managed identity configuration for the AI resource.",
-      "Path": "quickstarts/microsoft.machinelearningservices/aistudio-basics",
+      "Title": "Azure AI Foundry basic setup",
+      "Description": "This set of templates demonstrates how to set up Azure AI Foundry with the basic setup, meaning with public internet access enabled, Microsoft-managed keys for encryption and Microsoft-managed identity configuration for the AI resource.",
+      "Path": "quickstarts/microsoft.machinelearningservices/aifoundry-basics",
       "ResourceTypes": [
         "Microsoft.CognitiveServices/accounts",
         "Microsoft.ContainerRegistry/registries",
@@ -10116,9 +10152,9 @@
       "HasBicep": true
     },
     {
-      "Title": "Azure AI Studio basic setup",
-      "Description": "This set of templates demonstrates how to set up Azure AI Studio with the basic setup, meaning with public internet access enabled, Microsoft-managed keys for encryption and Microsoft-managed identity configuration for the AI resource.",
-      "Path": "quickstarts/microsoft.machinelearningservices/aistudio-cmk-service-side-encryption",
+      "Title": "Azure AI Foundry basic setup",
+      "Description": "This set of templates demonstrates how to set up Azure AI Foundry with the basic setup, meaning with public internet access enabled, Microsoft-managed keys for encryption and Microsoft-managed identity configuration for the AI resource.",
+      "Path": "quickstarts/microsoft.machinelearningservices/aifoundry-cmk",
       "ResourceTypes": [
         "Microsoft.CognitiveServices/accounts",
         "Microsoft.ContainerRegistry/registries",
@@ -10131,24 +10167,9 @@
       "HasBicep": true
     },
     {
-      "Title": "Azure AI Studio basic setup",
-      "Description": "This set of templates demonstrates how to set up Azure AI Studio with the basic setup, meaning with public internet access enabled, Microsoft-managed keys for encryption and Microsoft-managed identity configuration for the AI resource.",
-      "Path": "quickstarts/microsoft.machinelearningservices/aistudio-cmk",
-      "ResourceTypes": [
-        "Microsoft.CognitiveServices/accounts",
-        "Microsoft.ContainerRegistry/registries",
-        "Microsoft.Insights/components",
-        "Microsoft.KeyVault/vaults",
-        "Microsoft.MachineLearningServices/workspaces",
-        "Microsoft.MachineLearningServices/workspaces/connections",
-        "Microsoft.Storage/storageAccounts"
-      ],
-      "HasBicep": true
-    },
-    {
-      "Title": "Azure AI Studio with Microsoft Entra ID Authentication",
-      "Description": "This set of templates demonstrates how to set up Azure AI Studio with Microsoft Entra ID authentication for dependent resources, such as Azure AI Services and Azure Storage.",
-      "Path": "quickstarts/microsoft.machinelearningservices/aistudio-entraid-passthrough",
+      "Title": "Azure AI Foundry with Microsoft Entra ID Authentication",
+      "Description": "This set of templates demonstrates how to set up Azure AI Foundry with Microsoft Entra ID authentication for dependent resources, such as Azure AI Services and Azure Storage.",
+      "Path": "quickstarts/microsoft.machinelearningservices/aifoundry-entraid-passthrough",
       "ResourceTypes": [
         "Microsoft.Authorization/roleAssignments",
         "Microsoft.CognitiveServices/accounts",
@@ -10162,9 +10183,9 @@
       "HasBicep": true
     },
     {
-      "Title": "Azure AI Studio Network Restricted",
-      "Description": "This set of templates demonstrates how to set up Azure AI Studio with private link and egress disabled, using Microsoft-managed keys for encryption and Microsoft-managed identity configuration for the AI resource.",
-      "Path": "quickstarts/microsoft.machinelearningservices/aistudio-network-restricted",
+      "Title": "Azure AI Foundry Network Restricted",
+      "Description": "This set of templates demonstrates how to set up Azure AI Foundry with private link and egress disabled, using Microsoft-managed keys for encryption and Microsoft-managed identity configuration for the AI resource.",
+      "Path": "quickstarts/microsoft.machinelearningservices/aifoundry-network-restricted",
       "ResourceTypes": [
         "Microsoft.Authorization/roleAssignments",
         "Microsoft.CognitiveServices/accounts",
@@ -10184,9 +10205,9 @@
       "HasBicep": true
     },
     {
-      "Title": "Deploy Secure Azure AI Studio with a managed virtual network",
-      "Description": "This template creates a secure Azure AI Studio environment with robust network and identity security restrictions.",
-      "Path": "quickstarts/microsoft.machinelearningservices/aistudio-networking-aoao",
+      "Title": "Deploy Secure AI Foundry with a managed virtual network",
+      "Description": "This template creates a secure Azure AI Foundry environment with robust network and identity security restrictions.",
+      "Path": "quickstarts/microsoft.machinelearningservices/aifoundry-networking-aoao",
       "ResourceTypes": [
         "Microsoft.Authorization/roleAssignments",
         "Microsoft.CognitiveServices/accounts",
@@ -10211,6 +10232,21 @@
         "Microsoft.Storage/storageAccounts",
         "Microsoft.Storage/storageAccounts/blobServices",
         "Microsoft.Storage/storageAccounts/blobServices/containers"
+      ],
+      "HasBicep": true
+    },
+    {
+      "Title": "Azure AI Studio basic setup",
+      "Description": "This set of templates demonstrates how to set up Azure AI Studio with the basic setup, meaning with public internet access enabled, Microsoft-managed keys for encryption and Microsoft-managed identity configuration for the AI resource.",
+      "Path": "quickstarts/microsoft.machinelearningservices/aistudio-cmk-service-side-encryption",
+      "ResourceTypes": [
+        "Microsoft.CognitiveServices/accounts",
+        "Microsoft.ContainerRegistry/registries",
+        "Microsoft.Insights/components",
+        "Microsoft.KeyVault/vaults",
+        "Microsoft.MachineLearningServices/workspaces",
+        "Microsoft.MachineLearningServices/workspaces/connections",
+        "Microsoft.Storage/storageAccounts"
       ],
       "HasBicep": true
     },
@@ -11841,6 +11877,19 @@
       "HasBicep": true
     },
     {
+      "Title": "Create a network security perimeter",
+      "Description": "This template creates a network security perimeter and it's associated resource for protecting an Azure key vault.",
+      "Path": "quickstarts/microsoft.network/network-security-perimeter-create",
+      "ResourceTypes": [
+        "Microsoft.KeyVault/vaults",
+        "Microsoft.Network/networkSecurityPerimeters",
+        "Microsoft.Network/networkSecurityPerimeters/profiles",
+        "Microsoft.Network/networkSecurityPerimeters/profiles/accessRules",
+        "Microsoft.Network/networkSecurityPerimeters/resourceAssociations"
+      ],
+      "HasBicep": true
+    },
+    {
       "Title": "Create a Network Watcher",
       "Description": "This template creates a Network Watcher resource.",
       "Path": "quickstarts/microsoft.network/networkwatcher-create",
@@ -12686,7 +12735,7 @@
     },
     {
       "Title": "Create a Deployment Script with complex inputs & outputs",
-      "Description": "This template demonstrates best practices for passing and reading complex inputs, outputs and logs to an Az Powershell Deployment Script",
+      "Description": "This template demonstrates best practices for passing and reading complex inputs, outputs and logs to an Az PowerShell Deployment Script",
       "Path": "quickstarts/microsoft.resources/deployment-script-azpwsh-inputs-outputs",
       "ResourceTypes": [
         "Microsoft.Resources/deploymentScripts"
@@ -13719,6 +13768,24 @@
       "HasBicep": true
     },
     {
+      "Title": "Create a function app in the Flex Consumption plan",
+      "Description": "Flex Consumption hosting is recommended for functions that require rapid dynamic scale (including to zero instances), managed identity connections, and virtual network integration.",
+      "Path": "quickstarts/microsoft.web/function-app-flex-managed-identities",
+      "ResourceTypes": [
+        "Microsoft.Authorization/roleAssignments",
+        "Microsoft.Insights/components",
+        "Microsoft.ManagedIdentity/userAssignedIdentities",
+        "Microsoft.OperationalInsights/workspaces",
+        "Microsoft.Storage/storageAccounts",
+        "Microsoft.Storage/storageAccounts/blobServices",
+        "Microsoft.Storage/storageAccounts/blobServices/containers",
+        "Microsoft.Web/serverfarms",
+        "Microsoft.Web/sites",
+        "Microsoft.Web/sites/config"
+      ],
+      "HasBicep": true
+    },
+    {
       "Title": "Function App on Linux Consumption Plan with Remote Build",
       "Description": "This template provisions a function app on a Linux Consumption plan and perform remote build during code deployment. The app runs on demand and you're billed per execution, with no standing resource committment.",
       "Path": "quickstarts/microsoft.web/function-app-linux-consumption-remote-build",
@@ -14626,7 +14693,7 @@
       "Type": "Bicep",
       "Title": "API Management Service",
       "Description": "AVM Resource Module for API Management Service",
-      "ResourceType": "Microsoft.ApiManagement/service",
+      "ResourceType": "Microsoft.ApiManagement/services",
       "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/api-management/service"
     },
     {
@@ -14684,6 +14751,20 @@
       "Description": "AVM Resource Module for Azure Stack HCI Logical Network",
       "ResourceType": "Microsoft.AzureStackHCI/logicalNetworks",
       "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/azure-stack-hci/logical-network"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Stack HCI Network Interface",
+      "Description": "AVM Resource Module for Azure Stack HCI Network Interface",
+      "ResourceType": "Microsoft.AzureStackHCI/networkInterfaces",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/azure-stack-hci/network-interface"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Stack HCI Hard Disk",
+      "Description": "AVM Resource Module for Azure Stack HCI Hard Disk",
+      "ResourceType": "Microsoft.AzureStackHCI/virtualHardDisks",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/azure-stack-hci/virtual-hard-disk"
     },
     {
       "Type": "Bicep",
@@ -15016,6 +15097,13 @@
     },
     {
       "Type": "Bicep",
+      "Title": "Hybrid Container Service - Provisioned Cluster Instance",
+      "Description": "AVM Resource Module for Hybrid Container Service - Provisioned Cluster Instance",
+      "ResourceType": "Microsoft.HybridContainerService/provisionedClusterInstances",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/hybrid-container-service/provisioned-cluster-instance"
+    },
+    {
+      "Type": "Bicep",
       "Title": "Action Group",
       "Description": "AVM Resource Module for Action Group",
       "ResourceType": "Microsoft.Insights/actionGroups",
@@ -15093,6 +15181,13 @@
     },
     {
       "Type": "Bicep",
+      "Title": "Kubernetes Connected Cluster",
+      "Description": "AVM Resource Module for Kubernetes Connected Cluster",
+      "ResourceType": "Microsoft.Kubernetes/connectedClusters",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/kubernetes/connected-cluster"
+    },
+    {
+      "Type": "Bicep",
       "Title": "Kubernetes Configuration Extension",
       "Description": "AVM Resource Module for Kubernetes Configuration Extension",
       "ResourceType": "Microsoft.KubernetesConfiguration/extensions",
@@ -15121,8 +15216,8 @@
     },
     {
       "Type": "Bicep",
-      "Title": "Logic Apps (Workflow)",
-      "Description": "AVM Resource Module for Logic Apps (Workflow)",
+      "Title": "Logic Apps Workflow",
+      "Description": "AVM Resource Module for Logic Apps Workflow",
       "ResourceType": "Microsoft.Logic/workflows",
       "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/logic/workflow"
     },
@@ -15132,6 +15227,13 @@
       "Description": "AVM Resource Module for Machine Learning Services Workspace",
       "ResourceType": "Microsoft.MachineLearningServices/workspaces",
       "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/machine-learning-services/workspace"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Maintenance Configuration Assignment",
+      "Description": "AVM Resource Module for Maintenance Configuration Assignment",
+      "ResourceType": "Microsoft.Maintenance/configurationAssignments",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/maintenance/configuration-assignment"
     },
     {
       "Type": "Bicep",
@@ -15160,6 +15262,13 @@
       "Description": "AVM Resource Module for Management Group",
       "ResourceType": "Microsoft.Management/managementGroups",
       "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/management/management-group"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Azure Maps Account",
+      "Description": "AVM Resource Module for Azure Maps Account",
+      "ResourceType": "Microsoft.Maps/accounts",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/maps/account"
     },
     {
       "Type": "Bicep",
@@ -15331,6 +15440,13 @@
     },
     {
       "Type": "Bicep",
+      "Title": "Network Security Perimeter",
+      "Description": "AVM Resource Module for Network Security Perimeter",
+      "ResourceType": "Microsoft.Network/networkSecurityPerimeters",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/network-security-perimeter"
+    },
+    {
+      "Type": "Bicep",
       "Title": "Network Watcher",
       "Description": "AVM Resource Module for Network Watcher",
       "ResourceType": "Microsoft.Network/networkWatchers",
@@ -15412,6 +15528,13 @@
       "Description": "AVM Resource Module for Virtual Network",
       "ResourceType": "Microsoft.Network/virtualNetworks",
       "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/virtual-network"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Virtual Network - Subnet",
+      "Description": "AVM Child Module for Virtual Network - Subnet",
+      "ResourceType": "Microsoft.Network/virtualNetworks/subnets",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/network/virtual-network/subnet"
     },
     {
       "Type": "Bicep",
@@ -15590,15 +15713,15 @@
     },
     {
       "Type": "Bicep",
-      "Title": "Azure Synapse Analytics",
-      "Description": "AVM Resource Module for Azure Synapse Analytics",
+      "Title": "Azure Synapse Analytics Private Link Hub",
+      "Description": "AVM Resource Module for Azure Synapse Analytics Private Link Hub",
       "ResourceType": "Microsoft.Synapse/privateLinkHubs",
       "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/synapse/private-link-hub"
     },
     {
       "Type": "Bicep",
-      "Title": "Synapse Workspace",
-      "Description": "AVM Resource Module for Synapse Workspace",
+      "Title": "Azure Synapse Analytics Workspace",
+      "Description": "AVM Resource Module for Azure Synapse Analytics Workspace",
       "ResourceType": "Microsoft.Synapse/workspaces",
       "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/synapse/workspace"
     },
@@ -15646,6 +15769,13 @@
     },
     {
       "Type": "Terraform",
+      "Title": "API Management Service",
+      "Description": "AVM Resource Module for API Management Service",
+      "ResourceType": "Microsoft.ApiManagement/service",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-apimanagement-service"
+    },
+    {
+      "Type": "Terraform",
       "Title": "Container App",
       "Description": "AVM Resource Module for Container App",
       "ResourceType": "Microsoft.App/containerApps",
@@ -15660,10 +15790,24 @@
     },
     {
       "Type": "Terraform",
+      "Title": "App Configuration Store",
+      "Description": "AVM Resource Module for App Configuration Store",
+      "ResourceType": "Microsoft.AppConfiguration/configurationStores",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-appconfiguration-configurationstore"
+    },
+    {
+      "Type": "Terraform",
       "Title": "Role Assignment",
       "Description": "AVM Resource Module for Role Assignment",
       "ResourceType": "Microsoft.Authorization/roleAssignments",
       "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-authorization-roleassignment"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Automation Account",
+      "Description": "AVM Resource Module for Automation Account",
+      "ResourceType": "Microsoft.Automation/automationAccounts",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-automation-automationaccount"
     },
     {
       "Type": "Terraform",
@@ -15716,17 +15860,17 @@
     },
     {
       "Type": "Terraform",
-      "Title": "Compute Disk",
-      "Description": "AVM Resource Module for Compute Disk",
-      "ResourceType": "Microsoft.Compute/disks",
-      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-compute-disk"
-    },
-    {
-      "Type": "Terraform",
       "Title": "Disk Encryption Set",
       "Description": "AVM Resource Module for Disk Encryption Set",
       "ResourceType": "Microsoft.Compute/diskEncryptionSets",
       "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-compute-diskencryptionset"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Compute Disk",
+      "Description": "AVM Resource Module for Compute Disk",
+      "ResourceType": "Microsoft.Compute/disks",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-compute-disk"
     },
     {
       "Type": "Terraform",
@@ -15800,6 +15944,13 @@
     },
     {
       "Type": "Terraform",
+      "Title": "Data Factory",
+      "Description": "AVM Resource Module for Data Factory",
+      "ResourceType": "Microsoft.DataFactory/factories",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-datafactory-factory"
+    },
+    {
+      "Type": "Terraform",
       "Title": "DB for MySQL Flexible Server",
       "Description": "AVM Resource Module for DB for MySQL Flexible Server",
       "ResourceType": "Microsoft.DBforMySQL/flexibleServers",
@@ -15870,6 +16021,13 @@
     },
     {
       "Type": "Terraform",
+      "Title": "Event Hub Namespace",
+      "Description": "AVM Resource Module for Event Hub Namespace",
+      "ResourceType": "Microsoft.EventHub/namespaces",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-eventhub-namespace"
+    },
+    {
+      "Type": "Terraform",
       "Title": "AKS Arc",
       "Description": "AVM Resource Module for AKS Arc",
       "ResourceType": "Microsoft.HybridContainerService/provisionedClusterInstances",
@@ -15923,6 +16081,13 @@
       "Description": "AVM Resource Module for Machine Learning Services Workspace",
       "ResourceType": "Microsoft.MachineLearningServices/workspaces",
       "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-machinelearningservices-workspace"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Maintenance Configuration",
+      "Description": "AVM Resource Module for Maintenance Configuration",
+      "ResourceType": "Microsoft.Maintenance/maintenanceConfigurations",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-maintenance-maintenanceconfiguration"
     },
     {
       "Type": "Terraform",
@@ -16024,6 +16189,13 @@
     },
     {
       "Type": "Terraform",
+      "Title": "IP Group",
+      "Description": "AVM Resource Module for IP Group",
+      "ResourceType": "Microsoft.Network/ipGroups",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-ipgroup"
+    },
+    {
+      "Type": "Terraform",
       "Title": "Loadbalancer",
       "Description": "AVM Resource Module for Loadbalancer",
       "ResourceType": "Microsoft.Network/loadBalancers",
@@ -16094,6 +16266,13 @@
     },
     {
       "Type": "Terraform",
+      "Title": "Public IP Prefix",
+      "Description": "AVM Resource Module for Public IP Prefix",
+      "ResourceType": "Microsoft.Network/publicIPPrefixes",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-network-publicipprefix"
+    },
+    {
+      "Type": "Terraform",
       "Title": "Route Table",
       "Description": "AVM Resource Module for Route Table",
       "ResourceType": "Microsoft.Network/routeTables",
@@ -16115,24 +16294,17 @@
     },
     {
       "Type": "Terraform",
-      "Title": "Oracle Exadata Infrastructure",
-      "Description": "AVM Resource Module for Oracle Exadata Infrastructure",
-      "ResourceType": "Oracle.Database/cloudExadataInfrastructures",
-      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-oracledatabase-cloudexadatainfrastructure"
-    },
-    {
-      "Type": "Terraform",
-      "Title": "Oracle VM cluster",
-      "Description": "AVM Resource Module for Oracle VM cluster",
-      "ResourceType": "Oracle.Database/cloudvmclusters",
-      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-oracledatabase-cloudvmcluster"
-    },
-    {
-      "Type": "Terraform",
       "Title": "Azure Portal Dashboard",
       "Description": "AVM Resource Module for Azure Portal Dashboard",
       "ResourceType": "Microsoft.Portal/dashboards",
       "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-portal-dashboard"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Resource Graph Query",
+      "Description": "AVM Resource Module for Resource Graph Query",
+      "ResourceType": "Microsoft.ResourceGraph/queries",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-resourcegraph-query"
     },
     {
       "Type": "Terraform",
@@ -16203,6 +16375,20 @@
       "Description": "AVM Resource Module for Static Web App",
       "ResourceType": "Microsoft.Web/staticSites",
       "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-web-staticsite"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Oracle Exadata Infrastructure",
+      "Description": "AVM Resource Module for Oracle Exadata Infrastructure",
+      "ResourceType": "Oracle.Database/cloudExadataInfrastructures",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-oracledatabase-cloudexadatainfrastructure"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Oracle VM cluster",
+      "Description": "AVM Resource Module for Oracle VM cluster",
+      "ResourceType": "Oracle.Database/cloudvmclusters",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-oracledatabase-cloudvmcluster"
     }
   ]
 }
