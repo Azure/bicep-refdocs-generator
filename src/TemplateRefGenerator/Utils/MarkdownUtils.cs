@@ -22,7 +22,7 @@ public class MarkdownUtils
         .Replace(">", "&gt;")
         .Replace("\r", "")
         .Replace("\n", "<br />")
-        .Replace("|", "\|");
+        .Replace("|", "\\|");
 
     public static string ConvertDocsLinks(string input) => input
         // Remove hostname and /en-us/ prefix so that links under the same domain are relative
