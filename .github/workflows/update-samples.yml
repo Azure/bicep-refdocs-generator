@@ -44,3 +44,6 @@ jobs:
         with:
           commit_message: Update Quickstart & AVM samples
           file_pattern: settings/samples src/TemplateRefGenerator.Tests/Files
+          branch: update-samples
+          push_options: '--force'
+          create_branch: true
