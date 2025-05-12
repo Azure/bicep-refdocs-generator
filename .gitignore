@@ -396,3 +396,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Temporary directory for GitHub workflows to use
+/workflow-temp

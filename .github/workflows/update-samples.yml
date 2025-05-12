@@ -6,8 +6,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  main:
+  update-samples:
     name: Update Samples
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
 
     env:
@@ -19,21 +21,26 @@ jobs:
         with:
           fetch-depth: 0 # avoid shallow clone so nbgv can do its work.
 
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v4
+
+      - name: Clone quickstarts
+        uses: actions/checkout@v4
+        with:
+          repository: Azure/azure-quickstart-templates
+          path: workflow-temp/azure-quickstart-templates
+
       - name: Update Samples
         shell: pwsh
-        run: ./scripts/UpdateSamples.ps1
+        run: ./scripts/UpdateSamples.ps1 -QuickStartsRepoPath workflow-temp/azure-quickstart-templates
 
       - name: Update Baselines
         run: ./scripts/update_baselines.sh
-      
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v7
+        # this will fail if there are changes - this is expected
+        continue-on-error: true
+
+      - name: Commit and push
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          committer: GitHub <noreply@github.com>
-          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-          signoff: false
-          branch: update-samples
-          delete-branch: true
-          title: |
-            Update Quickstart & AVM Sample Links
-          draft: false
+          commit_message: Update Quickstart & AVM samples
+          file_pattern: settings/samples src/TemplateRefGenerator.Tests/Files

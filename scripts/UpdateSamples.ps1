@@ -29,7 +29,12 @@ function GetQuickstartLinks {
     $metadataPaths = Get-ChildItem $QuickStartsRepoPath -File -Recurse -Include "metadata.json" | Sort-Object FullName
     foreach ($metadataPath in $metadataPaths) {
         Write-Host "Processing $metadataPath"
-        $templatePath = Join-Path $metadataPath.DirectoryName "azuredeploy.json" -Resolve
+        $templatePath = Join-Path $metadataPath.DirectoryName "azuredeploy.json"
+        if (-not (Test-Path $templatePath -PathType Leaf)) {
+            Write-Host "No template found for $metadataPath"
+            continue
+        }
+
         $bicepPath = Join-Path $metadataPath.DirectoryName "main.bicep"
         $hasBicep = (Test-Path $bicepPath -PathType Leaf)
 
