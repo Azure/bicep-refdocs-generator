@@ -65,8 +65,8 @@ function GetAvmLinks {
     $tfModules = ConvertFrom-Csv (Invoke-WebRequest -Uri $tfLinks).Content
 
     $availableStatuses = @(
-        "Available :green_circle:",
-        "Orphaned :eyes:"
+        "Available",
+        "Orphaned"
     )
 
     $links = @()
