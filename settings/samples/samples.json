@@ -5369,30 +5369,14 @@
       "Title": "creates an Azure Stack HCI 23H2 cluster",
       "Description": "This template creates an Azure Stack HCI 23H2 cluster using an ARM template, using custom storage IP",
       "Path": "quickstarts/microsoft.azurestackhci/create-cluster-2-node-switched-custom-storageip-2411.3",
-      "ResourceTypes": [
-        "Microsoft.Authorization/roleAssignments",
-        "Microsoft.AzureStackHCI/clusters",
-        "microsoft.azurestackhci/clusters/deploymentSettings",
-        "Microsoft.KeyVault/vaults",
-        "Microsoft.KeyVault/vaults/providers/diagnosticsettings",
-        "Microsoft.KeyVault/vaults/secrets",
-        "Microsoft.Storage/storageAccounts"
-      ],
+      "ResourceTypes": [],
       "HasBicep": false
     },
     {
       "Title": "creates an Azure Stack HCI 23H2 cluster",
       "Description": "This template creates an Azure Stack HCI 23H2 cluster using an ARM template, using custom storage IP",
       "Path": "quickstarts/microsoft.azurestackhci/create-cluster-2-node-switched-custom-storageip",
-      "ResourceTypes": [
-        "Microsoft.Authorization/roleAssignments",
-        "Microsoft.AzureStackHCI/clusters",
-        "microsoft.azurestackhci/clusters/deploymentSettings",
-        "Microsoft.KeyVault/vaults",
-        "Microsoft.KeyVault/vaults/providers/diagnosticsettings",
-        "Microsoft.KeyVault/vaults/secrets",
-        "Microsoft.Storage/storageAccounts"
-      ],
+      "ResourceTypes": [],
       "HasBicep": false
     },
     {
@@ -5433,6 +5417,13 @@
     {
       "Title": "creates a four nodes Azure Local instance in Switchless-Dual-link Networking mode",
       "Description": "This template creates a four nodes Azure Local instance using an ARM template.",
+      "Path": "quickstarts/microsoft.azurestackhci/create-cluster-4Nodes-Switchless-DualLink-2411.3",
+      "ResourceTypes": [],
+      "HasBicep": false
+    },
+    {
+      "Title": "creates a four nodes Azure Local instance in Switchless-Dual-link Networking mode",
+      "Description": "This template creates a four nodes Azure Local instance using an ARM template.",
       "Path": "quickstarts/microsoft.azurestackhci/create-cluster-4Nodes-Switchless-DualLink",
       "ResourceTypes": [],
       "HasBicep": false
@@ -5440,16 +5431,8 @@
     {
       "Title": "creates an Azure Stack HCI 23H2 cluster",
       "Description": "This template creates an Azure Stack HCI 23H2 cluster using an ARM template.",
-      "Path": "quickstarts/microsoft.azurestackhci/create-cluster-for-fairfax",
-      "ResourceTypes": [
-        "Microsoft.Authorization/roleAssignments",
-        "Microsoft.AzureStackHCI/clusters",
-        "microsoft.azurestackhci/clusters/deploymentSettings",
-        "Microsoft.KeyVault/vaults",
-        "Microsoft.KeyVault/vaults/providers/diagnosticsettings",
-        "Microsoft.KeyVault/vaults/secrets",
-        "Microsoft.Storage/storageAccounts"
-      ],
+      "Path": "quickstarts/microsoft.azurestackhci/create-cluster-for-usgov",
+      "ResourceTypes": [],
       "HasBicep": false
     },
     {
@@ -6191,7 +6174,7 @@
         "Microsoft.Network/virtualNetworks",
         "Microsoft.Storage/storageAccounts"
       ],
-      "HasBicep": false
+      "HasBicep": true
     },
     {
       "Title": "Create an Availability Set with 3 Fault Domains",
@@ -9887,6 +9870,36 @@
         "Microsoft.ContainerService/managedClusters"
       ],
       "HasBicep": true
+    },
+    {
+      "Title": "Azure Kubernetes Fleet Manager",
+      "Description": "Deploy a private Hubful Fleet with Azure Kubernetes Fleet Manager",
+      "Path": "quickstarts/microsoft.kubernetes/fleet-hubful-private",
+      "ResourceTypes": [
+        "Microsoft.Authorization/roleAssignments",
+        "Microsoft.ContainerService/fleets",
+        "Microsoft.Network/virtualNetworks",
+        "Microsoft.Network/virtualNetworks/subnets"
+      ],
+      "HasBicep": false
+    },
+    {
+      "Title": "Azure Kubernetes Fleet Manager",
+      "Description": "Deploy a Hubful Fleet with Azure Kubernetes Fleet Manager",
+      "Path": "quickstarts/microsoft.kubernetes/fleet-hubful",
+      "ResourceTypes": [
+        "Microsoft.ContainerService/fleets"
+      ],
+      "HasBicep": false
+    },
+    {
+      "Title": "Azure Kubernetes Fleet Manager",
+      "Description": "Deploy a Hubless Fleet with Azure Kubernetes Fleet Manager",
+      "Path": "quickstarts/microsoft.kubernetes/fleet-hubless",
+      "ResourceTypes": [
+        "Microsoft.ContainerService/fleets"
+      ],
+      "HasBicep": false
     },
     {
       "Title": "Create a cluster a database",
@@ -15793,7 +15806,7 @@
       "Title": "App Configuration Store",
       "Description": "AVM Resource Module for App Configuration Store",
       "ResourceType": "Microsoft.AppConfiguration/configurationStores",
-      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-appconfiguration-configurationstore"
+      "RepoUrl": "https://github.com/Azure/terraform-azure-avm-res-appconfiguration-configurationstore"
     },
     {
       "Type": "Terraform",
@@ -15836,6 +15849,13 @@
       "Description": "AVM Resource Module for Stack HCI Virtual Machine Instance",
       "ResourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
       "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-azurestackhci-virtualmachineinstance"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Batch Account",
+      "Description": "AVM Resource Module for Batch Account",
+      "ResourceType": "Microsoft.Batch/batchAccounts",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-batch-batchaccount"
     },
     {
       "Type": "Terraform",
