@@ -5369,30 +5369,14 @@
       "Title": "creates an Azure Stack HCI 23H2 cluster",
       "Description": "This template creates an Azure Stack HCI 23H2 cluster using an ARM template, using custom storage IP",
       "Path": "quickstarts/microsoft.azurestackhci/create-cluster-2-node-switched-custom-storageip-2411.3",
-      "ResourceTypes": [
-        "Microsoft.Authorization/roleAssignments",
-        "Microsoft.AzureStackHCI/clusters",
-        "microsoft.azurestackhci/clusters/deploymentSettings",
-        "Microsoft.KeyVault/vaults",
-        "Microsoft.KeyVault/vaults/providers/diagnosticsettings",
-        "Microsoft.KeyVault/vaults/secrets",
-        "Microsoft.Storage/storageAccounts"
-      ],
+      "ResourceTypes": [],
       "HasBicep": false
     },
     {
       "Title": "creates an Azure Stack HCI 23H2 cluster",
       "Description": "This template creates an Azure Stack HCI 23H2 cluster using an ARM template, using custom storage IP",
       "Path": "quickstarts/microsoft.azurestackhci/create-cluster-2-node-switched-custom-storageip",
-      "ResourceTypes": [
-        "Microsoft.Authorization/roleAssignments",
-        "Microsoft.AzureStackHCI/clusters",
-        "microsoft.azurestackhci/clusters/deploymentSettings",
-        "Microsoft.KeyVault/vaults",
-        "Microsoft.KeyVault/vaults/providers/diagnosticsettings",
-        "Microsoft.KeyVault/vaults/secrets",
-        "Microsoft.Storage/storageAccounts"
-      ],
+      "ResourceTypes": [],
       "HasBicep": false
     },
     {
@@ -5433,6 +5417,13 @@
     {
       "Title": "creates a four nodes Azure Local instance in Switchless-Dual-link Networking mode",
       "Description": "This template creates a four nodes Azure Local instance using an ARM template.",
+      "Path": "quickstarts/microsoft.azurestackhci/create-cluster-4Nodes-Switchless-DualLink-2411.3",
+      "ResourceTypes": [],
+      "HasBicep": false
+    },
+    {
+      "Title": "creates a four nodes Azure Local instance in Switchless-Dual-link Networking mode",
+      "Description": "This template creates a four nodes Azure Local instance using an ARM template.",
       "Path": "quickstarts/microsoft.azurestackhci/create-cluster-4Nodes-Switchless-DualLink",
       "ResourceTypes": [],
       "HasBicep": false
@@ -5440,16 +5431,8 @@
     {
       "Title": "creates an Azure Stack HCI 23H2 cluster",
       "Description": "This template creates an Azure Stack HCI 23H2 cluster using an ARM template.",
-      "Path": "quickstarts/microsoft.azurestackhci/create-cluster-for-fairfax",
-      "ResourceTypes": [
-        "Microsoft.Authorization/roleAssignments",
-        "Microsoft.AzureStackHCI/clusters",
-        "microsoft.azurestackhci/clusters/deploymentSettings",
-        "Microsoft.KeyVault/vaults",
-        "Microsoft.KeyVault/vaults/providers/diagnosticsettings",
-        "Microsoft.KeyVault/vaults/secrets",
-        "Microsoft.Storage/storageAccounts"
-      ],
+      "Path": "quickstarts/microsoft.azurestackhci/create-cluster-for-usgov",
+      "ResourceTypes": [],
       "HasBicep": false
     },
     {
@@ -6191,7 +6174,7 @@
         "Microsoft.Network/virtualNetworks",
         "Microsoft.Storage/storageAccounts"
       ],
-      "HasBicep": false
+      "HasBicep": true
     },
     {
       "Title": "Create an Availability Set with 3 Fault Domains",
@@ -8546,6 +8529,18 @@
       "HasBicep": true
     },
     {
+      "Title": "Deploy MySQL Flexible Server with Entra Authentication",
+      "Description": "This template provides a way to deploy a Azure database for MySQL Flexible Server with Entra Authentication.",
+      "Path": "quickstarts/microsoft.dbformysql/flexible-mysql-with-aad",
+      "ResourceTypes": [
+        "Microsoft.DBforMySQL/flexibleServers",
+        "Microsoft.DBforMySQL/flexibleServers/administrators",
+        "Microsoft.DBforMySQL/flexibleServers/configurations",
+        "Microsoft.DBforMySQL/flexibleServers/firewallRules"
+      ],
+      "HasBicep": true
+    },
+    {
       "Title": "Deploy MySQL Flexible Server with Private Endpoint",
       "Description": "This template provides a way to deploy a Azure Database for MySQL Flexible Server with Private Endpoint.",
       "Path": "quickstarts/microsoft.dbformysql/flexible-mysql-with-private-endpoint",
@@ -9885,6 +9880,36 @@
       "Path": "quickstarts/microsoft.kubernetes/aks",
       "ResourceTypes": [
         "Microsoft.ContainerService/managedClusters"
+      ],
+      "HasBicep": true
+    },
+    {
+      "Title": "Azure Kubernetes Fleet Manager",
+      "Description": "Deploy a private Hubful Fleet with Azure Kubernetes Fleet Manager",
+      "Path": "quickstarts/microsoft.kubernetes/fleet-hubful-private",
+      "ResourceTypes": [
+        "Microsoft.Authorization/roleAssignments",
+        "Microsoft.ContainerService/fleets",
+        "Microsoft.Network/virtualNetworks",
+        "Microsoft.Network/virtualNetworks/subnets"
+      ],
+      "HasBicep": true
+    },
+    {
+      "Title": "Azure Kubernetes Fleet Manager",
+      "Description": "Deploy a Hubful Fleet with Azure Kubernetes Fleet Manager",
+      "Path": "quickstarts/microsoft.kubernetes/fleet-hubful",
+      "ResourceTypes": [
+        "Microsoft.ContainerService/fleets"
+      ],
+      "HasBicep": true
+    },
+    {
+      "Title": "Azure Kubernetes Fleet Manager",
+      "Description": "Deploy a Hubless Fleet with Azure Kubernetes Fleet Manager",
+      "Path": "quickstarts/microsoft.kubernetes/fleet-hubless",
+      "ResourceTypes": [
+        "Microsoft.ContainerService/fleets"
       ],
       "HasBicep": true
     },
@@ -14978,6 +15003,13 @@
     },
     {
       "Type": "Bicep",
+      "Title": "Dev Center Network Connection",
+      "Description": "AVM Resource Module for Dev Center Network Connection",
+      "ResourceType": "Microsoft.DevCenter/networkConnections",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/dev-center/network-connection"
+    },
+    {
+      "Type": "Bicep",
       "Title": "DevOps Infrastructure Pool",
       "Description": "AVM Resource Module for DevOps Infrastructure Pool",
       "ResourceType": "Microsoft.DevOpsInfrastructure/pools",
@@ -14999,8 +15031,8 @@
     },
     {
       "Type": "Bicep",
-      "Title": "CosmosDB Database Account",
-      "Description": "AVM Resource Module for CosmosDB Database Account",
+      "Title": "Cosmos DB Database Account",
+      "Description": "AVM Resource Module for Cosmos DB Database Account",
       "ResourceType": "Microsoft.DocumentDB/databaseAccounts",
       "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/document-db/database-account"
     },
@@ -15650,6 +15682,20 @@
     },
     {
       "Type": "Bicep",
+      "Title": "Security Insights - Data Connector",
+      "Description": "AVM Resource Module for Security Insights - Data Connector",
+      "ResourceType": "Microsoft.SecurityInsights/dataConnectors",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/security-insights/data-connector"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Security Insights - Setting",
+      "Description": "AVM Resource Module for Security Insights - Setting",
+      "ResourceType": "Microsoft.SecurityInsights/settings",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/security-insights/setting"
+    },
+    {
+      "Type": "Bicep",
       "Title": "Service Bus Namespace",
       "Description": "AVM Resource Module for Service Bus Namespace",
       "ResourceType": "Microsoft.ServiceBus/namespaces",
@@ -15783,6 +15829,13 @@
     },
     {
       "Type": "Terraform",
+      "Title": "App Job",
+      "Description": "AVM Resource Module for App Job",
+      "ResourceType": "Microsoft.App/Jobs",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-app-job"
+    },
+    {
+      "Type": "Terraform",
       "Title": "App Managed Environment",
       "Description": "AVM Resource Module for App Managed Environment",
       "ResourceType": "Microsoft.App/managedEnvironments",
@@ -15793,7 +15846,7 @@
       "Title": "App Configuration Store",
       "Description": "AVM Resource Module for App Configuration Store",
       "ResourceType": "Microsoft.AppConfiguration/configurationStores",
-      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-appconfiguration-configurationstore"
+      "RepoUrl": "https://github.com/Azure/terraform-azure-avm-res-appconfiguration-configurationstore"
     },
     {
       "Type": "Terraform",
@@ -15836,6 +15889,13 @@
       "Description": "AVM Resource Module for Stack HCI Virtual Machine Instance",
       "ResourceType": "Microsoft.AzureStackHCI/virtualMachineInstances",
       "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-azurestackhci-virtualmachineinstance"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Batch Account",
+      "Description": "AVM Resource Module for Batch Account",
+      "ResourceType": "Microsoft.Batch/batchAccounts",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-batch-batchaccount"
     },
     {
       "Type": "Terraform",
@@ -15948,6 +16008,13 @@
       "Description": "AVM Resource Module for Data Factory",
       "ResourceType": "Microsoft.DataFactory/factories",
       "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-datafactory-factory"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Data Protection Backup Vault",
+      "Description": "AVM Resource Module for Data Protection Backup Vault",
+      "ResourceType": "Microsoft.DataProtection/backupVaults",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-dataprotection-backupvault"
     },
     {
       "Type": "Terraform",
