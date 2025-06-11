@@ -148,6 +148,18 @@ resource symbolicname 'Microsoft.Compute/disks@2024-03-02' = {
 }
 ```
 ## Property Values
+### Microsoft.Compute/disks
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| extendedLocation | The extended location where the disk will be created. Extended location cannot be changed. | [ExtendedLocation](#extendedlocation) |
+| location | Resource location | string (required) |
+| name | The resource name | string (required) |
+| properties | Disk resource properties. | [DiskProperties](#diskproperties) |
+| sku | The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, StandardSSD_ZRS, or PremiumV2_LRS. | [DiskSku](#disksku) |
+| tags | Resource tags | Dictionary of tag names and values. See [Tags in templates](/azure/azure-resource-manager/management/tag-resources#arm-templates) |
+| zones | The Logical zone list for Disk. | string[] |
+
 ### CreationData
 
 | Name | Description | Value |
@@ -257,18 +269,6 @@ resource symbolicname 'Microsoft.Compute/disks@2024-03-02' = {
 | ---- | ----------- | ------------ |
 | secretUrl | Url pointing to a key or secret in KeyVault | string (required) |
 | sourceVault | Resource id of the KeyVault containing the key or secret | [SourceVault](#sourcevault) (required) |
-
-### Microsoft.Compute/disks
-
-| Name | Description | Value |
-| ---- | ----------- | ------------ |
-| extendedLocation | The extended location where the disk will be created. Extended location cannot be changed. | [ExtendedLocation](#extendedlocation) |
-| location | Resource location | string (required) |
-| name | The resource name | string (required) |
-| properties | Disk resource properties. | [DiskProperties](#diskproperties) |
-| sku | The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, StandardSSD_ZRS, or PremiumV2_LRS. | [DiskSku](#disksku) |
-| tags | Resource tags | Dictionary of tag names and values. See [Tags in templates](/azure/azure-resource-manager/management/tag-resources#arm-templates) |
-| zones | The Logical zone list for Disk. | string[] |
 
 ### PurchasePlan
 
@@ -438,6 +438,20 @@ To create a Microsoft.Compute/disks resource, add the following JSON to your tem
 }
 ```
 ## Property Values
+### Microsoft.Compute/disks
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| apiVersion | The api version | '2024-03-02' |
+| extendedLocation | The extended location where the disk will be created. Extended location cannot be changed. | [ExtendedLocation](#extendedlocation-1) |
+| location | Resource location | string (required) |
+| name | The resource name | string (required) |
+| properties | Disk resource properties. | [DiskProperties](#diskproperties-1) |
+| sku | The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, StandardSSD_ZRS, or PremiumV2_LRS. | [DiskSku](#disksku-1) |
+| tags | Resource tags | Dictionary of tag names and values. See [Tags in templates](/azure/azure-resource-manager/management/tag-resources#arm-templates) |
+| type | The resource type | 'Microsoft.Compute/disks' |
+| zones | The Logical zone list for Disk. | string[] |
+
 ### CreationData
 
 | Name | Description | Value |
@@ -547,20 +561,6 @@ To create a Microsoft.Compute/disks resource, add the following JSON to your tem
 | ---- | ----------- | ------------ |
 | secretUrl | Url pointing to a key or secret in KeyVault | string (required) |
 | sourceVault | Resource id of the KeyVault containing the key or secret | [SourceVault](#sourcevault-1) (required) |
-
-### Microsoft.Compute/disks
-
-| Name | Description | Value |
-| ---- | ----------- | ------------ |
-| apiVersion | The api version | '2024-03-02' |
-| extendedLocation | The extended location where the disk will be created. Extended location cannot be changed. | [ExtendedLocation](#extendedlocation-1) |
-| location | Resource location | string (required) |
-| name | The resource name | string (required) |
-| properties | Disk resource properties. | [DiskProperties](#diskproperties-1) |
-| sku | The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, StandardSSD_ZRS, or PremiumV2_LRS. | [DiskSku](#disksku-1) |
-| tags | Resource tags | Dictionary of tag names and values. See [Tags in templates](/azure/azure-resource-manager/management/tag-resources#arm-templates) |
-| type | The resource type | 'Microsoft.Compute/disks' |
-| zones | The Logical zone list for Disk. | string[] |
 
 ### PurchasePlan
 
@@ -731,6 +731,19 @@ resource "azapi_resource" "symbolicname" {
 }
 ```
 ## Property Values
+### Microsoft.Compute/disks
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| extendedLocation | The extended location where the disk will be created. Extended location cannot be changed. | [ExtendedLocation](#extendedlocation-2) |
+| location | Resource location | string (required) |
+| name | The resource name | string (required) |
+| properties | Disk resource properties. | [DiskProperties](#diskproperties-2) |
+| sku | The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, StandardSSD_ZRS, or PremiumV2_LRS. | [DiskSku](#disksku-2) |
+| tags | Resource tags | Dictionary of tag names and values. |
+| type | The resource type | "Microsoft.Compute/disks@2024-03-02" |
+| zones | The Logical zone list for Disk. | string[] |
+
 ### CreationData
 
 | Name | Description | Value |
@@ -840,19 +853,6 @@ resource "azapi_resource" "symbolicname" {
 | ---- | ----------- | ------------ |
 | secretUrl | Url pointing to a key or secret in KeyVault | string (required) |
 | sourceVault | Resource id of the KeyVault containing the key or secret | [SourceVault](#sourcevault-2) (required) |
-
-### Microsoft.Compute/disks
-
-| Name | Description | Value |
-| ---- | ----------- | ------------ |
-| extendedLocation | The extended location where the disk will be created. Extended location cannot be changed. | [ExtendedLocation](#extendedlocation-2) |
-| location | Resource location | string (required) |
-| name | The resource name | string (required) |
-| properties | Disk resource properties. | [DiskProperties](#diskproperties-2) |
-| sku | The disks sku name. Can be Standard_LRS, Premium_LRS, StandardSSD_LRS, UltraSSD_LRS, Premium_ZRS, StandardSSD_ZRS, or PremiumV2_LRS. | [DiskSku](#disksku-2) |
-| tags | Resource tags | Dictionary of tag names and values. |
-| type | The resource type | "Microsoft.Compute/disks@2024-03-02" |
-| zones | The Logical zone list for Disk. | string[] |
 
 ### PurchasePlan
 

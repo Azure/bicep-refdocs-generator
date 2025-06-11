@@ -217,6 +217,17 @@ For **Periodic**, use:
 ```
 
 ## Property Values
+### Microsoft.DocumentDB/databaseAccounts
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| identity | Identity for the resource. | [ManagedServiceIdentity](#managedserviceidentity) |
+| kind | Indicates the type of database account. This can only be set at database account creation. | 'GlobalDocumentDB'<br />'MongoDB'<br />'Parse' |
+| location | The location of the resource group to which the resource belongs. | string |
+| name | The resource name | string <br /><br />Constraints:<br />Min length = 3<br />Max length = 50<br />Pattern = `^[a-z0-9]+(-[a-z0-9]+)*` (required) |
+| properties | Properties to create and update Azure Cosmos DB database accounts. | [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties) (required) |
+| tags | Resource tags | Dictionary of tag names and values. See [Tags in templates](/azure/azure-resource-manager/management/tag-resources#arm-templates) |
+
 ### AnalyticalStorageConfiguration
 
 | Name | Description | Value |
@@ -367,17 +378,6 @@ For **Periodic**, use:
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
-
-### Microsoft.DocumentDB/databaseAccounts
-
-| Name | Description | Value |
-| ---- | ----------- | ------------ |
-| identity | Identity for the resource. | [ManagedServiceIdentity](#managedserviceidentity) |
-| kind | Indicates the type of database account. This can only be set at database account creation. | 'GlobalDocumentDB'<br />'MongoDB'<br />'Parse' |
-| location | The location of the resource group to which the resource belongs. | string |
-| name | The resource name | string <br /><br />Constraints:<br />Min length = 3<br />Max length = 50<br />Pattern = `^[a-z0-9]+(-[a-z0-9]+)*` (required) |
-| properties | Properties to create and update Azure Cosmos DB database accounts. | [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties) (required) |
-| tags | Resource tags | Dictionary of tag names and values. See [Tags in templates](/azure/azure-resource-manager/management/tag-resources#arm-templates) |
 
 ### PeriodicModeBackupPolicy
 
@@ -620,6 +620,19 @@ For **Periodic**, use:
 ```
 
 ## Property Values
+### Microsoft.DocumentDB/databaseAccounts
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| apiVersion | The api version | '2024-05-15' |
+| identity | Identity for the resource. | [ManagedServiceIdentity](#managedserviceidentity-1) |
+| kind | Indicates the type of database account. This can only be set at database account creation. | 'GlobalDocumentDB'<br />'MongoDB'<br />'Parse' |
+| location | The location of the resource group to which the resource belongs. | string |
+| name | The resource name | string <br /><br />Constraints:<br />Min length = 3<br />Max length = 50<br />Pattern = `^[a-z0-9]+(-[a-z0-9]+)*` (required) |
+| properties | Properties to create and update Azure Cosmos DB database accounts. | [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties-1) (required) |
+| tags | Resource tags | Dictionary of tag names and values. See [Tags in templates](/azure/azure-resource-manager/management/tag-resources#arm-templates) |
+| type | The resource type | 'Microsoft.DocumentDB/databaseAccounts' |
+
 ### AnalyticalStorageConfiguration
 
 | Name | Description | Value |
@@ -770,19 +783,6 @@ For **Periodic**, use:
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
-
-### Microsoft.DocumentDB/databaseAccounts
-
-| Name | Description | Value |
-| ---- | ----------- | ------------ |
-| apiVersion | The api version | '2024-05-15' |
-| identity | Identity for the resource. | [ManagedServiceIdentity](#managedserviceidentity-1) |
-| kind | Indicates the type of database account. This can only be set at database account creation. | 'GlobalDocumentDB'<br />'MongoDB'<br />'Parse' |
-| location | The location of the resource group to which the resource belongs. | string |
-| name | The resource name | string <br /><br />Constraints:<br />Min length = 3<br />Max length = 50<br />Pattern = `^[a-z0-9]+(-[a-z0-9]+)*` (required) |
-| properties | Properties to create and update Azure Cosmos DB database accounts. | [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties-1) (required) |
-| tags | Resource tags | Dictionary of tag names and values. See [Tags in templates](/azure/azure-resource-manager/management/tag-resources#arm-templates) |
-| type | The resource type | 'Microsoft.DocumentDB/databaseAccounts' |
 
 ### PeriodicModeBackupPolicy
 
@@ -1028,6 +1028,18 @@ For **Periodic**, use:
 ```
 
 ## Property Values
+### Microsoft.DocumentDB/databaseAccounts
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| identity | Identity for the resource. | [ManagedServiceIdentity](#managedserviceidentity-2) |
+| kind | Indicates the type of database account. This can only be set at database account creation. | 'GlobalDocumentDB'<br />'MongoDB'<br />'Parse' |
+| location | The location of the resource group to which the resource belongs. | string |
+| name | The resource name | string <br /><br />Constraints:<br />Min length = 3<br />Max length = 50<br />Pattern = `^[a-z0-9]+(-[a-z0-9]+)*` (required) |
+| properties | Properties to create and update Azure Cosmos DB database accounts. | [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties-2) (required) |
+| tags | Resource tags | Dictionary of tag names and values. |
+| type | The resource type | "Microsoft.DocumentDB/databaseAccounts@2024-05-15" |
+
 ### AnalyticalStorageConfiguration
 
 | Name | Description | Value |
@@ -1178,18 +1190,6 @@ For **Periodic**, use:
 
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
-
-### Microsoft.DocumentDB/databaseAccounts
-
-| Name | Description | Value |
-| ---- | ----------- | ------------ |
-| identity | Identity for the resource. | [ManagedServiceIdentity](#managedserviceidentity-2) |
-| kind | Indicates the type of database account. This can only be set at database account creation. | 'GlobalDocumentDB'<br />'MongoDB'<br />'Parse' |
-| location | The location of the resource group to which the resource belongs. | string |
-| name | The resource name | string <br /><br />Constraints:<br />Min length = 3<br />Max length = 50<br />Pattern = `^[a-z0-9]+(-[a-z0-9]+)*` (required) |
-| properties | Properties to create and update Azure Cosmos DB database accounts. | [DatabaseAccountCreateUpdatePropertiesOrDatabaseAccountGetProperties](#databaseaccountcreateupdatepropertiesordatabaseaccountgetproperties-2) (required) |
-| tags | Resource tags | Dictionary of tag names and values. |
-| type | The resource type | "Microsoft.DocumentDB/databaseAccounts@2024-05-15" |
 
 ### PeriodicModeBackupPolicy
 

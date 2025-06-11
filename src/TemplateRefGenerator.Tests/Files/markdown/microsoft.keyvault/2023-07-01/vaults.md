@@ -113,6 +113,15 @@ resource symbolicname 'Microsoft.KeyVault/vaults@2023-07-01' = {
 }
 ```
 ## Property Values
+### Microsoft.KeyVault/vaults
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| location | The supported Azure location where the key vault should be created. | string (required) |
+| name | The resource name | string <br /><br />Constraints:<br />Pattern = `^[a-zA-Z0-9-]{3,24}$` (required) |
+| properties | Properties of the vault | [VaultProperties](#vaultproperties) (required) |
+| tags | Resource tags | Dictionary of tag names and values. See [Tags in templates](/azure/azure-resource-manager/management/tag-resources#arm-templates) |
+
 ### AccessPolicyEntry
 
 | Name | Description | Value |
@@ -127,15 +136,6 @@ resource symbolicname 'Microsoft.KeyVault/vaults@2023-07-01' = {
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
 | value | An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78). | string (required) |
-
-### Microsoft.KeyVault/vaults
-
-| Name | Description | Value |
-| ---- | ----------- | ------------ |
-| location | The supported Azure location where the key vault should be created. | string (required) |
-| name | The resource name | string <br /><br />Constraints:<br />Pattern = `^[a-zA-Z0-9-]{3,24}$` (required) |
-| properties | Properties of the vault | [VaultProperties](#vaultproperties) (required) |
-| tags | Resource tags | Dictionary of tag names and values. See [Tags in templates](/azure/azure-resource-manager/management/tag-resources#arm-templates) |
 
 ### NetworkRuleSet
 
@@ -323,6 +323,17 @@ To create a Microsoft.KeyVault/vaults resource, add the following JSON to your t
 }
 ```
 ## Property Values
+### Microsoft.KeyVault/vaults
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| apiVersion | The api version | '2023-07-01' |
+| location | The supported Azure location where the key vault should be created. | string (required) |
+| name | The resource name | string <br /><br />Constraints:<br />Pattern = `^[a-zA-Z0-9-]{3,24}$` (required) |
+| properties | Properties of the vault | [VaultProperties](#vaultproperties-1) (required) |
+| tags | Resource tags | Dictionary of tag names and values. See [Tags in templates](/azure/azure-resource-manager/management/tag-resources#arm-templates) |
+| type | The resource type | 'Microsoft.KeyVault/vaults' |
+
 ### AccessPolicyEntry
 
 | Name | Description | Value |
@@ -337,17 +348,6 @@ To create a Microsoft.KeyVault/vaults resource, add the following JSON to your t
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
 | value | An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78). | string (required) |
-
-### Microsoft.KeyVault/vaults
-
-| Name | Description | Value |
-| ---- | ----------- | ------------ |
-| apiVersion | The api version | '2023-07-01' |
-| location | The supported Azure location where the key vault should be created. | string (required) |
-| name | The resource name | string <br /><br />Constraints:<br />Pattern = `^[a-zA-Z0-9-]{3,24}$` (required) |
-| properties | Properties of the vault | [VaultProperties](#vaultproperties-1) (required) |
-| tags | Resource tags | Dictionary of tag names and values. See [Tags in templates](/azure/azure-resource-manager/management/tag-resources#arm-templates) |
-| type | The resource type | 'Microsoft.KeyVault/vaults' |
 
 ### NetworkRuleSet
 
@@ -552,6 +552,16 @@ resource "azapi_resource" "symbolicname" {
 }
 ```
 ## Property Values
+### Microsoft.KeyVault/vaults
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| location | The supported Azure location where the key vault should be created. | string (required) |
+| name | The resource name | string <br /><br />Constraints:<br />Pattern = `^[a-zA-Z0-9-]{3,24}$` (required) |
+| properties | Properties of the vault | [VaultProperties](#vaultproperties-2) (required) |
+| tags | Resource tags | Dictionary of tag names and values. |
+| type | The resource type | "Microsoft.KeyVault/vaults@2023-07-01" |
+
 ### AccessPolicyEntry
 
 | Name | Description | Value |
@@ -566,16 +576,6 @@ resource "azapi_resource" "symbolicname" {
 | Name | Description | Value |
 | ---- | ----------- | ------------ |
 | value | An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78). | string (required) |
-
-### Microsoft.KeyVault/vaults
-
-| Name | Description | Value |
-| ---- | ----------- | ------------ |
-| location | The supported Azure location where the key vault should be created. | string (required) |
-| name | The resource name | string <br /><br />Constraints:<br />Pattern = `^[a-zA-Z0-9-]{3,24}$` (required) |
-| properties | Properties of the vault | [VaultProperties](#vaultproperties-2) (required) |
-| tags | Resource tags | Dictionary of tag names and values. |
-| type | The resource type | "Microsoft.KeyVault/vaults@2023-07-01" |
 
 ### NetworkRuleSet
 

@@ -933,7 +933,7 @@ For **{discSample.DiscriminatorValue}**, use:
             }
         }
 
-        foreach (var (name, type) in namedTypes.OrderBy(x => x.Name, StringComparer.OrdinalIgnoreCase))
+        foreach (var (name, type) in GetOrderedTypes(resource, namedTypes))
         {
             switch (type)
             {
@@ -971,6 +971,12 @@ For **{discSample.DiscriminatorValue}**, use:
 
         return sb.ToString();
     }
+
+    public static IEnumerable<NamedType> GetOrderedTypes(ResourceMetadata resource, ImmutableArray<NamedType> namedTypes)
+        => namedTypes
+            // We want to order top-level resource properties above all other types
+            .OrderBy(x => x.Name == resource.ResourceType ? 0 : 1)
+            .ThenBy(x => x.Name, StringComparer.OrdinalIgnoreCase);
 
     public static string GenerateMarkdown(GroupedTypes groupedTypes, ResourceType resourceType, ConfigLoader configLoader, RemarksLoader remarksLoader, bool isLatestVersionPage)
     {
