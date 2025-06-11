@@ -123,6 +123,14 @@ resource symbolicname 'Microsoft.CostManagement/exports@2019-01-01' = {
 }
 ```
 ## Property Values
+### Microsoft.CostManagement/exports
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| name | The resource name | string (required) |
+| properties | The properties of the export. | [ExportProperties](#exportproperties) |
+| scope | Use when creating a resource at a scope that is different than the deployment scope. | Set this property to the symbolic name of a resource to apply the [extension resource](/azure/azure-resource-manager/bicep/scope-extension-resources). |
+
 ### ExportDeliveryDestination
 
 | Name | Description | Value |
@@ -160,14 +168,6 @@ resource symbolicname 'Microsoft.CostManagement/exports@2019-01-01' = {
 | recurrence | The schedule recurrence. | 'Annually'<br />'Daily'<br />'Monthly'<br />'Weekly' (required) |
 | recurrencePeriod | Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date. | [ExportRecurrencePeriod](#exportrecurrenceperiod) |
 | status | The status of the schedule. Whether active or not. If inactive, the export's scheduled execution is paused. | 'Active'<br />'Inactive' |
-
-### Microsoft.CostManagement/exports
-
-| Name | Description | Value |
-| ---- | ----------- | ------------ |
-| name | The resource name | string (required) |
-| properties | The properties of the export. | [ExportProperties](#exportproperties) |
-| scope | Use when creating a resource at a scope that is different than the deployment scope. | Set this property to the symbolic name of a resource to apply the [extension resource](/azure/azure-resource-manager/bicep/scope-extension-resources). |
 
 ### QueryAggregation
 
@@ -340,6 +340,15 @@ To create a Microsoft.CostManagement/exports resource, add the following JSON to
 }
 ```
 ## Property Values
+### Microsoft.CostManagement/exports
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| apiVersion | The api version | '2019-01-01' |
+| name | The resource name | string (required) |
+| properties | The properties of the export. | [ExportProperties](#exportproperties-1) |
+| type | The resource type | 'Microsoft.CostManagement/exports' |
+
 ### ExportDeliveryDestination
 
 | Name | Description | Value |
@@ -377,15 +386,6 @@ To create a Microsoft.CostManagement/exports resource, add the following JSON to
 | recurrence | The schedule recurrence. | 'Annually'<br />'Daily'<br />'Monthly'<br />'Weekly' (required) |
 | recurrencePeriod | Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date. | [ExportRecurrencePeriod](#exportrecurrenceperiod-1) |
 | status | The status of the schedule. Whether active or not. If inactive, the export's scheduled execution is paused. | 'Active'<br />'Inactive' |
-
-### Microsoft.CostManagement/exports
-
-| Name | Description | Value |
-| ---- | ----------- | ------------ |
-| apiVersion | The api version | '2019-01-01' |
-| name | The resource name | string (required) |
-| properties | The properties of the export. | [ExportProperties](#exportproperties-1) |
-| type | The resource type | 'Microsoft.CostManagement/exports' |
 
 ### QueryAggregation
 
@@ -567,6 +567,15 @@ resource "azapi_resource" "symbolicname" {
 }
 ```
 ## Property Values
+### Microsoft.CostManagement/exports
+
+| Name | Description | Value |
+| ---- | ----------- | ------------ |
+| name | The resource name | string (required) |
+| parent_id | The ID of the resource to apply this extension resource to. | string (required) |
+| properties | The properties of the export. | [ExportProperties](#exportproperties-2) |
+| type | The resource type | "Microsoft.CostManagement/exports@2019-01-01" |
+
 ### ExportDeliveryDestination
 
 | Name | Description | Value |
@@ -604,15 +613,6 @@ resource "azapi_resource" "symbolicname" {
 | recurrence | The schedule recurrence. | 'Annually'<br />'Daily'<br />'Monthly'<br />'Weekly' (required) |
 | recurrencePeriod | Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date. | [ExportRecurrencePeriod](#exportrecurrenceperiod-2) |
 | status | The status of the schedule. Whether active or not. If inactive, the export's scheduled execution is paused. | 'Active'<br />'Inactive' |
-
-### Microsoft.CostManagement/exports
-
-| Name | Description | Value |
-| ---- | ----------- | ------------ |
-| name | The resource name | string (required) |
-| parent_id | The ID of the resource to apply this extension resource to. | string (required) |
-| properties | The properties of the export. | [ExportProperties](#exportproperties-2) |
-| type | The resource type | "Microsoft.CostManagement/exports@2019-01-01" |
 
 ### QueryAggregation
 
