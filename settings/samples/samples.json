@@ -218,37 +218,6 @@
       "HasBicep": false
     },
     {
-      "Title": "BOSH CF Cross Region",
-      "Description": "This template helps you setup the resources needed to deploy BOSH and Cloud Foundry across two regions on Azure.",
-      "Path": "application-workloads/bosh/bosh-cf-crossregion",
-      "ResourceTypes": [
-        "Microsoft.Compute/virtualMachines",
-        "Microsoft.Compute/virtualMachines/extensions",
-        "Microsoft.Network/connections",
-        "Microsoft.Network/networkInterfaces",
-        "Microsoft.Network/networkSecurityGroups",
-        "Microsoft.Network/publicIPAddresses",
-        "Microsoft.Network/virtualNetworkGateways",
-        "Microsoft.Network/virtualNetworks",
-        "Microsoft.Storage/storageAccounts"
-      ],
-      "HasBicep": false
-    },
-    {
-      "Title": "BOSH Setup",
-      "Description": "This template helps you setup a development environment where you can deploy BOSH and Cloud Foundry.",
-      "Path": "application-workloads/bosh/bosh-setup",
-      "ResourceTypes": [
-        "Microsoft.Compute/virtualMachines",
-        "Microsoft.Compute/virtualMachines/extensions",
-        "Microsoft.Network/networkInterfaces",
-        "Microsoft.Network/networkSecurityGroups",
-        "Microsoft.Network/publicIPAddresses",
-        "Microsoft.Network/virtualNetworks"
-      ],
-      "HasBicep": false
-    },
-    {
       "Title": "Buffalo Web App",
       "Description": "Start running your Golang Buffalo Application on Azure quickly and cheaply.",
       "Path": "application-workloads/buffalo/gobuffalo",
@@ -2147,6 +2116,18 @@
         "Microsoft.Storage/storageAccounts"
       ],
       "HasBicep": false
+    },
+    {
+      "Title": "SharePoint Subscription / 2019 / 2016 fully configured",
+      "Description": "Create a DC, a SQL Server 2022, and from 1 to 5 server(s) hosting a SharePoint Subscription / 2019 / 2016 farm with an extensive configuration, including trusted authentication, user profiles with personal sites, an OAuth trust (using a certificate), a dedicated IIS site for hosting high-trust add-ins, etc... The latest version of key softwares (including Fiddler, vscode, np++, 7zip, ULS Viewer) is installed. SharePoint machines have additional fine-tuning to make them immediately usable (remote administration tools, custom policies for Edge and Chrome, shortcuts, etc...).",
+      "Path": "application-workloads/sharepoint/sharepoint-adfs",
+      "ResourceTypes": [
+        "Microsoft.Network/firewallPolicies",
+        "Microsoft.Network/firewallPolicies/ruleCollectionGroups",
+        "Microsoft.Network/networkSecurityGroups",
+        "Microsoft.Network/virtualNetworks/subnets"
+      ],
+      "HasBicep": true
     },
     {
       "Title": "Deploy Shibboleth Identity Provider cluster on Ubuntu",
@@ -5369,30 +5350,14 @@
       "Title": "creates an Azure Stack HCI 23H2 cluster",
       "Description": "This template creates an Azure Stack HCI 23H2 cluster using an ARM template, using custom storage IP",
       "Path": "quickstarts/microsoft.azurestackhci/create-cluster-2-node-switched-custom-storageip-2411.3",
-      "ResourceTypes": [
-        "Microsoft.Authorization/roleAssignments",
-        "Microsoft.AzureStackHCI/clusters",
-        "microsoft.azurestackhci/clusters/deploymentSettings",
-        "Microsoft.KeyVault/vaults",
-        "Microsoft.KeyVault/vaults/providers/diagnosticsettings",
-        "Microsoft.KeyVault/vaults/secrets",
-        "Microsoft.Storage/storageAccounts"
-      ],
+      "ResourceTypes": [],
       "HasBicep": false
     },
     {
       "Title": "creates an Azure Stack HCI 23H2 cluster",
       "Description": "This template creates an Azure Stack HCI 23H2 cluster using an ARM template, using custom storage IP",
       "Path": "quickstarts/microsoft.azurestackhci/create-cluster-2-node-switched-custom-storageip",
-      "ResourceTypes": [
-        "Microsoft.Authorization/roleAssignments",
-        "Microsoft.AzureStackHCI/clusters",
-        "microsoft.azurestackhci/clusters/deploymentSettings",
-        "Microsoft.KeyVault/vaults",
-        "Microsoft.KeyVault/vaults/providers/diagnosticsettings",
-        "Microsoft.KeyVault/vaults/secrets",
-        "Microsoft.Storage/storageAccounts"
-      ],
+      "ResourceTypes": [],
       "HasBicep": false
     },
     {
@@ -5433,6 +5398,13 @@
     {
       "Title": "creates a four nodes Azure Local instance in Switchless-Dual-link Networking mode",
       "Description": "This template creates a four nodes Azure Local instance using an ARM template.",
+      "Path": "quickstarts/microsoft.azurestackhci/create-cluster-4Nodes-Switchless-DualLink-2411.3",
+      "ResourceTypes": [],
+      "HasBicep": false
+    },
+    {
+      "Title": "creates a four nodes Azure Local instance in Switchless-Dual-link Networking mode",
+      "Description": "This template creates a four nodes Azure Local instance using an ARM template.",
       "Path": "quickstarts/microsoft.azurestackhci/create-cluster-4Nodes-Switchless-DualLink",
       "ResourceTypes": [],
       "HasBicep": false
@@ -5440,16 +5412,8 @@
     {
       "Title": "creates an Azure Stack HCI 23H2 cluster",
       "Description": "This template creates an Azure Stack HCI 23H2 cluster using an ARM template.",
-      "Path": "quickstarts/microsoft.azurestackhci/create-cluster-for-fairfax",
-      "ResourceTypes": [
-        "Microsoft.Authorization/roleAssignments",
-        "Microsoft.AzureStackHCI/clusters",
-        "microsoft.azurestackhci/clusters/deploymentSettings",
-        "Microsoft.KeyVault/vaults",
-        "Microsoft.KeyVault/vaults/providers/diagnosticsettings",
-        "Microsoft.KeyVault/vaults/secrets",
-        "Microsoft.Storage/storageAccounts"
-      ],
+      "Path": "quickstarts/microsoft.azurestackhci/create-cluster-for-usgov",
+      "ResourceTypes": [],
       "HasBicep": false
     },
     {
@@ -5494,15 +5458,22 @@
     {
       "Title": "upgrades an Azure Stack HCI 22H2 cluster to 23H2 cluster",
       "Description": "This template upgrades an Azure Stack HCI 22H2 cluster to 23H2 cluster using an ARM template.",
+      "Path": "quickstarts/microsoft.azurestackhci/upgrade-cluster-2411.3",
+      "ResourceTypes": [],
+      "HasBicep": false
+    },
+    {
+      "Title": "upgrades an Azure Stack HCI 22H2 cluster to 23H2 cluster",
+      "Description": "This template upgrades an Azure Stack HCI 22H2 cluster to 23H2 cluster using an ARM template.",
+      "Path": "quickstarts/microsoft.azurestackhci/upgrade-cluster-for-usgov",
+      "ResourceTypes": [],
+      "HasBicep": false
+    },
+    {
+      "Title": "upgrades an Azure Stack HCI 22H2 cluster to 23H2 cluster",
+      "Description": "This template upgrades an Azure Stack HCI 22H2 cluster to 23H2 cluster using an ARM template.",
       "Path": "quickstarts/microsoft.azurestackhci/upgrade-cluster",
-      "ResourceTypes": [
-        "Microsoft.Authorization/roleAssignments",
-        "microsoft.azurestackhci/clusters/deploymentSettings",
-        "Microsoft.KeyVault/vaults",
-        "Microsoft.KeyVault/vaults/providers/diagnosticsettings",
-        "Microsoft.KeyVault/vaults/secrets",
-        "Microsoft.Storage/storageAccounts"
-      ],
+      "ResourceTypes": [],
       "HasBicep": false
     },
     {
@@ -6191,7 +6162,7 @@
         "Microsoft.Network/virtualNetworks",
         "Microsoft.Storage/storageAccounts"
       ],
-      "HasBicep": false
+      "HasBicep": true
     },
     {
       "Title": "Create an Availability Set with 3 Fault Domains",
@@ -7971,17 +7942,19 @@
     {
       "Title": "AzureDatabricks Template with Default Storage Firewall",
       "Description": "This template allows you to create an Default Storage Firewall enabled Azure Databricks workspace with Privateendpoint, all three forms of CMK, and User-Assigned Access Connector.",
-      "Path": "quickstarts/microsoft.databricks/databricks-all-in-one-template-for-privateendpoint-cmk-all-forms-default-storage-firewall",
+      "Path": "quickstarts/microsoft.databricks/databricks-all-in-one-template-for-privateendpoint-cmk-all-forms-default-storage-firewall-with-nat-gateway",
       "ResourceTypes": [
         "Microsoft.Databricks/accessConnectors",
         "Microsoft.Databricks/workspaces",
         "Microsoft.KeyVault/vaults/accessPolicies",
         "Microsoft.ManagedIdentity/userAssignedIdentities",
+        "Microsoft.Network/natGateways",
         "Microsoft.Network/networkSecurityGroups",
         "Microsoft.Network/privateDnsZones",
         "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
         "Microsoft.Network/privateEndpoints",
         "Microsoft.Network/privateEndpoints/privateDnsZoneGroups",
+        "Microsoft.Network/publicIPAddresses",
         "Microsoft.Network/virtualNetworks"
       ],
       "HasBicep": false
@@ -7989,15 +7962,17 @@
     {
       "Title": "Deploy an Azure Databricks Workspace with PE,CMK all forms",
       "Description": "This template allows you to create an Azure Databricks workspace with PrivateEndpoint and managed services and CMK with DBFS encryption.",
-      "Path": "quickstarts/microsoft.databricks/databricks-all-in-one-template-for-privateendpoint-cmk-all-forms",
+      "Path": "quickstarts/microsoft.databricks/databricks-all-in-one-template-for-privateendpoint-cmk-all-forms-with-nat-gateway",
       "ResourceTypes": [
         "Microsoft.Databricks/workspaces",
         "Microsoft.KeyVault/vaults/accessPolicies",
+        "Microsoft.Network/natGateways",
         "Microsoft.Network/networkSecurityGroups",
         "Microsoft.Network/privateDnsZones",
         "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
         "Microsoft.Network/privateEndpoints",
         "Microsoft.Network/privateEndpoints/privateDnsZoneGroups",
+        "Microsoft.Network/publicIPAddresses",
         "Microsoft.Network/virtualNetworks"
       ],
       "HasBicep": false
@@ -8005,15 +7980,17 @@
     {
       "Title": "AzureDatabricks Template for Default Storage Firewall",
       "Description": "This template allows you to create a network security group, a virtual network, private endpoint, and a default storage firewall enabled Azure Databricks workspace with the virtual network and the system-assigned access connector.",
-      "Path": "quickstarts/microsoft.databricks/databricks-all-in-one-template-for-vnet-injection-privateendpoint-default-storage-firewall",
+      "Path": "quickstarts/microsoft.databricks/databricks-all-in-one-template-for-vnet-injection-privateendpoint-default-storage-firewall-with-natgateway",
       "ResourceTypes": [
         "Microsoft.Databricks/accessConnectors",
         "Microsoft.Databricks/workspaces",
+        "Microsoft.Network/natGateways",
         "Microsoft.Network/networkSecurityGroups",
         "Microsoft.Network/privateDnsZones",
         "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
         "Microsoft.Network/privateEndpoints",
         "Microsoft.Network/privateEndpoints/privateDnsZoneGroups",
+        "Microsoft.Network/publicIPAddresses",
         "Microsoft.Network/virtualNetworks"
       ],
       "HasBicep": true
@@ -8021,14 +7998,16 @@
     {
       "Title": "Azure Databricks All-in-one Templat VNetInjection-Pvtendpt",
       "Description": "This template allows you to create a network security group, a virtual network and an Azure Databricks workspace with the virtual network, and Private Endpoint.",
-      "Path": "quickstarts/microsoft.databricks/databricks-all-in-one-template-for-vnet-injection-privateendpoint",
+      "Path": "quickstarts/microsoft.databricks/databricks-all-in-one-template-for-vnet-injection-privateendpoint-with-nat-gateway",
       "ResourceTypes": [
         "Microsoft.Databricks/workspaces",
+        "Microsoft.Network/natGateways",
         "Microsoft.Network/networkSecurityGroups",
         "Microsoft.Network/privateDnsZones",
         "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
         "Microsoft.Network/privateEndpoints",
         "Microsoft.Network/privateEndpoints/privateDnsZoneGroups",
+        "Microsoft.Network/publicIPAddresses",
         "Microsoft.Network/virtualNetworks"
       ],
       "HasBicep": true
@@ -8036,10 +8015,11 @@
     {
       "Title": "AzureDatabricks Template for VNetInjection and Load Balancer",
       "Description": "This template allows you to create a a load balancer, network security group, a virtual network and an Azure Databricks workspace with the virtual network.",
-      "Path": "quickstarts/microsoft.databricks/databricks-all-in-one-template-for-vnet-injection-with-load-balancer",
+      "Path": "quickstarts/microsoft.databricks/databricks-all-in-one-template-for-vnet-injection-with-load-balancer-with-nat-gateway",
       "ResourceTypes": [
         "Microsoft.Databricks/workspaces",
         "Microsoft.Network/loadBalancers",
+        "Microsoft.Network/natGateways",
         "Microsoft.Network/networkSecurityGroups",
         "Microsoft.Network/publicIPAddresses",
         "Microsoft.Network/virtualNetworks"
@@ -8060,19 +8040,6 @@
       "HasBicep": true
     },
     {
-      "Title": "Azure Databricks All-in-one Template for VNet Injection",
-      "Description": "This template allows you to create a network security group, a virtual network, a NAT gateway and an Azure Databricks workspace with the virtual network.",
-      "Path": "quickstarts/microsoft.databricks/databricks-all-in-one-template-for-vnet-injection",
-      "ResourceTypes": [
-        "Microsoft.Databricks/workspaces",
-        "Microsoft.Network/natGateways",
-        "Microsoft.Network/networkSecurityGroups",
-        "Microsoft.Network/publicIPAddresses",
-        "Microsoft.Network/virtualNetworks"
-      ],
-      "HasBicep": true
-    },
-    {
       "Title": "AzureDatabricks Virtual Network - VNet Injection NAT Gateway",
       "Description": "This template allows you to create a Virtual Network for Azure Databricks VNet injection with natgateway.",
       "Path": "quickstarts/microsoft.databricks/databricks-vnet-for-vnet-injection-with-nat-gateway",
@@ -8082,15 +8049,6 @@
         "Microsoft.Network/virtualNetworks"
       ],
       "HasBicep": true
-    },
-    {
-      "Title": "Azure Databricks Virtual Network for VNet Injection",
-      "Description": "This template allows you to create a Virtual Network for Azure Databricks VNet injection.",
-      "Path": "quickstarts/microsoft.databricks/databricks-vnet-for-vnet-injection",
-      "ResourceTypes": [
-        "Microsoft.Network/virtualNetworks"
-      ],
-      "HasBicep": false
     },
     {
       "Title": "Azure Databricks Workspace with custom Address Range",
@@ -8542,6 +8500,18 @@
       "ResourceTypes": [
         "Microsoft.DataShare/accounts",
         "Microsoft.DataShare/accounts/shares"
+      ],
+      "HasBicep": true
+    },
+    {
+      "Title": "Deploy MySQL Flexible Server with Entra Authentication",
+      "Description": "This template provides a way to deploy a Azure database for MySQL Flexible Server with Entra Authentication.",
+      "Path": "quickstarts/microsoft.dbformysql/flexible-mysql-with-aad",
+      "ResourceTypes": [
+        "Microsoft.DBforMySQL/flexibleServers",
+        "Microsoft.DBforMySQL/flexibleServers/administrators",
+        "Microsoft.DBforMySQL/flexibleServers/configurations",
+        "Microsoft.DBforMySQL/flexibleServers/firewallRules"
       ],
       "HasBicep": true
     },
@@ -9885,6 +9855,36 @@
       "Path": "quickstarts/microsoft.kubernetes/aks",
       "ResourceTypes": [
         "Microsoft.ContainerService/managedClusters"
+      ],
+      "HasBicep": true
+    },
+    {
+      "Title": "Azure Kubernetes Fleet Manager",
+      "Description": "Deploy a private Hubful Fleet with Azure Kubernetes Fleet Manager",
+      "Path": "quickstarts/microsoft.kubernetes/fleet-hubful-private",
+      "ResourceTypes": [
+        "Microsoft.Authorization/roleAssignments",
+        "Microsoft.ContainerService/fleets",
+        "Microsoft.Network/virtualNetworks",
+        "Microsoft.Network/virtualNetworks/subnets"
+      ],
+      "HasBicep": true
+    },
+    {
+      "Title": "Azure Kubernetes Fleet Manager",
+      "Description": "Deploy a Hubful Fleet with Azure Kubernetes Fleet Manager",
+      "Path": "quickstarts/microsoft.kubernetes/fleet-hubful",
+      "ResourceTypes": [
+        "Microsoft.ContainerService/fleets"
+      ],
+      "HasBicep": true
+    },
+    {
+      "Title": "Azure Kubernetes Fleet Manager",
+      "Description": "Deploy a Hubless Fleet with Azure Kubernetes Fleet Manager",
+      "Path": "quickstarts/microsoft.kubernetes/fleet-hubless",
+      "ResourceTypes": [
+        "Microsoft.ContainerService/fleets"
       ],
       "HasBicep": true
     },
@@ -14733,6 +14733,34 @@
     },
     {
       "Type": "Bicep",
+      "Title": "Authorization - Role Assignment",
+      "Description": "AVM Resource Module for Authorization - Role Assignment",
+      "ResourceType": "Microsoft.Authorization/roleAssignments",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/authorization/role-assignment"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Authorization - Role Assignment - Management Group Scope",
+      "Description": "AVM Child Module for Authorization - Role Assignment - Management Group Scope",
+      "ResourceType": "Microsoft.Authorization/roleAssignments",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/authorization/role-assignment/mg-scope"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Authorization - Role Assignment - Resource Group Scope",
+      "Description": "AVM Child Module for Authorization - Role Assignment - Resource Group Scope",
+      "ResourceType": "Microsoft.Authorization/roleAssignments",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/authorization/role-assignment/rg-scope"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Authorization - Role Assignment - Subscription Scope",
+      "Description": "AVM Child Module for Authorization - Role Assignment - Subscription Scope",
+      "ResourceType": "Microsoft.Authorization/roleAssignments",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/authorization/role-assignment/sub-scope"
+    },
+    {
+      "Type": "Bicep",
       "Title": "Automation Account",
       "Description": "AVM Resource Module for Automation Account",
       "ResourceType": "Microsoft.Automation/automationAccounts",
@@ -14978,6 +15006,20 @@
     },
     {
       "Type": "Bicep",
+      "Title": "Dev Center Network Connection",
+      "Description": "AVM Resource Module for Dev Center Network Connection",
+      "ResourceType": "Microsoft.DevCenter/networkConnections",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/dev-center/network-connection"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Dev Center Project",
+      "Description": "AVM Resource Module for Dev Center Project",
+      "ResourceType": "Microsoft.DevCenter/projects",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/dev-center/project"
+    },
+    {
+      "Type": "Bicep",
       "Title": "DevOps Infrastructure Pool",
       "Description": "AVM Resource Module for DevOps Infrastructure Pool",
       "ResourceType": "Microsoft.DevOpsInfrastructure/pools",
@@ -14999,8 +15041,8 @@
     },
     {
       "Type": "Bicep",
-      "Title": "CosmosDB Database Account",
-      "Description": "AVM Resource Module for CosmosDB Database Account",
+      "Title": "Cosmos DB Database Account",
+      "Description": "AVM Resource Module for Cosmos DB Database Account",
       "ResourceType": "Microsoft.DocumentDB/databaseAccounts",
       "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/document-db/database-account"
     },
@@ -15650,6 +15692,20 @@
     },
     {
       "Type": "Bicep",
+      "Title": "Security Insights - Data Connector",
+      "Description": "AVM Resource Module for Security Insights - Data Connector",
+      "ResourceType": "Microsoft.SecurityInsights/dataConnectors",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/security-insights/data-connector"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Security Insights - Setting",
+      "Description": "AVM Resource Module for Security Insights - Setting",
+      "ResourceType": "Microsoft.SecurityInsights/settings",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/security-insights/setting"
+    },
+    {
+      "Type": "Bicep",
       "Title": "Service Bus Namespace",
       "Description": "AVM Resource Module for Service Bus Namespace",
       "ResourceType": "Microsoft.ServiceBus/namespaces",
@@ -15710,6 +15766,13 @@
       "Description": "AVM Resource Module for Storage Account",
       "ResourceType": "Microsoft.Storage/storageAccounts",
       "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/storage/storage-account"
+    },
+    {
+      "Type": "Bicep",
+      "Title": "Storage Account - Blob Container",
+      "Description": "AVM Child Module for Storage Account - Blob Container",
+      "ResourceType": "Microsoft.Storage/blobServices/containers",
+      "RepoUrl": "https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/storage/storage-account/blob-service/container"
     },
     {
       "Type": "Bicep",
@@ -15776,6 +15839,13 @@
     },
     {
       "Type": "Terraform",
+      "Title": "App Configuration Store",
+      "Description": "AVM Resource Module for App Configuration Store",
+      "ResourceType": "Microsoft.AppConfiguration/configurationStores",
+      "RepoUrl": "https://github.com/Azure/terraform-azure-avm-res-appconfiguration-configurationstore"
+    },
+    {
+      "Type": "Terraform",
       "Title": "Container App",
       "Description": "AVM Resource Module for Container App",
       "ResourceType": "Microsoft.App/containerApps",
@@ -15783,17 +15853,17 @@
     },
     {
       "Type": "Terraform",
+      "Title": "App Job",
+      "Description": "AVM Resource Module for App Job",
+      "ResourceType": "Microsoft.App/Jobs",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-app-job"
+    },
+    {
+      "Type": "Terraform",
       "Title": "App Managed Environment",
       "Description": "AVM Resource Module for App Managed Environment",
       "ResourceType": "Microsoft.App/managedEnvironments",
       "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-app-managedenvironment"
-    },
-    {
-      "Type": "Terraform",
-      "Title": "App Configuration Store",
-      "Description": "AVM Resource Module for App Configuration Store",
-      "ResourceType": "Microsoft.AppConfiguration/configurationStores",
-      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-appconfiguration-configurationstore"
     },
     {
       "Type": "Terraform",
@@ -15839,6 +15909,13 @@
     },
     {
       "Type": "Terraform",
+      "Title": "Batch Account",
+      "Description": "AVM Resource Module for Batch Account",
+      "ResourceType": "Microsoft.Batch/batchAccounts",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-batch-batchaccount"
+    },
+    {
+      "Type": "Terraform",
       "Title": "Redis Cache",
       "Description": "AVM Resource Module for Redis Cache",
       "ResourceType": "Microsoft.Cache/Redis",
@@ -15860,17 +15937,17 @@
     },
     {
       "Type": "Terraform",
-      "Title": "Disk Encryption Set",
-      "Description": "AVM Resource Module for Disk Encryption Set",
-      "ResourceType": "Microsoft.Compute/diskEncryptionSets",
-      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-compute-diskencryptionset"
-    },
-    {
-      "Type": "Terraform",
       "Title": "Compute Disk",
       "Description": "AVM Resource Module for Compute Disk",
       "ResourceType": "Microsoft.Compute/disks",
       "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-compute-disk"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Disk Encryption Set",
+      "Description": "AVM Resource Module for Disk Encryption Set",
+      "ResourceType": "Microsoft.Compute/diskEncryptionSets",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-compute-diskencryptionset"
     },
     {
       "Type": "Terraform",
@@ -15948,6 +16025,13 @@
       "Description": "AVM Resource Module for Data Factory",
       "ResourceType": "Microsoft.DataFactory/factories",
       "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-datafactory-factory"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Data Protection Backup Vault",
+      "Description": "AVM Resource Module for Data Protection Backup Vault",
+      "ResourceType": "Microsoft.DataProtection/backupVaults",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-dataprotection-backupvault"
     },
     {
       "Type": "Terraform",
@@ -16294,6 +16378,20 @@
     },
     {
       "Type": "Terraform",
+      "Title": "Oracle Exadata Infrastructure",
+      "Description": "AVM Resource Module for Oracle Exadata Infrastructure",
+      "ResourceType": "Oracle.Database/cloudExadataInfrastructures",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-oracledatabase-cloudexadatainfrastructure"
+    },
+    {
+      "Type": "Terraform",
+      "Title": "Oracle VM cluster",
+      "Description": "AVM Resource Module for Oracle VM cluster",
+      "ResourceType": "Oracle.Database/cloudvmclusters",
+      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-oracledatabase-cloudvmcluster"
+    },
+    {
+      "Type": "Terraform",
       "Title": "Azure Portal Dashboard",
       "Description": "AVM Resource Module for Azure Portal Dashboard",
       "ResourceType": "Microsoft.Portal/dashboards",
@@ -16375,20 +16473,6 @@
       "Description": "AVM Resource Module for Static Web App",
       "ResourceType": "Microsoft.Web/staticSites",
       "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-web-staticsite"
-    },
-    {
-      "Type": "Terraform",
-      "Title": "Oracle Exadata Infrastructure",
-      "Description": "AVM Resource Module for Oracle Exadata Infrastructure",
-      "ResourceType": "Oracle.Database/cloudExadataInfrastructures",
-      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-oracledatabase-cloudexadatainfrastructure"
-    },
-    {
-      "Type": "Terraform",
-      "Title": "Oracle VM cluster",
-      "Description": "AVM Resource Module for Oracle VM cluster",
-      "ResourceType": "Oracle.Database/cloudvmclusters",
-      "RepoUrl": "https://github.com/Azure/terraform-azurerm-avm-res-oracledatabase-cloudvmcluster"
     }
   ]
 }
