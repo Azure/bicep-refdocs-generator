@@ -4,9 +4,9 @@
     "net8.0": {
       "Azure.Bicep.Types.Az": {
         "type": "Direct",
-        "requested": "[0.2.727, )",
-        "resolved": "0.2.727",
-        "contentHash": "qgjmuu+6S15paLyFyFw9UXWMXKaS64tcNmKBT7b8NQ/smnP2FEgMN7A+CyZ7iP/ogTpjBRCry96wJfiMnuQ6aw==",
+        "requested": "[0.2.789, )",
+        "resolved": "0.2.789",
+        "contentHash": "ytFs+ki/lWw1Lv3XlfNj3+bu7JmiWvI/G4+Fr1gSiTFDeZK1vk5XoHy230EVuqK1wkgWAvOE/DzEKy6LkfjAag==",
         "dependencies": {
           "Azure.Bicep.Types": "0.5.110"
         }
@@ -374,11 +374,11 @@
       "testhelpers": {
         "type": "Project",
         "dependencies": {
-          "Azure.Bicep.Types.Az": "[0.2.727, )",
+          "Azure.Bicep.Types.Az": "[0.2.789, )",
           "DiffPlex": "[1.7.2, )",
           "FluentAssertions": "[7.0.0, )",
           "JsonDiffPatch.Net": "[2.4.0, )",
-          "MSTest": "[3.7.3, )",
+          "MSTest": "[3.8.2, )",
           "Microsoft.NET.Test.Sdk": "[17.13.0, )"
         }
       }
