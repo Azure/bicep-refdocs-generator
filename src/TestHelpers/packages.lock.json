@@ -28,9 +28,9 @@
       },
       "JsonDiffPatch.Net": {
         "type": "Direct",
-        "requested": "[2.4.0, )",
-        "resolved": "2.4.0",
-        "contentHash": "G7aBpHomgAKockKB6478QoTU7J93Qe/8xUCDl7WK7OfkKH58hX5QHLFhQ2noxkvHOlIOl4BLP9GhV0wH60zkXQ==",
+        "requested": "[2.5.0, )",
+        "resolved": "2.5.0",
+        "contentHash": "Hp1b5+DAQby54qPljfKRfpLTHn9c5hUxYfcmmtEJTlzD7lEkFQIwrUnjaNR99RV63nB+pJwDNBbL2kCMIiWc1g==",
         "dependencies": {
           "Newtonsoft.Json": "13.0.2"
         }
