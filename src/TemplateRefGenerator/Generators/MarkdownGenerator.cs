@@ -356,14 +356,14 @@ For **{discSample.DiscriminatorValue}**, use:
             }
         }
 
-        sb.Append(GenerateOptionalSection("Property Values", [
-            GetPropertyValues(resource, DeploymentType.Bicep, namedTypes, remarks, anchorIndex),
-        ]));
-
         sb.Append(GenerateOptionalSection("Usage Examples", [
             GetBicepSamplesSection(remarksLoader, resource, remarks),
             GetAvmSection(configLoader.GetSamples(), AvmLinkType.Bicep, resource),
             GetBicepQuickstartsSection(configLoader.GetSamples(), resource),
+        ]));
+
+        sb.Append(GenerateOptionalSection("Property Values", [
+            GetPropertyValues(resource, DeploymentType.Bicep, namedTypes, remarks, anchorIndex),
         ]));
 
         sb.Append($"""
@@ -485,12 +485,12 @@ For **{discSample.DiscriminatorValue}**, use:
             }
         }
 
-        sb.Append(GenerateOptionalSection("Property Values", [
-            GetPropertyValues(resource, DeploymentType.Json, namedTypes, remarks, anchorIndex),
-        ]));
-
         sb.Append(GenerateOptionalSection("Usage Examples", [
             GetJsonQuickstartsSection(configLoader.GetSamples(), resource),
+        ]));
+
+        sb.Append(GenerateOptionalSection("Property Values", [
+            GetPropertyValues(resource, DeploymentType.Json, namedTypes, remarks, anchorIndex),
         ]));
 
         sb.Append($"""
@@ -586,12 +586,12 @@ For **{discSample.DiscriminatorValue}**, use:
             }
         }
 
-        sb.Append(GenerateOptionalSection("Property Values", [
-            GetPropertyValues(resource, DeploymentType.Terraform, namedTypes, remarks, anchorIndex),
-        ]));
-
         sb.Append(GenerateOptionalSection("Usage Examples", [
             GetAvmSection(configLoader.GetSamples(), AvmLinkType.Terraform, resource),
+        ]));
+
+        sb.Append(GenerateOptionalSection("Property Values", [
+            GetPropertyValues(resource, DeploymentType.Terraform, namedTypes, remarks, anchorIndex),
         ]));
 
         sb.Append($"""
