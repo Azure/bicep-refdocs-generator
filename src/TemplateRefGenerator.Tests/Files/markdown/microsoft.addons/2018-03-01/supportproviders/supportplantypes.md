@@ -65,6 +65,7 @@ To create a Microsoft.Addons/supportProviders/supportPlanTypes resource, add the
   "name": "string"
 }
 ```
+## Usage Examples
 ## Property Values
 ### Microsoft.Addons/supportProviders/supportPlanTypes
 
@@ -74,7 +75,6 @@ To create a Microsoft.Addons/supportProviders/supportPlanTypes resource, add the
 | name | The resource name | 'Advanced'<br />'Essential'<br />'Standard' (required) |
 | type | The resource type | 'Microsoft.Addons/supportProviders/supportPlanTypes' |
 
-## Usage Examples
 
 ::: zone-end
 
