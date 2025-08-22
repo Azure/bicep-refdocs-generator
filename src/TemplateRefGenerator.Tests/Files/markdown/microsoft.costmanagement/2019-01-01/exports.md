@@ -339,6 +339,7 @@ To create a Microsoft.CostManagement/exports resource, add the following JSON to
   }
 }
 ```
+## Usage Examples
 ## Property Values
 ### Microsoft.CostManagement/exports
 
@@ -464,7 +465,6 @@ To create a Microsoft.CostManagement/exports resource, add the following JSON to
 | from | The start date to pull data from. | string (required) |
 | to | The end date to pull data to. | string (required) |
 
-## Usage Examples
 
 ::: zone-end
 
