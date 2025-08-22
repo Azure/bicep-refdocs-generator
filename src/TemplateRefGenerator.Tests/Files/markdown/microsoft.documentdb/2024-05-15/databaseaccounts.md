@@ -425,7 +425,7 @@ The following [Azure Verified Modules](https://aka.ms/avm) can be used to deploy
 > [!div class="mx-tableFixed"]
 > | Module | Description |
 > | ----- | ----- |
-> | [CosmosDB Database Account](https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/document-db/database-account) | AVM Resource Module for CosmosDB Database Account |
+> | [Cosmos DB Database Account](https://github.com/Azure/bicep-registry-modules/tree/main/avm/res/document-db/database-account) | AVM Resource Module for Cosmos DB Database Account |
 
 ### Azure Quickstart Samples
 
