@@ -502,7 +502,7 @@ For **{discSample.DiscriminatorValue}**, use:
         return sb.ToString();
     }
 
-    private static string GetTerraformZone(ConfigLoader configLoader, ResourceMetadata resource, ImmutableArray<NamedType> namedTypes, RemarksFile remarks, int anchorIndex)
+    private static string GetTerraformZone(ConfigLoader configLoader, RemarksLoader remarksLoader, ResourceMetadata resource, ImmutableArray<NamedType> namedTypes, RemarksFile remarks, int anchorIndex)
     {
         var sb = new StringBuilder();
         sb.Append($"""
@@ -591,6 +591,7 @@ For **{discSample.DiscriminatorValue}**, use:
         ]));
 
         sb.Append(GenerateOptionalSection("Usage Examples", [
+            GetTerraformSamplesSection(remarksLoader, resource, remarks),
             GetAvmSection(configLoader.GetSamples(), AvmLinkType.Terraform, resource),
         ]));
 
@@ -605,9 +606,9 @@ For **{discSample.DiscriminatorValue}**, use:
 
     private static string? GetBicepSamplesSection(RemarksLoader remarksLoader, ResourceMetadata resource, RemarksFile remarks)
     {
-        var bicepSamples = remarks.GetBicepSamples(resource).ToArray();
+        var samples = remarks.GetBicepSamples(resource).ToArray();
 
-        if (!bicepSamples.Any())
+        if (!samples.Any())
         {
             return null;
         }
@@ -619,12 +620,43 @@ For **{discSample.DiscriminatorValue}**, use:
 
 """);
         
-        foreach (var sample in bicepSamples)
+        foreach (var sample in samples)
         {
             sb.Append($"""
 {sample.Description}
 
 ```bicep
+{remarksLoader.GetCodeSample(resource.Provider, sample)}
+```
+
+""");
+        }
+
+        return sb.ToString();
+    }
+
+    private static string? GetTerraformSamplesSection(RemarksLoader remarksLoader, ResourceMetadata resource, RemarksFile remarks)
+    {
+        var samples = remarks.GetTerraformSamples(resource).ToArray();
+
+        if (!samples.Any())
+        {
+            return null;
+        }
+
+        var sb = new StringBuilder();
+        sb.Append($"""
+### Terraform Samples
+
+
+""");
+
+        foreach (var sample in samples)
+        {
+            sb.Append($"""
+{sample.Description}
+
+```tf
 {remarksLoader.GetCodeSample(resource.Provider, sample)}
 ```
 
@@ -1004,7 +1036,7 @@ For **{discSample.DiscriminatorValue}**, use:
 {GetResourceRemarks(resource, remarks)}
 {GetBicepZone(configLoader, remarksLoader, resource, namedTypes, remarks, 0)}
 {GetArmTemplateZone(configLoader, resource, namedTypes, remarks, 1)}
-{GetTerraformZone(configLoader, resource, namedTypes, remarks, 2)}
+{GetTerraformZone(configLoader, remarksLoader, resource, namedTypes, remarks, 2)}
 """;
     }
 }
