@@ -1,3 +1,5 @@
+#!/usr/bin/env pwsh
+
 Param (
     [parameter(Mandatory=$true)][string] $QuickStartsRepoPath
 )
