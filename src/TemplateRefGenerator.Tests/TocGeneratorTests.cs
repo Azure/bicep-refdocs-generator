@@ -6,10 +6,10 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Azure.Bicep.Types.Az;
+using Azure.Deployments.Testing.Utilities;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TemplateRefGenerator;
-using TestHelpers;
 
 namespace TemplateRefGenerator.Tests;
 [TestClass]
