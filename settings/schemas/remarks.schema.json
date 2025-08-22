@@ -28,6 +28,12 @@
       "items": {
         "$ref": "#/definitions/CodeSample"
       }
+    },
+    "TerraformSamples": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/CodeSample"
+      }
     }
   },
   "additionalProperties": false,
